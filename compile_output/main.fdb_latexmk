@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex compile_output/main"] 1549020493 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1549020970
+["bibtex compile_output/main"] 1549020493 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1549021293
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1549018972 38514 9239c6630ed3bacc39df49e54cc717e2 ""
-  "compile_output/main.aux" 1549020969 13723 5aacfa55a7dd6a2f22e718ee620967f9 ""
+  "compile_output/main.aux" 1549021293 13723 5aacfa55a7dd6a2f22e718ee620967f9 ""
   "compile_output/main.bcf" 0 -1 0 ""
   (generated)
-  "compile_output/main.bbl"
   "compile_output/main.blg"
-["pdflatex"] 1549020968 "main.tex" "compile_output/main.pdf" "main" 1549020970
+  "compile_output/main.bbl"
+["pdflatex"] 1549021291 "main.tex" "compile_output/main.pdf" "main" 1549021293
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -250,9 +250,9 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1486052417 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "compile_output/main.aux" 1549020969 13723 5aacfa55a7dd6a2f22e718ee620967f9 ""
+  "compile_output/main.aux" 1549021293 13723 5aacfa55a7dd6a2f22e718ee620967f9 ""
   "compile_output/main.bbl" 1549020493 8823 1aa0d5081b07b896405f5eb3f84d86b8 "bibtex compile_output/main"
-  "compile_output/main.out" 1549020969 1088 ba078c25e6543b57c20767baf706fc7d ""
+  "compile_output/main.out" 1549021293 1088 ba078c25e6543b57c20767baf706fc7d ""
   "images/interfaceInProgress.jpg" 1549018972 129486 603c8076405541b3401b88b66b6f401c ""
   "images/montage-subject-21096891.jpg" 1549018974 127376 ca6410be449a2f6530dd086dc01799d5 ""
   "images/residualProgress.jpg" 1549018974 129805 f6cd867f846fff1d878c91bb37eae678 ""
@@ -266,15 +266,15 @@
   "images__results/pitch-angle-comparison.pdf" 1549018972 18086 aa6240c500d824e6780be55f9aea3002 ""
   "main.tex" 1549019587 4536 4398139c909dad631fe90eb68951748d ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
-  "sections/abstract.tex" 1549020967 743 7e4b5bf13d9594b864d9c0dee732fe63 ""
-  "sections/appendix.tex" 1549018972 1922 9e08d2d45d022d0e271a703e817934d2 ""
-  "sections/conclusions.tex" 1549018972 458 d03c7b888f6f9fa872b9ee35f9847f66 ""
-  "sections/introduction.tex" 1549018972 9248 901f30717aa01801332dc6d359321eb0 ""
-  "sections/method.tex" 1549018972 17084 b98667d9cabe81627b264149cda6d59f ""
-  "sections/results.tex" 1549018972 4825 e47fff74fce6740df45ce88ace593aca ""
+  "sections/abstract.tex" 1549020973 743 bd7e5eab8366ba83e1ee403d1e3ee185 ""
+  "sections/appendix.tex" 1549020986 1948 22eba6545b1da6ba673913de4142d9e5 ""
+  "sections/conclusions.tex" 1549020985 485 30aca92481eed0d6a90b794c89cd93cf ""
+  "sections/introduction.tex" 1549020991 9275 e01cfa7471e6f35bbcc2a41a8279083a ""
+  "sections/method.tex" 1549020994 17108 2cb2fc4410d90fae3d2a51644a5a0896 ""
+  "sections/results.tex" 1549020996 4851 d44f45b88e1bc0120d1ef873fb721791 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
+  "compile_output/main.aux"
   "compile_output/main.pdf"
   "compile_output/main.log"
-  "compile_output/main.aux"
   "compile_output/main.out"
