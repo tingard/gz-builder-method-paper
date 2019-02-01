@@ -1,0 +1,204 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{{Abazajian} et~al.,}{{Abazajian}
+  et~al.}{2009}]{SDSSDR7}
+{Abazajian} K.~N.,  et~al., 2009, \mn@doi [\apjs]
+  {10.1088/0067-0049/182/2/543}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJS..182..543A} {182, 543}
+
+\bibitem[\protect\citeauthoryear{{Bamford}, {H{\"a}u{\ss}ler}, {Rojas}  \&
+  {Borch}}{{Bamford} et~al.}{2011}]{megamorph-paper}
+{Bamford} S.~P.,  {H{\"a}u{\ss}ler} B.,  {Rojas} A.,   {Borch} A.,  2011, in
+  {Evans} I.~N.,  {Accomazzi} A.,  {Mink} D.~J.,   {Rots} A.~H.,  eds,
+  Astronomical Society of the Pacific Conference Series Vol. 442, Astronomical
+  Data Analysis Software and Systems XX. p.~479
+
+\bibitem[\protect\citeauthoryear{{Bertin} \& {Arnouts}}{{Bertin} \&
+  {Arnouts}}{1996}]{source-extractor}
+{Bertin} E.,  {Arnouts} S.,  1996, \mn@doi [\aaps] {10.1051/aas:1996164}, \href
+  {http://adsabs.harvard.edu/abs/1996A%26AS..117..393B} {117, 393}
+
+\bibitem[\protect\citeauthoryear{Boonchoo, Ao  \& He}{Boonchoo
+  et~al.}{2018}]{dbscan}
+Boonchoo T.,  Ao X.,   He Q.,  2018, CoRR, abs/1801.06965
+
+\bibitem[\protect\citeauthoryear{{Cappellari} et~al.,}{{Cappellari}
+  et~al.}{2011}]{2011MNRAS.413..813C}
+{Cappellari} M.,  et~al., 2011, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2010.18174.x}, \href
+  {http://adsabs.harvard.edu/abs/2011MNRAS.413..813C} {413, 813}
+
+\bibitem[\protect\citeauthoryear{Davis \& Hayes}{Davis \&
+  Hayes}{2014}]{Davis2014:1402.1910v1}
+Davis D.~R.,  Hayes W.~B.,  2014, ApJ, 790, 87
+
+\bibitem[\protect\citeauthoryear{Dobbs \& Baba}{Dobbs \&
+  Baba}{2014}]{Dobbs2014:1407.5062v1}
+Dobbs C.,  Baba J.,  2014, Publ. Astron. Soc. Aust., 31
+
+\bibitem[\protect\citeauthoryear{Fall \& Romanowsky}{Fall \&
+  Romanowsky}{2018}]{Fall2018:1812.06144v1}
+Fall S.~M.,  Romanowsky A.~J.,  2018
+
+\bibitem[\protect\citeauthoryear{Gadotti}{Gadotti}{2010}]{Gadotti2010:1003.1719v2}
+Gadotti D.~A.,  2010, Monthly Notices of the Royal Astronomical Society, 415,
+  3308
+
+\bibitem[\protect\citeauthoryear{Hart et~al.,}{Hart
+  et~al.}{2016}]{Hart2016:1607.01019v1}
+Hart R.~E.,  et~al., 2016
+
+\bibitem[\protect\citeauthoryear{Hart et~al.,}{Hart
+  et~al.}{2017}]{Hart2017:1708.04628v1}
+Hart R.~E.,  et~al., 2017
+
+\bibitem[\protect\citeauthoryear{Holincheck et~al.,}{Holincheck
+  et~al.}{2016}]{Holincheck2016:1604.00435v1}
+Holincheck A.~J.,  et~al., 2016
+
+\bibitem[\protect\citeauthoryear{Hopkins et~al.,}{Hopkins
+  et~al.}{2010}]{Hopkins2010:1004.2708v3}
+Hopkins P.~F.,  et~al., 2010, The Astrophysical Journal, 724, 915
+
+\bibitem[\protect\citeauthoryear{{Hubble}}{{Hubble}}{1936}]{Hubble1936}
+{Hubble} E.~P.,  1936, {Realm of the Nebulae}
+
+\bibitem[\protect\citeauthoryear{{Kalinova} et~al.,}{{Kalinova}
+  et~al.}{2017}]{2017MNRAS.469.2539K}
+{Kalinova} V.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stx901}, \href
+  {https://ui.adsabs.harvard.edu/\#abs/2017MNRAS.469.2539K} {469, 2539}
+
+\bibitem[\protect\citeauthoryear{Kormendy, Drory, Bender  \& Cornell}{Kormendy
+  et~al.}{2010}]{Kormendy2010:1009.3015v1}
+Kormendy J.,  Drory N.,  Bender R.,   Cornell M.~E.,  2010, The Astrophysical
+  Journal, 723, 54
+
+\bibitem[\protect\citeauthoryear{Kruk et~al.,}{Kruk
+  et~al.}{2017a}]{Kruk2017:1705.00007v1}
+Kruk S.~J.,  et~al., 2017a
+
+\bibitem[\protect\citeauthoryear{Kruk et~al.,}{Kruk
+  et~al.}{2017b}]{Kruk2017:1710.00093v2}
+Kruk S.~J.,  et~al., 2017b, Monthly Notices of the Royal Astronomical Society,
+  473, 4731
+
+\bibitem[\protect\citeauthoryear{{Lauberts} \& {Valentijn}}{{Lauberts} \&
+  {Valentijn}}{1989}]{1989Msngr..56...31L}
+{Lauberts} A.,  {Valentijn} E.~A.,  1989, The Messenger, \href
+  {http://adsabs.harvard.edu/abs/1989Msngr..56...31L} {56, 31}
+
+\bibitem[\protect\citeauthoryear{Lintott et~al.,}{Lintott
+  et~al.}{2008}]{Lintott2008:0804.4483v1}
+Lintott C.~J.,  et~al., 2008, Monthly Notices of the Royal Astronomical
+  Society, 389, 1179
+
+\bibitem[\protect\citeauthoryear{Lupton, Blanton, Fekete, Hogg, O'Mullane,
+  Szalay  \& Wherry}{Lupton et~al.}{2004}]{Lupton2003:astro-ph/0312483v1}
+Lupton R.,  Blanton M.~R.,  Fekete G.,  Hogg D.~W.,  O'Mullane W.,  Szalay A.,
+   Wherry N.,  2004, PUBL ASTRON SOC PAC, 116, 133
+
+\bibitem[\protect\citeauthoryear{Masters et~al.,}{Masters
+  et~al.}{2010}]{Masters2010:1003.0449v2}
+Masters K.~L.,  et~al., 2010, Monthly Notices of the Royal Astronomical
+  Society, 411, 2026
+
+\bibitem[\protect\citeauthoryear{Mendez-Abreu et~al.,}{Mendez-Abreu
+  et~al.}{2016}]{Mendez-Abreu2016:1610.05324v1}
+Mendez-Abreu J.,  et~al., 2016
+
+\bibitem[\protect\citeauthoryear{Naim et~al.,}{Naim
+  et~al.}{1995}]{Naim1995:astro-ph/9502078v1}
+Naim A.,  et~al., 1995, Monthly Notices of the Royal Astronomical Society
+
+\bibitem[\protect\citeauthoryear{Pedregosa et~al.,}{Pedregosa
+  et~al.}{2011}]{scikit-learn}
+Pedregosa F.,  et~al., 2011, Journal of Machine Learning Research, 12, 2825
+
+\bibitem[\protect\citeauthoryear{{Peng}, {Ho}, {Impey}  \& {Rix}}{{Peng}
+  et~al.}{2002}]{galfit-paper}
+{Peng} C.~Y.,  {Ho} L.~C.,  {Impey} C.~D.,   {Rix} H.-W.,  2002, \mn@doi [\aj]
+  {10.1086/340952}, \href {http://adsabs.harvard.edu/abs/2002AJ....124..266P}
+  {124, 266}
+
+\bibitem[\protect\citeauthoryear{Pour-Imani, Kennefick, Kennefick, Davis,
+  Shields  \& Abdeen}{Pour-Imani et~al.}{2016}]{Pour-Imani2016:1608.00969v1}
+Pour-Imani H.,  Kennefick D.,  Kennefick J.,  Davis B.~L.,  Shields D.~W.,
+  Abdeen M.~S.,  2016, The Astrophysical Journal, 827, L2
+
+\bibitem[\protect\citeauthoryear{{Roberts} \& {Haynes}}{{Roberts} \&
+  {Haynes}}{1994}]{RobertsHaynes1994}
+{Roberts} M.~S.,  {Haynes} M.~P.,  1994, \mn@doi [\araa]
+  {10.1146/annurev.aa.32.090194.000555}, \href
+  {http://adsabs.harvard.edu/abs/1994ARA%26A..32..115R} {32, 115}
+
+\bibitem[\protect\citeauthoryear{Robotham, Taranu, Tobar, Moffett  \&
+  Driver}{Robotham et~al.}{2016}]{profit-paper}
+Robotham A. S.~G.,  Taranu D.~S.,  Tobar R.,  Moffett A.,   Driver S.~P.,  2016
+
+\bibitem[\protect\citeauthoryear{Sanchez et~al.,}{Sanchez
+  et~al.}{2011}]{Sanchez2011:1111.0962v2}
+Sanchez S.~F.,  et~al., 2011, Astronomy and Astrophysics, 538, A8
+
+\bibitem[\protect\citeauthoryear{{Sandage}}{{Sandage}}{1961}]{Sandage1961}
+{Sandage} A.,  1961, {The Hubble Atlas of Galaxies}
+
+\bibitem[\protect\citeauthoryear{Scarlata et~al.,}{Scarlata
+  et~al.}{2007}]{Scarlata2007:astro-ph/0701746v2}
+Scarlata C.,  et~al., 2007, The Astrophysical Journal Supplement Series, 172,
+  494
+
+\bibitem[\protect\citeauthoryear{Simard et~al.,}{Simard
+  et~al.}{2002a}]{gim2d-paper}
+Simard L.,  et~al., 2002a, The Astrophysical Journal Supplement Series, 142, 1
+
+\bibitem[\protect\citeauthoryear{Simard et~al.,}{Simard
+  et~al.}{2002b}]{Simard2002:astro-ph/0205025v2}
+Simard L.,  et~al., 2002b, ASTROPHYS J SUPPL S, 142, 1
+
+\bibitem[\protect\citeauthoryear{Simmons et~al.,}{Simmons
+  et~al.}{2014}]{Simmons2014:1409.1214v1}
+Simmons B.~D.,  et~al., 2014, Monthly Notices of the Royal Astronomical
+  Society, 445, 3466
+
+\bibitem[\protect\citeauthoryear{Vika, Bamford, Häußler  \& Rojas}{Vika
+  et~al.}{2014}]{Vika2014:1408.4070v1}
+Vika M.,  Bamford S.~P.,  Häußler B.,   Rojas A.~L.,  2014, Monthly Notices
+  of the Royal Astronomical Society, 444, 3603
+
+\bibitem[\protect\citeauthoryear{Willett et~al.,}{Willett
+  et~al.}{2013}]{Willett2013:1308.3496v2}
+Willett K.~W.,  et~al., 2013
+
+\bibitem[\protect\citeauthoryear{Willett et~al.,}{Willett
+  et~al.}{2016}]{Willett2016:1610.03068v2}
+Willett K.~W.,  et~al., 2016, Monthly Notices of the Royal Astronomical
+  Society, 464, 4176
+
+\bibitem[\protect\citeauthoryear{{de Vaucouleurs}, {de Vaucouleurs}, {Corwin},
+  {Buta}, {Paturel}  \& {Fouqu{\'e}}}{{de Vaucouleurs}
+  et~al.}{1991}]{deVaucouleurs1991}
+{de Vaucouleurs} G.,  {de Vaucouleurs} A.,  {Corwin} Jr. H.~G.,  {Buta} R.~J.,
+  {Paturel} G.,   {Fouqu{\'e}} P.,  1991, {Third Reference Catalogue of Bright
+  Galaxies. Volume I: Explanations and references. Volume II: Data for galaxies
+  between 0$^{h}$ and 12$^{h}$. Volume III: Data for galaxies between 12$^{h}$
+  and 24$^{h}$.}
+
+\makeatother
+\end{thebibliography}

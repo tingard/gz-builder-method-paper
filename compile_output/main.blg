@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: mnras.bst
+Database file #1: bibliography.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Fall2018:1812.06144v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Fall2018:1812.06144v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Fall2018:1812.06144v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hart2016:1607.01019v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Hart2016:1607.01019v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hart2016:1607.01019v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hart2017:1708.04628v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Hart2017:1708.04628v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Hart2017:1708.04628v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Holincheck2016:1604.00435v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Holincheck2016:1604.00435v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Holincheck2016:1604.00435v1
+while executing---line 1822 of file mnras.bst
+Warning--empty publisher in Hubble1936
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Kruk2017:1705.00007v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Kruk2017:1705.00007v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Kruk2017:1705.00007v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Mendez-Abreu2016:1610.05324v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Mendez-Abreu2016:1610.05324v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Mendez-Abreu2016:1610.05324v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry profit-paper
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in profit-paper
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry profit-paper
+while executing---line 1822 of file mnras.bst
+Warning--empty publisher in Sandage1961
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Willett2013:1308.3496v2
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Willett2013:1308.3496v2
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Willett2013:1308.3496v2
+while executing---line 1822 of file mnras.bst
+Warning--empty publisher in deVaucouleurs1991
+You've used 39 entries,
+            2881 wiz_defined-function locations,
+            1030 strings with 22229 characters,
+and the built_in function-call counts, 16224 in all, are:
+= -- 1262
+> -- 1161
+< -- 58
++ -- 583
+- -- 120
+* -- 2018
+:= -- 2491
+add.period$ -- 0
+call.type$ -- 39
+change.case$ -- 78
+chr.to.int$ -- 37
+cite$ -- 50
+duplicate$ -- 865
+empty$ -- 898
+format.name$ -- 264
+if$ -- 2731
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 42
+newline$ -- 130
+num.names$ -- 226
+pop$ -- 257
+preamble$ -- 1
+purify$ -- 156
+quote$ -- 0
+skip$ -- 477
+stack$ -- 0
+substring$ -- 800
+swap$ -- 340
+text.length$ -- 159
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 342
+warning$ -- 11
+while$ -- 243
+width$ -- 0
+write$ -- 382
+(There were 16 error messages)
