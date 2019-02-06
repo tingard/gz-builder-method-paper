@@ -51,13 +51,24 @@ The rendering code was designed to run on a computer's GPU, using the WebGL rend
 
 \subsection{Images and Ancillary Data}
 \label{sec:data}
-The original sample proposed for the Galaxy Builder project aimed to mirror the \textit{stellar mass-complete sample} in \citet{Hart2017:1708.04628v1}. This was a sample of face-on spiral galaxies, with and without bars, complete in stellar mass. The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2).
+The original sample proposed for the Galaxy Builder project aimed to mirror the \textit{stellar mass-complete sample} in \citet{Hart2017:1708.04628v1}. This was a sample of face-on spiral galaxies, with and without bars, complete in stellar mass. The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas \citep{2011AJ....142...31B}.
 
-\comment{List specific selections, cite source of images and redshifts and NSA catalog}
+% \comment{List specific selections, cite source of images and redshifts and NSA catalog}
+% The \textit{stellar mass complete sample} defined by \citet{Hart2017:1708.04628v1} has the following criteria:
 
-%The original \textit{stellar mass-complete sample} used in \citet{Hart2017:1708.04628v1} was kindly provided by Hart, rather than being recalculated by us.
+\begin{itemize}
+  \item GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$
+  \item $0.02 < z < 0.055$
+  \item g-band axial ratio greater than 0.4 \comment{explain}
+  \item r-band magnitude $14 < m_r < 17$
+  \item Computation of stellar mass completeness limits using the method of \citet{Pozzetti2009:0907.5416v2}
+  \item Exclusion of galaxies outside these limits\\
+    $\log({M_{*,\text{lower}} / M_\odot}) = 2.07\log(z) + 12.64$\\
+    $\log({M_{*,\text{upper}} / M_\odot}) = 2.45\log(z) + 14.05$.
+  \item A volume correction is applied, given by $9.45 < \log(M_* / M_\odot) \le 11.05$
+\end{itemize}
 
-%\subsubsection{Cut-out Preparation}
+This selection criteria results in the \textit{stellar mass-complete sample} of 6222 spiral galaxies.
 
 The galaxy data shown to volunteers in the Galaxy Builder project came in two forms: A gray-scale image cutout of the galaxy and a JSON array which was rendered onto an HTML canvas element.
 
@@ -91,11 +102,11 @@ The rendering code correctly ignores masked regions identified in the subject se
 
 As we were unsure as to the rate at which volunteers would be able to classify images, we split the \textit{stellar mass-complete sample} into smaller sub-samples, each containing around 100 galaxies. In an iterative process we chose each sub-sample to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample.
 
-After collecting data for three of these sub-samples, preliminary analysis of the classifications indicated that, in order to be able to reliably calculate an aggregate model, we needed more classifications per galaxy than the 10 we had originally envisioned.
+After collecting data for two of these sub-samples, preliminary analysis of the classifications indicated that, in order to be able to reliably calculate an aggregate model, we needed more classifications per galaxy than the 10 we had originally envisioned.
 
-A hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms.
+A hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow preliminary aggregation methodology development.
 
-Once this hand-picked sample was completed, the remaining galaxies from the initial three sub-samples were re-activated. Time constraints meant that only these three sub-samples were run through the project.
+Once this hand-picked sample was completed, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample to measure volunteer consistency. Time constraints meant that as of the time of writing, only these three batches of galaxies were run through the project.
 
 
 \subsection{Classification Aggregation Methodology}

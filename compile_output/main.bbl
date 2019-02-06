@@ -35,6 +35,17 @@
 {Bertin} E.,  {Arnouts} S.,  1996, \mn@doi [\aaps] {10.1051/aas:1996164}, \href
   {http://adsabs.harvard.edu/abs/1996A%26AS..117..393B} {117, 393}
 
+\bibitem[\protect\citeauthoryear{{Blanton}, {Kazin}, {Muna}, {Weaver}  \&
+  {Price-Whelan}}{{Blanton} et~al.}{2011}]{2011AJ....142...31B}
+{Blanton} M.~R.,  {Kazin} E.,  {Muna} D.,  {Weaver} B.~A.,   {Price-Whelan} A.,
+   2011, \mn@doi [\aj] {10.1088/0004-6256/142/1/31}, \href
+  {http://adsabs.harvard.edu/abs/2011AJ....142...31B} {142, 31}
+
+\bibitem[\protect\citeauthoryear{{Blanton} et~al.,}{{Blanton}
+  et~al.}{2017}]{2017AJ....154...28B}
+{Blanton} M.~R.,  et~al., 2017, \mn@doi [\aj] {10.3847/1538-3881/aa7567}, \href
+  {http://adsabs.harvard.edu/abs/2017AJ....154...28B} {154, 28}
+
 \bibitem[\protect\citeauthoryear{Boonchoo, Ao  \& He}{Boonchoo
   et~al.}{2018}]{dbscan}
 Boonchoo T.,  Ao X.,   He Q.,  2018, CoRR, abs/1801.06965
@@ -141,6 +152,10 @@ Pedregosa F.,  et~al., 2011, Journal of Machine Learning Research, 12, 2825
   Shields  \& Abdeen}{Pour-Imani et~al.}{2016}]{Pour-Imani2016:1608.00969v1}
 Pour-Imani H.,  Kennefick D.,  Kennefick J.,  Davis B.~L.,  Shields D.~W.,
   Abdeen M.~S.,  2016, The Astrophysical Journal, 827, L2
+
+\bibitem[\protect\citeauthoryear{Pozzetti et~al.,}{Pozzetti
+  et~al.}{2009}]{Pozzetti2009:0907.5416v2}
+Pozzetti L.,  et~al., 2009, Astronomy \& Astrophysics, 523, A13
 
 \bibitem[\protect\citeauthoryear{{Roberts} \& {Haynes}}{{Roberts} \&
   {Haynes}}{1994}]{RobertsHaynes1994}
