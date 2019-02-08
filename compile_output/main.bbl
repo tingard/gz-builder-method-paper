@@ -50,6 +50,14 @@
   et~al.}{2018}]{dbscan}
 Boonchoo T.,  Ao X.,   He Q.,  2018, CoRR, abs/1801.06965
 
+\bibitem[\protect\citeauthoryear{Breunig, Kriegel, Ng  \& Sander}{Breunig
+  et~al.}{2000}]{local-outlier-factor}
+Breunig M.~M.,  Kriegel H.-P.,  Ng R.~T.,   Sander J.,  2000, in Proceedings of
+  the 2000 ACM SIGMOD International Conference on Management of Data. SIGMOD
+  '00.
+ACM, New York, NY, USA, pp 93--104, \mn@doi{10.1145/342009.335388}, \url
+  {http://doi.acm.org/10.1145/342009.335388}
+
 \bibitem[\protect\citeauthoryear{{Cappellari} et~al.,}{{Cappellari}
   et~al.}{2011}]{2011MNRAS.413..813C}
 {Cappellari} M.,  et~al., 2011, \mn@doi [\mnras]

@@ -48,3 +48,44 @@ distance(A,\,B) \equiv D(A,\,B) + D(B,\,A).
   \caption{An example of the resulting spiral classifications for a galaxy in the Galaxy Builder sample}
 \end{figure}
 \end{document}
+
+\section{Model Rendering Profile}
+
+Standard S\`ersic \comment{citation}:
+\begin{equation}
+  I(R) = I_e \exp\left(-b_n\left[\left(\frac{R}{R_e}\right)^{1/n} - 1\right]\right)
+\end{equation}
+
+As implemented in Galaxy Builder (for a galaxy with axis ratio $E$, drawn isophotal major axis $r_e$, boxyness $c$ and S\`ersic index $n$):
+
+\begin{equation}
+  I(R) = \frac{I_0}{2} \exp\left(-b_n\left[D^{1/n} - 1\right]\right),
+\end{equation}
+
+\noindent
+where
+
+\begin{equation}
+  \begin{aligned}
+    D &= 3\sqrt{\left(\frac{E}{r_e}\right)^c|x' - \mu_x|^c + \left(\frac{1}{r_e}\right)^c|y'-\mu_y|^c} \\
+      &= \frac{3}{r_e^{c/2}}\sqrt{E^c|x' - \mu_x|^c + |y'-\mu_y|^c}
+  \end{aligned}
+\end{equation}
+
+\noindent
+and
+
+\begin{equation}
+  \begin{pmatrix}x'\\y'\end{pmatrix} =
+    \begin{pmatrix}\cos\phi & -\sin\phi\\\sin\phi & \cos\phi\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}
+      + \vec{\mu}
+      - \begin{pmatrix}\cos\phi & -\sin\phi\\\sin\phi & \cos\phi\end{pmatrix} \vec{\mu}.
+\end{equation}
+
+\noindent
+
+Therefore the effective radius is given by
+
+\begin{equation}
+  R_e = \frac{r_e^{c/2}}{3}
+\end{equation}
