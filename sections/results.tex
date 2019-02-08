@@ -14,9 +14,9 @@ After having obtained aggregated models for our galaxies, we examine the reliabi
 
 We can also make comparisons to existing measures of morphology for individual galaxies. Using morphology results from GZ2, we can investigate how likely a volunteer is to incorporate a bulge or bar component in their model relative to its existing morphological classification obtained through citizen science.
 
-Mirroring \citet{Kruk2017:1710.00093v2}, we define a galaxy as disk dominated if the debiased GZ2 fractions $p_\text{no bulge} + p_\text{just noticeable} > p_\text{obvious bulge} + p_\text{dominant bulge}$, or bulge dominated if the converse. Grouping our galaxies based on their type, we find no significant difference in the probability of bulge being present in their model\footnote{The probability of a classification of a disk dominated galaxy having a bulge was \comment{$0.7293 \pm 0.0781$}, whereas for a bulge dominated galaxy it was \comment{$0.7707 \pm 0.0806$}.}.
+Mirroring \citet{Kruk2017:1710.00093v2}, we define a galaxy as disk dominated if the debiased GZ2 fractions $p_\text{no bulge} + p_\text{just noticeable} > p_\text{obvious bulge} + p_\text{dominant bulge}$, or bulge dominated if the converse. Grouping our galaxies based on their type, we find no significant difference in the probability of bulge being present in their model\footnote{The probability of a classification of a disk dominated galaxy having a bulge was \comment{$0.7293 \pm 0.0781$}, whereas for a bulge dominated galaxy it was \comment{$0.7707 \pm 0.0806$}.}. Inspection of resulting aggregated models from galaxy builder suggests that many volunteers were using a highly elliptical bulge component to include both a galaxy's bulge and its bar, it is possible that enforcing a circular bulge may have provided more consistent classifications and less ambiguity for volunteers.
 
-However, when comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.5713 \pm 0.1549 \%$} chance of containing a bar, vs \comment{$0.3666 \pm 0.1147\%$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in galaxy builder is \comment{$0.751$}.
+When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.5713 \pm 0.1549 \%$} chance of containing a bar, vs \comment{$0.3666 \pm 0.1147\%$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in galaxy builder is \comment{$0.751$}.
 
 The strongest consistency check of our results is to make comparisons between galaxy builder models and the result of many-component photometric fits. \citet{Kruk2017:1710.00093v2} performed many-component, multi-band decompositions of a selection of Sloan galaxies, 12 of which were also classified in Galaxy Builder. We compare details of those photometric models to the models obtained in Galaxy Builder in table.\ref{table:sandor-fits}. As some of the galaxies received two independent sets of classifications (due to being in the \textit{validation subset}), we list 19 comparisons in the table.
 
@@ -80,18 +80,21 @@ The strongest consistency check of our results is to make comparisons between ga
 
 \subsection{Spiral Arms}
 
-In order to benchmark the reliability of this method of spiral parameter extraction, we compare the result of our logarithmic spiral fit to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle (Fig.\ref{fig:hart_pitch_angle}). We find good agreement, though the large error bars on the GZ2-produced pitch angle (along with the caveat in the paper that these pitch angles should not be used for individual galaxies) make this comparison rather inconclusive.
-
-The fit obtained by \citet{Hart2016:1607.01019v1} was obtained by using a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}.
-
-points in each arm cluster to that produced by a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}.
+In order to benchmark the reliability of this method of spiral parameter extraction, we compare the result of our logarithmic spiral fit to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle (Fig.\ref{fig:hart_pitch_angle}). Their fit was obtained using a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}. We find good agreement, though the large error bars on the GZ2-produced pitch angle (along with the caveat in the paper that these pitch angles should not be used for individual galaxies) make this comparison rather inconclusive.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/pitch-angle-comparison.pdf}
-  \caption{A comparison of Pitch angle obtained by \citet{Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample}
+  \caption{A comparison of Pitch angle obtained by \citet{Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. Errors on the Galaxy Builder pitch angles come from dispersion in the arms drawn by volunteers.}
   \label{fig:hart_pitch_angle}
 \end{figure}
 
+We can also directly compare the pitch angles from Galaxy Builder models to the output of the SpArcFiRe software, as shown in Fig.\ref{fig:sparcfire_pitch_angle}. The SpArcFiRe pitch angle used is the length-weighted mean of all arms of the dominant chirality of a galaxy.
+
+\begin{figure}
+  \includegraphics[width=8cm]{images__results/pitch-angle-comparison2.pdf}
+  \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder (orange) and SpArcFiRe (green). It is worth noting that in this plot, unlike Fig.\ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}
+  \label{fig:sparcfire_pitch_angle}
+\end{figure}
 
 \comment{Show results of sparcfire / GZ2 comparison}
 
