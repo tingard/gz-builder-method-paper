@@ -10,23 +10,21 @@ The closest relative to this project within the Galaxy Zoo ecosystem was the Gal
 
 \subsubsection{Project Timeline and Development}
 
-The Galaxy Builder project was developed over one and a half-years, and was built inside the Zooniverse's \textsc{Panoptes-Front-End} codebase, using Facebook's \textsc{React.js} framework, as well as WebGL to enable massively parrallel photometric galaxy model rendering. Galaxy Builder entered a Zooniverse beta in late November 2017. After some user experience and significant code reworking to meet internal standards, the project was launched as an official Zooniverse project on the 24th of April 2018.
+The Galaxy Builder project was developed over one and a half-years, and was built inside the Zooniverse's \textsc{Panoptes-Front-End} codebase, using Facebook's \textsc{React.js} framework, as well as WebGL to enable realtime photometric galaxy model rendering. Galaxy Builder entered a Zooniverse beta in late November 2017 and after some user experience improvements and significant code reworking to meet internal standards, the project was launched as an official Zooniverse project on the 24th of April 2018.
 
 A major challenge during development of the project was finding the right balance between keeping the interface and instructions simple enough for users to understand intuitively, while also allowing the freedom and versatility to properly model galaxies. It was also a significant challenge to develop a compelling and simple tutorial for what is one of the most complex projects attempted on the Zooniverse platform.
 
-\comment{KLM: Mostly you get the language right, but need to be careful in this section to stay away from diary style to a more objective "this was done" style.}
-
 \subsubsection{The project interface}
 
-The Galaxy Builder project presents a volunteer with three images, which they can switch between at any time. These images are: an $r$-band cutout of a spiral galaxy from the sample (for details of the images used see Section \ref{sec:data}), the galaxy model they have created so far, and the residual between their model and image (shown in blue and yellow). The interface can be seen in in Fig.\ref{fig:interfaceInProgress}.
+The Galaxy Builder project presents a volunteer with three images, which they can switch between at any time: an $r$-band cutout of a spiral galaxy (for details of the images used see Section \ref{sec:data}), the galaxy model they have created so far, and the residual between their model and image (shown in blue and yellow). The interface can be seen in in Fig.\ref{fig:interfaceInProgress}.
 
 \begin{figure*}
   \includegraphics[width=17.7cm]{images/interfaceInProgress.jpg}
-  \caption{The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disc component (yellow) is offset from the galaxy image (blue) to demonstrate the yellow and blue residuals. Where the image equals the model the residual is black.}
+  \caption{The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the yellow and blue residuals. Where the image equals the model the residual is black.}
   \label{fig:interfaceInProgress}
 \end{figure*}
 
-The interface prompts volunteers to work through the step-by-step creation of a photometric model of a galaxy (described in detail in section \ref{section:galaxy-model}). At each step volunteers are asked to first draw a simple isophote (ellipse for disc and bulge, rectangle for bar and polygon-lines for spiral arms), and then make use of a series of sliders to adjust various parameters for the chosen model component (i.e. brightness, S\'ersic index and boxyness of the bar).
+The interface prompts volunteers to work through the step-by-step creation of a photometric model of a galaxy (described in detail in Section \ref{section:galaxy-model}). At each step volunteers are asked to first draw a simple isophote (ellipse for disk and bulge, rectangle for bar and polygon-lines for spiral arms), and then make use of a series of sliders to adjust various parameters for the chosen model component (i.e. brightness, S\'ersic index and boxyness).
 
 The workflow is designed so that volunteers slowly subtract increasing amounts of light from the galaxy, as can be seen in Fig.\ref{fig:residualsStepByStep}. A tutorial is present which contains a step-by-step guide to completing a classification.
 
@@ -36,25 +34,22 @@ Volunteers are also guided by a ``score'', which is tied to the residuals and ch
     S = 100 \exp\left(\frac{-300}{N}\sum_{i=0}^N\frac{\text{arcsinh}^2\left(\,|\text{y}_i - M_i|\ /\ 0.6\right)}{\text{arcsinh}\,0.6 }\right)
 \end{equation*}
 
-where $N$ is the total number of pixels, $y$ is the cutout of the galaxy, normalized such that the maximum value is one ($y = \text{cutout}/\text{max}(\text{cutout})$), and $M$ is the model calculated by volunteers.
+where $N$ is the total number of pixels, $y$ is the cutout of the galaxy, normalized to a maximum value of 1 ($y = \text{cutout}/\text{max}(\text{cutout})$), and $M$ is the model calculated by volunteers.
 
 
 \begin{figure}
   \includegraphics[width=8cm]{images/residualProgress.jpg}
-  \caption{Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disk component has been added: the top right contains a disk and a bulge; the bottom left has a disk, bulge and bar; the bottom right is the finished model with a disk, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8}
+  \caption{Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disk component has been added: the top right contains a disk and a bulge; the bottom left has a disk, bulge and bar; the bottom right is the finished model with a disk, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}
   \label{fig:residualsStepByStep}
 \end{figure}
 
 \subsubsection{Rendering the model}
 
-The rendering code was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level interface \textsc{regl}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer. We do experience problems with some computers and browsers not being able to render models correctly. This choice also limits precision of the model to values from 0-255. We decided that an improved user experience would result in obtaining more, high quality classifications. This was deemed was more important than a mathematically exact fit. An analytic fit in the data reduction stage would be required in order to be confident in the calculated models.
+The rendering code was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level Javascript interface \textsc{regl}\footnote{\url{https://github.com/regl-project/regl}}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer. We do experience problems with some computers and browsers not being able to render models correctly. This choice also has the impact of limiting precision of the model to that allowed by WebGL. It was decided that an improved user experience would result in obtaining more, higher quality classifications; a result deemed more important than a mathematically exact fit. An analytic fit to fine tune the obtained models would be required in order to be fully confident in the numerical values of the resulting parameters.
 
 \subsection{Images and Ancillary Data}
 \label{sec:data}
-The original sample proposed for the Galaxy Builder project aimed to mirror the \textit{stellar mass-complete sample} in \citet{Hart2017:1708.04628v1}. This was a sample of face-on spiral galaxies, with and without bars, complete in stellar mass. The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas \citep{2011AJ....142...31B}.
-
-% \comment{List specific selections, cite source of images and redshifts and NSA catalog}
-% The \textit{stellar mass complete sample} defined by \citet{Hart2017:1708.04628v1} has the following criteria:
+The original sample proposed for the Galaxy Builder project aimed to mirror the \textit{stellar mass-complete sample} in \citet{Hart2017:1708.04628v1}. This was a sample of face-on spiral galaxies, with and without bars, complete in stellar mass. The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas \citep{2011AJ....142...31B}. The \textit{stellar mass complete sample} has the following criteria:
 
 \begin{itemize}
   \item GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$
@@ -72,12 +67,12 @@ This selection criteria results in the \textit{stellar mass-complete sample} of 
 
 \subsubsection{Image and modelling metadata extraction}
 
-The galaxy data shown to volunteers in the Galaxy Builder project came in two forms: A gray-scale image cutout of the galaxy and a JSON array which was rendered onto an HTML canvas element.
+The galaxy data shown to volunteers in the Galaxy Builder project came in two forms: A gray-scale image cutout of the galaxy and a JSON file containing rendering information for the web-interface.
 
 Both forms of data were obtained using a similar process:
 
 \begin{itemize}
-\item A montage of multiple r-band observations from the SDSS DR13 data release was created. To combine multiple FITS images, we made use of the \textsc{Montage}\footnote{Montage is funded by the National Science Foundation under Grant Number ACI-1440620, and was previously funded by the National Aeronautics and Space Administration's Earth Science Technology Office, Computation Technologies Project, under Cooperative Agreement Number NCC5-626 between NASA and the California Institute of Technology.} software package.\footnote{2 selected galaxies failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown.}
+\item A montage of multiple r-band observations from the SDSS DR13 data release was created. To combine multiple FITS images, we made use of the \textsc{Montage}\footnote{Montage is funded by the National Science Foundation under Grant Number ACI-1440620, and was previously funded by the National Aeronautics and Space Administration's Earth Science Technology Office, Computation Technologies Project, under Cooperative Agreement Number NCC5-626 between NASA and the California Institute of Technology.} software package.\footnote{Two out of the two-hundred selected galaxies failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown.}
 \item This montage was cropped to four times the Petrosian radius of the galaxy.
 \item The \textsc{SExtractor} software \citep{source-extractor} was used to identify regions containing foreground stars and generate a mask.
 \item The JSON file was written containing the cut-out data and the 2D boolean mask obtained from the source extraction process. This file also contained other metadata needed for the rendering process (PSF, the size of the PSF array, and the width and height of the image).
@@ -87,13 +82,13 @@ Both forms of data were obtained using a similar process:
 
 We chose to use r-band images in our subject set due to it's higher signal-to-noise than other bands.
 
-Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-client}\footnote{\url{https://github.com/zooniverse/aggregation-for-caesar}} was used to upload them as a subject-set to the Zooniverse.
+Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-client}\footnote{\url{https://github.com/zooniverse/aggregation-for-caesar}} \citep{coleman_krawczyk_2019_2562861} was used to upload them as a subject-set to the Zooniverse.
 
 
 \subsection{The Galaxy Model}
 \label{section:galaxy-model}
 
-The model to be rendered was largely based off of components and methodology described in \citet{galfit-paper}. The chosen model components were: An exponential, elliptical disc; an elliptical S\'ersic bulge; a S\'ersic bar with a ``boxiness'' modifier on the isophote; spiral arms drawn using freehand lines.
+The model to be rendered was largely based off of components and methodology described in \citet{galfit-paper}. The chosen model components were: An exponential, elliptical disk; an elliptical S\'ersic bulge; a S\'ersic bar with a ``boxiness'' modifier on the isophote; spiral arms drawn using freehand lines.
 
 Each spiral arm is modelled using a polygon-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn polygon-line, with users able to choose the Gaussian spread and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disk, though volunteers could change the half-light radius of this falloff disk.
 
@@ -133,17 +128,21 @@ Clustering was done using the Jaccard distance measure, which is a simple metric
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
-The algorithm chosen to perform clustering was the Density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \cite{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by manually iterating over a small number of galaxies.
+The algorithm chosen to perform clustering was the Density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \cite{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
 
-Once a cluster of drawn shapes was identified, the means of their widths, heights, centre-points and rotations were calculated. Mean rotation was calculated using the \texttt{avg\_angle} function inside the Zooniverse's \textsc{panoptes-aggregation} package. This properly minimises the mean squared error (which many formulas do not), whilst also respecting isophotal symmetries.
+For shapes clustered in this way, we define their mean to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster.
 
-I.e. the angle $\bar{\phi}$ which minimises
-
-\begin{equation}
-    D = \sum_{i=0}^n \left(\phi_i \bmod \phi_\text{max} - \bar{\phi}\right)
-\end{equation}
-
-Where $\phi_\text{max} = 2\pi / n$ and $n$ is the degree of rotational symmetry of the isophote (2 for ellipses, three for equilateral triangles and so on). The mean angle is restricted to $\bar{\phi} \in [0, 2\pi / n)$
+% An alternate method explored to calculate the mean shape of a cluster was to calculae the means of the parameters (width / height / position / roll) of the shapes in the cluster. Mean rotation was calculated using the \texttt{avg\_angle} function inside the Zooniverse's \textsc{panoptes-aggregation} package. This properly minimises the mean squared error (which many formulas do not), whilst also respecting isophotal symmetries.
+%
+% I.e. the angle $\bar{\phi}$ which minimises
+%
+% \begin{equation}
+%     D = \sum_{i=0}^n \left(\phi_i \bmod \phi_\text{max} - \bar{\phi}\right)
+% \end{equation}
+%
+% Where $\phi_\text{max} = 2\pi / n$ and $n$ is the degree of rotational symmetry of the isophote (2 for ellipses, three for equilateral triangles and so on). The mean angle is restricted to $\bar{\phi} \in [0, 2\pi / n)$
+%
+% This method was not deemed as justifiable given the clustering method used.
 
 For our example galaxy, UGC 4721, all drawn disks, bulges and bars can be seen in Fig.\ref{fig:drawn_shapes}. Resulting mean components can be seen in Fig.\ref{fig:clustered_shapes} and the final galaxy model (without spiral arms) can be seen in \ref{fig:clustered_shapes}
 
