@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  8 MAR 2019 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  8 MAR 2019 16:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1233,48 +1233,48 @@ Overfull \hbox (15.10355pt too wide) in paragraph at lines 97--97
 
 (./sections/abstract.tex) (./sections/introduction.tex
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 12.
+(Font)              scaled to size 9.0pt on input line 13.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 12.
+(Font)              scaled to size 7.3pt on input line 13.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 15.
-LaTeX Font Info:    No file TS1aer.fd. on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 16.
+LaTeX Font Info:    No file TS1aer.fd. on input line 16.
 
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textcopyright' on input line 15.
+(Font)              for symbol `textcopyright' on input line 16.
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]) [2] (./sections/method.tex
-Underfull \hbox (badness 1783) in paragraph at lines 9--10
+Underfull \hbox (badness 1783) in paragraph at lines 10--11
 \T1/aer/m/n/9 Zoo eco-sys-tem was the Galaxy Zoo: Mer-gers pro-ject
  []
 
-<images/interfaceInProgress.jpg, id=229, 1991.44pt x 1193.45876pt>
+<images/interfaceInProgress.jpg, id=235, 1991.44pt x 1193.45876pt>
 File: images/interfaceInProgress.jpg Graphic file (type jpg)
  <use images/interfaceInProgress.jpg>
-Package pdftex.def Info: images/interfaceInProgress.jpg used on input line 22.
+Package pdftex.def Info: images/interfaceInProgress.jpg used on input line 23.
 (pdftex.def)             Requested size: 503.61368pt x 301.80577pt.
- <images/residualProgress.jpg, id=232, 807.015pt x 807.015pt>
+ <images/residualProgress.jpg, id=238, 807.015pt x 807.015pt>
 File: images/residualProgress.jpg Graphic file (type jpg)
  <use images/residualProgress.jpg>
-Package pdftex.def Info: images/residualProgress.jpg used on input line 41.
+Package pdftex.def Info: images/residualProgress.jpg used on input line 42.
 (pdftex.def)             Requested size: 227.62204pt x 227.62505pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 48.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 49.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ) [3]
-Underfull \hbox (badness 1237) in paragraph at lines 63--64
+Underfull \hbox (badness 1237) in paragraph at lines 64--65
 []\T1/aer/m/n/9 A volume cor-rec-tion is ap-plied, given by $\OT1/ntxtlf/m/n/9 9\OML/ntxmi/m/it/9 :\OT1/ntxtlf/m/n/9 45 \OML/ntxmi/m/it/9 <
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 66--67
+Underfull \hbox (badness 1163) in paragraph at lines 67--68
 []\T1/aer/m/n/9 This se-lec-tion cri-teria res-ults in the \T1/aer/m/it/9 stel-lar mass-
  []
 
@@ -1285,53 +1285,53 @@ Underfull \vbox (badness 1910) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 \end{itemize}
-                   <./images/interfaceInProgress.jpg>] <images__results/drawn_shapes.pdf, id=294, 1279.86224pt x 460.37799pt>
+l.82 \end{itemize}
+                   <./images/interfaceInProgress.jpg>] <images__results/drawn_shapes.pdf, id=297, 1279.86224pt x 460.37799pt>
 File: images__results/drawn_shapes.pdf Graphic file (type pdf)
  <use images__results/drawn_shapes.pdf>
-Package pdftex.def Info: images__results/drawn_shapes.pdf used on input line 118.
+Package pdftex.def Info: images__results/drawn_shapes.pdf used on input line 119.
 (pdftex.def)             Requested size: 426.79134pt x 153.51982pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.133 F
-       or shapes clustered in this way, we define their mean to be the shape... <./images/residualProgress.jpg>] <images__results/mean_shapes.pdf, id=319, 1281.33012pt x 430.20683pt>
+l.134 F
+       or shapes clustered in this way, we define their mean to be the shape... <./images/residualProgress.jpg>] <images__results/mean_shapes.pdf, id=322, 1281.33012pt x 430.20683pt>
 File: images__results/mean_shapes.pdf Graphic file (type pdf)
  <use images__results/mean_shapes.pdf>
-Package pdftex.def Info: images__results/mean_shapes.pdf used on input line 150.
+Package pdftex.def Info: images__results/mean_shapes.pdf used on input line 151.
 (pdftex.def)             Requested size: 426.79134pt x 143.2947pt.
- <images__results/clustered_shapes.pdf, id=320, 559.69667pt x 558.3322pt>
+ <images__results/clustered_shapes.pdf, id=323, 559.69667pt x 558.3322pt>
 File: images__results/clustered_shapes.pdf Graphic file (type pdf)
  <use images__results/clustered_shapes.pdf>
-Package pdftex.def Info: images__results/clustered_shapes.pdf used on input line 157.
+Package pdftex.def Info: images__results/clustered_shapes.pdf used on input line 158.
 (pdftex.def)             Requested size: 227.62204pt x 227.06895pt.
- <images__results/drawn_polylines.pdf, id=321, 559.69667pt x 558.47336pt>
+ <images__results/drawn_polylines.pdf, id=324, 559.69667pt x 558.47336pt>
 File: images__results/drawn_polylines.pdf Graphic file (type pdf)
  <use images__results/drawn_polylines.pdf>
-Package pdftex.def Info: images__results/drawn_polylines.pdf used on input line 165.
+Package pdftex.def Info: images__results/drawn_polylines.pdf used on input line 166.
 (pdftex.def)             Requested size: 227.62204pt x 227.12637pt.
- <images__results/arm_clusters.pdf, id=324, 559.69667pt x 558.47336pt>
+ <images__results/arm_clusters.pdf, id=327, 559.69667pt x 558.47336pt>
 File: images__results/arm_clusters.pdf Graphic file (type pdf)
  <use images__results/arm_clusters.pdf>
-Package pdftex.def Info: images__results/arm_clusters.pdf used on input line 175.
+Package pdftex.def Info: images__results/arm_clusters.pdf used on input line 176.
 (pdftex.def)             Requested size: 227.62204pt x 227.12637pt.
 
-Underfull \hbox (badness 1360) in paragraph at lines 182--183
+Underfull \hbox (badness 1360) in paragraph at lines 183--184
 []\T1/aer/m/n/9 Once spiral clas-si-fic-a-tions on a galaxy have been
  []
 
-<images__results/log_spirals.pdf, id=328, 559.69667pt x 558.47336pt>
+<images__results/log_spirals.pdf, id=331, 559.69667pt x 558.47336pt>
 File: images__results/log_spirals.pdf Graphic file (type pdf)
  <use images__results/log_spirals.pdf>
-Package pdftex.def Info: images__results/log_spirals.pdf used on input line 187.
+Package pdftex.def Info: images__results/log_spirals.pdf used on input line 188.
 (pdftex.def)             Requested size: 227.62204pt x 227.12637pt.
 ) [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.120 \newpage
-               <./images__results/drawn_shapes.pdf>] (./sections/results.tex <images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf, id=381, 417.61143pt x 327.20317pt>
+               <./images__results/drawn_shapes.pdf>] (./sections/results.tex <images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf, id=384, 417.61143pt x 327.20317pt>
 File: images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf Graphic file (type pdf)
  <use images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf>
 Package pdftex.def Info: images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf used on input line 13.
@@ -1357,12 +1357,12 @@ pdfTeX warning: pdflatex (file ./images__results/clustered_shapes.pdf): PDF incl
 > <./images__results/drawn_polylines.pdf
 
 pdfTeX warning: pdflatex (file ./images__results/drawn_polylines.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <images__results/pitch-angle-comparison.pdf, id=513, 388.87158pt x 268.01317pt>
+>] <images__results/pitch-angle-comparison.pdf, id=516, 388.87158pt x 268.01317pt>
 File: images__results/pitch-angle-comparison.pdf Graphic file (type pdf)
  <use images__results/pitch-angle-comparison.pdf>
 Package pdftex.def Info: images__results/pitch-angle-comparison.pdf used on input line 89.
 (pdftex.def)             Requested size: 227.62204pt x 156.88316pt.
- <images__results/pitch-angle-comparison2.pdf, id=519, 389.05687pt x 268.01317pt>
+ <images__results/pitch-angle-comparison2.pdf, id=522, 389.05687pt x 268.01317pt>
 File: images__results/pitch-angle-comparison2.pdf Graphic file (type pdf)
  <use images__results/pitch-angle-comparison2.pdf>
 Package pdftex.def Info: images__results/pitch-angle-comparison2.pdf used on input line 97.
@@ -1424,7 +1424,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--118
 \T1/aer/m/n/8 DOI to the re-pos-it-ory, [][]doi:10.5281/zenodo.2562861[][],
  []
 
-) (./sections/appendix.tex <images/montage-subject-21096891.jpg, id=770, 1003.75pt x 501.875pt>
+) (./sections/appendix.tex <images/montage-subject-21096891.jpg, id=773, 1003.75pt x 501.875pt>
 File: images/montage-subject-21096891.jpg Graphic file (type jpg)
  <use images/montage-subject-21096891.jpg>
 Package pdftex.def Info: images/montage-subject-21096891.jpg used on input line 47.
@@ -1456,22 +1456,22 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 10695 strings out of 493014
- 150227 string characters out of 6133352
- 254453 words of memory out of 5000000
- 13756 multiletter control sequences out of 15000+600000
+ 10699 strings out of 493014
+ 150287 string characters out of 6133352
+ 254595 words of memory out of 5000000
+ 13760 multiletter control sequences out of 15000+600000
  108066 words of font info for 242 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,15n,35p,1224b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,15n,35p,1214b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on compile_output/main.pdf (12 pages, 2241427 bytes).
+Output written on compile_output/main.pdf (12 pages, 2243309 bytes).
 PDF statistics:
- 927 PDF objects out of 1000 (max. 8388607)
- 578 compressed objects within 6 object streams
+ 930 PDF objects out of 1000 (max. 8388607)
+ 581 compressed objects within 6 object streams
  113 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
