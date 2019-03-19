@@ -68,6 +68,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}Citizen Science}{2}{subsubsection.1.1.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Light Distribution Modelling}{2}{subsection.1.2}}
 \citation{Holincheck2016:1604.00435v1}
+\citation{Lupton2003:astro-ph/0312483v1}
 \citation{Hart2017:1708.04628v1}
 \citation{Willett2013:1308.3496v2}
 \citation{2011AJ....142...31B}
@@ -77,18 +78,17 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Project Timeline and Development}{3}{subsubsection.2.1.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}The project interface}{3}{subsubsection.2.1.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Rendering the model}{3}{subsubsection.2.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Images and Ancillary Data}{3}{subsection.2.2}}
-\newlabel{sec:data}{{2.2}{3}{Images and Ancillary Data}{subsection.2.2}{}}
 \citation{Pozzetti2009:0907.5416v2}
+\citation{Hart2017:1708.04628v1}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black.}}{4}{figure.1}}
+\newlabel{fig:interfaceInProgress}{{1}{4}{The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Images and Ancillary Data}{4}{subsection.2.2}}
+\newlabel{sec:data}{{2.2}{4}{Images and Ancillary Data}{subsection.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Image and modelling metadata extraction}{4}{subsubsection.2.2.1}}
 \citation{source-extractor}
 \citation{Lupton2003:astro-ph/0312483v1}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the yellow and blue residuals. Where the image equals the model the residual is black.}}{4}{figure.1}}
-\newlabel{fig:interfaceInProgress}{{1}{4}{The galaxy builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the yellow and blue residuals. Where the image equals the model the residual is black}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Image and modelling metadata extraction}{4}{subsubsection.2.2.1}}
 \citation{coleman_krawczyk_2019_2562861}
 \citation{galfit-paper}
-\citation{dbscan}
-\citation{scikit-learn}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disk component has been added: the top right contains a disk and a bulge; the bottom left has a disk, bulge and bar; the bottom right is the finished model with a disk, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}}{5}{figure.2}}
 \newlabel{fig:residualsStepByStep}{{2}{5}{Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disk component has been added: the top right contains a disk and a bulge; the bottom left has a disk, bulge and bar; the bottom right is the finished model with a disk, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The Galaxy Model}{5}{subsection.2.3}}
@@ -97,22 +97,27 @@
 \newlabel{sec:retirement-limit}{{2.4}{5}{Choice of Retirement limit}{subsection.2.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Classification Aggregation Methodology}{5}{subsection.2.5}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Disk, Bulge and Bar Aggregation}{5}{subsubsection.2.5.1}}
+\citation{dbscan}
+\citation{scikit-learn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Components drawn by volunteers for UGC 4721. The top left panel shows drawn disks (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}}{6}{figure.3}}
+\newlabel{fig:drawn_shapes}{{3}{6}{Components drawn by volunteers for UGC 4721. The top left panel shows drawn disks (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms}{figure.3}{}}
 \citation{local-outlier-factor}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example of drawn components for UGC 4721}}{6}{figure.3}}
-\newlabel{fig:drawn_shapes}{{3}{6}{Example of drawn components for UGC 4721}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Spiral Arm Aggregation}{6}{subsubsection.2.5.2}}
-\citation{Kruk2017:1710.00093v2}
-\citation{Masters2010:1003.0449v2}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Calculated mean components for UGC 4721. The mean disk is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel.}}{7}{figure.4}}
 \newlabel{fig:mean_shapes}{{4}{7}{Calculated mean components for UGC 4721. The mean disk is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel}{figure.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green.}}{7}{figure.5}}
-\newlabel{fig:clustered_shapes}{{5}{7}{Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green}{figure.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{7}{section.3}}
-\newlabel{sec:results}{{3}{7}{Results}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Examination of volunteer consistency}{7}{subsection.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Disk, Bulge and Bar}{7}{subsection.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Example of drawn poly-lines for UGC 4721}}{7}{figure.6}}
-\newlabel{fig:drawn_polylines}{{6}{7}{Example of drawn poly-lines for UGC 4721}{figure.6}{}}
+\newlabel{fig:aggregate_model}{{5}{7}{Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm.}}{7}{figure.6}}
+\newlabel{fig:arm_clusters}{{6}{7}{The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm}{figure.6}{}}
+\citation{Kruk2017:1710.00093v2}
+\citation{Masters2010:1003.0449v2}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The fitted logarithmic spirals for UGC 4721}}{8}{figure.7}}
+\newlabel{fig:log_spirals}{{7}{8}{The fitted logarithmic spirals for UGC 4721}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between the axis ratios of the disk components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit.}}{8}{figure.8}}
+\newlabel{fig:ax_ratio_comparison}{{8}{8}{Comparison between the axis ratios of the disk components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit}{figure.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{8}{section.3}}
+\newlabel{sec:results}{{3}{8}{Results}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Examination of volunteer consistency}{8}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Disk, Bulge and Bar}{8}{subsection.3.2}}
 \citation{Kruk2017:1710.00093v2}
 \citation{Kruk2017:1710.00093v2}
 \citation{Kruk2017:1710.00093v2}
@@ -122,22 +127,12 @@
 \citation{Hart2016:1607.01019v1}
 \citation{Hart2016:1607.01019v1}
 \citation{Hart2016:1607.01019v1}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm.}}{8}{figure.7}}
-\newlabel{fig:arm_clusters}{{7}{8}{The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The fitted logarithmic spirals for UGC 4721}}{8}{figure.8}}
-\newlabel{fig:log_spirals}{{8}{8}{The fitted logarithmic spirals for UGC 4721}{figure.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison between the axis ratios of the disk components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit.}}{8}{figure.9}}
-\newlabel{fig:ax_ratio_comparison}{{9}{8}{Comparison between the axis ratios of the disk components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Spiral Arms}{8}{subsection.3.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Model selection}{8}{subsubsection.3.3.1}}
-\newlabel{table:sandor-fits}{{3.2}{9}{Disk, Bulge and Bar}{figure.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Table comparing the result of guided photometric three-component fits performed by \citet  {Kruk2017:1710.00093v2} to the aggregated model obtained from Galaxy Builder. All length units are in arcseconds. \comment {Change from using zooniverse subject ids to IAU name from NSA} \comment {Needs updating}}}{9}{table.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A comparison of Pitch angle obtained by \citet  {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. Errors on the Galaxy Builder pitch angles come from dispersion in the arms drawn by volunteers.}}{9}{figure.10}}
-\newlabel{fig:hart_pitch_angle}{{10}{9}{A comparison of Pitch angle obtained by \citet {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. Errors on the Galaxy Builder pitch angles come from dispersion in the arms drawn by volunteers}{figure.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A comparison between pitch angles obtained by \citet  {Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder (orange) and SpArcFiRe (green). It is worth noting that in this plot, unlike Fig.\ref  {fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}}{9}{figure.11}}
-\newlabel{fig:sparcfire_pitch_angle}{{11}{9}{A comparison between pitch angles obtained by \citet {Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder (orange) and SpArcFiRe (green). It is worth noting that in this plot, unlike Fig.\ref {fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle}{figure.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{10}{section.4}}
-\newlabel{sec:conclusions}{{4}{10}{Conclusions}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces A comparison of Pitch angle obtained by \citet  {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. Errors on the Galaxy Builder pitch angles come from dispersion in the arms drawn by volunteers.}}{9}{figure.9}}
+\newlabel{fig:hart_pitch_angle}{{9}{9}{A comparison of Pitch angle obtained by \citet {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. Errors on the Galaxy Builder pitch angles come from dispersion in the arms drawn by volunteers}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Spiral Arms}{9}{subsection.3.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A comparison between pitch angles obtained by \citet  {Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. In this plot, unlike Fig.\ref  {fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}}{9}{figure.10}}
+\newlabel{fig:sparcfire_pitch_angle}{{10}{9}{A comparison between pitch angles obtained by \citet {Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. In this plot, unlike Fig.\ref {fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Model selection}{9}{subsubsection.3.3.1}}
 \bibstyle{mnras}
 \bibdata{bibliography}
 \bibcite{SDSSDR7}{{1}{2009}{{{Abazajian} et~al.}}{{{Abazajian} et~al.,}}}
@@ -152,6 +147,10 @@
 \bibcite{Dobbs2014:1407.5062v1}{{10}{2014}{{Dobbs \& Baba}}{{Dobbs \& Baba}}}
 \bibcite{Fall2018:1812.06144v1}{{11}{2018}{{Fall \& Romanowsky}}{{Fall \& Romanowsky}}}
 \bibcite{Gadotti2010:1003.1719v2}{{12}{2010}{{Gadotti}}{{Gadotti}}}
+\newlabel{table:sandor-fits}{{3.2}{10}{Disk, Bulge and Bar}{figure.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Table comparing the result of guided photometric three-component fits performed by \citet  {Kruk2017:1710.00093v2} to the aggregated model obtained from Galaxy Builder. All length units are in arcseconds. \comment {Change from using zooniverse subject ids to IAU name from NSA} \comment {Needs updating}}}{10}{table.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{10}{section.4}}
+\newlabel{sec:conclusions}{{4}{10}{Conclusions}{section.4}{}}
 \bibcite{Hart2016:1607.01019v1}{{13}{2016}{{Hart et~al.}}{{Hart et~al.,}}}
 \bibcite{Hart2017:1708.04628v1}{{14}{2017}{{Hart et~al.}}{{Hart et~al.,}}}
 \bibcite{Holincheck2016:1604.00435v1}{{15}{2016}{{Holincheck et~al.}}{{Holincheck et~al.,}}}
@@ -184,11 +183,11 @@
 \bibcite{Willett2013:1308.3496v2}{{42}{2013}{{Willett et~al.}}{{Willett et~al.,}}}
 \bibcite{Willett2016:1610.03068v2}{{43}{2016}{{Willett et~al.}}{{Willett et~al.,}}}
 \bibcite{deVaucouleurs1991}{{44}{1991}{{{de Vaucouleurs} et~al.}}{{{de Vaucouleurs}, {de Vaucouleurs}, {Corwin}, {Buta}, {Paturel} \& {Fouqu{\'e}}}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C1}{\ignorespaces An example of the resulting spiral classifications for a galaxy in the Galaxy Builder sample}}{11}{figure.A3.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Technical overview of the software}{11}{section.A1}}
 \@writefile{toc}{\contentsline {section}{\numberline {B}Mathematical description of the poly-line separation measure}{11}{section.A2}}
 \newlabel{appendix:clusteringMaths}{{B}{11}{Mathematical description of the poly-line separation measure}{section.A2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Example resulting splines from Galaxy Builder}{11}{section.A3}}
-\newlabel{appendix:exampleSplines}{{C}{11}{Example resulting splines from Galaxy Builder}{section.A3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {D}Model Rendering Profile}{11}{section.A4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C1}{\ignorespaces An example of the resulting spiral classifications for a galaxy in the Galaxy Builder sample}}{12}{figure.A3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Example resulting splines from Galaxy Builder}{12}{section.A3}}
+\newlabel{appendix:exampleSplines}{{C}{12}{Example resulting splines from Galaxy Builder}{section.A3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Model Rendering Profile}{12}{section.A4}}
 \newlabel{lastpage}{{4}{12}{Conclusions}{equation.A4.5}{}}

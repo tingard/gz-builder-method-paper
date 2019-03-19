@@ -95,7 +95,7 @@ We can also directly compare the pitch angles from Galaxy Builder models to the 
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/pitch-angle-comparison2.pdf}
-  \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder (orange) and SpArcFiRe (green). It is worth noting that in this plot, unlike Fig.\ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}
+  \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. In this plot, unlike Fig.\ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}
   \label{fig:sparcfire_pitch_angle}
 \end{figure}
 
@@ -106,7 +106,6 @@ We can also directly compare the pitch angles from Galaxy Builder models to the 
 \comment{This is more "Are log spirals right?", should it go in a different paper?}
 
 Group K-fold cross validation is used to perform model selection, where points are grouped according to the poly-line they were drawn in. Five folds is chosen as a compromise to minimise variance on the resulting scores, while also minimising the bias from removing too many classifications from our training set. To score the goodness-of-fit of a model, we use negative median absolute error.
-
 
 In order to confidently describe a spiral arm as not a logarithmic spiral, we \comment{TODO}
 

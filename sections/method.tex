@@ -116,25 +116,25 @@ Once this hand-picked sample was completed, the remaining galaxies from the init
 
 \subsection{Classification Aggregation Methodology}
 
-We will use galaxy UGC 4721 as an example galaxy for the illustration of the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 disks, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figures \ref{fig:drawn_shapes} and \ref{fig:drawn_polylines} \comment{merge these figures}.
+We will use galaxy UGC 4721 as an example galaxy for the illustration of the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 disks, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figure \ref{fig:drawn_shapes}.
 
 \subsubsection{Disk, Bulge and Bar Aggregation}
 
 \begin{figure*}
-  \includegraphics[width=15cm]{images__results/drawn_shapes.pdf}
-  \caption{Example of drawn components for UGC 4721}
+  \includegraphics[width=17.3cm]{images__results/drawn_shapes.pdf}
+  \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn disks (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}
   \label{fig:drawn_shapes}
 \end{figure*}
 
 Clustering the disk, bulge and bar components was done purely on the shapes drawn by volunteers, as preliminary data exploration suggested that some users simply left model parameters at their default values, or moved them to an extreme of the allowed range. These shapes can be used as the starting point for numerical fits.
 
-Clustering was done using the Jaccard distance measure, which is a simple metric determining the relative shared area of two shapes:
+Clustering was done using the Jaccard distance measure (also known as the intersect over union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
 
 \begin{equation}
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
-The algorithm chosen to perform clustering was the Density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \cite{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
+The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \cite{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
 
 For shapes clustered in this way, we define their mean to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster.
 
@@ -150,27 +150,19 @@ For shapes clustered in this way, we define their mean to be the shape which min
 %
 % This method was not deemed as justifiable given the clustering method used.
 
-For our example galaxy, UGC 4721, all drawn disks, bulges and bars can be seen in Fig.\ref{fig:drawn_shapes}. Resulting mean components can be seen in Fig.\ref{fig:clustered_shapes} and the final galaxy model (without spiral arms) can be seen in \ref{fig:clustered_shapes}
+For our example galaxy, UGC 4721, all drawn disks, bulges, bars and spiral arms can be seen in Fig.\ref{fig:drawn_shapes}. Resulting mean components can be seen in Fig.\ref{fig:mean_shapes} and the final galaxy model (without spiral arms) can be seen in \ref{fig:aggregate_model}
 
 \begin{figure*}
-  \includegraphics[width=15cm]{images__results/mean_shapes.pdf}
+  \includegraphics[width=17.3cm]{images__results/mean_shapes.pdf}
   \caption{Calculated mean components for UGC 4721. The mean disk is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel.}
   \label{fig:mean_shapes}
 \end{figure*}
 
 
 \begin{figure}
-  \includegraphics[width=8cm]{images__results/clustered_shapes.pdf}
+  \includegraphics[width=8cm]{images__results/aggregate_model.pdf}
   \caption{Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green.}
-  \label{fig:clustered_shapes}
-\end{figure}
-
-
-\subsubsection{Spiral Arm Aggregation}
-\begin{figure}
-  \includegraphics[width=8cm]{images__results/drawn_polylines.pdf}
-  \caption{Example of drawn poly-lines for UGC 4721}
-  \label{fig:drawn_polylines}
+  \label{fig:aggregate_model}
 \end{figure}
 
 To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clusteringMaths}.
