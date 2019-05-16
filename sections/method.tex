@@ -121,7 +121,7 @@ We will use galaxy UGC 4721 as an example galaxy for the illustration of the dat
 \subsubsection{Disk, Bulge and Bar Aggregation}
 
 \begin{figure*}
-  \includegraphics[width=17.3cm]{images__results/drawn_shapes.pdf}
+  \includegraphics[width=17.3cm]{images__method/drawn_shapes.pdf}
   \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn disks (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}
   \label{fig:drawn_shapes}
 \end{figure*}
@@ -153,14 +153,14 @@ For shapes clustered in this way, we define their mean to be the shape which min
 For our example galaxy, UGC 4721, all drawn disks, bulges, bars and spiral arms can be seen in Fig.\ref{fig:drawn_shapes}. Resulting mean components can be seen in Fig.\ref{fig:mean_shapes} and the final galaxy model (without spiral arms) can be seen in \ref{fig:aggregate_model}
 
 \begin{figure*}
-  \includegraphics[width=17.3cm]{images__results/mean_shapes.pdf}
+  \includegraphics[width=17.3cm]{images__method/mean_shapes.pdf}
   \caption{Calculated mean components for UGC 4721. The mean disk is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel.}
   \label{fig:mean_shapes}
 \end{figure*}
 
 
 \begin{figure}
-  \includegraphics[width=8cm]{images__results/aggregate_model.pdf}
+  \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
   \caption{Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green.}
   \label{fig:aggregate_model}
 \end{figure}
@@ -170,7 +170,7 @@ To cluster drawn spiral arms, we define a custom separation measure to represent
 We now make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications). The results of this clustering for our example galaxy can be seen in Fig.\ref{fig:arm_clusters}.
 
 \begin{figure}
-  \includegraphics[width=8cm]{images__results/arm_clusters.pdf}
+  \includegraphics[width=8cm]{images__method/arm_clusters.pdf}
   \caption{The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm.}
   \label{fig:arm_clusters}
 \end{figure}
@@ -182,7 +182,7 @@ Once spiral classifications on a galaxy have been clustered into the physical ar
 For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \comment{citation needed} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). The logarithmic spiral fit for our example galaxy is shown in Fig.\ref{fig:log_spirals}.
 
 \begin{figure}
-  \includegraphics[width=8cm]{images__results/log_spirals.pdf}
+  \includegraphics[width=8cm]{images__method/log_spirals.pdf}
   \caption{The fitted logarithmic spirals for UGC 4721}
   \label{fig:log_spirals}
 \end{figure}
