@@ -1,12 +1,20 @@
 % !TEX root = ../main.tex
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\section{Technical overview of the software}
+\section{Technical overview of the Zooniverse project}
+
+The custom code allowing in-browser galaxy photometric modelling had to be incorporated into the existing Zooniverse website front-end codebase\footnote{\url{http://github.com/zooniverse/Panoptes-Front-End}}. This front-end was written using Facebook's \textsc{React}\footnote{\url{http://reactjs.org}} JavaScript library, which uses a declarative, component-based framework to piece together an interactive webpage from a series of building blocks.
+
+Traditionally the way Zooniverse projects operate is fairly linear - with researchers uploading data, generally in the form of one or more images. These ``subjects`` are then presented to volunteers, who are asked to perform a series of relatively simple tasks to extract meaningful information useful to the project's science case. Exceptions to this workflow exist, such as the Galaxy Zoo mergers project \citep{Holincheck2016:1604.00435v1}, but not inside the current Zooniverse web platform.
+
+The Galaxy Builder project breaks the above pattern in that two of the images a volunteer is shown vary depending on their in-progress classification. This seemingly small change results in a significant amount of code restructuring, which was not anticipated at the onset of the project.
+
+Initially, rendering was performed on the CPU, simply using JavaScript. As JavaScript compilers have become increasingly advanced (approaching numpy-level speeds for many mathematical tasks), this option seemed viable for some time. However, the requirement of a smooth user-interface and near-instantaneous feedback on changes for volunteer prompted a change to GPU rendering using WebGL. For convenience, the \textsc{regl}\footnote{\url{http://regl.party/}} package was selected for use.
 
 \section{Mathematical description of the poly-line separation measure}
 \label{appendix:clusteringMaths}
 
-First, define a poly-line containing $n$ pairs of x- and y-values (vertices) as
+First, define a poly-line containing $n$ 2D cartesian coordinates (vertices) as
 
 \begin{equation}
 A: \{i \in \mathbb{N};\;i<n\} \longrightarrow \mathbb{R}

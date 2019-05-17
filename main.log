@@ -1,0 +1,16 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdftex 2017.2.2)  16 MAY 2019 14:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+! Undefined control sequence.
+l.24 \documentclass
+                   [fleqn,usenatbib]{mnras}
+? 
+! Emergency stop.
+l.24 \documentclass
+                   [fleqn,usenatbib]{mnras}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
