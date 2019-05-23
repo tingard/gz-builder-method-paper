@@ -3,6 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
+Repeated entry---line 711 of file bibliography.bib
+ : @article{2017MNRAS.464.4176W
+ :                             ,
+I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 "ArXiv e-prints" is a string literal, `journal' is a missing field
@@ -20,13 +24,6 @@ Warning--empty journal in Hart2016:1607.01019v1
 ---they aren't the same literal types for entry Hart2016:1607.01019v1
 while executing---line 1822 of file mnras.bst
 "ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Hart2017:1708.04628v1
-while executing---line 1822 of file mnras.bst
-Warning--empty journal in Hart2017:1708.04628v1
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Hart2017:1708.04628v1
-while executing---line 1822 of file mnras.bst
-"ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Holincheck2016:1604.00435v1
 while executing---line 1822 of file mnras.bst
 Warning--empty journal in Holincheck2016:1604.00435v1
@@ -40,6 +37,13 @@ while executing---line 1822 of file mnras.bst
 Warning--empty journal in Kruk2017:1705.00007v1
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Kruk2017:1705.00007v1
+while executing---line 1822 of file mnras.bst
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Masters2019:1904.11436v1
+while executing---line 1822 of file mnras.bst
+Warning--empty journal in Masters2019:1904.11436v1
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry Masters2019:1904.11436v1
 while executing---line 1822 of file mnras.bst
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Mendez-Abreu2016:1610.05324v1
@@ -64,45 +68,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 Warning--empty publisher in deVaucouleurs1991
-You've used 44 entries,
+You've used 45 entries,
             2881 wiz_defined-function locations,
-            1072 strings with 24679 characters,
-and the built_in function-call counts, 18615 in all, are:
-= -- 1444
-> -- 1340
+            1082 strings with 25670 characters,
+and the built_in function-call counts, 19024 in all, are:
+= -- 1488
+> -- 1354
 < -- 65
-+ -- 668
++ -- 674
 - -- 144
-* -- 2320
-:= -- 2867
+* -- 2389
+:= -- 2916
 add.period$ -- 0
-call.type$ -- 44
-change.case$ -- 88
-chr.to.int$ -- 42
-cite$ -- 55
-duplicate$ -- 989
-empty$ -- 1030
-format.name$ -- 302
-if$ -- 3142
+call.type$ -- 45
+change.case$ -- 90
+chr.to.int$ -- 43
+cite$ -- 56
+duplicate$ -- 1010
+empty$ -- 1052
+format.name$ -- 306
+if$ -- 3214
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 46
-newline$ -- 146
-num.names$ -- 258
-pop$ -- 287
+missing$ -- 47
+newline$ -- 149
+num.names$ -- 262
+pop$ -- 289
 preamble$ -- 1
-purify$ -- 176
+purify$ -- 180
 quote$ -- 0
-skip$ -- 546
+skip$ -- 560
 stack$ -- 0
-substring$ -- 916
-swap$ -- 401
-text.length$ -- 180
+substring$ -- 952
+swap$ -- 411
+text.length$ -- 184
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 387
+type$ -- 396
 warning$ -- 11
-while$ -- 279
+while$ -- 285
 width$ -- 0
-write$ -- 438
-(There were 16 error messages)
+write$ -- 448
+(There were 17 error messages)

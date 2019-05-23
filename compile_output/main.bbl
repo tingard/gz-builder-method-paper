@@ -84,9 +84,10 @@ Gadotti D.~A.,  2010, Monthly Notices of the Royal Astronomical Society, 415,
   et~al.}{2016}]{Hart2016:1607.01019v1}
 Hart R.~E.,  et~al., 2016
 
-\bibitem[\protect\citeauthoryear{Hart et~al.,}{Hart
-  et~al.}{2017}]{Hart2017:1708.04628v1}
-Hart R.~E.,  et~al., 2017
+\bibitem[\protect\citeauthoryear{{Hart} et~al.,}{{Hart}
+  et~al.}{2017}]{2017MNRAS.472.2263H}
+{Hart} R.~E.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stx2137}, \href
+  {https://ui.adsabs.harvard.edu/abs/2017MNRAS.472.2263H} {472, 2263}
 
 \bibitem[\protect\citeauthoryear{Holincheck et~al.,}{Holincheck
   et~al.}{2016}]{Holincheck2016:1604.00435v1}
@@ -145,6 +146,10 @@ Lupton R.,  Blanton M.~R.,  Fekete G.,  Hogg D.~W.,  O'Mullane W.,  Szalay A.,
 Masters K.~L.,  et~al., 2010, Monthly Notices of the Royal Astronomical
   Society, 411, 2026
 
+\bibitem[\protect\citeauthoryear{Masters et~al.,}{Masters
+  et~al.}{2019}]{Masters2019:1904.11436v1}
+Masters K.~L.,  et~al., 2019
+
 \bibitem[\protect\citeauthoryear{Mendez-Abreu et~al.,}{Mendez-Abreu
   et~al.}{2016}]{Mendez-Abreu2016:1610.05324v1}
 Mendez-Abreu J.,  et~al., 2016
@@ -202,10 +207,10 @@ Simard L.,  et~al., 2002a, The Astrophysical Journal Supplement Series, 142, 1
   et~al.}{2002b}]{Simard2002:astro-ph/0205025v2}
 Simard L.,  et~al., 2002b, ASTROPHYS J SUPPL S, 142, 1
 
-\bibitem[\protect\citeauthoryear{Simmons et~al.,}{Simmons
-  et~al.}{2014}]{Simmons2014:1409.1214v1}
-Simmons B.~D.,  et~al., 2014, Monthly Notices of the Royal Astronomical
-  Society, 445, 3466
+\bibitem[\protect\citeauthoryear{{Simmons} et~al.,}{{Simmons}
+  et~al.}{2017}]{2017MNRAS.464.4420S}
+{Simmons} B.~D.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stw2587}, \href
+  {https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.4420S} {464, 4420}
 
 \bibitem[\protect\citeauthoryear{Vika, Bamford, Häußler  \& Rojas}{Vika
   et~al.}{2014}]{Vika2014:1408.4070v1}
@@ -216,10 +221,10 @@ Vika M.,  Bamford S.~P.,  Häußler B.,   Rojas A.~L.,  2014, Monthly Notices
   et~al.}{2013}]{Willett2013:1308.3496v2}
 Willett K.~W.,  et~al., 2013
 
-\bibitem[\protect\citeauthoryear{Willett et~al.,}{Willett
-  et~al.}{2016}]{Willett2016:1610.03068v2}
-Willett K.~W.,  et~al., 2016, Monthly Notices of the Royal Astronomical
-  Society, 464, 4176
+\bibitem[\protect\citeauthoryear{{Willett} et~al.,}{{Willett}
+  et~al.}{2017}]{2017MNRAS.464.4176W}
+{Willett} K.~W.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stw2568}, \href
+  {https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.4176W} {464, 4176}
 
 \bibitem[\protect\citeauthoryear{{de Vaucouleurs}, {de Vaucouleurs}, {Corwin},
   {Buta}, {Paturel}  \& {Fouqu{\'e}}}{{de Vaucouleurs}
