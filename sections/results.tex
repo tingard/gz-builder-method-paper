@@ -32,7 +32,7 @@ Regarding the components present in the aggregate models, we see some consistenc
 
 \subsection{Comparison to results in the literature}
 \subsubsection{Aggregated Disk, Bulge and Bar}
-After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the disks recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}). We note that the results from Galaxy Builder tend to prefer a slightly more elliptical axis ratio, but plateau at an axis ratio of $0.5$. This could be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes. Alternatively, this observed effect could reflect a valid observation of users - for instance that disks are more rounded closer to their centres. \comment{Is it also possible that the presence of unmodelled spiral arms impacts the result of a one-component fit and produces a more elliptical result?}
+After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the disks recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}). We note that the results from Galaxy Builder tend to prefer a slightly more elliptical axis ratio, but plateau at an axis ratio of $0.5$. This could be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes. Alternatively, this observed effect could reflect a valid observation of users - for instance that disks are more rounded closer to their centres. \comment{Is it also possible that the presence of unmodelled spiral arms impacts the result of a one-component fit and produces a more elliptical result? It makes sense in my head.}
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf}
@@ -63,6 +63,7 @@ In order to benchmark the reliability of this method of spiral parameter extract
 \end{figure}
 
 We can also directly compare the pitch angles from Galaxy Builder models to the output of the SpArcFiRe software, as shown in Figure \ref{fig:sparcfire_pitch_angle}. The SpArcFiRe pitch angle used is the length-weighted mean of all arms of the dominant chirality of a galaxy. In this plot, unlike Figure \ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.
+
 \begin{figure}
   \includegraphics[width=8cm]{images__results/pitch-angle-comparison2.pdf}
   \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. Errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}

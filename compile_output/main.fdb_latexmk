@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex compile_output/main"] 1558541090 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1558603720
+["bibtex compile_output/main"] 1558541090 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1559048891
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1558449571 45120 3fc5a855aed76ebe5a0c23d852bc2ee3 ""
-  "compile_output/main.aux" 1558603717 17505 dd900188518d2885eb85d798aa623da6 ""
+  "compile_output/main.aux" 1559048891 17505 dd900188518d2885eb85d798aa623da6 ""
   "compile_output/main.bcf" 0 -1 0 ""
   (generated)
   "compile_output/main.blg"
   "compile_output/main.bbl"
-["pdflatex"] 1558603715 "main.tex" "compile_output/main.pdf" "main" 1558603720
+["pdflatex"] 1559048889 "main.tex" "compile_output/main.pdf" "main" 1559048891
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -251,9 +251,9 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1486052417 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "compile_output/main.aux" 1558603717 17505 dd900188518d2885eb85d798aa623da6 ""
+  "compile_output/main.aux" 1559048891 17505 dd900188518d2885eb85d798aa623da6 ""
   "compile_output/main.bbl" 1558541091 10667 c8518c2ba1e2e7e96c455f8dc237463a "bibtex compile_output/main"
-  "compile_output/main.out" 1558603717 1049 69009895e07948d31e818225c010d265 ""
+  "compile_output/main.out" 1559048891 1049 69009895e07948d31e818225c010d265 ""
   "images/interfaceInProgress.jpg" 1549896470 247936 ccc50f0863c8475d653f99518b033b9f ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
   "images__method/aggregate_model.pdf" 1557746230 102937 4a40dcc69f0e2891f85970fb1d63fe8d ""
@@ -266,18 +266,18 @@
   "images__results/component_sizing.pdf" 1557234230 24506 8bf56054b1288edb0a3551e489ddef0d ""
   "images__results/pitch-angle-comparison.pdf" 1557746230 31524 1ae07ce918dbf5cee9b65c8dfdfaca0a ""
   "images__results/pitch-angle-comparison2.pdf" 1557746230 16234 b65871cef49e2df90149648365d7e8fd ""
-  "images__results/sd_comp_comparison.pdf" 1558355992 21089 9fac12a393dbafed53d877f210b9478b ""
+  "images__results/sd_comp_comparison.pdf" 1558617788 21101 33f54a4aec2e63154958a0041a1f5c67 ""
   "main.tex" 1558541065 4894 e425003a28cffcf736ee5d4854569409 ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
   "sections/abstract.tex" 1558446595 851 4c085074d0817f07d0252f57fc33720b ""
   "sections/appendix.tex" 1558541095 3545 74690a7da7166f73ef964e9241bd3407 ""
   "sections/conclusions.tex" 1558539907 1736 5441ff8e6cee6ca3c817cdf20d3c9949 ""
   "sections/introduction.tex" 1558449651 10503 6f2b3e3b3ddfe2c82b400eec43c00351 ""
-  "sections/method.tex" 1558540902 20996 c0898a6d9409aa0f6463ed51940e3054 ""
-  "sections/results.tex" 1558538925 9100 c7e84b6c285f17fe1e67c3189a99adc0 ""
+  "sections/method.tex" 1558621149 20996 bd8fbd52ed577dd2d1cde6e652873f59 ""
+  "sections/results.tex" 1558622330 9128 67d6a3c0fbd2fa288e19fe7ae927366c ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
-  "compile_output/main.log"
   "compile_output/main.out"
-  "compile_output/main.pdf"
   "compile_output/main.aux"
+  "compile_output/main.pdf"
+  "compile_output/main.log"
