@@ -5,7 +5,7 @@
 
 \subsection{The Galaxy Builder Zooniverse project}
 
-Galaxy Builder\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}} is a citizen-science project built on the Zooniverse\footnote{\url{https://www.zooniverse.org}} web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disk, bar and spiral arm components). As a project of this kind, allowing users to interact with and model data, had never been attempted inside the Zooniverse web platform before, we had to design and implement a (comparatively basic) model rendering suite inside the existing Zooniverse front-end code-base. We had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions.
+Galaxy Builder\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}} is a citizen-science project built on the Zooniverse\footnote{\url{https://www.zooniverse.org}} web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disc, bar and spiral arm components). As a project of this kind, allowing users to interact with and model data, had never been attempted inside the Zooniverse web platform before, we had to design and implement a (comparatively basic) model rendering suite inside the existing Zooniverse front-end code-base. We had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions.
 
 The closest relative to this project within the Galaxy Zoo ecosystem was the Galaxy Zoo: Mergers project \citep{Holincheck2016:1604.00435v1}. This project asked volunteers to help match the morphological properties of an image of merging galaxies to a plethora of restricted three-body simulations, in an attempt to identify the possible initial conditions resulting in the observed morphology. For part of the project, volunteers downloaded a Java applet, which would run restricted three-body simulations and generate output images. The volunteer then voted on simulations which matched a given galaxy merger image, or shared important tidal features. A new batch of simulations would then be run.
 
@@ -21,11 +21,11 @@ The Galaxy Builder project presents a volunteer with three images, which they ca
 
 \begin{figure*}
   \includegraphics[width=17.7cm]{images/interfaceInProgress.jpg}
-  \caption{The Galaxy Builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disk component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black.}
+  \caption{The Galaxy Builder interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disc component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black.}
   \label{fig:interfaceInProgress}
 \end{figure*}
 
-The interface prompts volunteers to work through the step-by-step creation of a photometric model of a galaxy (described in detail in Section \ref{section:galaxy-model}). At each step volunteers are asked to first draw a simple isophote (ellipse for disk and bulge, rectangle for bar and polygon-lines for spiral arms), and then make use of a series of sliders to adjust the parameters of the model component (i.e. brightness, S\'ersic index and boxyness).
+The interface prompts volunteers to work through the step-by-step creation of a photometric model of a galaxy (described in detail in Section \ref{section:galaxy-model}). At each step volunteers are asked to first draw a simple isophote (ellipse for disc and bulge, rectangle for bar and polygon-lines for spiral arms), and then make use of a series of sliders to adjust the parameters of the model component (i.e. brightness, S\'ersic index and boxyness).
 
 The workflow is designed so that volunteers slowly subtract increasing amounts of light from the galaxy, as can be seen in Figure \ref{fig:residualsStepByStep}. A tutorial is present which contains a step-by-step guide to completing a classification.
 
@@ -41,7 +41,7 @@ This score has the advantage of being easy (and fast) to generate from the resid
 
 \begin{figure}
   \includegraphics[width=8cm]{images/residualProgress.jpg}
-  \caption{Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disk component has been added: the top right contains a disk and a bulge; the bottom left has a disk, bulge and bar; the bottom right is the finished model with a disk, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}
+  \caption{Figure demonstrating the ideal result of each step of the classification process. The top left panel shows the galaxy after only a disc component has been added: the top right contains a disc and a bulge; the bottom left has a disc, bulge and bar; the bottom right is the finished model with a disc, bulge, bar and spiral arms. The galaxy shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}
   \label{fig:residualsStepByStep}
 \end{figure}
 
@@ -55,8 +55,7 @@ The rendering code used in the Galaxy Builder project was designed to run on a c
 \label{sec:data}
 The original sample proposed for the Galaxy Builder project aimed to mirror the \textit{stellar mass-complete sample} in \citet{2017MNRAS.472.2263H}. This was a sample of face-on spiral galaxies, with and without bars, complete in stellar mass. The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the following:
 
-\comment{Make this more verbose}
-
+\comment{Is there a clearer way to present this?}
 \begin{itemize}
   \item GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$
   \item $0.02 < z < 0.055$
@@ -90,17 +89,17 @@ Both forms of data were obtained using a similar process:
 
 We chose to use r-band images in our subject set due to it's higher signal-to-noise than other bands.
 
-Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-client}\footnote{\url{https://github.com/zooniverse/panoptes-python-client}} \citep{coleman_krawczyk_2019_2562861} was used to upload them as a subject-set to the Zooniverse.
+Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-client}\footnote{\url{https://github.com/zooniverse/panoptes-python-client}} was used to upload them as a subject-set to the Zooniverse.
 
 
 \subsection{The Galaxy Model}
 \label{section:galaxy-model}
 
-The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The chosen model components were: An exponential, elliptical disk; an elliptical S\'ersic bulge; a S\'ersic bar with a ``boxiness'' modifier on the isophote; spiral arms drawn using freehand lines.
+The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The chosen model components were: An exponential, elliptical disc; an elliptical S\'ersic bulge; a S\'ersic bar with a ``boxiness'' modifier on the isophote; spiral arms drawn using freehand lines.
 
-Each spiral arm is modelled using a polygon-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn polygon-line, with users able to choose the Gaussian spread and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disk, though volunteers could change the half-light radius of this falloff disk.
+Each spiral arm is modelled using a polygon-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn polygon-line, with users able to choose the Gaussian spread and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disc, though volunteers could change the half-light radius of this falloff disc.
 
-The modelling code correctly ignores masked regions identified in the images. It over-samples the bulge, disk and bar components to a factor of five and performs PSF convolution using a PSF obtained in the subject set creation process.
+The modelling code correctly ignores masked regions identified in the images. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained in the subject set creation process.
 
 \subsection{Choice of Retirement limit}
 \label{sec:retirement-limit}
@@ -114,7 +113,7 @@ Once this hand-picked sample was completed, and we had determined that 30 classi
 
 \subsection{Classification Aggregation Methodology}
 
-In this Section, we will use galaxy UGC 4721 as an example galaxy for the illustration of the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 disks, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figure \ref{fig:drawn_shapes}, overlaid on the greyscale \texttt{r-band} image of the galaxy.
+In this Section, we will use galaxy UGC 4721 as an example galaxy for the illustration of the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 discs, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figure \ref{fig:drawn_shapes}, overlaid on the greyscale \texttt{r-band} image of the galaxy.
 
 \subsubsection{Best Individual Classification}
 
@@ -123,17 +122,17 @@ As Galaxy Builder is primarily asking volunteers to solve a complicated regressi
 Once the ``best'' classification for a galaxy has been identified, we computationally optimize the model using a linear fitting algorithm, fixing the position of each component but allowing all other parameters to vary. This optimized model for each galaxy we refer to as the ``best individual classification``.
 
 \subsubsection{Aggregation of Volunteer Models}
-\ref{sec:aggregation_of_volunteer_models}
+\label{sec:aggregation_of_volunteer_models}
 
 It is more common in citizen science projects to try and obtain a consensus from many volunteer classifications, via some form of aggregation methodology. In Galaxy Builder we can also attempt to aggregate volunteer models, using many existing tools, metrics and algorithms, and some others custom to this data-set.
 
 \begin{figure*}
   \includegraphics[width=17.3cm]{images__method/drawn_shapes.pdf}
-  \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn disks (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}
+  \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}
   \label{fig:drawn_shapes}
 \end{figure*}
 
-Clustering the disk, bulge and bar components was done purely on the shapes drawn by volunteers, as preliminary data exploration suggested that some users simply left model parameters (i.e. brightness and concentration) at their default values, or moved them to an extreme of the allowed range.
+Clustering the disc, bulge and bar components was done purely on the shapes drawn by volunteers, as preliminary data exploration suggested that some users simply left model parameters (i.e. brightness and concentration) at their default values, or moved them to an extreme of the allowed range.
 
 Clustering was done using the Jaccard distance measure (also known as the intersect over union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
 
@@ -143,38 +142,32 @@ d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 
 The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
 
-For shapes clustered in this way, we define their mean to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster.
+For shapes clustered in this way, we define their mean to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster. For our example galaxy, UGC 4721, all drawn discs, bulges, bars and spiral arms can be seen in Figure \ref{fig:drawn_shapes}. The resulting mean shapes can be seen in Figure \ref{fig:aggregate_model}.
 
-For our example galaxy, UGC 4721, all drawn disks, bulges, bars and spiral arms can be seen in Figure \ref{fig:drawn_shapes}. Resulting clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes} and the final galaxy model (without spiral arms) can be seen in Figure \ref{fig:aggregate_model}
+% Resulting clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes} and the final galaxy model (without spiral arms) can be seen in Figure \ref{fig:aggregate_model}
 
-\begin{figure*}
-  \includegraphics[width=17.3cm]{images__method/mean_shapes.pdf}
-  \caption{Calculated mean components for UGC 4721. The mean disk is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel.}
-  \label{fig:mean_shapes}
-\end{figure*}
+% \begin{figure*}
+%   \includegraphics[width=17.3cm]{images__method/mean_shapes.pdf}
+%   \caption{Calculated mean components for UGC 4721. The mean disc is shown in orange in the first panel, the mean bulge in green in the second panel and the mean bar in red in the third panel.}
+%   \label{fig:mean_shapes}
+% \end{figure*}
 
 
 \begin{figure}
   \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
-  \caption{Resulting bulge + disk + bar model for UGC 4721. The disk is shown in blue, the bulge in orange and the bar in green.}
+  \caption{Resulting bulge + disc + bar model for UGC 4721. The disc is shown in blue, the bulge in orange and the bar in green.}
   \label{fig:aggregate_model}
 \end{figure}
 
 To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clusteringMaths}.
 
-We now make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications). The results of this clustering for our example galaxy can be seen in Figure \ref{fig:arm_clusters}.
-
-\begin{figure}
-  \includegraphics[width=8cm]{images__method/arm_clusters.pdf}
-  \caption{The result of clustering drawn poly-lines for UGC 4721 using our separation measure and the DBSCAN clustering algorithm.}
-  \label{fig:arm_clusters}
-\end{figure}
+We now make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
 
 This clustering method sometimes picks up a small cluster of lines which are a subset of another arm. This is a feature of the separation measure used and is a necessity at this step due to the presence of classifications encompassing both arms with one line.
 
 Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the result of a 2D, single-component S\'ersic fit in r-band, provided in the NSA catalogue \citep{2011AJ....142...31B}. Once deprojected, points within each drawn poly-line are converted to polar coordinates and unwound using \texttt{numpy.unwrap} to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each arm in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature.
 
-For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \comment{citation needed} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). The logarithmic spiral fit for our example galaxy is shown in Figure \ref{fig:log_spirals}.
+For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). The logarithmic spiral fit for our example galaxy is shown in Figure \ref{fig:log_spirals}.
 
 We aggregate two independent modes for a set of galaxies based on ``original'' or repeat (``validation'') classifications, obtained with the same retirement limit (see Section \ref{sec:retirement-limit} for more on this selection)
 

@@ -80,6 +80,16 @@ Fall S.~M.,  Romanowsky A.~J.,  2018
 Gadotti D.~A.,  2010, Monthly Notices of the Royal Astronomical Society, 415,
   3308
 
+\bibitem[\protect\citeauthoryear{Gao \& Ho}{Gao \&
+  Ho}{2017}]{Gao2017:1709.00746v1}
+Gao H.,  Ho L.~C.,  2017, The Astrophysical Journal, 845, 114
+
+\bibitem[\protect\citeauthoryear{{Gao}, {Ho}, {Barth}  \& {Li}}{{Gao}
+  et~al.}{2018}]{2018ApJ...862..100G}
+{Gao} H.,  {Ho} L.~C.,  {Barth} A.~J.,   {Li} Z.-Y.,  2018, \mn@doi [\apj]
+  {10.3847/1538-4357/aacdac}, \href
+  {https://ui.adsabs.harvard.edu/abs/2018ApJ...862..100G} {862, 100}
+
 \bibitem[\protect\citeauthoryear{Hart et~al.,}{Hart
   et~al.}{2016}]{Hart2016:1607.01019v1}
 Hart R.~E.,  et~al., 2016
@@ -110,21 +120,20 @@ Hopkins P.~F.,  et~al., 2010, The Astrophysical Journal, 724, 915
 Kormendy J.,  Drory N.,  Bender R.,   Cornell M.~E.,  2010, The Astrophysical
   Journal, 723, 54
 
-\bibitem[\protect\citeauthoryear{Krawczyk, McMaster  \& Allen}{Krawczyk
-  et~al.}{2019}]{coleman_krawczyk_2019_2562861}
-Krawczyk C.,  McMaster A.,   Allen C.,  2019,
-  {zooniverse/aggregation-for-caesar: Add a citable DOI to the repository},
-  \mn@doi{10.5281/zenodo.2562861}, \url
-  {https://doi.org/10.5281/zenodo.2562861}
-
-\bibitem[\protect\citeauthoryear{Kruk et~al.,}{Kruk
-  et~al.}{2017a}]{Kruk2017:1705.00007v1}
-Kruk S.~J.,  et~al., 2017a
+\bibitem[\protect\citeauthoryear{{Kruk} et~al.,}{{Kruk}
+  et~al.}{2017a}]{2017MNRAS.469.3363K}
+{Kruk} S.~J.,  et~al., 2017a, \mn@doi [\mnras] {10.1093/mnras/stx1026}, \href
+  {https://ui.adsabs.harvard.edu/abs/2017MNRAS.469.3363K} {469, 3363}
 
 \bibitem[\protect\citeauthoryear{Kruk et~al.,}{Kruk
   et~al.}{2017b}]{Kruk2017:1710.00093v2}
 Kruk S.~J.,  et~al., 2017b, Monthly Notices of the Royal Astronomical Society,
   473, 4731
+
+\bibitem[\protect\citeauthoryear{{Kruk} et~al.,}{{Kruk}
+  et~al.}{2018}]{2018MNRAS.473.4731K}
+{Kruk} S.~J.,  et~al., 2018, \mn@doi [\mnras] {10.1093/mnras/stx2605}, \href
+  {http://adsabs.harvard.edu/abs/2018MNRAS.473.4731K} {473, 4731}
 
 \bibitem[\protect\citeauthoryear{{Lauberts} \& {Valentijn}}{{Lauberts} \&
   {Valentijn}}{1989}]{1989Msngr..56...31L}
@@ -157,6 +166,11 @@ Mendez-Abreu J.,  et~al., 2016
 \bibitem[\protect\citeauthoryear{Naim et~al.,}{Naim
   et~al.}{1995}]{Naim1995:astro-ph/9502078v1}
 Naim A.,  et~al., 1995, Monthly Notices of the Royal Astronomical Society
+
+\bibitem[\protect\citeauthoryear{{Nair} \& {Abraham}}{{Nair} \&
+  {Abraham}}{2010}]{2010yCat..21860427N}
+{Nair} P.~B.,  {Abraham} R.~G.,  2010, VizieR Online Data Catalog, \href
+  {https://ui.adsabs.harvard.edu/abs/2010yCat..21860427N} {p. J/ApJS/186/427}
 
 \bibitem[\protect\citeauthoryear{Pedregosa et~al.,}{Pedregosa
   et~al.}{2011}]{scikit-learn}
@@ -198,6 +212,11 @@ Sanchez S.~F.,  et~al., 2011, Astronomy and Astrophysics, 538, A8
   et~al.}{2007}]{Scarlata2007:astro-ph/0701746v2}
 Scarlata C.,  et~al., 2007, The Astrophysical Journal Supplement Series, 172,
   494
+
+\bibitem[\protect\citeauthoryear{{Schawinski} et~al.,}{{Schawinski}
+  et~al.}{2007}]{2007ApJS..173..512S}
+{Schawinski} K.,  et~al., 2007, \mn@doi [\apjs] {10.1086/516631}, \href
+  {https://ui.adsabs.harvard.edu/abs/2007ApJS..173..512S} {173, 512}
 
 \bibitem[\protect\citeauthoryear{Simard et~al.,}{Simard
   et~al.}{2002a}]{gim2d-paper}

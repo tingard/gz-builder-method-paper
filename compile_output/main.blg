@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
-Repeated entry---line 711 of file bibliography.bib
+Repeated entry---line 763 of file bibliography.bib
  : @article{2017MNRAS.464.4176W
  :                             ,
 I'm skipping whatever remains of this entry
@@ -31,13 +31,6 @@ Warning--empty journal in Holincheck2016:1604.00435v1
 ---they aren't the same literal types for entry Holincheck2016:1604.00435v1
 while executing---line 1822 of file mnras.bst
 Warning--empty publisher in Hubble1936
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Kruk2017:1705.00007v1
-while executing---line 1822 of file mnras.bst
-Warning--empty journal in Kruk2017:1705.00007v1
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Kruk2017:1705.00007v1
-while executing---line 1822 of file mnras.bst
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Masters2019:1904.11436v1
 while executing---line 1822 of file mnras.bst
@@ -68,45 +61,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 Warning--empty publisher in deVaucouleurs1991
-You've used 45 entries,
+You've used 49 entries,
             2881 wiz_defined-function locations,
-            1082 strings with 25670 characters,
-and the built_in function-call counts, 19024 in all, are:
-= -- 1488
-> -- 1354
-< -- 65
-+ -- 674
-- -- 144
-* -- 2389
-:= -- 2916
+            1121 strings with 27465 characters,
+and the built_in function-call counts, 21248 in all, are:
+= -- 1742
+> -- 1446
+< -- 74
++ -- 711
+- -- 154
+* -- 2634
+:= -- 3200
 add.period$ -- 0
-call.type$ -- 45
-change.case$ -- 90
-chr.to.int$ -- 43
-cite$ -- 56
-duplicate$ -- 1010
-empty$ -- 1052
-format.name$ -- 306
-if$ -- 3214
+call.type$ -- 49
+change.case$ -- 98
+chr.to.int$ -- 47
+cite$ -- 59
+duplicate$ -- 1127
+empty$ -- 1156
+format.name$ -- 336
+if$ -- 3661
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 47
-newline$ -- 149
-num.names$ -- 262
-pop$ -- 289
+missing$ -- 52
+newline$ -- 161
+num.names$ -- 286
+pop$ -- 299
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 196
 quote$ -- 0
-skip$ -- 560
+skip$ -- 658
 stack$ -- 0
-substring$ -- 952
-swap$ -- 411
-text.length$ -- 184
+substring$ -- 1163
+swap$ -- 486
+text.length$ -- 201
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 396
-warning$ -- 11
-while$ -- 285
+type$ -- 432
+warning$ -- 10
+while$ -- 317
 width$ -- 0
-write$ -- 448
-(There were 17 error messages)
+write$ -- 489
+(There were 15 error messages)

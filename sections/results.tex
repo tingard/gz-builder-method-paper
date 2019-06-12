@@ -7,7 +7,7 @@ In this Section we explore the consistency with which volunteers modelled galaxi
 
 
 \subsection{Examination of Volunteer consistency}
-Figure \ref{fig:volunteer_component_consistency} illustrates the consistency with which volunteers made use of a component in their model for a galaxy. We see that volunteer classification is quite consistent, with volunteers almost always using a disk and bulge, and consistent proportions agreeing on the presence of a bar and the number of spiral arms.
+Figure \ref{fig:volunteer_component_consistency} illustrates the consistency with which volunteers made use of a component in their model for a galaxy. We see that volunteer classification is quite consistent, with volunteers almost always using a disc and bulge, and consistent proportions agreeing on the presence of a bar and the number of spiral arms.
 
 \begin{figure*}
   \includegraphics[width=17.3cm]{images__results/component_frequency.pdf}
@@ -32,26 +32,33 @@ Regarding the components present in the aggregate models, we see some consistenc
 
 \subsection{Comparison to results in the literature}
 \subsubsection{Aggregated Disk, Bulge and Bar}
-After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the disks recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}). We note that the results from Galaxy Builder tend to prefer a slightly more elliptical axis ratio, but plateau at an axis ratio of $0.5$. This could be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes. Alternatively, this observed effect could reflect a valid observation of users - for instance that disks are more rounded closer to their centres. \comment{Is it also possible that the presence of unmodelled spiral arms impacts the result of a one-component fit and produces a more elliptical result? It makes sense in my head.}
+After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the discs recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}). We note that the results from Galaxy Builder tend to prefer a slightly more elliptical axis ratio, but plateau at an axis ratio of $0.5$. This could be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes. Alternatively, this observed effect could reflect a valid observation of users - for instance that discs are more rounded closer to their centres.
+
+\comment{Is it also possible that the presence of unmodelled spiral arms impacts the result of a one-component fit and produces a more elliptical result?}
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf}
-  \caption{Comparison between the axis ratios of the disk components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit.}
+  \caption{Comparison between the axis ratios of the disc components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit.}
   \label{fig:ax_ratio_comparison}
 \end{figure}
 
 We also make comparisons to existing measures of morphology for individual galaxies. Using morphology results from GZ2, we can investigate how likely a volunteer is to incorporate a bulge or bar component in their model relative to its existing morphological classification obtained through citizen science.
 
-Mirroring \citet{Kruk2017:1710.00093v2}, we define a galaxy as disk dominated if the debiased GZ2 fractions
+Mirroring \citet{Kruk2017:1710.00093v2}, we define a galaxy as disc dominated if the debiased GZ2 fractions
 
 \begin{equation}
 p_\mathrm{no\; bulge} + p_\mathrm{just\; noticeable} > p_\mathrm{obvious\; bulge} + p_\mathrm{dominant\; bulge},
 \end{equation}
 
-or bulge dominated if the converse. Grouping our galaxies based on their type, we find that the probability of a classification of a disk dominated galaxy having a bulge was \comment{$0.7293 \pm 0.0781$}, whereas for a bulge dominated galaxy it was \comment{$0.7707 \pm 0.0806$}. Inspection of resulting aggregated models from Galaxy Builder suggests that many volunteers were using a highly elliptical bulge component to model light in both a galaxy's bulge and its bar, it is possible that enforcing a circular bulge may have provided more consistent classifications and less ambiguity for volunteers.
+or bulge dominated if the converse. Grouping our galaxies based on their type, we find that the probability of a classification of a disc dominated galaxy having a bulge was \comment{$0.73 \pm 0.08$}, whereas for a bulge dominated galaxy it was \comment{$0.77 \pm 0.08$}. Inspection of resulting aggregated models from Galaxy Builder suggests that many volunteers were using a highly elliptical bulge component to model light in both a galaxy's bulge and its bar, it is possible that enforcing a circular bulge may have provided more consistent classifications and less ambiguity for volunteers.
 
-When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.5713 \pm 0.1549 \%$} chance of containing a bar, vs \comment{$0.3666 \pm 0.1147\%$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is \comment{$0.751$}. \comment{what does this statistic mean?}
+When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.57 \pm 0.16$} chance of containing a bar, vs \comment{$0.37 \pm 0.12$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is \comment{$0.75$}, which implies a notable correlation.
 
+\begin{figure}
+  \includegraphics[width=8cm]{images__results/bulge-bar-population-comparison.pdf}
+  \caption{Histograms detailing the differences in model component usage depending on underlying morphology. We see that volunteers consistently use a bulge component regardless of galaxy type (left), but preferentially use a bar for strongly barred galaxies (right).}
+  \label{fig:bulge_bar_comparison}
+\end{figure}
 
 \subsubsection{Aggregated Spiral Arms}
 In order to benchmark the reliability of this method of spiral parameter extraction, we compare the result of our logarithmic spiral fit to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle (Figure \ref{fig:hart_pitch_angle}). Their fit was obtained using a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}. We find good agreement, although there are large error bars on the GZ2-produced pitch angle (and a the caveat in the paper that these pitch angles should not be used for individual galaxies).
@@ -62,13 +69,13 @@ In order to benchmark the reliability of this method of spiral parameter extract
   \label{fig:hart_pitch_angle}
 \end{figure}
 
-We can also directly compare the pitch angles from Galaxy Builder models to the output of the SpArcFiRe software, as shown in Figure \ref{fig:sparcfire_pitch_angle}. The SpArcFiRe pitch angle used is the length-weighted mean of all arms of the dominant chirality of a galaxy. In this plot, unlike Figure \ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.
+% We can also directly compare the pitch angles from Galaxy Builder models to the output of the SpArcFiRe software, as shown in Figure \ref{fig:sparcfire_pitch_angle}. The SpArcFiRe pitch angle used is the length-weighted mean of all arms of the dominant chirality of a galaxy. In this plot, unlike Figure \ref{fig:hart_pitch_angle}, errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.
 
-\begin{figure}
-  \includegraphics[width=8cm]{images__results/pitch-angle-comparison2.pdf}
-  \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. Errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}
-  \label{fig:sparcfire_pitch_angle}
-\end{figure}
+% \begin{figure}
+%   \includegraphics[width=8cm]{images__results/pitch-angle-comparison2.pdf}
+%   \caption{A comparison between pitch angles obtained by \citet{Hart2016:1607.01019v1} (blue line) to those obtained through Galaxy Builder and SpArcFiRe. Errors are the sample error of arms used in the averaging and is a measure of inter-arm variation pitch angle.}
+%   \label{fig:sparcfire_pitch_angle}
+% \end{figure}
 
 
 \subsubsection{Comparison to Photometric Fits}
