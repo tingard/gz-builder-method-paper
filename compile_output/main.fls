@@ -390,6 +390,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aett8.tfm
 INPUT images/interfaceInProgress.jpg
 INPUT ./images/interfaceInProgress.jpg
 INPUT ./images/interfaceInProgress.jpg
+INPUT images/residualProgress.jpg
+INPUT ./images/residualProgress.jpg
+INPUT ./images/residualProgress.jpg
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi.tfm
@@ -426,9 +429,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/boondox/zxxrl7z.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
-INPUT images/residualProgress.jpg
-INPUT ./images/residualProgress.jpg
-INPUT ./images/residualProgress.jpg
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aett9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aett9.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
