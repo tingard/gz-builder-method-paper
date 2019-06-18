@@ -435,12 +435,12 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT images__method/drawn_shapes.pdf
 INPUT ./images__method/drawn_shapes.pdf
 INPUT ./images__method/drawn_shapes.pdf
+INPUT images__method/mean_shapes.pdf
+INPUT ./images__method/mean_shapes.pdf
+INPUT ./images__method/mean_shapes.pdf
 INPUT images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
-INPUT images__method/log_spirals.pdf
-INPUT ./images__method/log_spirals.pdf
-INPUT ./images__method/log_spirals.pdf
 INPUT sections/results.tex
 INPUT sections/results.tex
 INPUT images__results/component_frequency.pdf
@@ -452,9 +452,6 @@ INPUT ./images__results/component_sizing.pdf
 INPUT images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf
 INPUT ./images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf
 INPUT ./images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf
-INPUT images__results/bulge-bar-population-comparison.pdf
-INPUT ./images__results/bulge-bar-population-comparison.pdf
-INPUT ./images__results/bulge-bar-population-comparison.pdf
 INPUT images__results/pitch-angle-comparison.pdf
 INPUT ./images__results/pitch-angle-comparison.pdf
 INPUT ./images__results/pitch-angle-comparison.pdf
