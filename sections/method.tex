@@ -82,7 +82,7 @@ The galaxy data shown to volunteers in the Galaxy Builder project came in two fo
 Both forms of data were obtained using a similar process:
 
 \begin{itemize}
-\item A montage of multiple \texttt{r-band} observations from the SDSS DR13 data release was created. To combine multiple FITS images, we made use of the \textsc{Montage}\footnote{Montage is funded by the National Science Foundation under Grant Number ACI-1440620, and was previously funded by the National Aeronautics and Space Administration's Earth Science Technology Office, Computation Technologies Project, under Cooperative Agreement Number NCC5-626 between NASA and the California Institute of Technology.} \comment{reference?} software package.
+\item A montage of multiple \texttt{r-band} observations from the SDSS DR13 data release was created. To combine multiple FITS images, we made use of the \textsc{Montage}\footnote{Montage is funded by the National Science Foundation under Grant Number ACI-1440620, and was previously funded by the National Aeronautics and Space Administration's Earth Science Technology Office, Computation Technologies Project, under Cooperative Agreement Number NCC5-626 between NASA and the California Institute of Technology.} \citep{2010arXiv1005.4454J} software package.
 \item This montage was cropped to four times the Petrosian radius of the galaxy.
 \item The \textsc{SExtractor} software \citep{source-extractor} was used to identify regions containing foreground stars and generate a mask. \comment{SExtractor parameters needed here?}
 \item The JSON file was written containing the cut-out data and the 2D boolean mask obtained from the source extraction process. This file also contained other metadata needed for the rendering process (PSF, the size of the PSF array, and the width and height of the image).
@@ -153,6 +153,21 @@ For shapes clustered in this way, we define the aggregate component to be the sh
   \label{fig:mean_shapes}
 \end{figure*}
 
+To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clusteringMaths}.
+
+We now make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
+
+% This clustering method sometimes picks up a small cluster of lines which are a subset of another arm. This is a feature of the separation measure used and is a necessity at this step due to the presence of classifications encompassing both arms with one line.
+
+Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the result of a 2D, single-component S\'ersic fit in r-band, provided in the NSA catalogue \citep{2011AJ....142...31B}. Deprojected points within each drawn poly-line are converted to polar coordinates and unwound using \texttt{numpy.unwrap} to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each arm in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature. The points removed as outliers for the example galaxy are shown in \ref{fig:LOF_cleaning}.
+
+\begin{figure}
+  \includegraphics[width=8cm]{images__method/LOF_cleaning.pdf}
+  \caption{Point cleaning for the spiral arm clusters for UGC 4721. Points identified as outliers are displayed as red crosses, points used to fit log spirals are orange and blue dots.}
+  \label{fig:LOF_cleaning}
+\end{figure}
+
+For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values).
 
 \begin{figure}
   \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
@@ -160,15 +175,6 @@ For shapes clustered in this way, we define the aggregate component to be the sh
   \label{fig:aggregate_model}
 \end{figure}
 
-To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clusteringMaths}.
-
-We now make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
-
-% This clustering method sometimes picks up a small cluster of lines which are a subset of another arm. This is a feature of the separation measure used and is a necessity at this step due to the presence of classifications encompassing both arms with one line.
-
-Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the result of a 2D, single-component S\'ersic fit in r-band, provided in the NSA catalogue \citep{2011AJ....142...31B}. Deprojected points within each drawn poly-line are converted to polar coordinates and unwound using \texttt{numpy.unwrap} to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each arm in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature. \comment{Visualize this using a figure}
-
-For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values).
 
 \comment{Include list or table of clustering parameters used, for reproducibility}
 

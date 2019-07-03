@@ -34,9 +34,6 @@ We see some consistency in isophotal shape and size, as shown in Figure \ref{fig
 \subsubsection{Aggregated Disk, Bulge and Bar}
 After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the discs recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}). We note that the results from Galaxy Builder tend to prefer a slightly more elliptical axis ratio, but plateau at an axis ratio of $0.5$. This could be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes. Alternatively, this observed effect could reflect a valid observation of volunteers - for instance that discs are more rounded closer to their centres.
 
-\comment{Is it also possible that the presence of unmodelled spiral arms impacts the result of a one-component fit and produces a more elliptical result?}
-
-\comment{Brooke - With a tool like galfit it really depends on the spiral arms, but it tends to lead to oversubtraction of other parts of the disk, and a slight change of ellipticity. Unless the arms are really strong and/or the disk is low S/N, the disk just has a lot of pixels that tend to keep the major parameters close to the ''real`` value, because galfit's first priority always seems to be conserving flux and those disk pixels add up. But with a grand design spiral or similar all bets may be off}
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/GZBvsNSA_ax-ratio_SERSIC_BA.pdf}
@@ -45,6 +42,9 @@ After having obtained aggregated models for our galaxies, we examine the reliabi
 \end{figure}
 
 We also make comparisons to existing measures of morphology for individual galaxies: When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.57 \pm 0.16$} chance of containing a bar, vs \comment{$0.37 \pm 0.12$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is \comment{$0.75$}, which implies a notable correlation.
+
+\comment{Brooke - Are fits to your galaxies also in Simard et al. (2011), Meert et al, Lackner and Gunn? It would be good to compare to multiple different studies, and since many of them didn’t fit spiral arms or bars it’s a good opportunity to test the effect of adding those components.}
+
 
 % \begin{figure}
 %   \includegraphics[width=8cm]{images__results/bulge-bar-population-comparison.pdf}
@@ -79,7 +79,6 @@ In this Section we make comparisons between Galaxy Builder models and the result
   \label{fig:sd_comp_comparison}
 \end{figure}
 
-\comment{Brooke - Are fits to your galaxies also in Simard et al. (2011), Meert et al, Lackner and Gunn? It would be good to compare to multiple different studies, and since many of them didn’t fit spiral arms or bars it’s a good opportunity to test the effect of adding those components.}
 
 \comment{Brooke - I think there's something important missing from this paper: the extent to which using volunteer contributions captures the true set of uncertainties in parametric fitting. Galfit reports formal uncertainties that are very small compared to the true uncertainties. (Chien is the first and loudest person to say this but still people only quote the galfit uncertainties without ever even noting they are only reporting the smallest term.) Studies like Haussler et al. (2007)\footnote{\url{https://ui.adsabs.harvard.edu/abs/2007ApJS..172..615H/abstract}} and Simmons \& Urry (2008)\footnote{\url{https://ui.adsabs.harvard.edu/abs/2008ApJ...683..644S/abstract}} show this in various ways, so this is a known effect that isn’t usually measured for a sample because it’s a ton of work and computing time. GIM2D apparently measures a full set of posteriors, or likelihoods, can’t recall which, but again, it’s not that easy to use that software (by design, because Luc Simard didn’t want it to be a black box) so it’s not as popular as galfit, and there are newer codes like ProFit that do it but they haven’t really taken off yet — and none of these have the advantage of having human eyes on the data. I think this is a unique space and you can potentially make the point that you naturally measure this and thus draw primarily from the advantages of all methods here.
 

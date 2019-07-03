@@ -441,6 +441,9 @@ INPUT ./images__method/mean_shapes.pdf
 INPUT images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
+INPUT images__method/LOF_cleaning.pdf
+INPUT ./images__method/LOF_cleaning.pdf
+INPUT ./images__method/LOF_cleaning.pdf
 INPUT sections/results.tex
 INPUT sections/results.tex
 INPUT images__results/component_frequency.pdf
