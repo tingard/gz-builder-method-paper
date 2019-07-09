@@ -133,10 +133,6 @@ Once the ``best'' classification for a galaxy has been identified, we computatio
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
 
-% It is more common in citizen science projects to try and obtain a consensus from many volunteer classifications, via some form of aggregation methodology. In Galaxy Builder we can also attempt to aggregate volunteer models, using many existing tools, metrics and algorithms, and some others custom to this data-set.
-
-% Clustering the disc, bulge and bar components was done purely on the shapes drawn by volunteers, as preliminary data exploration suggested that some volunteers simply left model parameters (i.e. brightness and concentration) at their default values, or moved them to an extreme of the allowed range.
-
 Aggregate model calculation was done on a component-by-component basis, rather than per classification. Clustering was performed using the Jaccard distance measure (also known as the intersect over union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
 
 \begin{equation}
@@ -175,10 +171,17 @@ For each arm cluster in each galaxy, a logarithmic spiral model was fitted using
   \label{fig:aggregate_model}
 \end{figure}
 
-
 \comment{Include list or table of clustering parameters used, for reproducibility}
 
 We aggregate two independent models for a set of 98 galaxies based on ``original'' or repeat (``validation'') classifications, obtained with the same retirement limit (see Section \ref{sec:retirement-limit} for more on this selection). \comment{this paragraph should go somewhere?}
 
+
+\subsubsection{Error Estimation}
+
+The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
+
+\comment{rewrite next paragraph}
+
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component \comment{citation needed showing similar method in GZ2}. Figure \ref{fig:mean_shapes} roughly illustrates the variance in clustered shapes for the example galaxy, we recover.
 
 \end{document}
