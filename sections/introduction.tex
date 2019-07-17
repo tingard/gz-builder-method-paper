@@ -20,17 +20,6 @@ One approach to solving the problem of large-scale classification was to identif
 
 The trend towards use of colour, or automated proxies for morphology (such as bulge size), has also resulted in a subtle shift in what we mean by certain morphological terms (like late- or early-type), so care must be taken comparing with older morphological based classifications (see \citealt{Masters2019:1904.11436v1} for a longer discussion of this point).
 
-\subsubsection{Citizen Science}
-
-\comment{This section will be shortened and moved after Section 1.2}
-
-A promising solution to large-scale classification was to find a new source of person-power: \cite{Lintott2008:0804.4483v1} invited large numbers of people to classify SDSS-images of galaxies over the internet in the Galaxy Zoo project. The resulting classifications (a mean of 38 per galaxy) were then weighted and averaged to create a morphological catalogue of 893,212 galaxies.
-
-This hugely successful project, including its subsequent iterations and expansions (i.e. \citealt{Willett2013:1308.3496v2}, \citealt{2017MNRAS.464.4176W}, \citealt{2017MNRAS.464.4420S}, \citealt{Hart2016:1607.01019v1}), has produced a large catalogue of detailed morphological classifications which are in good agreement with other studies.
-
-The questions presented to Galaxy Zoo volunteers have evolved over time. Originally asking if a galaxy was one of: smooth, a ``Z''-wise spiral, an ``S''-wise spiral, an edge-on spiral or a star or unknown or a merger event; the decision tree has now expanded to a more complex array of possibilities to better encompass the variety of galaxy morphologies (including bars, spirals and other, rarer morphological features).
-
-However, while it is possible to draw quantitative measures from these classifications using vote fractions (for example \citealt{Masters2019:1904.11436v1} quantify bulge size and spiral winding and \citealt{2017MNRAS.472.2263H} calculate spiral arm number and pitch angle), they are predominantly descriptors of the visible structure present in the galaxy and don't provide a clear quantitative measurement of the relative size of different components, or allow the light from each to be isolated for further analysis.
 
 \subsection{Light Distribution Modelling}
 
@@ -44,9 +33,16 @@ A prominent issue when performing these detailed decompositions is the tendency 
 
 Another problem which needs to be addressed is whether a component should be present in the model at all. An automated fit will generally attempt to add as many components as possible to produce the closest-matching model. Many studies therefore need to select the most appropriate model by visual inspection of the resulting residuals or recovered parameters. For example, both \citet{Vika2014:1408.4070v1} and \citet{2018MNRAS.473.4731K} inspected the resulting model and residual images for all of their parametric fits (163 and 5,282 respectively) to ensure physical results with the correct components present.
 
-The end result of most of these problems is that researchers will have to invest time manually checking many of their fits to ensure they have converged on a physical model, meaning we are faced with a similar problem of scale discussed in Section \ref{subsec:galaxy-morphology}. This paper proposes an analogous solution to that introduced by \cite{Lintott2008:0804.4483v1}, inside the ecosystem that their research set in motion, where we leverage citizen scientists to pick model components and perform model optimization in an online, web-browser environment.
+The end result of most of these problems is that researchers will have to invest time manually checking many of their fits to ensure they have converged on a physical model, meaning we are faced with a similar problem of scale discussed in Section \ref{subsec:galaxy-morphology}.
 
-We describe our method in Section \ref{sec:method}, including details of the images and ancilliary data from SDSS as well as the strategy used to obtain scientifically useful models from volunteer classifications. We provide consistency checks within our infrastructure and to other methods in Section \ref{sec:results}.
+
+\subsubsection{Citizen Science}
+
+A promising solution to the problem of large-scale classification was to find a new source of person-power: \cite{Lintott2008:0804.4483v1} invited large numbers of people to classify SDSS-images of galaxies over the internet in the Galaxy Zoo project. The resulting classifications (a mean of 38 per galaxy) were then weighted and averaged to create a morphological catalogue of 893,212 galaxies.
+
+This hugely successful project, including its subsequent iterations and expansions (i.e. \citealt{Willett2013:1308.3496v2}, \citealt{2017MNRAS.464.4176W}, \citealt{2017MNRAS.464.4420S}, \citealt{Hart2016:1607.01019v1}), has produced a large catalogue of detailed morphological classifications which are in good agreement with other studies.
+
+This paper proposes an analogous solution to that introduced by \cite{Lintott2008:0804.4483v1} for the issues faced by galaxy parametric modelling inside the ecosystem that their research set in motion; leveraging citizen scientists to pick model components and perform model optimization in an online, web-browser environment. We describe our method in Section \ref{sec:method}, including details of the images and ancilliary data from SDSS as well as the strategy used to obtain scientifically useful models from volunteer classifications. We provide consistency checks within our infrastructure and to other methods in Section \ref{sec:results}.
 
 Where necessary, we make use of $H_0 = 70\ \text{km}\ \text{s}^{-1}\ \text{Mpc}^{-1}$.
 

@@ -102,7 +102,7 @@ The model we chose was largely based off of components and methodology described
 
 Each spiral arm is modelled using a poly-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn poly-line, with volunteers able to choose the Gaussian width and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disc, though volunteers could change the half-light radius of this falloff disc.
 
-The modelling code correctly ignores masked regions identified in the images. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained in the subject set creation process. \comment{How was the PSF obtained}
+The modelling code correctly ignores masked regions identified in the images. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained from the relevant Sloan r-band \texttt{psField} file, extracted at the central position of the galaxy \citep{2002AJ....123..485S}.
 
 \subsection{Choice of Retirement limit}
 \label{sec:retirement-limit}

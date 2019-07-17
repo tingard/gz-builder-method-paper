@@ -350,8 +350,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aecsc10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aer12.vf
@@ -363,9 +363,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aeti12.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aeti9.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsl9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmia.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txmia.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsyralt.tfm
@@ -381,6 +378,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aeti9.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsl9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer5.tfm
 INPUT sections/method.tex
 INPUT sections/method.tex
@@ -430,11 +430,11 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aett9.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aett9.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT images__method/drawn_shapes.pdf
 INPUT ./images__method/drawn_shapes.pdf
 INPUT ./images__method/drawn_shapes.pdf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aett9.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT images__method/mean_shapes.pdf
 INPUT ./images__method/mean_shapes.pdf
 INPUT ./images__method/mean_shapes.pdf
