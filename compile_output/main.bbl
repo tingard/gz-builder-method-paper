@@ -23,6 +23,11 @@
   {10.1088/0067-0049/182/2/543}, \href
   {http://adsabs.harvard.edu/abs/2009ApJS..182..543A} {182, 543}
 
+\bibitem[\protect\citeauthoryear{{Albareti} et~al.,}{{Albareti}
+  et~al.}{2017}]{2017ApJS..233...25A}
+{Albareti} F.~D.,  et~al., 2017, \mn@doi [\apjs] {10.3847/1538-4365/aa8992},
+  \href {https://ui.adsabs.harvard.edu/abs/2017ApJS..233...25A} {233, 25}
+
 \bibitem[\protect\citeauthoryear{{Bamford}, {H{\"a}u{\ss}ler}, {Rojas}  \&
   {Borch}}{{Bamford} et~al.}{2011}]{megamorph-paper}
 {Bamford} S.~P.,  {H{\"a}u{\ss}ler} B.,  {Rojas} A.,   {Borch} A.,  2011, in
@@ -246,6 +251,13 @@ Simard L.,  Mendel J.~T.,  Patton D.~R.,  Ellison S.~L.,   McConnachie A.~W.,
   et~al.}{2017}]{2017MNRAS.464.4420S}
 {Simmons} B.~D.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stw2587}, \href
   {https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.4420S} {464, 4420}
+
+\bibitem[\protect\citeauthoryear{Simpson, Page  \& De~Roure}{Simpson
+  et~al.}{2014}]{Simpson:2014:ZOW:2567948.2579215}
+Simpson R.,  Page K.~R.,   De~Roure D.,  2014, in Proceedings of the 23rd
+  International Conference on World Wide Web. WWW '14 Companion.
+ACM, New York, NY, USA, pp 1049--1054, \mn@doi{10.1145/2567948.2579215}, \url
+  {http://doi.acm.org/10.1145/2567948.2579215}
 
 \bibitem[\protect\citeauthoryear{{Stoughton} et~al.,}{{Stoughton}
   et~al.}{2002}]{2002AJ....123..485S}
