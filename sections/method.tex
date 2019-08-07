@@ -172,8 +172,12 @@ For each arm cluster in each galaxy, a logarithmic spiral model was fitted using
 
 \comment{Include list or table of clustering parameters used, for reproducibility}
 
-\subsubsection{Error Estimation}
 
+\subsection{Model Tuning}
+As mentioned above, we anticipated the need for a numerical fit to fine-tune parameters of Galaxy Builder models. This tuning was performed using the L\_BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. Parameter bounds were chosen to be as uninformative as possible, with bulge Sérsic index restricted to between 0.1 and 10. Tuning the best individual models did not significantly improve residuals, but due to the large presence of parameters left at their defaults / extrema \comment{give a number / fraction here}, tuning was neccessary for aggregate models.
+
+\subsubsection{Error Estimation}
+\label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
 \comment{rewrite next paragraph}

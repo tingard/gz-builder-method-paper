@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex compile_output/main"] 1565189255 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1565189325
-  "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
-  "bibliography.bib" 1565177753 53422 16ece9368b3fec53eaff2b50e942e410 ""
-  "compile_output/main.aux" 1565189325 21133 4fd562fe1a5b7b1b65eec463590cc657 ""
+["bibtex compile_output/main"] 1565191010 "compile_output/main.aux" "compile_output/main.bbl" "compile_output/main" 1565191012
+  "/Users/tlingard/PhD/galaxy-builder/methodPaper/latex-project/mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
+  "bibliography.bib" 1565190594 54073 ace8bf0cc9b52f181a6bf04f30f2aca8 ""
+  "compile_output/main.aux" 1565191011 21425 f96cfa74ca6ae03f99ed88560d034b12 ""
   "compile_output/main.bcf" 0 -1 0 ""
   (generated)
-  "compile_output/main.bbl"
   "compile_output/main.blg"
-["pdflatex"] 1565189324 "main.tex" "compile_output/main.pdf" "main" 1565189325
+  "compile_output/main.bbl"
+["pdflatex"] 1565191010 "main.tex" "compile_output/main.pdf" "main" 1565191012
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -252,9 +252,9 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1486052417 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "compile_output/main.aux" 1565189325 21133 4fd562fe1a5b7b1b65eec463590cc657 ""
-  "compile_output/main.bbl" 1565189255 13563 cc5bbcdcf20b3422a123206befa40acd "bibtex compile_output/main"
-  "compile_output/main.out" 1565189325 1032 b156fbe03950a682f3029b990b266967 ""
+  "compile_output/main.aux" 1565191011 21425 f96cfa74ca6ae03f99ed88560d034b12 ""
+  "compile_output/main.bbl" 1565191010 14031 dd323133edbf92ce842af3e55b39a8ae "bibtex compile_output/main"
+  "compile_output/main.out" 1565191011 1094 ef77b77e55fdb91c7d3c48b5160f4d8a ""
   "images/interfaceInProgress.jpg" 1549896470 247936 ccc50f0863c8475d653f99518b033b9f ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
   "images__method/LOF_cleaning.pdf" 1562159367 109966 7b4c348eec041bf379ca3427d42f058e ""
@@ -273,12 +273,12 @@
   "sections/acknowledgements.tex" 1564389075 459 c9268c73ad4daf4eee70dde5484721ae ""
   "sections/appendix.tex" 1558541095 3545 74690a7da7166f73ef964e9241bd3407 ""
   "sections/conclusions.tex" 1559643201 1260 7f17afa2a5233cc3a9c4da37da5448b7 ""
-  "sections/introduction.tex" 1564149054 10292 abcbb99d56a43bc3b0d17b1d0aff3709 ""
-  "sections/method.tex" 1565187875 21622 630f379d421c244e45f209510d074b68 ""
-  "sections/results.tex" 1565189315 11758 024a812e691405f7aad3a763898cccff ""
+  "sections/introduction.tex" 1565190181 10298 f2e57fac4cd96714eec166bb6ad6eee4 ""
+  "sections/method.tex" 1565191006 22295 06d3a1a39f645d8655bac493a0b47a30 ""
+  "sections/results.tex" 1565190646 8294 3bc6725e071823b54c8d4582ef3fe6e5 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
-  "compile_output/main.aux"
   "compile_output/main.pdf"
-  "compile_output/main.out"
+  "compile_output/main.aux"
   "compile_output/main.log"
+  "compile_output/main.out"

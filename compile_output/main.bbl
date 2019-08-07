@@ -63,6 +63,11 @@ Breunig M.~M.,  Kriegel H.-P.,  Ng R.~T.,   Sander J.,  2000, in Proceedings of
 ACM, New York, NY, USA, pp 93--104, \mn@doi{10.1145/342009.335388}, \url
   {http://doi.acm.org/10.1145/342009.335388}
 
+\bibitem[\protect\citeauthoryear{Byrd, Lu, Nocedal  \& Zhu}{Byrd
+  et~al.}{1995}]{doi:10.1137/0916069}
+Byrd R.,  Lu P.,  Nocedal J.,   Zhu C.,  1995, \mn@doi [SIAM Journal on
+  Scientific Computing] {10.1137/0916069}, 16, 1190
+
 \bibitem[\protect\citeauthoryear{{Cappellari} et~al.,}{{Cappellari}
   et~al.}{2011}]{2011MNRAS.413..813C}
 {Cappellari} M.,  et~al., 2011, \mn@doi [\mnras]
@@ -119,6 +124,11 @@ Hopkins P.~F.,  et~al., 2010, The Astrophysical Journal, 724, 915
   et~al.}{2010}]{2010arXiv1005.4454J}
 {Jacob} J.~C.,  et~al., 2010, arXiv e-prints, \href
   {https://ui.adsabs.harvard.edu/abs/2010arXiv1005.4454J} {p. arXiv:1005.4454}
+
+\bibitem[\protect\citeauthoryear{Jones, Oliphant, Peterson  et~al.}{Jones
+  et~al.}{01  }]{scipy-paper}
+Jones E.,  Oliphant T.,  Peterson P.,   et~al., 2001--, SciPy: Open source
+  scientific tools for Python, \url {http://www.scipy.org/}
 
 \bibitem[\protect\citeauthoryear{{Kalinova} et~al.,}{{Kalinova}
   et~al.}{2017}]{2017MNRAS.469.2539K}
