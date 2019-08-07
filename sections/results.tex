@@ -68,9 +68,23 @@ In order to benchmark the reliability of this method of spiral parameter extract
 
 
 \subsubsection{Comparison to Photometric Fits}
+
+\comment{technically the NSA comparison above is a comparison to a photometric fit...?}
+
 In this Section we make comparisons between Galaxy Builder models and the results from other photometric fits in the literature.
 
-One of the largest catalogs of 2D many-component fits is \citet{Simard2011:1107.1518v1}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7. Three variations of models were fitted: a pure S\'ersic model, an exponential disc and de-Vaucouleurs bulge model, and an exponential disc and a S\'ersic bulge model.
+One of the largest catalogs of 2D many-component fits is \citet{Simard2011:1107.1518v1}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an exponential disc and de-Vaucouleurs bulge model, and an exponential disc and a S\'ersic bulge model. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disk and exponential bulge, and an exponential disk and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
+
+Comparing between these catalogues and to Galaxy Builder results, we see that Galaxy Builder results show excellent consistency with other models, where such consistency is to be expected: for measurments like Bulge to Total ratio, as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}, we see good agreement to models where bulge S\'ersic index is similar to that most often chosen by Galaxy Builder volunteers (who significantly preferred exponential-like bulges to de Vaucouleurs bulges). We see a strong correlation with other models, but no 1:1 agreement in Bulge to Total fraction. The correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fit:bt_correlation}.
+
+\comment{should include scatterplot here?}
+
+
+\begin{figure}
+  \includegraphics[width=8cm]{images__results/b-t_comparison_correlation.pdf}
+  \caption{Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from Galaxy Builder results and other models fitted in \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation.}
+  \label{fig:bt_correlation}
+\end{figure}
 
 \citet{Kruk2017:1710.00093v2} performed many-component, multi-band decompositions of a selection of Sloan galaxies, 12 of which were also classified in Galaxy Builder. For each of these galaxies we obtain the ``best'' model provided by volunteers (scored using mean squared error, in units of nanomaggies) and futher optimize the slider parameters available to volunteers, as well as the effective radius and axis ratio of all components. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{Kruk2017:1710.00093v2} to those produced here.
 

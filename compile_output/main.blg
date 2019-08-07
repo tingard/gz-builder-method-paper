@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
-Repeated entry---line 858 of file bibliography.bib
+Repeated entry---line 877 of file bibliography.bib
  : @article{2017MNRAS.464.4176W
  :                             ,
 I'm skipping whatever remains of this entry
@@ -61,45 +61,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 Warning--empty publisher in deVaucouleurs1991
-You've used 55 entries,
+You've used 56 entries,
             2881 wiz_defined-function locations,
-            1173 strings with 29802 characters,
-and the built_in function-call counts, 24549 in all, are:
-= -- 2058
-> -- 1633
-< -- 82
-+ -- 797
-- -- 178
-* -- 3005
-:= -- 3658
+            1183 strings with 30074 characters,
+and the built_in function-call counts, 25040 in all, are:
+= -- 2104
+> -- 1663
+< -- 86
++ -- 809
+- -- 182
+* -- 3064
+:= -- 3731
 add.period$ -- 0
-call.type$ -- 55
-change.case$ -- 110
-chr.to.int$ -- 53
-cite$ -- 65
-duplicate$ -- 1306
-empty$ -- 1331
-format.name$ -- 378
-if$ -- 4294
+call.type$ -- 56
+change.case$ -- 112
+chr.to.int$ -- 54
+cite$ -- 66
+duplicate$ -- 1329
+empty$ -- 1353
+format.name$ -- 388
+if$ -- 4382
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 58
-newline$ -- 180
-num.names$ -- 322
-pop$ -- 332
+missing$ -- 59
+newline$ -- 183
+num.names$ -- 330
+pop$ -- 334
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 224
 quote$ -- 0
-skip$ -- 792
+skip$ -- 808
 stack$ -- 0
-substring$ -- 1410
-swap$ -- 590
-text.length$ -- 227
+substring$ -- 1444
+swap$ -- 606
+text.length$ -- 231
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 486
+type$ -- 495
 warning$ -- 10
-while$ -- 361
+while$ -- 369
 width$ -- 0
-write$ -- 554
+write$ -- 564
 (There were 15 error messages)
