@@ -7,15 +7,10 @@ Repeated entry---line 896 of file bibliography.bib
  : @article{2017MNRAS.464.4176W
  :                             ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Simmard"
+Warning--I didn't find a database entry for "Lackner"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Fall2018:1812.06144v1
-while executing---line 1822 of file mnras.bst
-Warning--empty journal in Fall2018:1812.06144v1
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Fall2018:1812.06144v1
-while executing---line 1822 of file mnras.bst
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Hart2016:1607.01019v1
 while executing---line 1822 of file mnras.bst
@@ -29,14 +24,6 @@ while executing---line 1822 of file mnras.bst
 Warning--empty journal in Holincheck2016:1604.00435v1
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Holincheck2016:1604.00435v1
-while executing---line 1822 of file mnras.bst
-Warning--empty publisher in Hubble1936
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Masters2019:1904.11436v1
-while executing---line 1822 of file mnras.bst
-Warning--empty journal in Masters2019:1904.11436v1
-"ArXiv e-prints" is a string literal, `journal' is a missing field
----they aren't the same literal types for entry Masters2019:1904.11436v1
 while executing---line 1822 of file mnras.bst
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Mendez-Abreu2016:1610.05324v1
@@ -52,7 +39,6 @@ Warning--empty journal in profit-paper
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry profit-paper
 while executing---line 1822 of file mnras.bst
-Warning--empty publisher in Sandage1961
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
@@ -60,46 +46,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
-Warning--empty publisher in deVaucouleurs1991
-You've used 58 entries,
+You've used 45 entries,
             2881 wiz_defined-function locations,
-            1197 strings with 30464 characters,
-and the built_in function-call counts, 26027 in all, are:
-= -- 2170
-> -- 1754
-< -- 90
-+ -- 849
-- -- 198
-* -- 3183
-:= -- 3898
+            1100 strings with 24592 characters,
+and the built_in function-call counts, 20338 in all, are:
+= -- 1716
+> -- 1382
+< -- 63
++ -- 653
+- -- 166
+* -- 2505
+:= -- 3061
 add.period$ -- 0
-call.type$ -- 58
-change.case$ -- 116
-chr.to.int$ -- 56
-cite$ -- 68
-duplicate$ -- 1376
-empty$ -- 1398
-format.name$ -- 408
-if$ -- 4544
+call.type$ -- 45
+change.case$ -- 90
+chr.to.int$ -- 43
+cite$ -- 50
+duplicate$ -- 1055
+empty$ -- 1069
+format.name$ -- 322
+if$ -- 3552
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 60
-newline$ -- 189
-num.names$ -- 346
-pop$ -- 349
+missing$ -- 44
+newline$ -- 150
+num.names$ -- 270
+pop$ -- 248
 preamble$ -- 1
-purify$ -- 232
+purify$ -- 180
 quote$ -- 0
-skip$ -- 833
+skip$ -- 633
 stack$ -- 0
-substring$ -- 1487
-swap$ -- 632
-text.length$ -- 239
+substring$ -- 1191
+swap$ -- 485
+text.length$ -- 186
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 513
-warning$ -- 10
-while$ -- 383
+type$ -- 405
+warning$ -- 5
+while$ -- 303
 width$ -- 0
-write$ -- 584
-(There were 15 error messages)
+write$ -- 462
+(There were 11 error messages)
