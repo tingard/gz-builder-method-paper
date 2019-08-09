@@ -25,6 +25,11 @@ After selecting a component, the volunteer sets its shape and size. We see good 
   \label{fig:aggregate_model_consistency}
 \end{figure*}
 
+\subsection{Best Individual vs Aggregate Model}
+
+For each galaxy in the sample we compare the tuned aggregate model to the tuned best individual model, and find that the best individual model consistently outperforms the aggregate (around 70\% of the time). However, there is less than a 5\% probability that any individual classifier will beat the aggregate model for more than half of the galaxies they model, with most volunteers outperforming the aggregate less than one in ten times.
+
+\comment{Should we make a big deal about how this is true even for expert classifiers? Though I am comparing raw volunteer models to tuned aggregate models, and we don't know if tuning the expert volunteer models would make a big difference}
 
 \subsection{Comparison to results in the literature}
 
@@ -38,14 +43,11 @@ After having obtained aggregated models for our galaxies, we examine the reliabi
   \label{fig:ax_ratio_comparison}
 \end{figure}
 
-We also make comparisons to existing measures of morphology for individual galaxies: When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a \comment{$0.57 \pm 0.16$} chance of containing a bar, vs \comment{$0.37 \pm 0.12$} for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is \comment{$0.75$}, which implies a notable correlation.
+We also make comparisons to existing measures of morphology for individual galaxies: When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a $0.47 \pm 0.14$ chance of containing a bar, vs $0.30 \pm 0.11$ for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is $0.56$, which implies a significant correlation.
 
 One of the largest catalogs of 2D many-component fits is \citet{Simard2011:1107.1518v1}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an exponential disc and de-Vaucouleurs bulge model, and an exponential disc and a S\'ersic bulge model. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disk and exponential bulge, and an exponential disk and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
 
-Comparing between these catalogues and to Galaxy Builder models, we see that our models show excellent consistency with others, where such consistency is to be expected. As bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}, when comparing bulge to total ratio we see good agreement to models where bulge S\'ersic index is similar to that most often chosen by Galaxy Builder volunteers (who significantly preferred exponential-like bulges to de Vaucouleurs bulges), as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}. The correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fit:bt_correlation}.
-
-\comment{should include scatterplot here?}
-
+Comparing between these catalogues and to Galaxy Builder models, we see that our models show excellent consistency with others, where such consistency is to be expected. As bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}, when comparing bulge to total ratio we see good agreement to models where bulge S\'ersic index is similar to that most often chosen by Galaxy Builder volunteers (who consistently preferred to use bulges with low S\'ersic indices), as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}. The correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fig:bt_correlation}.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/b-t_comparison_correlation.pdf}
