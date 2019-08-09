@@ -140,9 +140,7 @@ d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 
 The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
 
-For shapes clustered in this way, we define the aggregate component to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster. For our example galaxy, UGC 4721, all drawn discs, bulges, bars and spiral arms can be seen in Figure \ref{fig:drawn_shapes}. Clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes} and the final galaxy model can be seen in Figure \ref{fig:aggregate_model}.
-
-\comment{figures need to be in order}
+For shapes clustered in this way, we define the aggregate component to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster. For our example galaxy, UGC 4721, clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes}.
 
 \begin{figure*}
   \includegraphics[width=17.3cm]{images__method/mean_shapes.pdf}
@@ -150,9 +148,7 @@ For shapes clustered in this way, we define the aggregate component to be the sh
   \label{fig:mean_shapes}
 \end{figure*}
 
-To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clusteringMaths}. We make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
-
-% This clustering method sometimes picks up a small cluster of lines which are a subset of another arm. This is a feature of the separation measure used and is a necessity at this step due to the presence of classifications encompassing both arms with one line.
+To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clustering_maths}. We make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
 
 Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the axial ratio from a 2D, single-component S\'ersic fit in r-band, provided in the NSA catalogue \citep{2011AJ....142...31B}. Deprojected points within each drawn poly-line are converted to polar coordinates and unwound using \texttt{numpy.unwrap} to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each arm in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature. The points removed as outliers for the example galaxy are shown in Figure. \ref{fig:LOF_cleaning}.
 
@@ -164,26 +160,28 @@ Once spiral classifications on a galaxy have been clustered into the physical ar
 
 For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values).
 
+The galaxy model for UGC 4721 obtained through aggregation can be seen in Figure \ref{fig:aggregate_model}.
+
 \begin{figure}
   \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
   \caption{Resulting aggregate bulge + disc + bar + spiral arms components for UGC 4721. The disc is shown in blue, the bulge in orange, the bar in green and the spiral arms in red.}
   \label{fig:aggregate_model}
 \end{figure}
 
-\comment{Include list or table of clustering parameters used, for reproducibility}
-
-
 \subsection{Model Tuning}
-As mentioned above, we anticipated the need for a numerical fit to fine-tune parameters of Galaxy Builder models. This tuning was performed using the L\_BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. Parameter bounds were chosen to be as uninformative as possible, with bulge Sérsic index restricted to between 0.1 and 10. Tuning the best individual models did not significantly improve residuals, but due to the large presence of parameters left at their defaults / extrema \comment{give a number / fraction here}, tuning was neccessary for aggregate models.
+
+As mentioned above, we anticipated the need for a numerical fit to fine-tune parameters of Galaxy Builder models. This tuning was performed using the L\_BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. Parameter bounds were chosen to be as uninformative as possible, with bulge Sérsic index restricted to between 0.1 and 10. Tuning the best individual models did not significantly improve residuals, but due to the large presence of parameters left at their defaults / extrema \comment{give a number / fraction here}, tuning was neccessary for aggregate models. Models and residuals for the tuned best individual and aggregate models is shown in Figure \ref{fig:bi_vs_agg_comparison}.
+
+\begin{figure}
+  \includegraphics[width=8cm]{images__method/bi_vs_agg_comparison.pdf}
+  \caption{Tuned best individual and aggregate models, and their residuals for UGC 4721. The top two panels show the models, with the tuned best individual model on the left and the tuned aggregate model on the right. Bottom panels show the corresponding residuals, where red indicates oversubtraction of the galaxy and black indicates undersubtraction.}
+  \label{fig:bi_vs_agg_comparison}
+\end{figure}
 
 \subsubsection{Error Estimation}
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-\comment{rewrite next paragraph}
-
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component \comment{citation needed showing similar method in GZ2}. Figure \ref{fig:mean_shapes} roughly illustrates the variance in clustered shapes for the example galaxy, we recover.
-
-\comment{How to include the model tuning?}
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component \comment{citation needed showing similar method in GZ2}. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for the example galaxy, we recover.
 
 \end{document}
