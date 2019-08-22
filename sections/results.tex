@@ -27,15 +27,15 @@ After selecting a component, the volunteer sets its shape and size. We see good 
 
 \subsection{Best Individual vs Aggregate Model}
 
-For each galaxy in the sample we compare the tuned aggregate model to the tuned best individual model, and find that the best individual model consistently outperforms the aggregate (around 70\% of the time). However, there is less than a 5\% probability that any individual classifier will beat the aggregate model for more than half of the galaxies they model, with most volunteers outperforming the aggregate less than one in ten times.
+For each galaxy in the sample we compare the tuned aggregate model to the tuned best individual model, and find that the best individual model consistently outperforms the aggregate (around 70\% of the time). However, there is less than a 5\% probability that any individual classifier will beat the aggregate model for more than half of the galaxies they model, with most volunteers outperforming the aggregate less than one in ten times. Despite this, it is still surprising how close many volunteers' models came to the optimial solution without tuning.
 
-\comment{Should we make a big deal about how this is true even for expert classifiers? Though I am comparing raw volunteer models to tuned aggregate models, and we don't know if tuning the expert volunteer models would make a big difference}
+Our recommendation is to make use of the tuned aggregate model for scientific analysis, though if sufficent computation time is available it is likely that the best results can be obtained by using a number of volunteer models as starting points for numerical fits.
 
 \subsection{Comparison to results in the literature}
 
-\subsubsection{Disk, Bulge and Bar}
+\subsubsection{Comparison to One-component fit}
 
-After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the discs recovered from Galaxy Builder to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}), with an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}). We observe a large number of measurements outside $2\sigma$ around a Galaxy Builder axis ratio of 0.5, which is likely to be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes.
+After having obtained aggregated models for our galaxies, we examine the reliability of our models through comparison to other results in the literature. For instance, if we compare the axis ratios of the discs recovered from \textit{Galaxy Builder} to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NASA-Sloan Atlas), we see excellent agreement (Figure \ref{fig:ax_ratio_comparison}), with an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}). We observe a large number of measurements outside $2\sigma$ around a \textit{Galaxy Builder} axis ratio of 0.5, which is likely to be due to the drawing tool ellipse having a default axis ratio of $0.5$, and biasing volunteer classification or aggregate shapes.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/gzb-agg-nsa-comparison.pdf}
@@ -43,33 +43,41 @@ After having obtained aggregated models for our galaxies, we examine the reliabi
   \label{fig:ax_ratio_comparison}
 \end{figure}
 
-We also make comparisons to existing measures of morphology for individual galaxies: When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a $0.47 \pm 0.14$ chance of containing a bar, vs $0.30 \pm 0.11$ for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in Galaxy Builder is $0.56$, which implies a significant correlation.
+
+\subsubsection{Comparison to Disc-Bulge models}
+
+We also make comparisons to existing measures of morphology for individual galaxies: When comparing the probability of a classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see a significant difference: classifications of strongly-barred galaxies ($p_\text{bar} > 0.5$) had a $0.47 \pm 0.14$ chance of containing a bar, vs $0.30 \pm 0.11$ for galaxies classed as having no bar ($p_\text{bar} < 0.2$). The Spearman correlation between GZ2's $p_\text{bar}$ and the bar likelihood in \textit{Galaxy Builder} is $0.56$, which implies a significant correlation.
 
 One of the largest catalogs of 2D many-component fits is \citet{Simard2011:1107.1518v1}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an exponential disc and de-Vaucouleurs bulge model, and an exponential disc and a S\'ersic bulge model. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disk and exponential bulge, and an exponential disk and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
 
-Comparing between these catalogues and to Galaxy Builder models, we see that our models show excellent consistency with others, where such consistency is to be expected. As bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}, when comparing bulge to total ratio we see good agreement to models where bulge S\'ersic index is similar to that most often chosen by Galaxy Builder volunteers (who consistently preferred to use bulges with low S\'ersic indices), as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}. The correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fig:bt_correlation}.
+Comparing between these catalogues and to \textit{Galaxy Builder} models, we see that our models show excellent consistency with others, where such consistency is to be expected. As bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}, when comparing bulge to total ratio we see good agreement to models where bulge S\'ersic index is similar to that most often chosen by \textit{Galaxy Builder} volunteers (who consistently preferred to use bulges with low S\'ersic indices), as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}. The correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fig:bt_correlation}.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/b-t_comparison_correlation.pdf}
-  \caption{Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from Galaxy Builder results and other models fitted in \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation.}
+  \caption{Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from \textit{Galaxy Builder} results and other models fitted in \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation.}
   \label{fig:bt_correlation}
 \end{figure}
 
-\citet{Kruk2017:1710.00093v2} performed many-component, multi-band decompositions of a selection of Sloan galaxies, 12 of which were also classified in Galaxy Builder. For each of these galaxies we obtain the ``best'' model provided by volunteers (scored using mean squared error, in units of nanomaggies) and futher optimize the slider parameters available to volunteers, as well as the effective radius and axis ratio of all components. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{Kruk2017:1710.00093v2} to those produced here.
+
+\subsubsection{Comparison to Disc-Bulge-Bar models}
+
+\citet{Kruk2017:1710.00093v2} performed many-component, multi-band decompositions of a selection of Sloan galaxies, 12 of which were also classified in \textit{Galaxy Builder}. For each of these galaxies we obtain the ``best'' model provided by volunteers (scored using mean squared error, in units of nanomaggies) and futher optimize the slider parameters available to volunteers, as well as the effective radius and axis ratio of all components. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{Kruk2017:1710.00093v2} to those produced here.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/sd_comp_comparison.pdf}
-  \caption{Comparison between optimized Galaxy Builder models and the result of 3\-component, multi\-wavelength fits performed by \citet{Kruk2017:1710.00093v2}.}
+  \caption{Comparison between optimized \textit{Galaxy Builder} models and the result of 3\-component, multi\-wavelength fits performed by \citet{Kruk2017:1710.00093v2}.}
   \label{fig:sd_comp_comparison}
 \end{figure}
 
 
-\subsubsection{Spiral Arms}
-In order to benchmark the reliability of this method of spiral parameter extraction, we compare the result of our logarithmic spiral fit to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle (Figure \ref{fig:hart_pitch_angle}). Their fit was obtained by using the Zooniverse to filter good vs bad spiral arm segments identified using a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}. We find good agreement, although there are large error bars on the GZ2-produced pitch angle (and a caveat in the paper that these pitch angles should not be used for individual galaxies).
+\subsubsection{Comparison to Disc-Bulge-Bar-Spiral models}
+To the best of our knowledge, no photometic models exist for the Galaxy Builder sample which contain spiral arm structure. The closest comparable result is that produced by \citet{Gao2017:1709.00746v1}, however galaxies used are not in the Sloan footprint.
+
+In order to benchmark the reliability of our method of spiral parameter extraction, we compare the result of our logarithmic spiral fit to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle (Figure \ref{fig:hart_pitch_angle}). Their fit was obtained by using the Zooniverse to filter good vs bad spiral arm segments identified using a leading automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}. We find good agreement, although there are large error bars on the GZ2-produced pitch angle (and a caveat in the paper that these pitch angles should not be used for individual galaxies).
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/gzb-hart-comparison.pdf}
-  \caption{A comparison of Pitch angle obtained by \citet{Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma$ errors from \citet{Hart2016:1607.01019v1}. Errors on Galaxy Builder-measured pitch angles are not accounted for.}
+  \caption{A comparison of Pitch angle obtained by \citet{Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma$ errors from \citet{Hart2016:1607.01019v1}. Errors on \textit{Galaxy Builder}-measured pitch angles are not accounted for.}
   \label{fig:hart_pitch_angle}
 \end{figure}
 

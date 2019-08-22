@@ -367,6 +367,7 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer5.tfm
 INPUT sections/method.tex
 INPUT sections/method.tex
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aebxti10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aer12.vf
@@ -394,6 +395,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txsy.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aebxti10.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbxsl10.tfm
 INPUT images/interfaceInProgress.jpg
 INPUT ./images/interfaceInProgress.jpg
 INPUT ./images/interfaceInProgress.jpg
@@ -469,11 +473,11 @@ INPUT ./images__results/gzb-hart-comparison.pdf
 INPUT ./images__results/gzb-hart-comparison.pdf
 INPUT sections/conclusions.tex
 INPUT sections/conclusions.tex
-INPUT sections/acknowledgements.tex
-INPUT sections/acknowledgements.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi7.tfm
+INPUT sections/acknowledgements.tex
+INPUT sections/acknowledgements.tex
 INPUT compile_output/main.bbl
 INPUT compile_output/main.bbl
 INPUT sections/appendix.tex
@@ -490,6 +494,7 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

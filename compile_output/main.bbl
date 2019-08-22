@@ -162,6 +162,11 @@ Masters K.~L.,  et~al., 2010, Monthly Notices of the Royal Astronomical
   et~al.}{2016}]{Mendez-Abreu2016:1610.05324v1}
 Mendez-Abreu J.,  et~al., 2016
 
+\bibitem[\protect\citeauthoryear{Park, Choi, Vogeley, III, Blanton  \& the
+  SDSS~collaboration}{Park et~al.}{2007}]{Park2006:astro-ph/0611610v2}
+Park C.,  Choi Y.-Y.,  Vogeley M.~S.,  III J. R.~G.,  Blanton M.~R.,   the
+  SDSS~collaboration F.,  2007, ApJ, 658, 898
+
 \bibitem[\protect\citeauthoryear{Pedregosa et~al.,}{Pedregosa
   et~al.}{2011}]{scikit-learn}
 Pedregosa F.,  et~al., 2011, Journal of Machine Learning Research, 12, 2825
@@ -196,12 +201,12 @@ Robotham A. S.~G.,  Taranu D.~S.,  Tobar R.,  Moffett A.,   Driver S.~P.,  2016
 Sanchez S.~F.,  et~al., 2011, Astronomy and Astrophysics, 538, A8
 
 \bibitem[\protect\citeauthoryear{Simard et~al.,}{Simard
-  et~al.}{2002a}]{gim2d-paper}
-Simard L.,  et~al., 2002a, The Astrophysical Journal Supplement Series, 142, 1
+  et~al.}{2002a}]{Simard2002:astro-ph/0205025v2}
+Simard L.,  et~al., 2002a, ASTROPHYS J SUPPL S, 142, 1
 
 \bibitem[\protect\citeauthoryear{Simard et~al.,}{Simard
-  et~al.}{2002b}]{Simard2002:astro-ph/0205025v2}
-Simard L.,  et~al., 2002b, ASTROPHYS J SUPPL S, 142, 1
+  et~al.}{2002b}]{gim2d-paper}
+Simard L.,  et~al., 2002b, The Astrophysical Journal Supplement Series, 142, 1
 
 \bibitem[\protect\citeauthoryear{Simard, Mendel, Patton, Ellison  \&
   McConnachie}{Simard et~al.}{2011}]{Simard2011:1107.1518v1}
