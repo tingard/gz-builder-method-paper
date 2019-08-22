@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
-Repeated entry---line 884 of file bibliography.bib
+Repeated entry---line 899 of file bibliography.bib
  : @article{2017MNRAS.464.4176W
  :                             ,
 I'm skipping whatever remains of this entry
@@ -44,45 +44,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
-You've used 46 entries,
+You've used 47 entries,
             2881 wiz_defined-function locations,
-            1105 strings with 24910 characters,
-and the built_in function-call counts, 20901 in all, are:
-= -- 1756
-> -- 1438
-< -- 65
-+ -- 675
-- -- 178
-* -- 2572
-:= -- 3158
+            1114 strings with 25162 characters,
+and the built_in function-call counts, 21464 in all, are:
+= -- 1811
+> -- 1460
+< -- 70
++ -- 685
+- -- 180
+* -- 2614
+:= -- 3234
 add.period$ -- 0
-call.type$ -- 46
-change.case$ -- 92
-chr.to.int$ -- 44
-cite$ -- 51
-duplicate$ -- 1078
-empty$ -- 1091
-format.name$ -- 336
-if$ -- 3648
+call.type$ -- 47
+change.case$ -- 94
+chr.to.int$ -- 45
+cite$ -- 52
+duplicate$ -- 1116
+empty$ -- 1128
+format.name$ -- 340
+if$ -- 3768
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 153
-num.names$ -- 278
-pop$ -- 253
+missing$ -- 46
+newline$ -- 156
+num.names$ -- 284
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 184
+purify$ -- 188
 quote$ -- 0
-skip$ -- 646
+skip$ -- 678
 stack$ -- 0
-substring$ -- 1219
-swap$ -- 499
-text.length$ -- 190
+substring$ -- 1257
+swap$ -- 518
+text.length$ -- 195
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 414
+type$ -- 423
 warning$ -- 5
-while$ -- 311
+while$ -- 319
 width$ -- 0
-write$ -- 472
+write$ -- 482
 (There were 11 error messages)
