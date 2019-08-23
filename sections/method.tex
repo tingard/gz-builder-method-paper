@@ -5,15 +5,15 @@
 
 \subsection{The \textit{Galaxy Builder} Zooniverse project}
 
-\textit{Galaxy Builder}\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}} is a citizen-science project built on the Zooniverse\footnote{\url{https://www.zooniverse.org}} web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disc, bar and spiral arm components). As a project of this kind, allowing volunteers to interact with and model data, had never been attempted inside the current Zooniverse web platform before, we had to design and implement a (comparatively basic) model rendering suite inside the existing Zooniverse front-end code-base. We had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions. Feedback from expert users was essential to this process as part of the the typical beta trial process for Zooniverse projects.
-
+\textit{Galaxy Builder}\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}} is a citizen-science project built on the Zooniverse\footnote{\url{https://www.zooniverse.org}} web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disc, bar and spiral arm components). As a project of this kind, allowing volunteers to interact with and model data, had never been attempted inside the current Zooniverse web platform before, this project involved designing and implementing a model rendering suite inside the existing Zooniverse front-end code-base. As with all citizen science solutions, we had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions. 
 The closest relative to this project within the Zooniverse ecosystem was the Galaxy Zoo: Mergers project \citep{Holincheck2016:1604.00435v1}. This project asked volunteers to help match the morphological properties of an image of merging galaxies to a plethora of restricted three-body simulations, in an attempt to identify the possible initial conditions resulting in the observed morphology. For part of the project, volunteers downloaded a Java applet, which would run restricted three-body simulations and generate output images. Volunteers could mainpulate the models used in the simulation. The volunteer then voted on simulations which matched a given galaxy merger image, or shared important tidal features. A new batch of simulations would then be run.
 
 \subsubsection{Project Timeline and Development}
 
 The \textit{Galaxy Builder} project was built inside the Zooniverse's \citep{Simpson:2014:ZOW:2567948.2579215} \textsc{Panoptes-Front-End}\footnote{\url{http://github.com/zooniverse/Panoptes-Front-End}} codebase, using Facebook's \textsc{React.js}\footnote{\url{https://reactjs.org/}} framework, as well as WebGL\footnote{\url{https://www.khronos.org/webgl/}} to enable realtime photometric galaxy model rendering. \textit{Galaxy Builder} entered a Zooniverse beta in late November 2017 and after some user experience improvements and significant code reworking to meet internal standards, the project was launched as an official Zooniverse project on the 24th of April 2018.
 
-A major challenge during development of the project was finding the right balance between keeping the interface and instructions simple enough for volunteers to understand intuitively, while also allowing the freedom and versatility to properly model galaxies. It was also a significant challenge to develop a compelling and simple tutorial for what is one of the most complex projects attempted on the Zooniverse platform.
+A major challenge during development of the project was finding the right balance between keeping the interface and instructions simple enough for volunteers to understand intuitively, while also allowing the freedom and versatility to properly model galaxies. It was also a significant challenge to develop a compelling and simple tutorial for what is one of the most complex projects attempted on the Zooniverse platform. Feedback from expert users was essential to this process as part of the the typical beta trial process for Zooniverse projects.
+
 
 \subsubsection{The project interface}
 
@@ -49,15 +49,14 @@ This score has the advantage of being easy (and fast) to generate from the resid
 
 \subsubsection{Rendering the model}
 
-We use the term rendering in a similar manner to that used for computer graphics: to calculate an image from a model or set of rules.
 
-The rendering code used in the \textit{Galaxy Builder} project was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level Javascript interface \textsc{regl}\footnote{\url{http://regl.party/}}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer in the browser. Using WebGL has the effect of limiting precision of the model rendered in the browser to that allowed by WebGL. As these models are envisioned as a starting point for a later numerical fit, it was determined this precision was sufficient.
+The rendering\footnote{We use the term rendering in a similar manner to that used for computer graphics: to calculate an image from a model or set of rules.} code used in the \textit{Galaxy Builder} project was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level Javascript interface \textsc{regl}\footnote{\url{http://regl.party/}}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer in the browser. Using WebGL has the effect of limiting precision of the model rendered in the browser to that allowed by WebGL. As these models are envisioned as a starting point for a later numerical fit, it was determined this precision was sufficient.
 
-\subsection{Images and Ancillary Data}
+\subsection{Sample Selection: Images and Ancillary Data}
 \label{sec:data}
 The original sample proposed for the \textit{Galaxy Builder} project aimed to mirror the \textit{stellar mass-complete sample} in \citet{2017MNRAS.472.2263H}. This was a sample of face-on spiral galaxies, with and without bars, complete in  stellar mass.
 
-The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the following:
+The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the following set of criteria:
 
 \begin{itemize}
   \item GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$
@@ -65,16 +64,15 @@ The morphological information required to select spiral galaxies came from the p
   \item g-band axial ratio $a/b > 0.4$
   \item r-band magnitude $14 < m_r < 17$
   \item A volume correction, excluding galaxies outside $9.45 < \log(M_* / M_\odot) \le 11.05$
-  \item Computation of stellar mass completeness limits using the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated by \citet{2017MNRAS.472.2263H}\\
-    $9.45 < \log(M_* / M_\odot) \le 11.05$\\
+  \item Computation of stellar mass completeness limits using the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated by \citet{2017MNRAS.472.2263H}, namely: \\
+    $9.45 < \log(M_* / M_\odot) \le 11.05$\\ %KLM comment: Figure out how to indent these more
     $\log({M_* / M_\odot}) > 2.07\log(z) + 12.64$\\
     $\log({M_* / M_\odot}) < 2.45\log(z) + 14.05$.
 \end{itemize}
 
 This selection criteria results in the \textit{stellar mass-complete sample} of 6222 spiral galaxies from \citet{2017MNRAS.472.2263H}.
 
-We split the \textit{stellar mass-complete sample} into smaller sub-samples, each containing 100 galaxies. In an iterative process we chose each sub-sample to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample. This was done to fascilitate the unknown rate at which volunteers would provide classifications. Two out of the two-hundred selected galaxies failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown.
-
+We split the \textit{stellar mass-complete sample} into smaller sub-samples, each containing 100 galaxies. In an iterative process we chose each sub-sample to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample. This was done to account for the unknown rate at which volunteers would provide classifications (we wanted some results to test as early as possible). In the first two sets of 100 galaxies, 1\% of galaxies (i.e. 2 images) failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown, but it leaves a sample of 198 galaxies with images we consider in this paper. 
 
 \subsubsection{Image and modelling metadata extraction}
 
@@ -99,19 +97,25 @@ Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-cli
 \subsection{The Galaxy Model}
 \label{section:galaxy-model}
 
-The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The allowed model components consisted of: An exponential, elliptical disc; an elliptical S\'ersic bulge (with $n$ allowed to vary from 0.5 to 5); a S\'ersic bar with a ``boxiness'' modifier (as described in \citealt{galfit-paper}); freehand poly-line spiral arms.
+The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The allowed model components consisted of: 
+\begin{itemize}
+\item An exponential, elliptical disc; 
+\item an elliptical S\'ersic bulge (with $n$ allowed to vary from 0.5 to 5); 
+\item a S\'ersic bar with a ``boxiness'' modifier (as described in \citealt{galfit-paper}); 
+\item any number of freehand poly-line spiral arms.
+\end{itemize}
 
 Each spiral arm is modelled using a poly-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn poly-line, with volunteers able to choose the Gaussian width and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disc, though volunteers could change the half-light radius of this falloff disc.
 
-The modelling code correctly ignores masked regions identified in the images. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained from the relevant Sloan r-band \texttt{psField} file, extracted at the central position of the galaxy \citep{2002AJ....123..485S}.
+The modelling code ignores masked regions identified in the images. %KLM: Please comment on where the masks are from.
+It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained from the relevant Sloan r-band \texttt{psField} file, extracted at the central position of the galaxy \citep{2002AJ....123..485S}.
 
 \subsection{Choice of Retirement limit}
 \label{sec:retirement-limit}
 
-We initially collected 10 classifications per galaxy, however preliminary analysis indicated this volume of data would be insufficient to create reliable and reproducable aggregate classifications. For this reason, a hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow the development of the aggregation methodology.
+We initially collected 10 classifications per galaxy, however preliminary analysis indicated this number of independent answers would be insufficient to create reliable and reproducable aggregate classifications. For this reason, a hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow the development of the aggregation methodology.
 
-Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications.
-
+Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (present in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies. 
 
 \subsection{Classification Aggregation Methodology}
 
@@ -132,7 +136,7 @@ Once the ``best'' classification for a galaxy has been identified, we computatio
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
 
-Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
+As we have multiple independent answers for each parameter and component we can also use these to find an aggregated answer. Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
 
 \begin{equation}
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
@@ -182,6 +186,6 @@ As mentioned above, we anticipated the need for a numerical fit to fine-tune par
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for the example galaxy, we recover.
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). %Could use some numbers here. 
 
 \end{document}

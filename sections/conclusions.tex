@@ -2,12 +2,23 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \label{sec:conclusions}
-This paper has explored how citizen science could impact the problem of photometric modelling of spiral galaxies using complex models. We detailed a novel project inside the popular and successful Zooniverse citizen science platform that enables galaxy photometric decomposition in near-realtime.
+In this paper we present a novel method for modelling of galaxy images, \textit{Galaxy Builder}\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}}, which was conceived with the goal of solving the ``quality of quantity" dilema face in galaxy image modelling, which despite advances in computation, still typically requires significant human interaction to make quality fits. 
 
-We have demonstrated that it is possible to obtain models from volunteer classifications, using both the best individual classification and an aggregate model from clustering, which show good agreement with existing results in the literature.
+\textit{Galaxy Builder} leverages the power of crowd sourcing for the hardest to automate parts of image fitting, namely determining the appropriate number of model components to include, and finding parameters which are close to optimal.  
 
-The complexity of the tasks involved in this project coupled with the difficulties in clustering and aggregating data suggest that this is one problem space the power of the crowd hasn't quite overcome yet. Despite this, we remain of the opinion that better user experience design \& in-browser computer optimization will help improve the quality of classifications and thus that of the recovered models.
+%This paper has explored how citizen science could impact the problem of photometric modelling of spiral galaxies using complex models. We detailed a novel project inside the popular and successful Zooniverse citizen science platform that enables galaxy photometric decomposition in near-realtime.
 
-We are optimistic about the potential of projects like \textit{Galaxy Builder} to dramatically increase the ability of researchers to perform complex, labour-intensive modelling of galaxy photometry.
+We have demonstrated that we are able to obtain models with residuals at the level of (PUT NUMBERS HERE?) from volunteer classifications, using both the best individual classification and an aggregate model from clustering. 
 
+We compare these new models to existing results in the literature where available. We find good agreement where the models or parameters are similar, and comment on instances where \textit{Galaxy Builder} should provide superior models. 
+
+% MORE NUMBER IN THE CONCLUSIONS. 
+
+%LETS JUST NOT HAVE THIS: The complexity of the tasks involved in this project coupled with the difficulties in clustering and aggregating data suggest that this is one problem space the power of the crowd hasn't quite overcome yet. Despite this, we remain of the opinion that better user experience design \& in-browser computer optimization will help improve the quality of classifications and thus that of the recovered models.
+
+While we were able to obtain models for 296 images in a period of XX Months of running the site, we note that user experience will need to be considered if significantly larger numbers of these models are to be obtained. 
+
+We are optimistic about the potential of projects like \textit{Galaxy Builder} to dramatically increase the ability of researchers to perform complex, labour-intensive modelling of galaxy photometry, leveraging the power of the crowd to perform the complex tasks best suited to humans, and computer algorithms for the final optimization. 
+
+We elease our catalogue of models to the community, and in future work we use this sample to investigate spiral arm formation mechanisms (T. Lingard et al. in prep.). 
 \end{document}
