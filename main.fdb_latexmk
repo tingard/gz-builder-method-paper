@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1567178322 "main.aux" "main.bbl" "main" 1567180731
+["bibtex main"] 1567178322 "main.aux" "main.bbl" "main" 1567417794
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1566468169 54199 61b2b72c3f90f9552bcdfcc4195936e0 ""
-  "main.aux" 1567180730 21323 26a563cbdc7d04ad59919d383040e79a ""
+  "main.aux" 1567417793 21323 26a563cbdc7d04ad59919d383040e79a ""
   "main.bcf" 0 -1 0 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1567180729 "main.tex" "main.pdf" "main" 1567180731
+["pdflatex"] 1567417792 "main.tex" "main.pdf" "main" 1567417794
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -259,7 +259,7 @@
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
   "images__method/LOF_cleaning.pdf" 1562159367 109966 7b4c348eec041bf379ca3427d42f058e ""
   "images__method/aggregate_model.pdf" 1560848495 104971 72a9c52700b985ce06a4c6db349244e7 ""
-  "images__method/bi_vs_agg_comparison.pdf" 1565271854 300713 9dfee2e3a33161adb68d753dc1cc2c1e ""
+  "images__method/bi_vs_agg_comparison.pdf" 1567417784 177340 7f4446edd569e6acc98621ba8f0a9e92 ""
   "images__method/drawn_shapes.pdf" 1564410819 938676 81f359b7c62cb7f01256cb817fc92ef8 ""
   "images__method/mean_shapes.pdf" 1560848842 161182 5d70cc9f7fd29fb10169db3e904e0a04 ""
   "images__results/b-t_comparison_correlation.pdf" 1565177550 19487 00602dfe3fe5b4298708a47d6bdf6474 ""
@@ -267,10 +267,10 @@
   "images__results/component_sizing.pdf" 1565606462 26037 34a41207c75634df3dc2745ccc5fcf54 ""
   "images__results/gzb-agg-nsa-comparison.pdf" 1564140060 34267 15a8802dbd8b55a0895d930570146250 ""
   "images__results/gzb-hart-comparison.pdf" 1560866224 18290 ddb9a7502875293d9056d63a9aab8a78 ""
-  "images__results/sd_comp_comparison.pdf" 1567178632 20807 8983ecf626edcdc8e86aee18f05ff377 ""
-  "main.aux" 1567180730 21323 26a563cbdc7d04ad59919d383040e79a ""
+  "images__results/sd_comp_comparison.pdf" 1567417773 20807 83c2fb2bce51de9a88d9607725f80b36 ""
+  "main.aux" 1567417793 21323 26a563cbdc7d04ad59919d383040e79a ""
   "main.bbl" 1567178322 11536 792c241f474a4eed8e0f55b4e08e779e "bibtex main"
-  "main.out" 1567180730 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
+  "main.out" 1567417793 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
   "main.tex" 1567031927 5209 2c0032360f37ed87ade29be2e4f68802 ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
   "sections/abstract.tex" 1567031927 1936 338442981f853ecacf0ed15ad01106ad ""
@@ -283,6 +283,6 @@
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
   "main.out"
+  "main.log"
   "main.aux"
   "main.pdf"
-  "main.log"
