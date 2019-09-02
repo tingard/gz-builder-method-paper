@@ -5,7 +5,8 @@
 
 \subsection{The \textit{Galaxy Builder} Zooniverse project}
 
-\textit{Galaxy Builder}\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}} is a citizen-science project built on the Zooniverse\footnote{\url{https://www.zooniverse.org}} web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disc, bar and spiral arm components). As a project of this kind, allowing volunteers to interact with and model data, had never been attempted inside the current Zooniverse web platform before, this project involved designing and implementing a model rendering suite inside the existing Zooniverse front-end code-base. As with all citizen science solutions, we had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions. 
+\textit{Galaxy Builder} is a citizen-science project built on the Zooniverse web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (including the bulge, disc, bar and spiral arm components). As a project of this kind, allowing volunteers to interact with and model data, had never been attempted inside the current Zooniverse web platform before, this project involved designing and implementing a model rendering suite inside the existing Zooniverse front-end code-base. As with all citizen science solutions, we had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions.
+
 The closest relative to this project within the Zooniverse ecosystem was the Galaxy Zoo: Mergers project \citep{Holincheck2016:1604.00435v1}. This project asked volunteers to help match the morphological properties of an image of merging galaxies to a plethora of restricted three-body simulations, in an attempt to identify the possible initial conditions resulting in the observed morphology. For part of the project, volunteers downloaded a Java applet, which would run restricted three-body simulations and generate output images. Volunteers could mainpulate the models used in the simulation. The volunteer then voted on simulations which matched a given galaxy merger image, or shared important tidal features. A new batch of simulations would then be run.
 
 \subsubsection{Project Timeline and Development}
@@ -72,7 +73,7 @@ The morphological information required to select spiral galaxies came from the p
 
 This selection criteria results in the \textit{stellar mass-complete sample} of 6222 spiral galaxies from \citet{2017MNRAS.472.2263H}.
 
-We split the \textit{stellar mass-complete sample} into smaller sub-samples, each containing 100 galaxies. In an iterative process we chose each sub-sample to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample. This was done to account for the unknown rate at which volunteers would provide classifications (we wanted some results to test as early as possible). In the first two sets of 100 galaxies, 1\% of galaxies (i.e. 2 images) failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown, but it leaves a sample of 198 galaxies with images we consider in this paper. 
+We split the \textit{stellar mass-complete sample} into smaller sub-samples, each containing 100 galaxies. In an iterative process we chose each sub-sample to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample. This was done to account for the unknown rate at which volunteers would provide classifications (we wanted some results to test as early as possible). In the first two sets of 100 galaxies, 1\% of galaxies (i.e. 2 images) failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown, but it leaves a sample of 198 galaxies with images we consider in this paper.
 
 \subsubsection{Image and modelling metadata extraction}
 
@@ -97,11 +98,11 @@ Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-cli
 \subsection{The Galaxy Model}
 \label{section:galaxy-model}
 
-The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The allowed model components consisted of: 
+The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The allowed model components consisted of:
 \begin{itemize}
-\item An exponential, elliptical disc; 
-\item an elliptical S\'ersic bulge (with $n$ allowed to vary from 0.5 to 5); 
-\item a S\'ersic bar with a ``boxiness'' modifier (as described in \citealt{galfit-paper}); 
+\item An exponential, elliptical disc;
+\item an elliptical S\'ersic bulge (with $n$ allowed to vary from 0.5 to 5);
+\item a S\'ersic bar with a ``boxiness'' modifier (as described in \citealt{galfit-paper});
 \item any number of freehand poly-line spiral arms.
 \end{itemize}
 
@@ -115,7 +116,7 @@ It over-samples the bulge, disc and bar components to a factor of five and perfo
 
 We initially collected 10 classifications per galaxy, however preliminary analysis indicated this number of independent answers would be insufficient to create reliable and reproducable aggregate classifications. For this reason, a hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow the development of the aggregation methodology.
 
-Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (present in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies. 
+Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (present in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies.
 
 \subsection{Classification Aggregation Methodology}
 
@@ -186,6 +187,6 @@ As mentioned above, we anticipated the need for a numerical fit to fine-tune par
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). %Could use some numbers here. 
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). %Could use some numbers here.
 
 \end{document}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1567178322 "main.aux" "main.bbl" "main" 1567417794
+["bibtex main"] 1567437025 "main.aux" "main.bbl" "main" 1567437309
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1566468169 54199 61b2b72c3f90f9552bcdfcc4195936e0 ""
-  "main.aux" 1567417793 21323 26a563cbdc7d04ad59919d383040e79a ""
+  "main.aux" 1567437308 21323 064d7cc7b570d2402b5958ac369c3099 ""
   "main.bcf" 0 -1 0 ""
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1567417792 "main.tex" "main.pdf" "main" 1567417794
+  "main.blg"
+["pdflatex"] 1567437307 "main.tex" "main.pdf" "main" 1567437309
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -268,21 +268,21 @@
   "images__results/gzb-agg-nsa-comparison.pdf" 1564140060 34267 15a8802dbd8b55a0895d930570146250 ""
   "images__results/gzb-hart-comparison.pdf" 1560866224 18290 ddb9a7502875293d9056d63a9aab8a78 ""
   "images__results/sd_comp_comparison.pdf" 1567417773 20807 83c2fb2bce51de9a88d9607725f80b36 ""
-  "main.aux" 1567417793 21323 26a563cbdc7d04ad59919d383040e79a ""
-  "main.bbl" 1567178322 11536 792c241f474a4eed8e0f55b4e08e779e "bibtex main"
-  "main.out" 1567417793 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
+  "main.aux" 1567437308 21323 064d7cc7b570d2402b5958ac369c3099 ""
+  "main.bbl" 1567437025 11536 792c241f474a4eed8e0f55b4e08e779e "bibtex main"
+  "main.out" 1567437308 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
   "main.tex" 1567031927 5209 2c0032360f37ed87ade29be2e4f68802 ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
-  "sections/abstract.tex" 1567031927 1936 338442981f853ecacf0ed15ad01106ad ""
+  "sections/abstract.tex" 1567434254 1682 0048034bf53923ecc5f1b180afc7107e ""
   "sections/acknowledgements.tex" 1564389075 459 c9268c73ad4daf4eee70dde5484721ae ""
   "sections/appendix.tex" 1565259675 1748 377270bca341c6d6f0d7f939872b35ca ""
   "sections/conclusions.tex" 1567031927 2727 13cd46d9b01cd224f4f837e8263582e5 ""
   "sections/introduction.tex" 1567166565 11719 836d20c47a5b03493867cb9616381c17 ""
-  "sections/method.tex" 1567031927 23289 23f387116a1da12873f49d284340daf6 ""
+  "sections/method.tex" 1567437295 23163 f2e058585d1cf96b4fc1122723062492 ""
   "sections/results.tex" 1567180671 10862 c74736236343bbdbf42dd7c3633e2412 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
   "main.out"
-  "main.log"
   "main.aux"
   "main.pdf"
+  "main.log"
