@@ -140,7 +140,22 @@ As we have multiple independent answers for each parameter and component we can 
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
-The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results.
+The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results and can be seen in Table \ref{table:dbscan_params}. In DBSCAN the core of a cluster is defined as a group of at least \texttt{min\_points} that are all within a distance eps of each other. Additionally, any points with a distance \texttt{eps} of a cluster's core are also associated with the cluster. Bar with axis ratios greater than 0.6 were removed from the pool.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ |c|c|c| }
+    \hline
+    component & \texttt{eps} & \texttt{min\_points} \\
+    \hline
+    Disc & 0.3 & 5 \\
+    Bulge & 0.3 & 3 \\
+    Bar & 0.385 & 3 \\
+    \hline
+  \end{tabular}
+  \caption{The clustering parameters used for the disc, bulge and bar components present in \textit{Galaxy Builder}}
+  \label{table:dbscan_params}
+\end{table}
 
 For shapes clustered in this way, we define the aggregate component to be the shape which minimises the sum of Jaccard distances to each of the shapes in the cluster. For our example galaxy, UGC 4721, clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes}.
 

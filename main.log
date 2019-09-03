@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  3 SEP 2019 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  3 SEP 2019 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1296,133 +1296,99 @@ Package pdftex.def Info: images__method/drawn_shapes.pdf used on input line 123.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.144 
-       <./images/residualProgress.jpg>] <images__method/mean_shapes.pdf, id=334, 1281.14192pt x 430.10228pt>
+       <./images/residualProgress.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ <images__method/mean_shapes.pdf, id=335, 1281.14192pt x 430.10228pt>
 File: images__method/mean_shapes.pdf Graphic file (type pdf)
  <use images__method/mean_shapes.pdf>
-Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 148.
+Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 163.
 (pdftex.def)             Requested size: 492.23276pt x 165.25189pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1360) in paragraph at lines 155--156
-[]\T1/aer/m/n/9 Once spiral clas-si-fic-a-tions on a galaxy have been
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2460) has occurred while \output is active []
 
  [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 
-       <./images__method/drawn_shapes.pdf>] <images__method/LOF_cleaning.pdf, id=381, 570.13062pt x 547.64034pt>
+l.166 \end{figure*}
+                   pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.166 \end{figure*}
+                    <./images__method/drawn_shapes.pdf>]
+Underfull \hbox (badness 1360) in paragraph at lines 170--171
+[]\T1/aer/m/n/9 Once spiral clas-si-fic-a-tions on a galaxy have been
+ []
+
+<images__method/LOF_cleaning.pdf, id=382, 570.13062pt x 547.64034pt>
 File: images__method/LOF_cleaning.pdf Graphic file (type pdf)
  <use images__method/LOF_cleaning.pdf>
-Package pdftex.def Info: images__method/LOF_cleaning.pdf used on input line 158.
+Package pdftex.def Info: images__method/LOF_cleaning.pdf used on input line 173.
 (pdftex.def)             Requested size: 227.62204pt x 218.64279pt.
- <images__method/aggregate_model.pdf, id=383, 566.40926pt x 558.3322pt>
+ <images__method/aggregate_model.pdf, id=384, 566.40926pt x 558.3322pt>
 File: images__method/aggregate_model.pdf Graphic file (type pdf)
  <use images__method/aggregate_model.pdf>
-Package pdftex.def Info: images__method/aggregate_model.pdf used on input line 168.
+Package pdftex.def Info: images__method/aggregate_model.pdf used on input line 183.
 (pdftex.def)             Requested size: 227.62204pt x 224.36829pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+ <images__method/bi_vs_agg_comparison.pdf, id=390, 617.49341pt x 543.74413pt>
+File: images__method/bi_vs_agg_comparison.pdf Graphic file (type pdf)
+ <use images__method/bi_vs_agg_comparison.pdf>
+Package pdftex.def Info: images__method/bi_vs_agg_comparison.pdf used on input line 193.
+(pdftex.def)             Requested size: 227.62204pt x 200.43546pt.
+) (./sections/results.tex <images__results/component_frequency.pdf, id=396, 955.60945pt x 254.90804pt>
+File: images__results/component_frequency.pdf Graphic file (type pdf)
+ <use images__results/component_frequency.pdf>
+Package pdftex.def Info: images__results/component_frequency.pdf used on input line 15.
+(pdftex.def)             Requested size: 492.23276pt x 131.30438pt.
+ <images__results/component_sizing.pdf, id=398, 891.30807pt x 605.73175pt>
+File: images__results/component_sizing.pdf Graphic file (type pdf)
+ <use images__results/component_sizing.pdf>
+Package pdftex.def Info: images__results/component_sizing.pdf used on input line 23.
+(pdftex.def)             Requested size: 492.23276pt x 334.52141pt.
+ [7] [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.176 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+l.43 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.176 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+l.43 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.176 
-       <./images__method/mean_shapes.pdf> <./images__method/LOF_cleaning.pdf
+l.43 
+      <./images__method/mean_shapes.pdf> <./images__method/LOF_cleaning.pdf
 
 pdfTeX warning: pdflatex (file ./images__method/LOF_cleaning.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./images__method/aggregate_model.pdf
 
 pdfTeX warning: pdflatex (file ./images__method/aggregate_model.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <images__method/bi_vs_agg_comparison.pdf, id=505, 617.49341pt x 543.74413pt>
-File: images__method/bi_vs_agg_comparison.pdf Graphic file (type pdf)
- <use images__method/bi_vs_agg_comparison.pdf>
-Package pdftex.def Info: images__method/bi_vs_agg_comparison.pdf used on input line 178.
-(pdftex.def)             Requested size: 227.62204pt x 200.43546pt.
-) (./sections/results.tex <images__results/component_frequency.pdf, id=511, 955.60945pt x 254.90804pt>
-File: images__results/component_frequency.pdf Graphic file (type pdf)
- <use images__results/component_frequency.pdf>
-Package pdftex.def Info: images__results/component_frequency.pdf used on input line 15.
-(pdftex.def)             Requested size: 492.23276pt x 131.30438pt.
- <images__results/component_sizing.pdf, id=513, 891.30807pt x 605.73175pt>
-File: images__results/component_sizing.pdf Graphic file (type pdf)
- <use images__results/component_sizing.pdf>
-Package pdftex.def Info: images__results/component_sizing.pdf used on input line 23.
-(pdftex.def)             Requested size: 492.23276pt x 334.52141pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.41 \subsubsection
-                   {Comparison to One-component fit - axis ratio} <./images__method/bi_vs_agg_comparison.pdf>] <images__results/gzb-agg-nsa-comparison.pdf, id=582, 418.1218pt x 425.62012pt>
+>] <images__results/gzb-agg-nsa-comparison.pdf, id=535, 418.1218pt x 425.62012pt>
 File: images__results/gzb-agg-nsa-comparison.pdf Graphic file (type pdf)
  <use images__results/gzb-agg-nsa-comparison.pdf>
 Package pdftex.def Info: images__results/gzb-agg-nsa-comparison.pdf used on input line 45.
 (pdftex.def)             Requested size: 227.62204pt x 231.70833pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.54 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.54 
-      <./images__results/component_frequency.pdf> <./images__results/component_sizing.pdf
-
-pdfTeX warning: pdflatex (file ./images__results/component_sizing.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
 Underfull \hbox (badness 1142) in paragraph at lines 57--58
 []\T1/aer/m/n/9 [[\T1/aer/bx/n/9 Talk about bias (only 1:1 agree-ment with
  []
 
-<images__results/b-t_comparison_correlation.pdf, id=699, 616.6036pt x 605.04045pt>
+<images__results/b-t_comparison_correlation.pdf, id=547, 616.6036pt x 605.04045pt>
 File: images__results/b-t_comparison_correlation.pdf Graphic file (type pdf)
  <use images__results/b-t_comparison_correlation.pdf>
 Package pdftex.def Info: images__results/b-t_comparison_correlation.pdf used on input line 64.
 (pdftex.def)             Requested size: 227.62204pt x 223.35368pt.
- <images__results/sd_comp_comparison.pdf, id=717, 523.43694pt x 290.91437pt>
+ <images__results/sd_comp_comparison.pdf, id=565, 523.43694pt x 290.91437pt>
 File: images__results/sd_comp_comparison.pdf Graphic file (type pdf)
  <use images__results/sd_comp_comparison.pdf>
 Package pdftex.def Info: images__results/sd_comp_comparison.pdf used on input line 76.
 (pdftex.def)             Requested size: 227.62204pt x 126.50676pt.
- [10pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.85 I
-      n order to provide a comparison for our novel method of spiral paramet...pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.85 I
-      n order to provide a comparison for our novel method of spiral paramet...pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.85 I
-      n order to provide a comparison for our novel method of spiral paramet... <./images__results/gzb-agg-nsa-comparison.pdf> <./images__results/b-t_comparison_correlation.pdf
-
-pdfTeX warning: pdflatex (file ./images__results/b-t_comparison_correlation.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./images__results/sd_comp_comparison.pdf
-
-pdfTeX warning: pdflatex (file ./images__results/sd_comp_comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <images__results/gzb-hart-comparison.pdf, id=890, 505.62651pt x 389.54659pt>
+ <images__results/gzb-hart-comparison.pdf, id=577, 505.62651pt x 389.54659pt>
 File: images__results/gzb-hart-comparison.pdf Graphic file (type pdf)
  <use images__results/gzb-hart-comparison.pdf>
 Package pdftex.def Info: images__results/gzb-hart-comparison.pdf used on input line 88.
@@ -1432,18 +1398,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 $[]$ [][][][]$\T1/aett/m/n/8 https : / / www . zooniverse . org / projects / tingard /
  []
 
-) (./sections/acknowledgements.tex) (./main.bbl [11pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.126   et~al.}{2017a}]{2017MNRAS.469.3363K}
-                                             <./images__results/gzb-hart-comparison.pdf>]
+l.9 W
+     e have demonstrated that we are able to obtain models with residuals at... <./images__method/bi_vs_agg_comparison.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.142 \section
+              {Acknowledgements}pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.142 \section
+              {Acknowledgements} <./images__results/component_frequency.pdf> <./images__results/component_sizing.pdf
+
+pdfTeX warning: pdflatex (file ./images__results/component_sizing.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./sections/acknowledgements.tex) (./main.bbl [11pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.65 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.65 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.65 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.65 
+      <./images__results/gzb-agg-nsa-comparison.pdf> <./images__results/b-t_comparison_correlation.pdf
+
+pdfTeX warning: pdflatex (file ./images__results/b-t_comparison_correlation.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./images__results/sd_comp_comparison.pdf
+
+pdfTeX warning: pdflatex (file ./images__results/sd_comp_comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./images__results/gzb-hart-comparison.pdf
+
+pdfTeX warning: pdflatex (file ./images__results/gzb-hart-comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 Underfull \hbox (badness 1043) in paragraph at lines 227--231
 \T1/aer/m/n/8 1049--1054, [][]doi:10.1145/2567948.2579215[][], [][]$\T1/aett/m/n/8 http : / / doi . acm .
  []
 
 ) (./sections/appendix.tex
-Underfull \vbox (badness 2418) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
@@ -1465,22 +1479,22 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 10714 strings out of 493014
- 150747 string characters out of 6133352
- 253935 words of memory out of 5000000
- 13775 multiletter control sequences out of 15000+600000
+ 10716 strings out of 493014
+ 150775 string characters out of 6133352
+ 257055 words of memory out of 5000000
+ 13776 multiletter control sequences out of 15000+600000
  107312 words of font info for 235 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,15n,35p,1194b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,15n,35p,1194b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (12 pages, 2408470 bytes).
+Output written on main.pdf (12 pages, 2409912 bytes).
 PDF statistics:
- 1144 PDF objects out of 1200 (max. 8388607)
- 672 compressed objects within 7 object streams
- 116 named destinations out of 1000 (max. 500000)
+ 1145 PDF objects out of 1200 (max. 8388607)
+ 673 compressed objects within 7 object streams
+ 117 named destinations out of 1000 (max. 500000)
  194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

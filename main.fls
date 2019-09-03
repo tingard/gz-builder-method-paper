@@ -468,9 +468,6 @@ INPUT ./images__results/b-t_comparison_correlation.pdf
 INPUT images__results/sd_comp_comparison.pdf
 INPUT ./images__results/sd_comp_comparison.pdf
 INPUT ./images__results/sd_comp_comparison.pdf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi7.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi7.tfm
 INPUT images__results/gzb-hart-comparison.pdf
 INPUT ./images__results/gzb-hart-comparison.pdf
 INPUT ./images__results/gzb-hart-comparison.pdf
@@ -480,6 +477,9 @@ INPUT sections/acknowledgements.tex
 INPUT sections/acknowledgements.tex
 INPUT main.bbl
 INPUT main.bbl
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi7.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi7.tfm
 INPUT sections/appendix.tex
 INPUT sections/appendix.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
