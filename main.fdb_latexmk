@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1567512781 "main.aux" "main.bbl" "main" 1567512785
+["bibtex main"] 1567512781 "main.aux" "main.bbl" "main" 1567515070
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1566468169 54199 61b2b72c3f90f9552bcdfcc4195936e0 ""
-  "main.aux" 1567512782 21323 f5779c0d9d1c894edfdc5b8759b2b80b ""
+  "main.aux" 1567515070 21323 f5779c0d9d1c894edfdc5b8759b2b80b ""
   "main.bcf" 0 -1 0 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1567512781 "main.tex" "main.pdf" "main" 1567512785
+["pdflatex"] 1567515068 "main.tex" "main.pdf" "main" 1567515070
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -268,12 +268,12 @@
   "images__results/gzb-agg-nsa-comparison.pdf" 1564140060 34267 15a8802dbd8b55a0895d930570146250 ""
   "images__results/gzb-hart-comparison.pdf" 1560866224 18290 ddb9a7502875293d9056d63a9aab8a78 ""
   "images__results/sd_comp_comparison.pdf" 1567417773 20807 83c2fb2bce51de9a88d9607725f80b36 ""
-  "main.aux" 1567512782 21323 f5779c0d9d1c894edfdc5b8759b2b80b ""
+  "main.aux" 1567515070 21323 f5779c0d9d1c894edfdc5b8759b2b80b ""
   "main.bbl" 1567512781 11536 792c241f474a4eed8e0f55b4e08e779e "bibtex main"
-  "main.out" 1567512782 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
+  "main.out" 1567515070 1129 8c2ea0130413c32c11c8c2cbf0551f2d ""
   "main.tex" 1567031927 5209 2c0032360f37ed87ade29be2e4f68802 ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
-  "sections/abstract.tex" 1567434254 1682 0048034bf53923ecc5f1b180afc7107e ""
+  "sections/abstract.tex" 1567515061 1683 66262d84164559e189830debbe52ab15 ""
   "sections/acknowledgements.tex" 1567503681 536 059c759570224f92d189a2d3a73ecbec ""
   "sections/appendix.tex" 1565259675 1748 377270bca341c6d6f0d7f939872b35ca ""
   "sections/conclusions.tex" 1567503701 1998 abe67d2e6f10fd2846f9673c627ec17b ""
@@ -283,6 +283,6 @@
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
   "main.out"
-  "main.aux"
   "main.pdf"
+  "main.aux"
   "main.log"
