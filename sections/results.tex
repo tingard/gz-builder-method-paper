@@ -30,7 +30,7 @@ After selecting a component, the volunteer sets its shape and size. We see good 
 For each galaxy in the sample we compare the tuned aggregate model to the tuned best individual model, and find that the best individual model consistently outperforms the aggregate (around 70\% of the time). However, there is a very small (less than a 5\%) probability that any individual classifier will beat the aggregate model for more than half of the galaxies they model, with most volunteers outperforming the aggregate less than one in ten times. In summary, for an individual galaxy it is usually the case that the best individual model is best, but these models come from a wide variety of users, not a small number of super-users. It is notable how close many volunteers' models came to the optimial solution without any tuning.
 
 Our recommendation is to make use of the tuned aggregate model for scientific analysis, though users may wish to instead make use of a number of volunteer models as starting points for their own numerical fits.
-%if sufficient computation time is available it is likely that the best results can be obtained by using a number of volunteer models as starting points for numerical fits.
+
 
 \subsection{Comparison to results in the literature}
 
@@ -54,7 +54,11 @@ One of the largest catalogs of 2D many-component fits is \citet{Simard2011:1107.
 
 Comparing between these catalogues and to \textit{Galaxy Builder} models, we see that our models show excellent agreement with others, where such agreement is to be expected. Comparing bulge to total fraction, we see closest agreement to the \textit{exp+exp} model, where bulge S\'ersic index is similar to that most often chosen by \textit{Galaxy Builder} volunteers (who consistently preferred to use bulges with low S\'ersic indices), as bulge measurements are very sensitive to central substructure and model choice \citep{Gao2017:1709.00746v1}. The Kendall rank correlation coefficients between our measurments and \citet{Simard2011:1107.1518v1} and \citet{2012MNRAS.421.2277L} can be seen in Figure \ref{fig:bt_correlation}. The low correlation coefficients in general, even when comparing the results of fitting identical models (the two \textit{exp+dV} models), further show the difficulty of calculating reliable bulge to total ratios for galaxies. \textit{Galaxy Builder} models agree with more conventional photometrically fit models as well  as those models agree with each other.
 
-% Talk about bias (only 1:1 agreement with exp+exp)?
+\comment{Talk about bias (only 1:1 agreement with exp+exp)?}
+
+\comment{Meert et al?}
+
+\comment{Other comparisons than Bulge Fraction?}
 
 \begin{figure}
   \includegraphics[width=8cm]{images__results/b-t_comparison_correlation.pdf}
