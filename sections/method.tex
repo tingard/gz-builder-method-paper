@@ -99,14 +99,14 @@ Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-cli
 The model we chose was largely based off of components and methodology described in \citet{galfit-paper}. The allowed model components consisted of:
 \begin{itemize}
 \item An exponential, elliptical disc;
-\item an elliptical S\'ersic bulge (with $n$ allowed to vary from 0.5 to 5);
+\item an elliptical S\'ersic bulge (with $n$ chosen by volunteers and allowed to vary from 0.5 to 5);
 \item a S\'ersic bar with a ``boxiness'' modifier (as described in \citealt{galfit-paper});
 \item any number of freehand poly-line spiral arms.
 \end{itemize}
 
 Each spiral arm is modelled using a poly-line drawn by the volunteer. The brightness of a spiral arm at any point is given by the value of a Gaussian centred at the nearest point on any drawn poly-line, with volunteers able to choose the Gaussian width and peak brightness using sliders. Radial falloff was added by multiplying by the value of the previously added exponential disc, though volunteers could change the half-light radius of this falloff disc.
 
-The modelling code ignores masked regions identified by \textsc{SExtractor}. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained from the relevant Sloan r-band \texttt{psField} file, extracted at the central position of the galaxy \citep{2002AJ....123..485S}.
+The modelling code ignores masked regions identified as secondary sources by \textsc{SExtractor}. It over-samples the bulge, disc and bar components to a factor of five and performs PSF convolution using a PSF obtained from the relevant Sloan r-band \texttt{psField} file, extracted at the central position of the galaxy \citep{2002AJ....123..485S}.
 
 \subsection{Choice of Retirement limit}
 \label{sec:retirement-limit}
@@ -134,7 +134,7 @@ Once the ``best'' classification for a galaxy has been identified, we computatio
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
 
-As we have multiple independent answers for each parameter and component we can also use these to find an aggregated answer. Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
+As we have multiple independent answers for each parameter and component, we can also combine these to find an aggregated answer. Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two shapes:
 
 \begin{equation}
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
@@ -187,7 +187,10 @@ The galaxy model for UGC 4721 obtained through aggregation can be seen in Figure
 
 \subsection{Model Tuning}
 
-As mentioned above, we anticipated the need for a numerical fit to fine-tune parameters of \textit{Galaxy Builder} models. This tuning was performed using the L\_BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}, with a mean-squared error metric. Parameter bounds were chosen to be as uninformative as possible, with bulge Sérsic index restricted to between 0.1 and 10. Tuning the best individual models did not significantly improve residuals, but due to the large presence of parameters left at their defaults / extrema (36\% of all disk components drawn by volunteers were left at the default axis ratio, and over half of all bars were left with their default rotation, 12\% of the best individual galaxies had disk axis ratios left at the default values), tuning was neccessary for aggregate models. Models and residuals for the tuned best individual and aggregate models for our example galaxy are shown in Figure \ref{fig:bi_vs_agg_comparison}.
+As mentioned above, we anticipated the need for a numerical fit to fine-tune parameters of \textit{Galaxy Builder} models. This tuning was performed using the L\_BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}, with a mean-squared error metric. Parameter bounds were chosen to be as uninformative as possible, with bulge Sérsic index restricted to between 0.1 and 10. Tuning the best individual models did not significantly improve residuals, but due to the large presence of parameters left at their defaults / extrema (36\% of all disk components drawn by volunteers were left at the default axis ratio, and over half of all bars were left with their default rotation, 12\% of the best individual galaxies had disk axis ratios left at the default values), tuning was neccessary as an attempt to correct for this bias. Models and residuals for the tuned best individual and aggregate models for our example galaxy are shown in Figure \ref{fig:bi_vs_agg_comparison};
+
+Both forms of tuned model generally accounted for roughly 50\% of the light present in a cutout, and reduced the peak pixel brightness to 25\% that of the original value. However, both of these measures are hugely dependent on the signal-to-noise of each galaxy and whether all secondary sources where correctly identified and masked.
+
 
 \begin{figure}
   \includegraphics[width=8cm]{images__method/bi_vs_agg_comparison.pdf}
@@ -199,6 +202,7 @@ As mentioned above, we anticipated the need for a numerical fit to fine-tune par
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). \comment{Could use some numbers here.}
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721).
+Effective radii generally had relative errors of around 15\% and axis ratios show an error of around 0.1. Parameters dictated by sliders show much larger and less consistent errors.
 
 \end{document}
