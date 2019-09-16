@@ -39,4 +39,34 @@ Finally, we define our separation measure between two drawn poly-lines as
 distance(A,\,B) \equiv D(A,\,B) + D(B,\,A).
 \end{equation}
 
+
+\section{Default Values and Parameter Limits}
+\begin{table*}
+  \centering
+  \begin{tabular}{l|l|r|r|r|r|r}
+\hline
+Component & Parameter &  Default &  Volunteer allowed &  Volunteer allowed & Tuning Maximum & Tuning Minimum \\
+ &  &   &  Maximum &  Minimum & Bound & Bound \\
+\hline
+disk & axRatio &      0.5 &      inf &      0.0 & 0.01 & 100 \\
+       & scale &      2.0 &     1.00 &      0.0 & 0 & inf \\
+       & i0 &      1.0 &     0.20 &      0.0 & 0 & inf \\
+bulge & axRatio &      0.5 &      inf &      0.0 & 0.01 & 100 \\
+       & scale &      2.0 &     1.00 &      0.0 & 0 & inf \\
+       & i0 &      2.0 &     0.50 &      0.0 & 0 & inf   \\
+       & n &      5.0 &     1.00 &      0.5 & 0.1 & 10 \\
+bar & roll &      0.0 &      inf &     -inf & 0.01 & 100 \\
+       & scale &      2.0 &     1.00 &      0.0 & 0 & inf \\
+       & i0 &      1.0 &     0.20 &      0.0 & 0 & inf   \\
+       & n &      2.0 &     0.50 &      0.3 & 0.1 & 10 \\
+       & c &      3.0 &     2.00 &      1.5 & 0.01 & 10 \\
+spiral & i0 &      1.0 &     0.75 &      0.0 & 0 & inf   \\
+       & spread &      2.0 &     1.00 &      0.0 & 0 & inf   \\
+       & falloff &      2.0 &     1.00 &      0.0 & 0.01 & inf   \\
+\hline
+  \centering
+  \end{tabular}
+  \caption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll was similarly unconstrained.}
+  \label{table:bad_values}
+\end{table*}
 \end{document}

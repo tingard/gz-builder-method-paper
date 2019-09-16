@@ -83,9 +83,9 @@ Davis D.~R.,  Hayes W.~B.,  2014, ApJ, 790, 87
   Baba}{2014}]{Dobbs2014:1407.5062v1}
 Dobbs C.,  Baba J.,  2014, Publ. Astron. Soc. Aust., 31
 
-\bibitem[\protect\citeauthoryear{Gadotti}{Gadotti}{2010}]{Gadotti2010:1003.1719v2}
-Gadotti D.~A.,  2010, Monthly Notices of the Royal Astronomical Society, 415,
-  3308
+\bibitem[\protect\citeauthoryear{{Gadotti}}{{Gadotti}}{2011}]{2011MNRAS.415.3308G}
+{Gadotti} D.~A.,  2011, \mn@doi [\mnras] {10.1111/j.1365-2966.2011.18945.x},
+  \href {https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.3308G} {415, 3308}
 
 \bibitem[\protect\citeauthoryear{Gao \& Ho}{Gao \&
   Ho}{2017}]{Gao2017:1709.00746v1}
@@ -130,14 +130,9 @@ Kormendy J.,  Drory N.,  Bender R.,   Cornell M.~E.,  2010, The Astrophysical
   Journal, 723, 54
 
 \bibitem[\protect\citeauthoryear{{Kruk} et~al.,}{{Kruk}
-  et~al.}{2017a}]{2017MNRAS.469.3363K}
-{Kruk} S.~J.,  et~al., 2017a, \mn@doi [\mnras] {10.1093/mnras/stx1026}, \href
+  et~al.}{2017}]{2017MNRAS.469.3363K}
+{Kruk} S.~J.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stx1026}, \href
   {https://ui.adsabs.harvard.edu/abs/2017MNRAS.469.3363K} {469, 3363}
-
-\bibitem[\protect\citeauthoryear{Kruk et~al.,}{Kruk
-  et~al.}{2017b}]{Kruk2017:1710.00093v2}
-Kruk S.~J.,  et~al., 2017b, Monthly Notices of the Royal Astronomical Society,
-  473, 4731
 
 \bibitem[\protect\citeauthoryear{{Kruk} et~al.,}{{Kruk}
   et~al.}{2018}]{2018MNRAS.473.4731K}
@@ -207,6 +202,11 @@ Pozzetti L.,  et~al., 2009, Astronomy \& Astrophysics, 523, A13
   Driver}{Robotham et~al.}{2016}]{profit-paper}
 Robotham A. S.~G.,  Taranu D.~S.,  Tobar R.,  Moffett A.,   Driver S.~P.,  2016
 
+\bibitem[\protect\citeauthoryear{{Salo} et~al.,}{{Salo}
+  et~al.}{2015}]{2015ApJS..219....4S}
+{Salo} H.,  et~al., 2015, \mn@doi [\apjs] {10.1088/0067-0049/219/1/4}, \href
+  {https://ui.adsabs.harvard.edu/abs/2015ApJS..219....4S} {219, 4}
+
 \bibitem[\protect\citeauthoryear{Sanchez et~al.,}{Sanchez
   et~al.}{2011}]{Sanchez2011:1111.0962v2}
 Sanchez S.~F.,  et~al., 2011, Astronomy and Astrophysics, 538, A8
@@ -219,10 +219,11 @@ Simard L.,  et~al., 2002a, ASTROPHYS J SUPPL S, 142, 1
   et~al.}{2002b}]{gim2d-paper}
 Simard L.,  et~al., 2002b, The Astrophysical Journal Supplement Series, 142, 1
 
-\bibitem[\protect\citeauthoryear{Simard, Mendel, Patton, Ellison  \&
-  McConnachie}{Simard et~al.}{2011}]{Simard2011:1107.1518v1}
-Simard L.,  Mendel J.~T.,  Patton D.~R.,  Ellison S.~L.,   McConnachie A.~W.,
-  2011, ApJS, 196, 11
+\bibitem[\protect\citeauthoryear{{Simard}, {Mendel}, {Patton}, {Ellison}  \&
+  {McConnachie}}{{Simard} et~al.}{2011}]{2011ApJS..196...11S}
+{Simard} L.,  {Mendel} J.~T.,  {Patton} D.~R.,  {Ellison} S.~L.,
+  {McConnachie} A.~W.,  2011, \mn@doi [\apjs] {10.1088/0067-0049/196/1/11},
+  \href {https://ui.adsabs.harvard.edu/abs/2011ApJS..196...11S} {196, 11}
 
 \bibitem[\protect\citeauthoryear{{Simmons} et~al.,}{{Simmons}
   et~al.}{2017}]{2017MNRAS.464.4420S}

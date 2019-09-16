@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
-Repeated entry---line 899 of file bibliography.bib
+Repeated entry---line 933 of file bibliography.bib
  : @article{2017MNRAS.464.4176W
  :                             ,
 I'm skipping whatever remains of this entry
@@ -46,37 +46,37 @@ Warning--empty journal in Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 You've used 48 entries,
             2881 wiz_defined-function locations,
-            1121 strings with 25477 characters,
-and the built_in function-call counts, 22402 in all, are:
-= -- 1916
+            1125 strings with 25945 characters,
+and the built_in function-call counts, 22376 in all, are:
+= -- 1904
 > -- 1505
 < -- 73
-+ -- 704
++ -- 702
 - -- 188
-* -- 2688
-:= -- 3347
+* -- 2706
+:= -- 3341
 add.period$ -- 0
 call.type$ -- 48
 change.case$ -- 96
-chr.to.int$ -- 46
+chr.to.int$ -- 47
 cite$ -- 53
 duplicate$ -- 1172
 empty$ -- 1168
 format.name$ -- 350
-if$ -- 3975
-int.to.chr$ -- 3
+if$ -- 3963
+int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 47
 newline$ -- 159
 num.names$ -- 292
-pop$ -- 274
+pop$ -- 271
 preamble$ -- 1
 purify$ -- 192
 quote$ -- 0
-skip$ -- 737
+skip$ -- 741
 stack$ -- 0
-substring$ -- 1345
-swap$ -- 567
+substring$ -- 1326
+swap$ -- 573
 text.length$ -- 200
 text.prefix$ -- 0
 top$ -- 0
