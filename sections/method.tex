@@ -55,21 +55,26 @@ The rendering\footnote{We use the term rendering in a similar manner to that use
 \label{sec:data}
 The original sample proposed for the \textit{Galaxy Builder} project aimed to mirror the \textit{stellar mass-complete sample} in \citet{2017MNRAS.472.2263H}. This was a sample of face-on spiral galaxies, with and without bars, complete in  stellar mass.
 
-The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the following set of criteria:
+The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responed positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the set of criteria detailed in Table \ref{table:sample_selection}.
 
-\comment{Sandor suggests replacing this list with a table with selection name (i.e. ''low z``), expression ($0.02 < z < 0.055$), number of galaxies remaining}
-
-\begin{itemize}
-  \item GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$
-  \item $0.02 < z < 0.055$
-  \item g-band axial ratio $a/b > 0.4$
-  \item r-band magnitude $14 < m_r < 17$
-  \item A volume correction, excluding galaxies outside $9.45 < \log(M_* / M_\odot) \le 11.05$
-  \item Computation of stellar mass completeness limits using the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated by \citet{2017MNRAS.472.2263H}, namely: \\
-    \indent$9.45 < \log(M_* / M_\odot) \le 11.05$\\
-    \indent$\log({M_* / M_\odot}) > 2.07\log(z) + 12.64$\\
-    \indent$\log({M_* / M_\odot}) < 2.45\log(z) + 14.05$.
-\end{itemize}
+\begin{table*}
+  \centering
+  \begin{tabular}{ |l|c| }
+    \hline
+    Description & Value\\
+    \hline
+    Face-on spiral morphological selection. & GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$ \\
+    Low-redshift cutoff. & $0.02 < z < 0.055$ \\
+    Face-on galaxy selection using g-band axial ratio. & $(a/b)_g > 0.4$ \\
+    Volume correction. & $9.45 < \log(M_* / M_\odot) \le 11.05$ \\
+    Computation of stellar mass completeness limits using & $2.07\log(z) + 12.64 < \log({M_* / M_\odot}) < 2.45\log(z) + 14.05$ \\
+    the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated & \\
+    by \citet{2017MNRAS.472.2263H}. & \\
+    \hline
+  \end{tabular}
+  \caption{The selection criteria used in \citet{2017MNRAS.472.2263H} to create the \textit{stellar mass-complete sample} of 6222 spiral galaxies.}
+  \label{table:sample_selection}
+\end{table*}
 
 This selection criteria results in the \textit{stellar mass-complete sample} of 6222 spiral galaxies from \citet{2017MNRAS.472.2263H}.
 
@@ -82,7 +87,7 @@ The galaxy data shown to volunteers in the \textit{Galaxy Builder} project came 
 Both forms of data were obtained using a similar process:
 
 \begin{itemize}
-\item A montage of multiple \texttt{r-band} observations from the SDSS DR13 \citep{2017ApJS..233...25A} data release was created. To combine multiple FITS images, we made use of the \textsc{Montage} \citep{2010arXiv1005.4454J} software package.
+\item A montage of multiple r-band observations from the SDSS DR13 \citep{2017ApJS..233...25A} data release was created. To combine multiple FITS images, we made use of Astropy \citep{2018AJ....156..123T}, and the \textsc{Montage} \citep{2010arXiv1005.4454J} software package.
 \item This montage was cropped to four times the Petrosian radius of the galaxy.
 \item The \textsc{SExtractor} software \citep{source-extractor} was used to identify regions containing secondary sources (foreground stats, other galaxies) and generate a mask.
 \item The JSON file was written containing the cut-out data and the 2D boolean mask obtained from the source extraction process. This file also contained other metadata needed for the rendering process (PSF, the size of the PSF array, and the width and height of the image).
@@ -119,11 +124,11 @@ Once this hand-picked sample was completed, and we had determined that 30 classi
 
 \subsection{Classification Aggregation Methodology}
 
-In this Section, we will use galaxy UGC 4721 to illustrate the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 discs, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figure \ref{fig:drawn_shapes}, overlaid on the greyscale \texttt{r-band} image of the galaxy.
+In this Section, we will use galaxy UGC 4721 to illustrate the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 discs, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines. These annotations can be seen in Figure \ref{fig:drawn_shapes}, overlaid on the greyscale r-band image of the galaxy.
 
 \begin{figure*}
   \includegraphics[width=17.3cm]{images__method/drawn_shapes.pdf}
-  \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms. \comment{Add component numbers to panels}}
+  \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}
   \label{fig:drawn_shapes}
 \end{figure*}
 
@@ -179,7 +184,7 @@ Deprojected points within each drawn poly-line are converted to polar coordinate
   \label{fig:LOF_cleaning}
 \end{figure}
 
-For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values).
+For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \citep{2014arXiv1401.0287Z} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). To obtain a single value for the pitch angle of a galaxy, we take the length-weighted average pitch angle of all arms detected in the galaxy as used by \citet{Davis2014:1402.1910v1}.
 
 The galaxy model for UGC 4721 obtained through aggregation can be seen in Figure \ref{fig:aggregate_model}.
 
@@ -206,7 +211,6 @@ Both forms of tuned model generally accounted for roughly 50\% of the light pres
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721).
-Effective radii generally had relative errors of around 15\% and axis ratios show an error of around 0.1. Parameters dictated by sliders show much larger and less consistent errors.
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). Effective radii generally had relative errors of around 15\% and axis ratios show an error of around 0.1. Parameters dictated by sliders show much larger and less consistent errors.
 
 \end{document}

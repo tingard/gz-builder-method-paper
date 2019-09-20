@@ -63,7 +63,6 @@
 \citation{2017MNRAS.464.4176W}
 \citation{2017MNRAS.464.4420S}
 \citation{Hart2016:1607.01019v1}
-\citation{2019AAS...23333201M}
 \citation{Lintott2008:0804.4483v1}
 \citation{Holincheck2016:1604.00435v1}
 \citation{Simpson:2014:ZOW:2567948.2579215}
@@ -78,23 +77,25 @@
 \citation{Pozzetti2009:0907.5416v2}
 \citation{2017MNRAS.472.2263H}
 \citation{2017MNRAS.472.2263H}
+\citation{2017MNRAS.472.2263H}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}The project interface}{3}{subsubsection.2.1.2}}
 \newlabel{eq:gal_score}{{1}{3}{The project interface}{equation.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Rendering the model}{3}{subsubsection.2.1.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sample Selection: Images and Ancillary Data}{3}{subsection.2.2}}
 \newlabel{sec:data}{{2.2}{3}{Sample Selection: Images and Ancillary Data}{subsection.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Image and modelling metadata extraction}{3}{subsubsection.2.2.1}}
 \citation{2017ApJS..233...25A}
+\citation{2018AJ....156..123T}
 \citation{2010arXiv1005.4454J}
 \citation{source-extractor}
 \citation{Lupton2003:astro-ph/0312483v1}
-\citation{galfit-paper}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The \textit  {Galaxy Builder} interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disc component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black. The dots below the residual image allow the user to switch images. The icons to the right allow panning and zooming of the image (rotation was not functional for this project). The icons to the bottom right of the image allow colour inversion of the galaxy cutout, flagging of the image as inappropriate, inspection of galaxy metadata (i.e. sky position, link to SDSS SkyServer), ability to save the image as a favourite and to add to a Zooniverse ``collection''. The Score shown in the bottom left of the image is calculated using Equation \ref  {eq:gal_score} and is a rough goodness-of-fit measure.}}{4}{figure.1}}
 \newlabel{fig:interfaceInProgress}{{1}{4}{The \textit {Galaxy Builder} interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disc component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black. The dots below the residual image allow the user to switch images. The icons to the right allow panning and zooming of the image (rotation was not functional for this project). The icons to the bottom right of the image allow colour inversion of the galaxy cutout, flagging of the image as inappropriate, inspection of galaxy metadata (i.e. sky position, link to SDSS SkyServer), ability to save the image as a favourite and to add to a Zooniverse ``collection''. The Score shown in the bottom left of the image is calculated using Equation \ref {eq:gal_score} and is a rough goodness-of-fit measure}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Image and modelling metadata extraction}{4}{subsubsection.2.2.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The selection criteria used in \citet  {2017MNRAS.472.2263H} to create the \textit  {stellar mass-complete sample} of 6222 spiral galaxies.}}{4}{table.1}}
+\newlabel{table:sample_selection}{{1}{4}{The selection criteria used in \citet {2017MNRAS.472.2263H} to create the \textit {stellar mass-complete sample} of 6222 spiral galaxies}{table.1}{}}
+\citation{galfit-paper}
 \citation{galfit-paper}
 \citation{2002AJ....123..485S}
-\citation{dbscan}
-\citation{scikit-learn}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Figure demonstrating the desired result of each step of the modelling process, as seen from the residual image provided to volunteers. The top left panel shows the galaxy after only a disc component has been added: the top right contains a disc and a bulge; the bottom left has a disc, bulge and bar; the bottom right is the finished model with a disc, bulge, bar and spiral arms. The images shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}}{5}{figure.2}}
 \newlabel{fig:residualsStepByStep}{{2}{5}{Figure demonstrating the desired result of each step of the modelling process, as seen from the residual image provided to volunteers. The top left panel shows the galaxy after only a disc component has been added: the top right contains a disc and a bulge; the bottom left has a disc, bulge and bar; the bottom right is the finished model with a disc, bulge, bar and spiral arms. The images shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The Galaxy Model}{5}{subsection.2.3}}
@@ -105,30 +106,34 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Best Individual Classification}{5}{subsubsection.2.5.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Aggregation of Volunteer Models}{5}{subsubsection.2.5.2}}
 \newlabel{sec:aggregation_of_volunteer_models}{{2.5.2}{5}{Aggregation of Volunteer Models}{subsubsection.2.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms. \comment {Add component numbers to panels}}}{6}{figure.3}}
-\newlabel{fig:drawn_shapes}{{3}{6}{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms. \comment {Add component numbers to panels}}{figure.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The clustering parameters used for the disc, bulge and bar components present in \textit  {Galaxy Builder}}}{6}{table.1}}
-\newlabel{table:dbscan_params}{{1}{6}{The clustering parameters used for the disc, bulge and bar components present in \textit {Galaxy Builder}}{table.1}{}}
+\citation{dbscan}
+\citation{scikit-learn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms.}}{6}{figure.3}}
+\newlabel{fig:drawn_shapes}{{3}{6}{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs (blue), top right shows drawn bulges (orange), bottom left shows drawn bars (green) and bottom right shows drawn spiral arms}{figure.3}{}}
 \citation{2011AJ....142...31B}
 \citation{local-outlier-factor}
+\citation{2014arXiv1401.0287Z}
+\citation{Davis2014:1402.1910v1}
 \citation{doi:10.1137/0916069}
 \citation{scipy-paper}
 \citation{2010AJ....139.2097P}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The clustering parameters used for the disc, bulge and bar components present in \textit  {Galaxy Builder}}}{7}{table.2}}
+\newlabel{table:dbscan_params}{{2}{7}{The clustering parameters used for the disc, bulge and bar components present in \textit {Galaxy Builder}}{table.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Model Tuning}{7}{subsection.2.6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Error Estimation}{7}{subsection.2.7}}
 \newlabel{sec:error_estimation}{{2.7}{7}{Error Estimation}{subsection.2.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{7}{section.3}}
 \newlabel{sec:results}{{3}{7}{Results}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Examination of Volunteer consistency}{7}{subsection.3.1}}
-\citation{Masters2010:1003.0449v2}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Calculated aggregate components for UGC 4721. The aggregate disc is shown in orange in the first panel, the aggregate bulge in green in the second panel and the aggregate bar in red in the third panel.}}{8}{figure.4}}
 \newlabel{fig:mean_shapes}{{4}{8}{Calculated aggregate components for UGC 4721. The aggregate disc is shown in orange in the first panel, the aggregate bulge in green in the second panel and the aggregate bar in red in the third panel}{figure.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Point cleaning for the spiral arm clusters for UGC 4721. Points identified as outliers are displayed as red crosses, points used to fit log spirals are orange and blue dots.}}{8}{figure.5}}
 \newlabel{fig:LOF_cleaning}{{5}{8}{Point cleaning for the spiral arm clusters for UGC 4721. Points identified as outliers are displayed as red crosses, points used to fit log spirals are orange and blue dots}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Best Individual vs Aggregate Model}{8}{subsection.3.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Resulting aggregate bulge + disc + bar + spiral arms components for UGC 4721. The disc is shown in blue, the bulge in orange, the bar in green and the spiral arms in red.}}{8}{figure.6}}
 \newlabel{fig:aggregate_model}{{6}{8}{Resulting aggregate bulge + disc + bar + spiral arms components for UGC 4721. The disc is shown in blue, the bulge in orange, the bar in green and the spiral arms in red}{figure.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Comparison to results in the literature}{8}{subsection.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Best Individual vs Aggregate Model}{8}{subsection.3.2}}
+\citation{Masters2010:1003.0449v2}
+\citation{2011AJ....142...31B}
 \citation{2011ApJS..196...11S}
 \citation{2012MNRAS.421.2277L}
 \citation{Gao2017:1709.00746v1}
@@ -142,40 +147,29 @@
 \citation{2018MNRAS.473.4731K}
 \citation{2018MNRAS.473.4731K}
 \citation{2018MNRAS.473.4731K}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Tuned best individual and aggregate models, and their residuals for UGC 4721. The top two panels show the models, with the tuned best individual model on the left and the tuned aggregate model on the right. Bottom panels show the corresponding residuals, where red indicates oversubtraction of the galaxy and black indicates undersubtraction.}}{9}{figure.7}}
+\newlabel{fig:bi_vs_agg_comparison}{{7}{9}{Tuned best individual and aggregate models, and their residuals for UGC 4721. The top two panels show the models, with the tuned best individual model on the left and the tuned aggregate model on the right. Bottom panels show the corresponding residuals, where red indicates oversubtraction of the galaxy and black indicates undersubtraction}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Comparison to results in the literature}{9}{subsection.3.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Comparison to One-component fit - axis ratio}{9}{subsubsection.3.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Comparison to Disc-Bulge models}{9}{subsubsection.3.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Comparison to Disc-Bulge-Bar models}{9}{subsubsection.3.3.3}}
 \citation{2018MNRAS.473.4731K}
 \citation{2018MNRAS.473.4731K}
 \citation{Gao2017:1709.00746v1}
 \citation{Hart2016:1607.01019v1}
 \citation{Davis2014:1402.1910v1}
 \citation{Hart2016:1607.01019v1}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of frequency of use of component in volunteer models between the original and validation sets of classifications.}}{10}{figure.8}}
+\newlabel{fig:volunteer_component_consistency}{{8}{10}{Comparison of frequency of use of component in volunteer models between the original and validation sets of classifications}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of component shape in aggregate models between the original and validation sets.}}{10}{figure.9}}
+\newlabel{fig:aggregate_model_consistency}{{9}{10}{Comparison of component shape in aggregate models between the original and validation sets}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Comparison to Disc-Bulge-Bar-Spiral models}{10}{subsubsection.3.3.4}}
 \citation{Davis2014:1402.1910v1}
 \citation{2019arXiv190804246D}
 \citation{Hart2016:1607.01019v1}
 \citation{Hart2016:1607.01019v1}
 \citation{Hart2016:1607.01019v1}
 \citation{Hart2016:1607.01019v1}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Tuned best individual and aggregate models, and their residuals for UGC 4721. The top two panels show the models, with the tuned best individual model on the left and the tuned aggregate model on the right. Bottom panels show the corresponding residuals, where red indicates oversubtraction of the galaxy and black indicates undersubtraction.}}{9}{figure.7}}
-\newlabel{fig:bi_vs_agg_comparison}{{7}{9}{Tuned best individual and aggregate models, and their residuals for UGC 4721. The top two panels show the models, with the tuned best individual model on the left and the tuned aggregate model on the right. Bottom panels show the corresponding residuals, where red indicates oversubtraction of the galaxy and black indicates undersubtraction}{figure.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Comparison to One-component fit - axis ratio}{9}{subsubsection.3.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Comparison to Disc-Bulge models}{9}{subsubsection.3.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Comparison to Disc-Bulge-Bar models}{9}{subsubsection.3.3.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Comparison to Disc-Bulge-Bar-Spiral models}{9}{subsubsection.3.3.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of frequency of use of component in volunteer models between the original and validation sets of classifications.}}{10}{figure.8}}
-\newlabel{fig:volunteer_component_consistency}{{8}{10}{Comparison of frequency of use of component in volunteer models between the original and validation sets of classifications}{figure.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of component shape in aggregate models between the original and validation sets.}}{10}{figure.9}}
-\newlabel{fig:aggregate_model_consistency}{{9}{10}{Comparison of component shape in aggregate models between the original and validation sets}{figure.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Summary and Conclusions}{10}{section.4}}
-\newlabel{sec:conclusions}{{4}{10}{Summary and Conclusions}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Difference between the axis ratios of the disc components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit. Points outside 1- and $2\sigma $ are highlighted in orange and red.}}{11}{figure.10}}
-\newlabel{fig:ax_ratio_comparison}{{10}{11}{Difference between the axis ratios of the disc components of aggregated Galaxy Builder models to the results of an r-band S\'ersic profile fit. Points outside 1- and $2\sigma $ are highlighted in orange and red}{figure.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from \textit  {Galaxy Builder} results and other models fitted in \citet  {2011ApJS..196...11S} and \citet  {2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation.}}{11}{figure.11}}
-\newlabel{fig:bt_correlation}{{11}{11}{Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from \textit {Galaxy Builder} results and other models fitted in \citet {2011ApJS..196...11S} and \citet {2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation}{figure.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Comparison between \textit  {Galaxy Builder} tuned aggregate models and the result of 3\discretionary {-}{}{}component, multi\discretionary {-}{}{}wavelength fits performed by \citet  {2018MNRAS.473.4731K}.}}{11}{figure.12}}
-\newlabel{fig:sd_comp_comparison}{{12}{11}{Comparison between \textit {Galaxy Builder} tuned aggregate models and the result of 3\-component, multi\-wavelength fits performed by \citet {2018MNRAS.473.4731K}}{figure.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces A comparison of Pitch angle obtained by \citet  {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma $ errors from \citet  {Hart2016:1607.01019v1}. Errors on \textit  {Galaxy Builder}-measured pitch angles are not accounted for.}}{11}{figure.13}}
-\newlabel{fig:hart_pitch_angle}{{13}{11}{A comparison of Pitch angle obtained by \citet {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma $ errors from \citet {Hart2016:1607.01019v1}. Errors on \textit {Galaxy Builder}-measured pitch angles are not accounted for}{figure.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Acknowledgements}{11}{section.5}}
-\newlabel{sec:acknowledgements}{{5}{11}{Acknowledgements}{section.5}{}}
 \bibstyle{mnras}
 \bibdata{bibliography}
 \bibcite{SDSSDR7}{{1}{2009}{{{Abazajian} et~al.}}{{{Abazajian} et~al.,}}}
@@ -189,9 +183,15 @@
 \bibcite{doi:10.1137/0916069}{{9}{1995}{{Byrd et~al.}}{{Byrd, Lu, Nocedal \& Zhu}}}
 \bibcite{Davis2014:1402.1910v1}{{10}{2014}{{Davis \& Hayes}}{{Davis \& Hayes}}}
 \bibcite{2019arXiv190804246D}{{11}{2019}{{{D{\'\i }az-Garc{\'\i }a} et~al.}}{{{D{\'\i }az-Garc{\'\i }a}, {Salo}, {Knapen} \& {Herrera-Endoqui}}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Difference between the axis ratios of the disc components of aggregated \textit  {Galaxy Builder} models to the results of an r-band S\'ersic profile fit. Points outside 1- and $2\sigma $ are highlighted in orange and red.}}{11}{figure.10}}
+\newlabel{fig:ax_ratio_comparison}{{10}{11}{Difference between the axis ratios of the disc components of aggregated \textit {Galaxy Builder} models to the results of an r-band S\'ersic profile fit. Points outside 1- and $2\sigma $ are highlighted in orange and red}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Summary and Conclusions}{11}{section.4}}
+\newlabel{sec:conclusions}{{4}{11}{Summary and Conclusions}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Acknowledgements}{11}{section.5}}
+\newlabel{sec:acknowledgements}{{5}{11}{Acknowledgements}{section.5}{}}
 \bibcite{Dobbs2014:1407.5062v1}{{12}{2014}{{Dobbs \& Baba}}{{Dobbs \& Baba}}}
 \bibcite{2011MNRAS.415.3308G}{{13}{2011}{{{Gadotti}}}{{{Gadotti}}}}
-\bibcite{Gao2017:1709.00746v1}{{14}{2017}{{Gao \& Ho}}{{Gao \& Ho}}}
+\bibcite{Gao2017:1709.00746v1}{{14}{2017}{{{Gao} \& {Ho}}}{{{Gao} \& {Ho}}}}
 \bibcite{2018ApJ...862..100G}{{15}{2018}{{{Gao} et~al.}}{{{Gao}, {Ho}, {Barth} \& {Li}}}}
 \bibcite{Hart2016:1607.01019v1}{{16}{2016}{{Hart et~al.}}{{Hart et~al.,}}}
 \bibcite{2017MNRAS.472.2263H}{{17}{2017}{{{Hart} et~al.}}{{{Hart} et~al.,}}}
@@ -205,29 +205,36 @@
 \bibcite{2012MNRAS.421.2277L}{{25}{2012}{{{Lackner} \& {Gunn}}}{{{Lackner} \& {Gunn}}}}
 \bibcite{Lintott2008:0804.4483v1}{{26}{2008}{{Lintott et~al.}}{{Lintott et~al.,}}}
 \bibcite{Lupton2003:astro-ph/0312483v1}{{27}{2004}{{Lupton et~al.}}{{Lupton, Blanton, Fekete, Hogg, O'Mullane, Szalay \& Wherry}}}
-\bibcite{2019AAS...23333201M}{{28}{2019}{{{Masters}}}{{{Masters}}}}
-\bibcite{Masters2010:1003.0449v2}{{29}{2010}{{Masters et~al.}}{{Masters et~al.,}}}
-\bibcite{Mendez-Abreu2016:1610.05324v1}{{30}{2016}{{Mendez-Abreu et~al.}}{{Mendez-Abreu et~al.,}}}
-\bibcite{Park2006:astro-ph/0611610v2}{{31}{2007}{{Park et~al.}}{{Park, Choi, Vogeley, III, Blanton \& the SDSS~collaboration}}}
-\bibcite{scikit-learn}{{32}{2011}{{Pedregosa et~al.}}{{Pedregosa et~al.,}}}
-\bibcite{galfit-paper}{{33}{2002}{{{Peng} et~al.}}{{{Peng}, {Ho}, {Impey} \& {Rix}}}}
-\bibcite{2010AJ....139.2097P}{{34}{2010}{{{Peng} et~al.}}{{{Peng}, {Ho}, {Impey} \& {Rix}}}}
-\bibcite{Pour-Imani2016:1608.00969v1}{{35}{2016}{{Pour-Imani et~al.}}{{Pour-Imani, Kennefick, Kennefick, Davis, Shields \& Abdeen}}}
-\bibcite{Pozzetti2009:0907.5416v2}{{36}{2009}{{Pozzetti et~al.}}{{Pozzetti et~al.,}}}
-\bibcite{profit-paper}{{37}{2016}{{Robotham et~al.}}{{Robotham, Taranu, Tobar, Moffett \& Driver}}}
-\bibcite{2015ApJS..219....4S}{{38}{2015}{{{Salo} et~al.}}{{{Salo} et~al.,}}}
-\bibcite{Sanchez2011:1111.0962v2}{{39}{2011}{{Sanchez et~al.}}{{Sanchez et~al.,}}}
-\bibcite{Simard2002:astro-ph/0205025v2}{{40}{2002a}{{Simard et~al.}}{{Simard et~al.,}}}
-\bibcite{gim2d-paper}{{41}{2002b}{{Simard et~al.}}{{Simard et~al.,}}}
-\bibcite{2011ApJS..196...11S}{{42}{2011}{{{Simard} et~al.}}{{{Simard}, {Mendel}, {Patton}, {Ellison} \& {McConnachie}}}}
-\bibcite{2017MNRAS.464.4420S}{{43}{2017}{{{Simmons} et~al.}}{{{Simmons} et~al.,}}}
-\bibcite{Simpson:2014:ZOW:2567948.2579215}{{44}{2014}{{Simpson et~al.}}{{Simpson, Page \& De~Roure}}}
-\bibcite{2002AJ....123..485S}{{45}{2002}{{{Stoughton} et~al.}}{{{Stoughton} et~al.,}}}
+\bibcite{Masters2010:1003.0449v2}{{28}{2010}{{Masters et~al.}}{{Masters et~al.,}}}
+\bibcite{Mendez-Abreu2016:1610.05324v1}{{29}{2016}{{Mendez-Abreu et~al.}}{{Mendez-Abreu et~al.,}}}
+\bibcite{Park2006:astro-ph/0611610v2}{{30}{2007}{{Park et~al.}}{{Park, Choi, Vogeley, III, Blanton \& the SDSS~collaboration}}}
+\bibcite{scikit-learn}{{31}{2011}{{Pedregosa et~al.}}{{Pedregosa et~al.,}}}
+\bibcite{galfit-paper}{{32}{2002}{{{Peng} et~al.}}{{{Peng}, {Ho}, {Impey} \& {Rix}}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from \textit  {Galaxy Builder} results and other models fitted in \citet  {2011ApJS..196...11S} and \citet  {2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation.}}{12}{figure.11}}
+\newlabel{fig:bt_correlation}{{11}{12}{Correlation matrix showing Kendall rank correlation coefficient between measures of Bulge to Total fraction from \textit {Galaxy Builder} results and other models fitted in \citet {2011ApJS..196...11S} and \citet {2012MNRAS.421.2277L}. Colours and box size indicate the strength of the correlation}{figure.11}{}}
+\bibcite{2010AJ....139.2097P}{{33}{2010}{{{Peng} et~al.}}{{{Peng}, {Ho}, {Impey} \& {Rix}}}}
+\bibcite{Pour-Imani2016:1608.00969v1}{{34}{2016}{{Pour-Imani et~al.}}{{Pour-Imani, Kennefick, Kennefick, Davis, Shields \& Abdeen}}}
+\bibcite{Pozzetti2009:0907.5416v2}{{35}{2009}{{Pozzetti et~al.}}{{Pozzetti et~al.,}}}
+\bibcite{profit-paper}{{36}{2016}{{Robotham et~al.}}{{Robotham, Taranu, Tobar, Moffett \& Driver}}}
+\bibcite{2015ApJS..219....4S}{{37}{2015}{{{Salo} et~al.}}{{{Salo} et~al.,}}}
+\bibcite{Sanchez2011:1111.0962v2}{{38}{2011}{{Sanchez et~al.}}{{Sanchez et~al.,}}}
+\bibcite{Simard2002:astro-ph/0205025v2}{{39}{2002a}{{Simard et~al.}}{{Simard et~al.,}}}
+\bibcite{gim2d-paper}{{40}{2002b}{{Simard et~al.}}{{Simard et~al.,}}}
+\bibcite{2011ApJS..196...11S}{{41}{2011}{{{Simard} et~al.}}{{{Simard}, {Mendel}, {Patton}, {Ellison} \& {McConnachie}}}}
+\bibcite{2017MNRAS.464.4420S}{{42}{2017}{{{Simmons} et~al.}}{{{Simmons} et~al.,}}}
+\bibcite{Simpson:2014:ZOW:2567948.2579215}{{43}{2014}{{Simpson et~al.}}{{Simpson, Page \& De~Roure}}}
+\bibcite{2002AJ....123..485S}{{44}{2002}{{{Stoughton} et~al.}}{{{Stoughton} et~al.,}}}
+\bibcite{2018AJ....156..123T}{{45}{2018}{{{The Astropy Collaboration} et~al.}}{{{The Astropy Collaboration} et~al.,}}}
 \bibcite{Vika2014:1408.4070v1}{{46}{2014}{{Vika et~al.}}{{Vika, Bamford, H\IeC {\"a}u\IeC {\ss }ler \& Rojas}}}
 \bibcite{Willett2013:1308.3496v2}{{47}{2013}{{Willett et~al.}}{{Willett et~al.,}}}
 \bibcite{2017MNRAS.464.4176W}{{48}{2017}{{{Willett} et~al.}}{{{Willett} et~al.,}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Mathematical description of the poly-line separation measure}{12}{section.A1}}
-\newlabel{appendix:clustering_maths}{{A}{12}{Mathematical description of the poly-line separation measure}{section.A1}{}}
+\bibcite{2014arXiv1401.0287Z}{{49}{2014}{{{Zaninetti}}}{{{Zaninetti}}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Comparison between \textit  {Galaxy Builder} tuned aggregate models and the result of 3-component, multi\discretionary {-}{}{}wavelength fits performed by \citet  {2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio.}}{13}{figure.12}}
+\newlabel{fig:sd_comp_comparison}{{12}{13}{Comparison between \textit {Galaxy Builder} tuned aggregate models and the result of 3-component, multi\-wavelength fits performed by \citet {2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces A comparison of Pitch angle obtained by \citet  {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma $ errors from \citet  {Hart2016:1607.01019v1}. Errors on \textit  {Galaxy Builder}-measured pitch angles are not accounted for.}}{13}{figure.13}}
+\newlabel{fig:hart_pitch_angle}{{13}{13}{A comparison of Pitch angle obtained by \citet {Hart2016:1607.01019v1} with measured pitch angles for the aggregated model results in galaxies in the Galaxy Zoo Builder sample. The grey regions show 1- and $2\sigma $ errors from \citet {Hart2016:1607.01019v1}. Errors on \textit {Galaxy Builder}-measured pitch angles are not accounted for}{figure.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Mathematical description of the poly-line separation measure}{13}{section.A1}}
+\newlabel{appendix:clustering_maths}{{A}{13}{Mathematical description of the poly-line separation measure}{section.A1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {B}Default Values and Parameter Limits}{13}{section.A2}}
 \newlabel{lastpage}{{5}{13}{Acknowledgements}{table.A2.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {B1}{\ignorespaces The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll was similarly unconstrained.}}{14}{table.A2.1}}

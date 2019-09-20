@@ -87,9 +87,10 @@ Dobbs C.,  Baba J.,  2014, Publ. Astron. Soc. Aust., 31
 {Gadotti} D.~A.,  2011, \mn@doi [\mnras] {10.1111/j.1365-2966.2011.18945.x},
   \href {https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.3308G} {415, 3308}
 
-\bibitem[\protect\citeauthoryear{Gao \& Ho}{Gao \&
-  Ho}{2017}]{Gao2017:1709.00746v1}
-Gao H.,  Ho L.~C.,  2017, The Astrophysical Journal, 845, 114
+\bibitem[\protect\citeauthoryear{{Gao} \& {Ho}}{{Gao} \&
+  {Ho}}{2017}]{Gao2017:1709.00746v1}
+{Gao} H.,  {Ho} L.~C.,  2017, \mn@doi [\apj] {10.3847/1538-4357/aa7da4}, \href
+  {https://ui.adsabs.harvard.edu/abs/2017ApJ...845..114G} {845, 114}
 
 \bibitem[\protect\citeauthoryear{{Gao}, {Ho}, {Barth}  \& {Li}}{{Gao}
   et~al.}{2018}]{2018ApJ...862..100G}
@@ -154,10 +155,6 @@ Lintott C.~J.,  et~al., 2008, Monthly Notices of the Royal Astronomical
   Szalay  \& Wherry}{Lupton et~al.}{2004}]{Lupton2003:astro-ph/0312483v1}
 Lupton R.,  Blanton M.~R.,  Fekete G.,  Hogg D.~W.,  O'Mullane W.,  Szalay A.,
    Wherry N.,  2004, PUBL ASTRON SOC PAC, 116, 133
-
-\bibitem[\protect\citeauthoryear{{Masters}}{{Masters}}{2019}]{2019AAS...23333201M}
-{Masters} K.,  2019, in American Astronomical Society Meeting Abstracts \#233.
-  p. 332.01
 
 \bibitem[\protect\citeauthoryear{Masters et~al.,}{Masters
   et~al.}{2010}]{Masters2010:1003.0449v2}
@@ -242,6 +239,12 @@ ACM, New York, NY, USA, pp 1049--1054, \mn@doi{10.1145/2567948.2579215}, \url
 {Stoughton} C.,  et~al., 2002, \mn@doi [\aj] {10.1086/324741}, \href
   {https://ui.adsabs.harvard.edu/abs/2002AJ....123..485S} {123, 485}
 
+\bibitem[\protect\citeauthoryear{{The Astropy Collaboration} et~al.,}{{The
+  Astropy Collaboration} et~al.}{2018}]{2018AJ....156..123T}
+{The Astropy Collaboration} et~al., 2018, \mn@doi [\aj]
+  {10.3847/1538-3881/aabc4f}, \href
+  {http://adsabs.harvard.edu/abs/2018AJ....156..123T} {156, 123}
+
 \bibitem[\protect\citeauthoryear{Vika, Bamford, Häußler  \& Rojas}{Vika
   et~al.}{2014}]{Vika2014:1408.4070v1}
 Vika M.,  Bamford S.~P.,  Häußler B.,   Rojas A.~L.,  2014, Monthly Notices
@@ -255,6 +258,10 @@ Willett K.~W.,  et~al., 2013
   et~al.}{2017}]{2017MNRAS.464.4176W}
 {Willett} K.~W.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stw2568}, \href
   {https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.4176W} {464, 4176}
+
+\bibitem[\protect\citeauthoryear{{Zaninetti}}{{Zaninetti}}{2014}]{2014arXiv1401.0287Z}
+{Zaninetti} L.,  2014, arXiv e-prints, \href
+  {https://ui.adsabs.harvard.edu/abs/2014arXiv1401.0287Z} {p. arXiv:1401.0287}
 
 \makeatother
 \end{thebibliography}
