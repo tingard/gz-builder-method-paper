@@ -3,10 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
-Repeated entry---line 958 of file bibliography.bib
- : @article{2017MNRAS.464.4176W
- :                             ,
-I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 "ArXiv e-prints" is a string literal, `journal' is a missing field
@@ -46,15 +42,15 @@ Warning--empty journal in Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 You've used 49 entries,
             2881 wiz_defined-function locations,
-            1133 strings with 29008 characters,
-and the built_in function-call counts, 23001 in all, are:
+            1133 strings with 28937 characters,
+and the built_in function-call counts, 23005 in all, are:
 = -- 1983
-> -- 1525
+> -- 1526
 < -- 73
-+ -- 713
++ -- 714
 - -- 188
-* -- 2783
-:= -- 3408
+* -- 2784
+:= -- 3409
 add.period$ -- 0
 call.type$ -- 49
 change.case$ -- 98
@@ -69,11 +65,11 @@ int.to.str$ -- 0
 missing$ -- 48
 newline$ -- 162
 num.names$ -- 296
-pop$ -- 272
+pop$ -- 273
 preamble$ -- 1
 purify$ -- 196
 quote$ -- 0
-skip$ -- 777
+skip$ -- 776
 stack$ -- 0
 substring$ -- 1396
 swap$ -- 601
@@ -85,4 +81,4 @@ warning$ -- 5
 while$ -- 333
 width$ -- 0
 write$ -- 502
-(There were 11 error messages)
+(There were 10 error messages)

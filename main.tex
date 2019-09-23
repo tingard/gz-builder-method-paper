@@ -99,6 +99,9 @@
 % Enter the current year, for the copyright statements etc.
 \pubyear{2019}
 
+% use this if getting \pdfendlink ended up in different nesting than \pdfstartlink
+\hypersetup{draft}
+
 % Don't change these lines
 \begin{document}
 \label{firstpage}
@@ -140,13 +143,11 @@ galaxies: evolution -- galaxies: spiral -- galaxies: photometry
 \subfile{sections/acknowledgements}
 % \newpage
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 
 % The best way to enter references is to use BibTeX:
-
 \bibliographystyle{mnras}
 \bibliography{bibliography} % if your bibtex file is called example.bib
 

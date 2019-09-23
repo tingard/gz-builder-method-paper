@@ -49,7 +49,7 @@ This score has the advantage of being easy (and fast) to generate from the resid
 \subsubsection{Rendering the model}
 
 
-The rendering\footnote{We use the term rendering in a similar manner to that used for computer graphics: to calculate an image from a model or set of rules.} code used in the \textit{Galaxy Builder} project was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level Javascript interface \textsc{regl}\footnote{\url{http://regl.party/}}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer in the browser. Using WebGL has the effect of limiting precision of the model rendered in the browser to that allowed by WebGL. As these models are envisioned as a starting point for a later numerical fit, it was determined this precision was sufficient.
+The rendering\footnote{We use the term rendering in a similar manner to that used for computer graphics: to calculate an image from a model or set of rules.} code used in the \textit{Galaxy Builder} project was designed to run on a computer's GPU, using the WebGL rendering API (via the high-level Javascript interface \textsc{regl}\footnote{\url{http://regl.party/}}). This enables the model (and residual) to be calculated at a speed which allows low-latency feedback to a change in the model made by the volunteer in the browser. Using WebGL has the effect of limiting precision of the model rendered in the browser to that allowed by WebGL, which is $0.00097656$ relative precision. however the use of arcsinh scaling resulted in this precision loss being slighly more impactful than if we had rendered without scaling. As these models are envisioned as a starting point for a later numerical fit, it was determined this precision was sufficient.
 
 \subsection{Sample Selection: Images and Ancillary Data}
 \label{sec:data}
@@ -59,20 +59,20 @@ The morphological information required to select spiral galaxies came from the p
 
 \begin{table*}
   \centering
+  \caption{The selection criteria used in \citet{2017MNRAS.472.2263H} to create the \textit{stellar mass-complete sample} of 6222 spiral galaxies.}
   \begin{tabular}{ |l|c| }
     \hline
     Description & Value\\
     \hline
     Face-on spiral morphological selection. & GZ2 $p_\text{features} \cdot p_\text{not edge on} \cdot p_\text{spiral} \ge 0.5$ \\
     Low-redshift cutoff. & $0.02 < z < 0.055$ \\
-    Face-on galaxy selection using g-band axial ratio. & $(a/b)_g > 0.4$ \\
+    Face-on galaxy selection using g-band axial ratio. & $(b/a)_g > 0.4$ \\
     Volume correction. & $9.45 < \log(M_* / M_\odot) \le 11.05$ \\
     Computation of stellar mass completeness limits using & $2.07\log(z) + 12.64 < \log({M_* / M_\odot}) < 2.45\log(z) + 14.05$ \\
     the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated & \\
     by \citet{2017MNRAS.472.2263H}. & \\
     \hline
   \end{tabular}
-  \caption{The selection criteria used in \citet{2017MNRAS.472.2263H} to create the \textit{stellar mass-complete sample} of 6222 spiral galaxies.}
   \label{table:sample_selection}
 \end{table*}
 
@@ -120,7 +120,7 @@ The modelling code ignores masked regions identified as secondary sources by \te
 
 We initially collected 10 classifications per galaxy, however preliminary analysis indicated this number of independent answers would be insufficient to create reliable and reproducable aggregate classifications. For this reason, a hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow the development of the aggregation methodology.
 
-Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (present in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies.
+Once this hand-picked sample was completed, and we had determined that 30 classifications per galaxy was sufficient (having trialled 10 and concluding more was needed for a reliable aggregation), the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (present in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies.
 
 \subsection{Classification Aggregation Methodology}
 
@@ -136,7 +136,7 @@ In this Section, we will use galaxy UGC 4721 to illustrate the data reduction an
 
 As \textit{Galaxy Builder} is primarily asking volunteers to solve a complicated regression problem, it is possible to identify the classification provided for each galaxy with the best residual, and assume that this classification has roughly found the globally optimal model. We make use of the common mean squared error metric, in units of nanomaggies, to score the volunteer models (note that this is not the score shown to volunteers).
 
-Once the ``best'' classification for a galaxy has been identified, we computationally optimize the model using a linear fitting algorithm, fixing the position of each component but allowing all other parameters to vary. This optimized model for each galaxy we refer to as the ``best individual classification``.
+Once the ``best'' classification for a galaxy has been identified, we computationally optimize the model using a linear fitting algorithm, fixing the position of each component but allowing all other parameters to vary. This optimized model for each galaxy we refer to as the ``best individual classification''.
 
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
@@ -147,10 +147,11 @@ As we have multiple independent answers for each parameter and component, we can
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
-The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. The parameters \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results and can be seen in Table \ref{table:dbscan_params}. In DBSCAN the core of a cluster is defined as a group of at least \texttt{min\_points} that are all within a distance eps of each other. Additionally, any points with a distance \texttt{eps} of a cluster's core are also associated with the cluster. Bar with axis ratios greater than 0.6 were removed from the pool.
+The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. In DBSCAN the core of a cluster is defined as a group of at least \texttt{min\_points} that are all within a distance \texttt{eps} of each other. Additionally, any points within a distance \texttt{eps} of a cluster's core are also associated with the cluster. \texttt{eps} and \texttt{min\_points} were chosen by visually inspecting the resulting clustering results and can be seen in Table \ref{table:dbscan_params}.  Bar with axis ratios greater than 0.6 were removed from the pool.
 
 \begin{table}
   \centering
+  \caption{The clustering parameters used for the disc, bulge and bar components present in \textit{Galaxy Builder}}
   \begin{tabular}{ |c|c|c| }
     \hline
     component & \texttt{eps} & \texttt{min\_points} \\
@@ -160,7 +161,6 @@ The algorithm chosen to perform clustering was the density-based spatial cluster
     Bar & 0.385 & 3 \\
     \hline
   \end{tabular}
-  \caption{The clustering parameters used for the disc, bulge and bar components present in \textit{Galaxy Builder}}
   \label{table:dbscan_params}
 \end{table}
 
@@ -168,7 +168,7 @@ For shapes clustered in this way, we define the aggregate component to be the sh
 
 \begin{figure*}
   \includegraphics[width=17.3cm]{images__method/mean_shapes.pdf}
-  \caption{Calculated aggregate components for UGC 4721. The aggregate disc is shown in orange in the first panel, the aggregate bulge in green in the second panel and the aggregate bar in red in the third panel.}
+  \caption{Calculated aggregate components for UGC 4721. The aggregate disc is shown using a dashed line in the first panel, the aggregate bulge with a dash-dot line in the second panel and the aggregate bar using a dotted line in the third panel.}
   \label{fig:mean_shapes}
 \end{figure*}
 
@@ -190,7 +190,7 @@ The galaxy model for UGC 4721 obtained through aggregation can be seen in Figure
 
 \begin{figure}
   \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
-  \caption{Resulting aggregate bulge + disc + bar + spiral arms components for UGC 4721. The disc is shown in blue, the bulge in orange, the bar in green and the spiral arms in red.}
+  \caption{Resulting aggregate bulge + disc + bar + spiral arms components for UGC 4721. The disc is shown in blue with a dashed outline, the bulge in orange with a dash-dot outline, the bar in green with a dotted outline, and the spiral arms in red.}
   \label{fig:aggregate_model}
 \end{figure}
 
@@ -211,6 +211,6 @@ Both forms of tuned model generally accounted for roughly 50\% of the light pres
 \label{sec:error_estimation}
 The uncertainties reported by many software fitting packages (\textsc{Galfit} and \textsc{MegaMorph} from the above list) are in fact lower estimates, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
 
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). Effective radii generally had relative errors of around 15\% and axis ratios show an error of around 0.1. Parameters dictated by sliders show much larger and less consistent errors.
+As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). Effective radii generally had relative errors of around 15\% and axis ratios show an absoulute error of around $0.13$. Parameters dictated by sliders show much larger and less consistent errors. A pivot table detailing all errors on parameters is provided in the appendix (Table \ref{table:error_values}).
 
 \end{document}
