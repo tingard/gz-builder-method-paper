@@ -492,6 +492,9 @@ INPUT main.bbl
 INPUT main.bbl
 INPUT sections/appendix.tex
 INPUT sections/appendix.tex
+INPUT images__appendix/spiral_metric_description.pdf
+INPUT ./images__appendix/spiral_metric_description.pdf
+INPUT ./images__appendix/spiral_metric_description.pdf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txsya.tfm
 INPUT main.aux

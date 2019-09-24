@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1569250820 "main.aux" "main.bbl" "main" 1569250823
+["bibtex main"] 1569315706 "main.aux" "main.bbl" "main" 1569315710
   "./mnras.bst" 1549018972 43376 8463aa2cc1948e346d5641ca59bb4619 ""
   "bibliography.bib" 1569249609 62982 0b77c8ec9ff0475d38c2911da634cc5d ""
-  "main.aux" 1569250821 24923 8bea89c086d07b626a22b8abbdeadff1 ""
+  "main.aux" 1569315709 25574 606d3b9f15487913a4c29819aaa1c0b4 ""
   "main.bcf" 0 -1 0 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1569250820 "main.tex" "main.pdf" "main" 1569250823
+["pdflatex"] 1569315707 "main.tex" "main.pdf" "main" 1569315710
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -259,6 +259,7 @@
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "images/interfaceInProgress.jpg" 1549896470 247936 ccc50f0863c8475d653f99518b033b9f ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
+  "images__appendix/spiral_metric_description.pdf" 1569313717 17926 e820b1ee98f2a61c54f21addf6fa78b2 ""
   "images__method/LOF_cleaning.pdf" 1562159367 109966 7b4c348eec041bf379ca3427d42f058e ""
   "images__method/aggregate_model.pdf" 1569246828 105022 bad6ca590ebf5ae2143c545f13a5d0ce ""
   "images__method/bi_vs_agg_comparison.pdf" 1567417784 177340 7f4446edd569e6acc98621ba8f0a9e92 ""
@@ -270,13 +271,13 @@
   "images__results/gzb-agg-nsa-comparison.pdf" 1564140060 34267 15a8802dbd8b55a0895d930570146250 ""
   "images__results/gzb-hart-comparison.pdf" 1560866224 18290 ddb9a7502875293d9056d63a9aab8a78 ""
   "images__results/sd_comp_comparison.pdf" 1567417773 20807 83c2fb2bce51de9a88d9607725f80b36 ""
-  "main.aux" 1569250821 24923 8bea89c086d07b626a22b8abbdeadff1 ""
-  "main.bbl" 1569250820 12556 54c7ffbba5ce5b24f97bdb53f9468182 "bibtex main"
-  "main.tex" 1569250816 5145 0151ef4a704c003710bf20b998eb616b ""
+  "main.aux" 1569315709 25574 606d3b9f15487913a4c29819aaa1c0b4 ""
+  "main.bbl" 1569315706 12556 54c7ffbba5ce5b24f97bdb53f9468182 "bibtex main"
+  "main.tex" 1569250823 5145 0151ef4a704c003710bf20b998eb616b ""
   "mnras.cls" 1549018972 62270 584b1996e2ad3b6232713ae7357cb18e ""
   "sections/abstract.tex" 1568893916 1717 7b007e08595f7d289e0aded0dc8702c0 ""
   "sections/acknowledgements.tex" 1568976473 1046 617462b6dcb41f111ce648184b3edf10 ""
-  "sections/appendix.tex" 1569245251 5257 64e45d2fbe34feca3ccfaa633e2d5309 ""
+  "sections/appendix.tex" 1569315701 5747 5f3c6babbcfdaace9dd9b4c6658ed7ca ""
   "sections/conclusions.tex" 1569250218 2199 2fd7b3d9c9cc79e3812774f2b5395252 ""
   "sections/introduction.tex" 1568893882 6714 2674c880188093aca7b9b850b252b09b ""
   "sections/method.tex" 1569250168 25600 643d8415dcef62918593af954e79bfd3 ""
@@ -284,6 +285,6 @@
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
   "main.aux"
-  "main.out"
   "main.pdf"
   "main.log"
+  "main.out"
