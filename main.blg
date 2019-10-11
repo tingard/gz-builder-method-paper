@@ -40,45 +40,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 "ArXiv e-prints" is a string literal, `journal' is a missing field
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
-You've used 49 entries,
+You've used 48 entries,
             2881 wiz_defined-function locations,
-            1133 strings with 28937 characters,
-and the built_in function-call counts, 23005 in all, are:
-= -- 1983
-> -- 1526
+            1124 strings with 28494 characters,
+and the built_in function-call counts, 22644 in all, are:
+= -- 1951
+> -- 1507
 < -- 73
-+ -- 714
++ -- 703
 - -- 188
-* -- 2784
-:= -- 3409
+* -- 2730
+:= -- 3359
 add.period$ -- 0
-call.type$ -- 49
-change.case$ -- 98
-chr.to.int$ -- 48
-cite$ -- 54
-duplicate$ -- 1207
-empty$ -- 1192
-format.name$ -- 354
-if$ -- 4090
+call.type$ -- 48
+change.case$ -- 96
+chr.to.int$ -- 47
+cite$ -- 53
+duplicate$ -- 1186
+empty$ -- 1170
+format.name$ -- 350
+if$ -- 4030
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 48
-newline$ -- 162
-num.names$ -- 296
-pop$ -- 273
+missing$ -- 47
+newline$ -- 159
+num.names$ -- 292
+pop$ -- 268
 preamble$ -- 1
-purify$ -- 196
+purify$ -- 192
 quote$ -- 0
-skip$ -- 776
+skip$ -- 765
 stack$ -- 0
-substring$ -- 1396
-swap$ -- 601
-text.length$ -- 204
+substring$ -- 1376
+swap$ -- 595
+text.length$ -- 200
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 441
+type$ -- 432
 warning$ -- 5
-while$ -- 333
+while$ -- 327
 width$ -- 0
-write$ -- 502
+write$ -- 492
 (There were 10 error messages)
