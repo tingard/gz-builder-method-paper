@@ -2,15 +2,15 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \label{sec:conclusions}
-In this paper we present a novel method for modelling of galaxy images, \textit{Galaxy Builder}\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder/}}, which was conceived with the goal of solving the ``quality of quantity" dilema facing galaxy image modelling, which, despite advances in computation, still typically requires significant human interaction to achieve quality fits.
+In this paper we present a novel method for modelling of galaxy images, \textit{Galaxy Builder}, which was conceived with the goal of solving the ``quality of quantity" dilema facing galaxy image modelling, which, despite advances in computation, still typically requires significant human interaction to achieve quality fits.
 
-\textit{Galaxy Builder} leverages the power of crowd sourcing for the hardest to automate parts of image fitting, namely determining the appropriate number of model components to include, and finding parameters which are close to the global optima.
+\textit{Galaxy Builder} leverages the power of crowd sourcing for the hardest to automate parts of image fitting, namely determining the appropriate number of model components to include, and finding regions of parameter space close to the global optima.
 
-We have demonstrated that we are able to obtain models with residuals with a median maximum value of 20\% of the maximum galaxy brightness, using either the best individual classification provided by volunteers or an aggregate model from clustering. We obtain errors on parameters through the sample standard deviation of component clusters, which better respects the complex curvature of the likelihood space than simple jacobian approximations.
+We have demonstrated that we are able to obtain models with comparable reduced chi-squared values (between 1 and 5) to results in the literature, using either the best individual classification provided by volunteers or an aggregate model from clustering. We obtain errors on parameters through the sample standard deviation of component clusters, which respects the complex curvature of the likelihood space better than simple jacobian approximations.
 
 We compare these new models to existing results in the literature where available. We find good agreement where the models or parameters are comparable, and comment on instances where \textit{Galaxy Builder} should provide superior models.
 
-We were able to obtain models for 296 images with a rate of one galaxy per day. We note that user experience and task simplification will need to be considered if significantly larger numbers of these models are to be obtained. We note that, at the time of writing and to the best of our knowledge, the number of photometric models obtained here is significantly larger than the largest sample obtained through purely computational fitting (10 galaxies, \citealt{Gao2017:1709.00746v1}).
+We were able to obtain models for 296 images with a rate of one galaxy per day. We note that user experience and task simplification will need to be considered if significantly larger numbers of these models are to be obtained. We note that, at the time of writing and to the best of our knowledge, the number of photometric models obtained here is significantly larger than the largest sample obtained through purely computational photometric fitting of disc, bulge, bar and spiral arms in galaxies (10 galaxies, \citealt{Gao2017:1709.00746v1}, who also included rings, disc-breaks and further components).
 
 We are optimistic about the potential of projects like \textit{Galaxy Builder} to dramatically increase the ability of researchers to perform complex, labour-intensive modelling of galaxy photometry, leveraging the power of the crowd to perform the complex tasks best suited to humans, and computer algorithms for the final optimization.
 

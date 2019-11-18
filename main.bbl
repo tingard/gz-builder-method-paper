@@ -28,6 +28,12 @@
 {Albareti} F.~D.,  et~al., 2017, \mn@doi [\apjs] {10.3847/1538-4365/aa8992},
   \href {https://ui.adsabs.harvard.edu/abs/2017ApJS..233...25A} {233, 25}
 
+\bibitem[\protect\citeauthoryear{{Andrae}, {Schulze-Hartung}  \&
+  {Melchior}}{{Andrae} et~al.}{2010}]{2010arXiv1012.3754A}
+{Andrae} R.,  {Schulze-Hartung} T.,   {Melchior} P.,  2010, arXiv e-prints,
+  \href {https://ui.adsabs.harvard.edu/abs/2010arXiv1012.3754A} {p.
+  arXiv:1012.3754}
+
 \bibitem[\protect\citeauthoryear{{Bamford}, {H{\"a}u{\ss}ler}, {Rojas}  \&
   {Borch}}{{Bamford} et~al.}{2011}]{megamorph-paper}
 {Bamford} S.~P.,  {H{\"a}u{\ss}ler} B.,  {Rojas} A.,   {Borch} A.,  2011, in
@@ -102,6 +108,12 @@ Hart R.~E.,  et~al., 2016
 {Hart} R.~E.,  et~al., 2017, \mn@doi [\mnras] {10.1093/mnras/stx2137}, \href
   {https://ui.adsabs.harvard.edu/abs/2017MNRAS.472.2263H} {472, 2263}
 
+\bibitem[\protect\citeauthoryear{{Head}, {Lucey}  \& {Hudson}}{{Head}
+  et~al.}{2015}]{2015MNRAS.453.3729H}
+{Head} J. T.~C.~G.,  {Lucey} J.~R.,   {Hudson} M.~J.,  2015, \mn@doi [\mnras]
+  {10.1093/mnras/stv1662}, \href
+  {https://ui.adsabs.harvard.edu/abs/2015MNRAS.453.3729H} {453, 3729}
+
 \bibitem[\protect\citeauthoryear{Holincheck et~al.,}{Holincheck
   et~al.}{2016}]{Holincheck2016:1604.00435v1}
 Holincheck A.~J.,  et~al., 2016
@@ -116,8 +128,8 @@ Hopkins P.~F.,  et~al., 2010, The Astrophysical Journal, 724, 915
   {https://ui.adsabs.harvard.edu/abs/2010arXiv1005.4454J} {p. arXiv:1005.4454}
 
 \bibitem[\protect\citeauthoryear{Jones, Oliphant, Peterson  et~al.}{Jones
-  et~al.}{01  }]{scipy-paper}
-Jones E.,  Oliphant T.,  Peterson P.,   et~al., 2001--, SciPy: Open source
+  et~al.}{2001}]{scipy-paper}
+Jones E.,  Oliphant T.,  Peterson P.,   et~al., 2001, SciPy: Open source
   scientific tools for Python, \url {http://www.scipy.org/}
 
 \bibitem[\protect\citeauthoryear{Kormendy, Drory, Bender  \& Cornell}{Kormendy
@@ -141,6 +153,11 @@ Kormendy J.,  Drory N.,  Bender R.,   Cornell M.~E.,  2010, The Astrophysical
   {10.1111/j.1365-2966.2012.20450.x}, \href
   {https://ui.adsabs.harvard.edu/abs/2012MNRAS.421.2277L} {421, 2277}
 
+\bibitem[\protect\citeauthoryear{{Lange} et~al.,}{{Lange}
+  et~al.}{2016}]{2016MNRAS.462.1470L}
+{Lange} R.,  et~al., 2016, \mn@doi [\mnras] {10.1093/mnras/stw1495}, \href
+  {https://ui.adsabs.harvard.edu/abs/2016MNRAS.462.1470L} {462, 1470}
+
 \bibitem[\protect\citeauthoryear{Lintott et~al.,}{Lintott
   et~al.}{2008}]{Lintott2008:0804.4483v1}
 Lintott C.~J.,  et~al., 2008, Monthly Notices of the Royal Astronomical
@@ -150,6 +167,11 @@ Lintott C.~J.,  et~al., 2008, Monthly Notices of the Royal Astronomical
   Szalay  \& Wherry}{Lupton et~al.}{2004}]{Lupton2003:astro-ph/0312483v1}
 Lupton R.,  Blanton M.~R.,  Fekete G.,  Hogg D.~W.,  O'Mullane W.,  Szalay A.,
    Wherry N.,  2004, PUBL ASTRON SOC PAC, 116, 133
+
+\bibitem[\protect\citeauthoryear{{Masters} \& {the Galaxy Zoo Team}}{{Masters}
+  \& {the Galaxy Zoo Team}}{2019}]{2019arXiv191008177M}
+{Masters} K.~L.,  {the Galaxy Zoo Team} 2019, arXiv e-prints, \href
+  {https://ui.adsabs.harvard.edu/abs/2019arXiv191008177M} {p. arXiv:1910.08177}
 
 \bibitem[\protect\citeauthoryear{Masters et~al.,}{Masters
   et~al.}{2010}]{Masters2010:1003.0449v2}
@@ -257,6 +279,15 @@ Willett K.~W.,  et~al., 2013
 \bibitem[\protect\citeauthoryear{{Zaninetti}}{{Zaninetti}}{2014}]{2014arXiv1401.0287Z}
 {Zaninetti} L.,  2014, arXiv e-prints, \href
   {https://ui.adsabs.harvard.edu/abs/2014arXiv1401.0287Z} {p. arXiv:1401.0287}
+
+\bibitem[\protect\citeauthoryear{{de Vaucouleurs}, {de Vaucouleurs}, {Corwin},
+  {Buta}, {Paturel}  \& {Fouqu{\'e}}}{{de Vaucouleurs}
+  et~al.}{1991}]{deVaucouleurs1991}
+{de Vaucouleurs} G.,  {de Vaucouleurs} A.,  {Corwin} Jr. H.~G.,  {Buta} R.~J.,
+  {Paturel} G.,   {Fouqu{\'e}} P.,  1991, {Third Reference Catalogue of Bright
+  Galaxies. Volume I: Explanations and references. Volume II: Data for galaxies
+  between 0$^{h}$ and 12$^{h}$. Volume III: Data for galaxies between 12$^{h}$
+  and 24$^{h}$.}
 
 \makeatother
 \end{thebibliography}
