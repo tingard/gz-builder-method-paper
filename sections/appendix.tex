@@ -1,3 +1,4 @@
+% !TEX root = ../main.tex
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
@@ -101,6 +102,78 @@ Note that this is identical to saying
 \begin{equation}
 \sigma_I^2 = \frac{1}{N^2}\sum_i\sigma_{I_i}^2.
 \end{equation}
+
+
+\section{Model Fitting}
+\label{sec:appendix_model_fitting}
+Assume Normal priors on components dictaded by Jaccard clustering ($\mu_x$, $\mu_y$, $q$, $Re$), with the spread given by the spread in the clustered values. We reflect these constraints in the loss function. The gaussian log-likelihood for a value with $\mu$ and $sigma$ is
+
+$$l(\mu, \sigma; x_1, ..., x_n) = -\frac{n}{2}\ln(2\pi) -\frac{n}{2}\ln(\sigma^2) - \frac{1}{2\sigma^2}\sum_{j=1}^n(x_j - \mu)^2$$
+
+We therefore have that our final log-likelihood (to be maximised) for a galaxy with data $D$, uncertainty $S$, parameters $p$ of length $n_p$, with parameter mean $\mu$ and  error $\sigma$, is given by
+
+$$l_{tot}(p) = \sum_{i=0}^{N_x}\sum_{i=0}^{N_x}l(D_{i,j}, S_{i,j}; R_{i,j}(p)\ ) + \sum_{k=0}^{n_p}l(\mu_k, \sigma_{k}; p_k).$$
+
+Alternately,
+
+$$l_{tot}(p) = l\left(0, 1; \frac{D-R(p)}{S}\right) + l(0, 1; \frac{\mu - p}{\sigma}).$$
+
+Where $R(p)$ is the rendering function, which outputs an ($N_x$, $N_y$) image.
+
+The rendering function is the PSF-convolved sum of the separate components, with disc, bulge and bar being variations on the boxy sersic profile:
+
+$$I(\vec{P}) = I_e \exp\left\{-b_n\left[\left(\frac{r\,(\vec{P})}{R_e}\right)^{1/n} - 1\right]\right\}$$
+
+where
+
+$$r\,(\vec{P}) = \left|\begin{pmatrix}
+\frac{1}{q} & 0 \\\\
+0 & 1
+\end{pmatrix}\begin{pmatrix}
+\cos\psi & -\sin\psi\\\\
+\sin\psi & \cos\psi
+\end{pmatrix}\left(\vec\mu - \vec{P}\right)\right|_{\ c}.$$
+
+A disc has $n=1; c=2$, a bulge has $n\in(0.5, 6); c=2$ and a bar has $n\in(0.5, 6); c\in(0.5, 6)$.
+
+To slightly complicate matters, the Sérsic components are rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel. I.e. for a pixel of size $(\delta_x, \delta_y)$
+
+$$
+I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_y/2}\int_{-\delta_x/2}^{\delta_x/2}\mathrm{d}x\mathrm{d}y\ I\left(\vec{P} + \begin{pmatrix}
+\delta_x \\\\
+\delta_y \\\\
+\end{pmatrix}\right).
+$$
+
+A logarithmic spiral arm in Galaxy Builder is defined by a brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($a$ and $b$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component. It is multiplied by the disc component to capture the correct exponential falloff with the disc.
+
+$$S(\vec{P}) = I_\mathrm{Disc}(\vec{P}) \times I_s\exp\left(-\frac{1}{s}\min_{\theta\in[a, b]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
+\cos\psi & \sin\psi\\\\
+-\sin\psi & \cos\psi
+\end{pmatrix}
+\begin{pmatrix}
+q\cos\theta \\\\
+\sin\theta \\\\
+\end{pmatrix}
+\right|\right|^{\ 2}\right)$$
+
+
+Therefore, for a galaxy with a disc, bulge, bar and $N_s$ spiral arms, we have:
+
+$$R(\vec{P}) = \mathrm{conv}\left(I(\vec{P}; \mathrm{disc}) + I(\vec{P}; \mathrm{bulge}) + I(\vec{P}; \mathrm{bar}) + \sum_{i=0}^{N_s} S(\vec{P}; \mathrm{spiral}_i),\ \mathrm{PSF}\right).$$
+
+We parametrize disc $I_e$ as total Luminosity, given by
+
+$$L_\mathrm{tot} = I_eR_e^2\ 2\pi n\frac{e^{b_n}}{(b_n)^{2n}}\Gamma(2n).$$
+
+Bulge (bar) $I_e$ is reparametrized as ''bulge (bar) fraction``, which we define as
+
+$$F_\mathrm{bulge} = \frac{L_\mathrm{bulge}}{L_\mathrm{disc} + L_\mathrm{bulge}},$$
+
+And is limited to be between 0 and 1. Disc luminosity is allowed to take any value greater than or equal to zero.
+
+Similarly, bulge and bar effective radius are reparametrized as their scale relative to the disc ($R_e = R_e / R_{e,\,\mathrm{disc}}$). Bulge and bar are also restricted to have the same $\mu$.
+
 
 \section{Ancillary Tables}
 \begin{table*}

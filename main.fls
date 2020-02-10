@@ -391,9 +391,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbxsl10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aett8.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
-INPUT images/interfaceInProgress.jpg
-INPUT ./images/interfaceInProgress.jpg
-INPUT ./images/interfaceInProgress.jpg
+INPUT images__method/interface_in_progress.jpg
+INPUT ./images__method/interface_in_progress.jpg
+INPUT ./images__method/interface_in_progress.jpg
 INPUT images/residualProgress.jpg
 INPUT ./images/residualProgress.jpg
 INPUT ./images/residualProgress.jpg
@@ -461,9 +461,9 @@ INPUT ./images__method/LOF_cleaning.pdf
 INPUT images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
 INPUT ./images__method/aggregate_model.pdf
-INPUT images__method/bi_vs_agg_comparison.pdf
-INPUT ./images__method/bi_vs_agg_comparison.pdf
-INPUT ./images__method/bi_vs_agg_comparison.pdf
+INPUT images__method/model_tuning.pdf
+INPUT ./images__method/model_tuning.pdf
+INPUT ./images__method/model_tuning.pdf
 INPUT sections/results.tex
 INPUT sections/results.tex
 INPUT images__results/component_frequency.pdf

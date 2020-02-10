@@ -10,6 +10,9 @@
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
 
+\definecolor{comment}{RGB}{200,0,0}
+\renewcommand{\comment}[2][comment]{{\color{#1}[[{\bf #2}]]}}
+
 \selectlanguage{british}
 \title[Galaxy Zoo Builder: Method paper]{Galaxy Zoo Builder: Four Component Photometric decomposition of Spiral Galaxies Guided by Citizen Science}
 \author[T. Lingard et al.]{
