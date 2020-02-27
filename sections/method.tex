@@ -14,7 +14,7 @@ In many ways, this iterative workflow was very similar to that used in \textit{G
 
 \subsubsection{Project Timeline and Development}
 
-The \textit{Galaxy Builder} project was built inside the Zooniverse's \citep{Simpson:2014:ZOW:2567948.2579215} \textsc{Panoptes-Front-End}\footnote{\url{http://github.com/zooniverse/Panoptes-Front-End}} codebase, using Facebook's \textsc{React.js}\footnote{\url{https://reactjs.org/}} framework, as well as WebGL\footnote{\url{https://www.khronos.org/webgl/}} to enable low-latency photometric galaxy model rendering. \textit{Galaxy Builder} entered a Zooniverse beta in late November 2017 and after some user experience improvements and code reworking to meet internal standards, the project was launched as an official Zooniverse project on the 24th of April 2018.
+The \textit{Galaxy Builder} project was built inside the Zooniverse's \citep{Simpson:2014:ZOW:2567948.2579215} \textsc{Panoptes-Front-End}\footnote{\url{http://github.com/zooniverse/Panoptes-Front-End}} codebase, using Facebook's \textsc{React.js}\footnote{\url{https://reactjs.org/}} framework, as well as WebGL\footnote{\url{https://www.khronos.org/webgl/}} to enable low-latency photometric galaxy model rendering. \textit{Galaxy Builder} entered a Zooniverse beta in late November 2017 and after some user experience improvements and code refactoring, the project was launched as an official Zooniverse project on the 24th of April 2018.
 
 A major challenge during development of the project was finding the right balance between keeping a simple and intuitive interface and workflow while also allowing the freedom and versatility to properly model galaxies. It was also a significant challenge to develop a compelling and simple tutorial for what is one of the most complex projects attempted on the Zooniverse platform. Feedback from expert users was essential to this process as part of the the typical beta trial process for Zooniverse projects\footnote{\url{https://help.zooniverse.org/best-practices/}}.
 
@@ -79,6 +79,7 @@ The morphological information required to select spiral galaxies came from the p
 The \textit{stellar mass-complete sample} was split into smaller sub-samples, each containing 100 galaxies. In an iterative process, each sub-sample was chosen to contain 60 of the lowest redshift galaxies and 40 random galaxies of those remaining in the sample. This was done to account for the unknown rate at which volunteers would provide classifications. In the first two sets of 100 galaxies, 1\% of galaxies (i.e. 2 images) failed to run through the image preparation process, due to an error when attempting to montage multiple frames. The root cause of this error is unknown, but it leaves a sample of 198 galaxies with images that are considered in this paper.
 
 \subsubsection{Image and modelling metadata extraction}
+\label{sec:image_creation}
 
 The galaxy data shown to volunteers in the \textit{Galaxy Builder} project came in two forms: A gray-scale image cutout of the galaxy and a JSON file containing rendering information for the web-interface.
 
@@ -98,15 +99,18 @@ The decision to use r-band images in our subject set was due to its higher signa
 
 Once a sub-sample had been created, the Zooniverse's \textsc{panoptes-python-client}\footnote{\url{https://github.com/zooniverse/panoptes-python-client}} was used to upload them as a subject-set to the Zooniverse.
 
-A separate stacked image and sigma image was calculated for the r-band corrected frames present in the montage, as described in Appendix \ref{appendix:frame_stacking}. These were not caluclated using \textsc{Montage} as its reprojection step does not conserve errors. These images were not shown to volunteers but were used for model fitting and comparison.
-
+Upon later consideration (after subjects had been uploaded to the Zooniverse), it was determined that the reprojection performed by \textsc{Montage} has a smoothing effect on the data, and thus does not conserve errors. This motivated the calculation of a separate stacked image and sigma image, using the same r-band corrected frames present in the montage, as described in Appendix \ref{appendix:frame_stacking}. These images were not shown to volunteers but were used for model fitting and comparison.
 
 \subsection{Choice of Retirement limit}
 \label{sec:retirement-limit}
 
 Initially 10 classifications were collected per galaxy, however preliminary analysis indicated this number of independent answers was insufficient to create reliable and reproducable aggregate classifications. For this reason, a hand-picked sample of 56 galaxies was then re-activated with a retirement limit of 30 classifications per galaxy. This sample was chosen by eye to be a relatively diverse set of galaxies, most with prominent spiral features including grand-design and flocculent arms. Its purpose was to allow the development of the aggregation methodology.
 
-Once this hand-picked sample was completed, and it had been determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (presented in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained. The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies.
+Once this hand-picked sample was completed, and it had been determined that 30 classifications per galaxy was sufficient, the remaining galaxies from the initial two sub-samples were re-activated, as well as a repeat of the first sub-sample (hereafter the \textit{validation subset}) to measure volunteer consistency. This paper focuses on these 198 galaxies (presented in \textit{Galaxy Builder} as 296 separate images) in order to explain the method used, and test the reliability of the models obtained.
+
+We also created 9 synthetic images of galaxies, containing various combinations of components available to volunteers and a spread of possible parameters. These synthetic galaxies were based off of a set of target galaxies from galaxy builder, including the use of the galaxies' metadata for the addition of realistic noise and pixel masks. This set of synthetic images was used to calibrate our aggregation and fitting methodology and thus is referred to as the \textit{calibration subset}.
+
+The \textit{Galaxy Builder} project is still active on the Zooniverse website as of the time of writing and continues to collect classifications for further samples of galaxies.
 
 
 \subsection{The Galaxy Model}
@@ -127,7 +131,7 @@ The modelling code ignores masked regions identified as secondary sources by \te
 
 \subsection{Reprojection of Classifications into original SDSS Frame Coordinates}
 
-In order to properly account for errors and as part of the data reduction process, we transform all classifications recieved for a galaxy from the coordinate space of the \textsc{Montage}-created cutouts back into the WCS of the original frames. This was motivated by the need for accurate sigma images, which cannot be created for reprojected images, due to the smoothing effect reprojection has on the image noise.
+In order to properly account for errors and as part of the data reduction process, we transform all classifications recieved for a galaxy from the coordinate space of the \textsc{Montage}-created cutouts shown to volunteers to the WCS of the original frames, allowing the use of the accurate sigma images discussed in Section \ref{sec:image_creation}.
 
 
 \subsection{Classification Aggregation Methodology}
@@ -150,7 +154,7 @@ d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
 The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. In DBSCAN the core of a cluster is defined as a group of at least \texttt{min\_points} that are all within a distance \texttt{eps} of each other. Additionally, any points within a distance \texttt{eps} of a cluster's core are also associated with the cluster.
-The values of \texttt{eps} and \texttt{min\_points} for the disk and bulge were chosen by visually inspecting the resulting clustering results. The value of \texttt{eps} used to cluster bars was tuned such that the aggregate model best agreed with GZ2 $p_\mathrm{bar}$ ($p_\mathrm{bar} < 0.2$ implying no bar and $p_\mathrm{bar} > 0.5$ implying a definite bar). The values used can be seen in Table \ref{table:dbscan_params}.
+The values of \texttt{eps} and \texttt{min\_points} for the disk and bulge were chosen by visually inspecting the resulting clustering results and ensuring that a disc was obtained for all galaxies, and a bulge for most. The value of \texttt{eps} used to cluster bars was tuned such that the aggregate model best agreed with GZ2 $p_\mathrm{bar}$ ($p_\mathrm{bar} < 0.2$ implying no bar and $p_\mathrm{bar} > 0.5$ implying a definite bar). The values used can be seen in Table \ref{table:dbscan_params}.
 
 Prior to clustering, models were altered such that component parameters were within the limits shown in Table \ref{table:bad_values} (deemed to be the physically acceptable bounds for such a component).
 
@@ -161,8 +165,8 @@ Prior to clustering, models were altered such that component parameters were wit
     \hline
     component & \texttt{eps} & \texttt{min\_points} \\
     \hline
-    Disc & 0.2 & 4 \\
-    Bulge & 0.3 & 3 \\
+    Disc & 0.3 & 4 \\
+    Bulge & 0.4 & 4 \\
     Bar & 0.478 & 4 \\
     \hline
   \end{tabular}
@@ -179,7 +183,7 @@ For shapes clustered in this way, we define the aggregate component to be the sh
 
 To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. A mathematical description of this measure can be found in Appendix \ref{appendix:clustering_maths}. We make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications).
 
-Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the axial ratio and position angle from the aggregate disc. The deprojection method assumes a thin disc and stretches the elliptical minor axis to match the major axis.
+Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the axis ratio and position angle of the aggregated disc. The deprojection method assumes a thin disc and stretches the elliptical minor axis to match the major axis.
 
 Deprojected points within each drawn poly-line are converted to polar coordinates and unwound to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each drawn poly-line in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature. The points removed as outliers for the example galaxy are shown in Figure. \ref{fig:LOF_cleaning}.
 
@@ -191,7 +195,7 @@ Deprojected points within each drawn poly-line are converted to polar coordinate
 
 For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \citep{2014arXiv1401.0287Z} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). To obtain a single value for the pitch angle of a galaxy, we take the length-weighted average pitch angle of all arms detected in the galaxy (as used by \citealt{Davis2014:1402.1910v1}). We make of the logarithmic spiral parameter $A$ and the range of $\theta$ values present in the arm during model fitting.
 
-The final galaxy model for UGC 4721 obtained through aggregation can be seen in Figure \ref{fig:aggregate_model}.
+The galaxy model for UGC 4721 obtained through aggregation can be seen in Figure \ref{fig:aggregate_model}.
 
 \begin{figure}
   \includegraphics[width=8cm]{images__method/aggregate_model.pdf}
@@ -199,28 +203,26 @@ The final galaxy model for UGC 4721 obtained through aggregation can be seen in 
   \label{fig:aggregate_model}
 \end{figure}
 
-\subsection{Error Estimation}
+\subsection{Error Estimation of Aggregate models}
 \label{sec:error_estimation}
 
-The uncertainties reported by many software fitting packages (i.e. \textsc{Galfit} and \textsc{MegaMorph} from the above list) are lower estimates on the real uncertainty, due to secondary sources not being modelled, flat-fielding errors and incorrect models \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity.
-
-As all shapes in a cluster can be viewed as volunteers' attempts at modelling the underlying component, the sample variance of the parameters of these shapes can be used as a good approximation of the underlying variance of the component. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721). Effective radii generally had relative errors of around 10\% and axis ratios show an absoulute error of around $0.10$. Parameters dictated by sliders show much larger and less consistent errors, potentially due to their impact being conceptually harder for volunteers. It is therefore possible that slider errors should be treated as a measure of volunteer confidence rather than a measure of the posterior. A table detailing all errors on parameters is provided in the appendix (Table \ref{table:error_values}).
-
+As all components in a cluster can be viewed as volunteers' attempts at modelling the true underlying component, the sample variance of the parameters of these shapes can be used as a measure of confidence in the parameters present in the aggregate result. These are highly sensitive to clustering hyperparameters, and are only valid for a component's position, size and shape. Figure \ref{fig:mean_shapes} illustrates the variance in clustered shapes for our example galaxy (UCG 4721); we see a large variation in the clustered discs, and much closer agreement on bulge and bar size and shape.
 
 \subsection{Model Fitting}
 
-As mentioned above, the need for a numerical fit to fine-tune parameters of \textit{Galaxy Builder} models was anticipated. This fitting was performed using the L-BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}, to minimize a custom likelihood function that incorporates the prior beliefs on parameters we obtain from clustering. The full fitting model and likelihood is detailed in Appendix \ref{sec:appendix_model_fitting}.
+As mentioned above, the need for a numerical fit to fine-tune parameters of \textit{Galaxy Builder} models was anticipated. This fitting was performed using the L-BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. We minimize a custom likelihood function that assumes gaussian error on pixel values and incorporates the priors on parameters we obtain from clustering. The full fitting model and likelihood is detailed in Appendix \ref{sec:appendix_model_fitting}. We use the same model as used by volunteers in the online interface (with altered limits), with spiral arms restricted to being logarithmic spirals relative to the disc, and without the ability to change the relative falloff of spiral arms.
 
-The model fitting code was written up using Google's JAX package, which allows GPU-optimization and automatic gradient calculation, enabling quick and accurate calculation of the jacobian matrix needed for the L-BFGS-b minimization algorithm.
+The model rendering and fitting code was written up using Google's JAX package \citep{jax2018github}, which allows GPU-optimization and automatic gradient calculation, enabling quick and accurate calculation of the jacobian matrix needed for the L-BFGS-b minimization algorithm.
 
-Before fitting for all free parameters, we fit only for the brightnesses and sizes of components. The result of the fit, including the final photometic model for UGC 4721, can be seen in \ref{fig:model_tuning}. The secondary components have been accounted for well, and the model has a sensible reduced chi-squared value of \comment{CHISQ OF EXAMPLE FIT}.
+Before fitting for all free parameters, we fit only for the brightnesses of components. The result of the fit, including the final photometic model for UGC 4721, can be seen in \ref{fig:model_tuning}. The secondary components have been accounted for well, and the model has a sensible reduced chi-squared value of \comment{1.183}, where we have approximated degrees of freedom as the number of unmasked pixels present in the galaxy image.
 
 \begin{figure*}
   \includegraphics[width=17.7cm]{images__method/model_tuning.pdf}
-  \caption{Effect of fitting on the fit results. The top left panel shows the galaxy being fit (UGC 4721), the top middle shows the final model obtained and the top right shows the difference between the two images. The bottom panels show a simple representation of the model before and after tuning, overlaid on a greyscale version of the galaxy image.}
+  \caption{Effect of fitting on the fit results. The top left panel shows an Arcsinh-scaled image of the galaxy being fit (UGC 4721), the top middle shows the final model obtained (with the same limits and scaling as the galaxy image) and the top right shows the difference between the two images, in units of pixel uncertainty. The bottom panels show a simple representation of the model before and after tuning, overlaid on the galaxy image from the top-left panel.}
   \label{fig:model_tuning}
 \end{figure*}
 
-Hie there
+As we do not perform a full Bayesian minimzation, we make use of the errors described in Section \ref{sec:error_estimation} as our parameter uncertainties, as we feel a Hessian-based approach would likely fall foul of the issues described in the introduction and thus be a under-estimate, this does mean we do not have uncertainties for some parameters.
 
+\comment{Use Hessian errors for parameters where clustering error is not possible?}
 \end{document}

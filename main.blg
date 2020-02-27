@@ -3,6 +3,8 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: mnras.bst
 Database file #1: bibliography.bib
+Warning--entry type for "jax2018github" isn't style-file defined
+--line 521 of file bibliography.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 "ArXiv e-prints" is a string literal, `journal' is a missing field
@@ -41,45 +43,45 @@ Warning--empty journal in Willett2013:1308.3496v2
 ---they aren't the same literal types for entry Willett2013:1308.3496v2
 while executing---line 1822 of file mnras.bst
 Warning--empty publisher in deVaucouleurs1991
-You've used 52 entries,
+You've used 53 entries,
             2881 wiz_defined-function locations,
-            1156 strings with 30799 characters,
-and the built_in function-call counts, 24984 in all, are:
-= -- 2164
-> -- 1654
-< -- 82
-+ -- 768
-- -- 210
-* -- 2981
-:= -- 3687
+            1160 strings with 31040 characters,
+and the built_in function-call counts, 25524 in all, are:
+= -- 2186
+> -- 1721
+< -- 84
++ -- 797
+- -- 224
+* -- 3051
+:= -- 3787
 add.period$ -- 0
-call.type$ -- 52
-change.case$ -- 104
-chr.to.int$ -- 51
-cite$ -- 58
-duplicate$ -- 1313
-empty$ -- 1286
-format.name$ -- 386
-if$ -- 4478
+call.type$ -- 53
+change.case$ -- 106
+chr.to.int$ -- 52
+cite$ -- 59
+duplicate$ -- 1337
+empty$ -- 1309
+format.name$ -- 402
+if$ -- 4560
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 52
-newline$ -- 171
-num.names$ -- 320
-pop$ -- 298
+newline$ -- 174
+num.names$ -- 328
+pop$ -- 307
 preamble$ -- 1
-purify$ -- 208
+purify$ -- 212
 quote$ -- 0
-skip$ -- 864
+skip$ -- 875
 stack$ -- 0
-substring$ -- 1540
-swap$ -- 680
-text.length$ -- 217
+substring$ -- 1548
+swap$ -- 694
+text.length$ -- 221
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 465
+type$ -- 474
 warning$ -- 6
-while$ -- 355
+while$ -- 361
 width$ -- 0
-write$ -- 531
+write$ -- 541
 (There were 10 error messages)

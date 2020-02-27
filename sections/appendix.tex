@@ -72,7 +72,7 @@ n_\mathrm{total} &= \sum_i{n_i} = \sum_i g_i\left(\frac{I_i}{C_i} + S_i - V_i\ri
   \end{aligned}
 \end{equation}
 
-This is ideal, and is the level that many fitting software packages work at, we, however, want to return to working in units of nanomaggies on a stacked image, and so further calculation is needed:
+This is ideal, and is the level that many fitting software packages work at. As we wish to return to working in units of nanomaggies on a stacked image, further calculation is needed:
 
 \begin{equation}
 I = \frac{1}{N}\sum_i I_i,
@@ -106,24 +106,12 @@ Note that this is identical to saying
 
 \section{Model Fitting}
 \label{sec:appendix_model_fitting}
-Assume Normal priors on components dictaded by Jaccard clustering ($\mu_x$, $\mu_y$, $q$, $Re$), with the spread given by the spread in the clustered values. We therefore have that our final log-likelihood (to be maximised) for a galaxy with data $D$, uncertainty $S$, parameters $p$ of length $n_p$, with parameter mean $\mu$ and  error $\sigma$, is given by
+Assume Normal priors on component parameters determined from clustering ($\mu_x$, $\mu_y$, $q$, $Re$), with the spread given by the spread in the clustered values. We therefore have that our final log-likelihood (to be maximised) is the sum of the gaussian log-likelihood of the residuals given the pixel uncertainty and the gaussian log-likelihood of the variation in parameters, given their uncertainty.
+
+The model being rendered is the PSF-convolved sum of the separate components and outputs an ($N_x$, $N_y$) image. The disc, bulge and bar are variations on the boxy S\'ersic profile:
 
 \begin{equation}
-l_{tot}(p) = \sum_{i=0}^{N_x}\sum_{i=0}^{N_x}l(D_{i,j}, S_{i,j}; R_{i,j}(p)\ ) + \sum_{k=0}^{n_p}l(\mu_k, \sigma_{k}; p_k).
-\end{equation}
-
-Alternately,
-
-\begin{equation}
-l_{tot}(p) = l\left(0, 1; \frac{D-R(p)}{S}\right) + l(0, 1; \frac{\mu - p}{\sigma}).
-\end{equation}
-
-Where $R(p)$ is the rendering function, which is the PSF-convolved sum of the separate components and outputs an ($N_x$, $N_y$) image.
-
-The model's disc, bulge and bar are variations on the boxy sersic profile:
-
-\begin{equation}
-I(\vec{P}) = I_e \exp\left\{-b_n\left[\left(\frac{r\,(\vec{P})}{R_e}\right)^{1/n} - 1\right]\right\}
+I_\mathrm{sersic}(\vec{P}) = I_e \exp\left\{-b_n\left[\left(\frac{r\,(\vec{P})}{R_e}\right)^{1/n} - 1\right]\right\}
 \end{equation}
 
 where
@@ -138,22 +126,24 @@ r\,(\vec{P}) = \left|\begin{pmatrix}
 \end{pmatrix}\left(\vec\mu - \vec{P}\right)\right|_{\ c}.
 \end{equation}
 
-A disc has $n=1; c=2$, a bulge has $n\in(0.5, 6); c=2$ and a bar has $n\in(0.5, 6); c\in(0.5, 6)$.
+The disc is resticted to $n=1; c=2$, bulge to $n\in(0.5, 6); c=2$ and bar to $n\in(0.5, 6); c\in(0.5, 6)$.
 
-To slightly complicate matters, the Sérsic components are rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel. I.e. for a pixel of size $(\delta_x, \delta_y)$
+The S\'ersic components are actually rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel. I.e. for a pixel of size $(\delta_x, \delta_y)$
 
 \begin{equation}
-I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_y/2}\int_{-\delta_x/2}^{\delta_x/2}\mathrm{d}x\mathrm{d}y\ I\left(\vec{P} + \begin{pmatrix}
+I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_y/2}\int_{-\delta_x/2}^{\delta_x/2}\mathrm{d}x\mathrm{d}y\ I_\mathrm{sersic}\left(\vec{P} + \begin{pmatrix}
 \delta_x \\
 \delta_y \\
 \end{pmatrix}\right).
 \end{equation}
 
-A logarithmic spiral arm in Galaxy Builder is defined as a gaussian blurring of a logarithmic spiral line, tied to the position angle and inclination of the disc, and multiplied by the disc to capture the correct exponential falloff:
+Spiral arms were restricted to be logarithmic with respect to the inclined, rotated disc. They were rendered in a similar manner to the online interface; using the nearest distance from a pixel to a calculated logarithmic spiral.
 
+An inclined, rotated log spiral requires parameters brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($a$ and $b$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component.
+
+The distance from a pixel to a logarithmic spiral is given by
 \begin{equation}
-S(\vec{P}) = I_\mathrm{Disc}(\vec{P}) \times I_s\exp\left(
-  -\frac{1}{s}\min_{\theta\in[a, b]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
+  D_\mathrm{s}(\vec{P}) = \min_{\theta\in[a, b]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
        \cos\psi & \sin\psi\\
        -\sin\psi & \cos\psi
        \end{pmatrix}
@@ -161,26 +151,38 @@ S(\vec{P}) = I_\mathrm{Disc}(\vec{P}) \times I_s\exp\left(
        q\cos\theta \\
        \sin\theta \\
        \end{pmatrix}
-       \right|\right|^{\ 2}\\
-    \right).
+       \right|\right|^{\ 2}.
 \end{equation}
 
-We have parameters brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($a$ and $b$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component.
+In practise the spiral distance was approximated using the distance to a poly-line with 200 vertices, as solving the above minimization for each pixel at each fitting step is computationally intractable. We also adjust $A$, $a$ and $b$ to account for the rotation of the disc component from its starting value, in order to prevent spirals inadvertendly moving far from starting locations for face-on discs (which have poorly constrained position angles). These adjustments are
 
-We parametrize disc $I_e$ as total Luminosity, given by
+\begin{equation}
+\begin{aligned}
+  A' &= Ae^{\Delta\psi\tan\phi},\\
+  a' &= a - \Delta\psi,\\
+  b' &= b - \Delta\psi.
+\end{aligned}
+\end{equation}
+
+The pixel brightness is then calculated as
+
+\begin{equation}
+I_\mathrm{spiral}(\vec{P}) = I_\mathrm{disc}(\vec{P}) \times I_s\exp\left(\frac{-D_\mathrm{s}(\vec{P})}{2s^2}\right).
+\end{equation}
+
+For the fit, we parametrize disc $I_e$ as the S\'ersic total luminosity, given by
 
 \begin{equation}
 L_\mathrm{tot} = I_eR_e^2\ 2\pi n\frac{e^{b_n}}{(b_n)^{2n}}\Gamma(2n).
 \end{equation}
 
-Bulge (bar) $I_e$ is reparametrized as ''bulge (bar) fraction``, which we define as
+Bulge (bar) $I_e$ is reparametrized as ``bulge (bar) fraction'', which we define as
 
 \begin{equation}
 F_\mathrm{bulge} = \frac{L_\mathrm{bulge}}{L_\mathrm{disc} + L_\mathrm{bulge}},
 \end{equation}
 
-
-And is limited to be between 0 and 1. Disc luminosity is allowed to take any value greater than or equal to zero.
+and is limited to be between 0 and 1. Disc luminosity is allowed to take any value greater than or equal to zero.
 
 Similarly, bulge and bar effective radius are reparametrized as their scale relative to the disc ($R_e = R_e / R_{e,\,\mathrm{disc}}$). Bulge and bar are also restricted to have the same poition.
 
@@ -188,7 +190,7 @@ Similarly, bulge and bar effective radius are reparametrized as their scale rela
 \section{Ancillary Tables}
 \begin{table*}
   \centering
-  \caption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll was similarly unconstrained.}
+  \caption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.}
   \begin{tabular}{l|l|r|r|r|r|r}
 \hline
 Component & Parameter  & Tuning Minimum & Tuning Maximum \\
@@ -197,63 +199,31 @@ Component & Parameter  & Tuning Minimum & Tuning Maximum \\
 disc      & $\mu_x$    & -inf           & inf            \\
           & $\mu_y$    & -inf           & inf            \\
           & roll       & -inf           & inf            \\
-          & $q$        & 0.01           & 100            \\
+          & $q$        & 0.25           & 1.2            \\
           & $R_e$      & 0              & inf            \\
           & $\Sigma_e$ & 0              & inf            \\
 bulge     & $\mu_x$    & -inf           & inf            \\
           & $\mu_y$    & -inf           & inf            \\
           & roll       & -inf           & inf            \\
-          & $q$        & 0.01           & 100            \\
-          & $R_e$      & 0              & inf            \\
-          & $\Sigma_e$ & 0              & inf            \\
-          & $n$        & 0.1            & 10             \\
+          & $q$        & 0.6            & 1.2            \\
+          & $R_e / R_\mathrm{disc}$ & 0.01 & 1           \\
+          & $(B/T)_r)$ & 0              & 0.99           \\
+          & $n$        & 0.5            & 5              \\
 bar       & $\mu_x$    & -inf           & inf            \\
           & $\mu_y$    & -inf           & inf            \\
           & roll       & -inf           & inf            \\
-          & $q$        & 0.01           & 100            \\
-          & $R_e$      & 0              & inf            \\
-          & $\Sigma_e$ & 0              & inf            \\
-          & $n$        & 0.1            & 10             \\
-          & $c$        & 0.01           & 10             \\
+          & $q$        & 0.05           & 0.5            \\
+          & $R_e / R_\mathrm{disc}$ & 0.05 & 1           \\
+          & $(B/T)_r)$ & 0              & 0.99           \\
+          & $n$        & 0.3            & 5              \\
+          & $c$        & 1              & 6              \\
 spiral    & $\Sigma_e$ & 0              & inf            \\
           & spread     & 0              & inf            \\
-          & falloff    & 0.01           & inf            \\
+          & $\phi$     & -85            & 85             \\
 \hline
   \centering
   \end{tabular}
   \label{table:bad_values}
 \end{table*}
 
-\begin{table*}
-  \centering
-  \caption{Pivot table of reported errors on parameters for our sample of 297 galaxies. Errors quoted are absolute errors.}
-  \begin{tabular}{l|l|rrrrrrrr}
-  \hline
-  component & parameter &  count &  mean &   std &   min &   25\% &   50\% &   75\% &    max \\
-  \hline
-  disk  & $\Sigma_e$ (nmgy) &    291 &  0.20 &  0.21 &  0.01 &  0.07 &  0.14 &  0.25 &  1.22 \\
-        & $r_e$ &    291 &  0.65 &  0.32 &  0.08 &  0.42 &  0.60 &  0.85 &  1.82 \\
-        & $\mu_x$ (arcseconds) &    291 &  0.43 &  0.28 &  0.05 &  0.24 &  0.38 &  0.56 &  2.56 \\
-        & $\mu_y$ (arcseconds) &    291 &  0.44 &  0.26 &  0.11 &  0.26 &  0.36 &  0.54 &  1.93 \\
-        & $b/a$ &    291 &  0.09 &  0.04 &  0.01 &  0.06 &  0.09 &  0.12 &  0.20 \\
-        & $\phi$ (radians) &    291 &  1.63 &  0.36 &  0.21 &  1.43 &  1.58 &  1.77 &  2.93 \\
-  bulge & $\Sigma_e$ (nmgy) &    272 &  0.75 &  0.96 &  0.00 &  0.16 &  0.39 &  0.85 &  6.75 \\
-        & $r_e$ &    272 &  0.08 &  0.05 &  0.00 &  0.05 &  0.07 &  0.10 &  0.47 \\
-        & $\mu_x$ (arcseconds) &    272 &  0.13 &  0.08 &  0.00 &  0.09 &  0.12 &  0.16 &  0.72 \\
-        & $\mu_y$ (arcseconds) &    272 &  0.13 &  0.07 &  0.00 &  0.09 &  0.11 &  0.16 &  0.51 \\
-        & $n$ &    272 &  1.23 &  0.64 &  0.00 &  0.63 &  1.40 &  1.73 &  2.48 \\
-        & $b/a$ &    272 &  0.10 &  0.05 &  0.00 &  0.07 &  0.10 &  0.14 &  0.23 \\
-        & $\phi$ (radians) &    272 &  1.56 &  0.57 &  0.00 &  1.28 &  1.57 &  1.86 &  3.47 \\
-  bar   & $\Sigma_e$ (nmgy) &     92 &  0.31 &  0.39 &  0.00 &  0.06 &  0.16 &  0.39 &  2.36 \\
-        & $r_e$ &     92 &  0.16 &  0.12 &  0.02 &  0.06 &  0.14 &  0.20 &  0.87 \\
-        & $c$ &     92 &  0.28 &  0.20 &  0.00 &  0.14 &  0.25 &  0.42 &  0.82 \\
-        & $\mu_x$ (arcseconds) &     92 &  0.23 &  0.26 &  0.04 &  0.11 &  0.17 &  0.27 &  2.24 \\
-        & $\mu_y$ (arcseconds) &     92 &  0.24 &  0.20 &  0.02 &  0.13 &  0.18 &  0.31 &  1.09 \\
-        & $n$ &     92 &  0.37 &  0.30 &  0.00 &  0.08 &  0.30 &  0.66 &  0.88 \\
-        & $b/a$ &     92 &  0.09 &  0.04 &  0.01 &  0.06 &  0.08 &  0.11 &  0.23 \\
-        & $\phi$ (radians) &     92 &  0.69 &  0.98 &  0.00 &  0.06 &  0.10 &  1.17 &  3.57 \\
-  \hline
-  \end{tabular}
-  \label{table:error_values}
-\end{table*}
 \end{document}

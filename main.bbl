@@ -50,6 +50,12 @@
   et~al.}{2018}]{dbscan}
 Boonchoo T.,  Ao X.,   He Q.,  2018, CoRR, abs/1801.06965
 
+\bibitem[\protect\citeauthoryear{Bradbury, Frostig, Hawkins, Johnson, Leary,
+  Maclaurin  \& Wanderman-Milne}{Bradbury et~al.}{2018}]{jax2018github}
+Bradbury J.,  Frostig R.,  Hawkins P.,  Johnson M.~J.,  Leary C.,  Maclaurin
+  D.,   Wanderman-Milne S.,  2018, {JAX}: composable transformations of
+  {P}ython+{N}um{P}y programs, \url {http://github.com/google/jax}
+
 \bibitem[\protect\citeauthoryear{Breunig, Kriegel, Ng  \& Sander}{Breunig
   et~al.}{2000}]{local-outlier-factor}
 Breunig M.~M.,  Kriegel H.-P.,  Ng R.~T.,   Sander J.,  2000, in Proceedings of

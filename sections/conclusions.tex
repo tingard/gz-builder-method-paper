@@ -6,9 +6,11 @@ In this paper we present a novel method for modelling of galaxy images, \textit{
 
 \textit{Galaxy Builder} leverages the power of crowd sourcing for the hardest to automate parts of image fitting, namely determining the appropriate number of model components to include, and finding regions of parameter space close to the global optima.
 
-We have demonstrated that we are able to obtain models with comparable reduced chi-squared values (between 1 and 5) to results in the literature. We obtain errors on parameters through the sample standard deviation of component clusters, which respects the complex curvature of the likelihood space better than simple jacobian approximations.
+The use of a small sample of synthetic images to calibrate and test our model clustering and fitting code has demonstrated our ability to correctly recover galaxy morphology, despite a systematic tendancy to incorporate more bulges and fewer bars than necessary for the photometric model. As most spiral galaxies contain some form of bulge these Type 1 errors are excusable, however future work should implement an improved clustering algorithm (and improved user interface) to address the bar clustering failures present in this work.
 
-We compare these new models to existing results in the literature where available. We find good agreement where the models or parameters are comparable, and comment on instances where \textit{Galaxy Builder} should provide superior models.
+We have demonstrated our ability to obtain physically motivated models with comparable reduced chi-squared values (between 1 and 5) to results in the literature. We obtain errors on parameters where possible through the sample standard deviation of component clusters, which is less likely to be an under-estimate than Hessian approximations.
+
+We compare these new models to existing results in the literature. We find good agreement where the models or parameters are comparable, and comment on instances where \textit{Galaxy Builder} should provide superior models.
 
 We were able to obtain models for 296 images with a rate of one galaxy per day. We note that user experience and task simplification will need to be considered if significantly larger numbers of these models are to be obtained. We note that, at the time of writing and to the best of our knowledge, the number of photometric models obtained here is significantly larger than the largest sample obtained through purely computational photometric fitting of disc, bulge, bar and spiral arms in galaxies (10 galaxies, \citealt{Gao2017:1709.00746v1}, who also included rings, disc-breaks and further components).
 
