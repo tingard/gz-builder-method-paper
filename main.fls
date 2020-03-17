@@ -489,9 +489,12 @@ INPUT ./images__results/gzb-agg-nsa-comparison.pdf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi5.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi5.tfm
-INPUT images__results/sd_comp_comparison.pdf
-INPUT ./images__results/sd_comp_comparison.pdf
-INPUT ./images__results/sd_comp_comparison.pdf
+INPUT images__results/bulge_fraction_scatter_reduced.pdf
+INPUT ./images__results/bulge_fraction_scatter_reduced.pdf
+INPUT ./images__results/bulge_fraction_scatter_reduced.pdf
+INPUT images__results/sd_comp_comparison_fitted.pdf
+INPUT ./images__results/sd_comp_comparison_fitted.pdf
+INPUT ./images__results/sd_comp_comparison_fitted.pdf
 INPUT images__results/gzb-hart-comparison.pdf
 INPUT ./images__results/gzb-hart-comparison.pdf
 INPUT ./images__results/gzb-hart-comparison.pdf

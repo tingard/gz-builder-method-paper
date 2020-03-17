@@ -83,18 +83,28 @@ Volunteers not adjusting components from their default values was a consistent i
 
 \subsubsection{Comparison to Disc-Bulge models}
 
-\comment{We should make some form of comparison here to Simard and others, though not to bulge fraction as the two-component models probably don't have a reliable fit (and it's basically impossible to measure $B/T$ using gradient-descent based methods anyway).}
+A strong motivation for performing multi-component modelling is the desire to measure the fraction of a galaxy's light being emitted by its central components (such as bulge fraction, defined as the ratio of bulge luminosity to total luminosity). \citet{Gao2017:1709.00746v1} demonstrate that modelling secondary central components is essential for recovering an accurate measure of bulge fraction. The difficulty of measuring bulge fraction is further componded by the complex degeneracies present in even two-component fits, meaning that many gradient-descent based solvers often fail to find the globally optimum solution \comment{maybe cite \citep{profit-paper} or Simard}, especially when bulge S\'ersic index is a free parameter.
 
-One of the largest catalogs of 2D multi-component fits is \citet{2011ApJS..196...11S}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an exponential disc and de-Vaucouleurs bulge model, and an exponential disc and a S\'ersic bulge model. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disc and exponential bulge (exp+exp), and an exponential disc and de Vaucouleurs bulge (exp+dV). They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
+One of the largest catalogs of 2D multi-component fits is \citet{2011ApJS..196...11S}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an Exponential disc and de-Vaucouleurs bulge model (hereafter exp+deV), and an Exponential disc and a S\'ersic bulge model (exp+S). Ftting was performed using the Metropolis algorithm, which is resilient to local minima and therefore suitable for the complex likelihood space of galaxy photometric modelling. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disc and exponential bulge (exp+exp), and an exponential disc and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
+
+We compare our central component fraction to bulge fraction from \citet{2011ApJS..196...11S} where their analysis indicated genuine bulge+disc systems ($P_{pS} \le 0.32$). We compare to \citet{2012MNRAS.421.2277L} bulge fractions only when their criteria determined that model was the best-fit model. We see a significant scatter, but a strong correlation (Figure \ref{fig:bulge_fractions}). We note that the relationship to exp+deV models appears to be less than 1:1, while the relationship to exp+exp models is greater than 1:1, highlighting the dependance of bulge fraction on S\'ersic index. We also note that the amount of scatter (and lack of consistent 1:1 relationships) between the bulge fractions of two-component models is comparable to the scatter we see to our more complex one.
+
+\comment{last sentence is a bit clunky}
+
+\begin{figure*}
+  \includegraphics[width=17.3cm]{images__results/bulge_fraction_scatter_reduced.pdf}
+  \caption{Scatter plots comparing the ratio of flux from central components (bulge and bar) to the total flux between fit models from \textit{Galaxy Builder} and two-component models in the literature.}
+  \label{fig:bulge_fractions}
+\end{figure*}
 
 
 \subsubsection{Comparison to Disc-Bulge-Bar models}
 
-\citet{2018MNRAS.473.4731K} performed multi-component, multi-band decompositions of a selection of SDSS galaxies, 12 of which were also classified in \textit{Galaxy Builder}. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the aggregate models. We see strong agreement in disk effective radius and axis ratio, with significantly more scatter in the sizes and shapes of the central components. We hypothesize that this is caused by difficult parameter degeneracies and issues with tuning, as the aggregate model without tuning shows closer agreeement (with systematic errors in size due to the nature of the clustering).
+\citet{2018MNRAS.473.4731K} performed multi-component, multi-band decompositions of a selection of SDSS galaxies, 12 of which were also classified in \textit{Galaxy Builder}. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the aggregate models. We see strong consistency in all effective radii, with more scatter in component axis ratio. Comparing values for central component fraction as above, we see a near-identical 1:1 relationship.
 
 \begin{figure}
-  \includegraphics[width=8cm]{images__results/sd_comp_comparison.pdf}
-  \caption{Comparison between \textit{Galaxy Builder} aggregate models (without fitting) and the result of 3-component, multi\-wavelength fits performed by \citet{2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio.}
+  \includegraphics[width=8cm]{images__results/sd_comp_comparison_fitted.pdf}
+  \caption{Comparison between \textit{Galaxy Builder} fit models and the result of 3-component, multi\-wavelength fits performed by \citet{2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio.}
   \label{fig:sd_comp_comparison}
 \end{figure}
 
