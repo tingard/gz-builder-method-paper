@@ -1,0 +1,44 @@
+% !TEX root = ../aas_submission.tex
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Ancillary Tables}
+\begin{table*}
+  \centering
+  \caption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.}
+  \begin{tabular}{l|l|r|r|r|r|r}
+\hline
+Component & Parameter  & Tuning Minimum & Tuning Maximum \\
+          &            &  Bound         & Bound          \\
+\hline
+disc      & $\mu_x$    & -inf           & inf            \\
+          & $\mu_y$    & -inf           & inf            \\
+          & roll       & -inf           & inf            \\
+          & $q$        & 0.25           & 1.2            \\
+          & $R_e$      & 0              & inf            \\
+          & $\Sigma_e$ & 0              & inf            \\
+bulge     & $\mu_x$    & -inf           & inf            \\
+          & $\mu_y$    & -inf           & inf            \\
+          & roll       & -inf           & inf            \\
+          & $q$        & 0.6            & 1.2            \\
+          & $R_e / R_\mathrm{disc}$ & 0.01 & 1           \\
+          & $(B/T)_r)$ & 0              & 0.99           \\
+          & $n$        & 0.5            & 5              \\
+bar       & $\mu_x$    & -inf           & inf            \\
+          & $\mu_y$    & -inf           & inf            \\
+          & roll       & -inf           & inf            \\
+          & $q$        & 0.05           & 0.5            \\
+          & $R_e / R_\mathrm{disc}$ & 0.05 & 1           \\
+          & $(B/T)_r)$ & 0              & 0.99           \\
+          & $n$        & 0.3            & 5              \\
+          & $c$        & 1              & 6              \\
+spiral    & $\Sigma_e$ & 0              & inf            \\
+          & spread     & 0              & inf            \\
+          & $\phi$     & -85            & 85             \\
+\hline
+  \centering
+  \end{tabular}
+  \label{table:bad_values}
+\end{table*}
+
+\end{document}

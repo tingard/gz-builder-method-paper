@@ -1,0 +1,49 @@
+% !TEX root = ../aas_submission.tex
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Mathematical description of the poly-line separation measure}
+\label{appendix:clustering_maths}
+
+This appendix details the metric used in Section \ref{sec:aggregation_of_volunteer_models} to cluster poly\-lines used by volunteers to model spirals arms. It can be seen as a variant of the Fréchet distance.
+
+% \begin{figure}
+%   \plotone{images__appendix/spiral_metric_description.pdf}
+%   \caption{Illustration of the metric used. For each point in line $A$, the shortest distance to each segment in line $B$ is calculated (shown as dotted red lines). The minimum of these distances (corresponding to the line shown in dashed green) is squared.}
+%   \label{fig:spiral_metric_description}
+% \end{figure}
+
+First, define a poly-line containing $n$ 2D cartesian coordinates (vertices) as
+
+\begin{equation}
+A: \{i \in \mathbb{N};\;i<n\} \longrightarrow \mathbb{R}
+^2\end{equation}
+
+We also define a function, $t$, which calculates how far a point $\vec{p}$ is along the line between two other points ($\vec{v}$ and $\vec{w}$):
+
+\begin{equation}
+t(\vec{p},\,\vec{v},\,\vec{w}) \equiv \frac{(\vec{p} - \vec{v})\cdot(\vec{v} - \vec{w})}{|\vec{w} - \vec{v}|^2}.
+\end{equation}
+
+The minimum distance from $\vec{p}$ to the line segment between $\vec{v}$ and $\vec{w}$ is given by
+
+\begin{equation}
+d(\vec{p},\,\vec{v},\,\vec{w}) = \|\left(\vec{v} + \mathrm{min}(\mathrm{max}(t(\vec{p},\,\vec{v},\,\vec{w}),\, 0),\, 1)\;(\vec{w} - \vec{v})\right) - \vec{p}\|
+\end{equation}
+
+We then define a ``squared distance'' from the poly-line $A$ (containing $n$ vertices) to the poly-line $B$ (containing $m$ vertices):
+
+\begin{equation}
+D(A,\,B) \equiv \frac{1}{n}\sum_{i = 0}^{n} \mathrm{min}\{j \in \mathbb{N}_0,\, j < m;\; d(A_i,\, B_j,\, B_{j+1})^2\}.
+\end{equation}
+
+The choice to square the distances and penalize large deviations from other lines was a data-driven choice to improve the results of clustering.
+
+Finally, we define our separation measure between two drawn poly-lines as
+
+\begin{equation}
+distance(A,\,B) \equiv D(A,\,B) + D(B,\,A).
+\end{equation}
+
+
+\end{document}

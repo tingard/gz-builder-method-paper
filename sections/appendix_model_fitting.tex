@@ -1,0 +1,87 @@
+% !TEX root = ../aas_submission.tex
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Model Fitting}
+\label{sec:appendix_model_fitting}
+Assume Normal priors on component parameters determined from clustering ($\mu_x$, $\mu_y$, $q$, $Re$), with the spread given by the spread in the clustered values. We therefore have that our final log-likelihood (to be maximised) is the sum of the gaussian log-likelihood of the residuals given the pixel uncertainty and the gaussian log-likelihood of the variation in parameters, given their uncertainty.
+
+The model being rendered is the PSF-convolved sum of the separate components and outputs an ($N_x$, $N_y$) image. The disc, bulge and bar are variations on the boxy S\'ersic profile:
+
+\begin{equation}
+I_\mathrm{sersic}(\vec{P}) = I_e \exp\left\{-b_n\left[\left(\frac{r\,(\vec{P})}{R_e}\right)^{1/n} - 1\right]\right\}
+\end{equation}
+
+where
+
+\begin{equation}
+r\,(\vec{P}) = \left|\begin{pmatrix}
+\frac{1}{q} & 0 \\
+0 & 1
+\end{pmatrix}\begin{pmatrix}
+\cos\psi & -\sin\psi\\
+\sin\psi & \cos\psi
+\end{pmatrix}\left(\vec\mu - \vec{P}\right)\right|_{\ c}.
+\end{equation}
+
+The disc is resticted to $n=1; c=2$, bulge to $n\in(0.5, 6); c=2$ and bar to $n\in(0.5, 6); c\in(0.5, 6)$.
+
+The S\'ersic components are actually rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel. I.e. for a pixel of size $(\delta_x, \delta_y)$
+
+\begin{equation}
+I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_y/2}\int_{-\delta_x/2}^{\delta_x/2}\mathrm{d}x\mathrm{d}y\ I_\mathrm{sersic}\left(\vec{P} + \begin{pmatrix}
+\delta_x \\
+\delta_y \\
+\end{pmatrix}\right).
+\end{equation}
+
+Spiral arms were restricted to be logarithmic with respect to the inclined, rotated disc. They were rendered in a similar manner to the online interface; using the nearest distance from a pixel to a calculated logarithmic spiral.
+
+An inclined, rotated log spiral requires parameters brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($a$ and $b$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component.
+
+The distance from a pixel to a logarithmic spiral is given by
+\begin{equation}
+  D_\mathrm{s}(\vec{P}) = \min_{\theta\in[a, b]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
+       \cos\psi & \sin\psi\\
+       -\sin\psi & \cos\psi
+       \end{pmatrix}
+       \begin{pmatrix}
+       q\cos\theta \\
+       \sin\theta \\
+       \end{pmatrix}
+       \right|\right|^{\ 2}.
+\end{equation}
+
+In practise the spiral distance was approximated using the distance to a poly-line with 200 vertices, as solving the above minimization for each pixel at each fitting step is computationally intractable. We also adjust $A$, $a$ and $b$ to account for the rotation of the disc component from its starting value, in order to prevent spirals inadvertendly moving far from starting locations for face-on discs (which have poorly constrained position angles). These adjustments are
+
+\begin{equation}
+\begin{aligned}
+  A' &= Ae^{\Delta\psi\tan\phi},\\
+  a' &= a - \Delta\psi,\\
+  b' &= b - \Delta\psi.
+\end{aligned}
+\end{equation}
+
+The pixel brightness is then calculated as
+
+\begin{equation}
+I_\mathrm{spiral}(\vec{P}) = I_\mathrm{disc}(\vec{P}) \times I_s\exp\left(\frac{-D_\mathrm{s}(\vec{P})}{2s^2}\right).
+\end{equation}
+
+For the fit, we parametrize disc $I_e$ as the S\'ersic total luminosity, given by
+
+\begin{equation}
+L_\mathrm{tot} = I_eR_e^2\ 2\pi n\frac{e^{b_n}}{(b_n)^{2n}}\Gamma(2n).
+\end{equation}
+
+Bulge (bar) $I_e$ is reparametrized as ``bulge (bar) fraction'', which we define as
+
+\begin{equation}
+F_\mathrm{bulge} = \frac{L_\mathrm{bulge}}{L_\mathrm{disc} + L_\mathrm{bulge}},
+\end{equation}
+
+and is limited to be between 0 and 1. Disc luminosity is allowed to take any value greater than or equal to zero.
+
+Similarly, bulge and bar effective radius are reparametrized as their scale relative to the disc ($R_e = R_e / R_{e,\,\mathrm{disc}}$). Bulge and bar are also restricted to have the same poition.
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  17 MAR 2020 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  18 MAR 2020 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,7 +1213,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 234.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.2pt on input line 234.
-(./sections/abstract.tex) <Orcid-ID.png, id=108, 220.825pt x 220.825pt>
+(./sections/abstract.tex) <Orcid-ID.png, id=120, 220.825pt x 220.825pt>
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
 Package pdftex.def Info: Orcid-ID.png used on input line 329.
@@ -1245,21 +1245,21 @@ Overfull \hbox (9.03374pt too wide) in paragraph at lines 329--329
 Overfull \vbox (3.69821pt too high) has occurred while \output is active []
 
  [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Orcid-ID.png>] (./sections/introduction.tex [2]
-LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 24.
+LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 22.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
 File: t1ntxsups.fd 2015/01/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 10.0pt on input line 24.
+(Font)              scaled to size 10.0pt on input line 22.
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 8.0pt on input line 24.
+(Font)              scaled to size 8.0pt on input line 22.
 
-Overfull \hbox (13.70369pt too wide) in paragraph at lines 24--24
+Overfull \hbox (13.70369pt too wide) in paragraph at lines 22--22
 [][]| [] [][][]| 
  []
 
 
-Overfull \hbox (13.86368pt too wide) in paragraph at lines 24--24
+Overfull \hbox (13.86368pt too wide) in paragraph at lines 22--22
 [][]| [] [][][]| 
  []
 
@@ -1289,122 +1289,96 @@ Overfull \hbox (13.67169pt too wide) in paragraph at lines 19--19
  []
 
 
-Overfull \vbox (34.03291pt too high) has occurred while \output is active []
+Overfull \vbox (21.53291pt too high) has occurred while \output is active []
 
- [3] <images__method/interface_in_progress.jpg, id=294, 1991.44pt x 1193.45876pt>
+ [3] <images__method/interface_in_progress.jpg, id=306, 1991.44pt x 1193.45876pt>
 File: images__method/interface_in_progress.jpg Graphic file (type jpg)
  <use images__method/interface_in_progress.jpg>
 Package pdftex.def Info: images__method/interface_in_progress.jpg used on input line 27.
-(pdftex.def)             Requested size: 503.61368pt x 301.80577pt.
- [4 <./images__method/interface_in_progress.jpg>] <images/residualProgress.jpg, id=310, 807.015pt x 807.015pt>
+(pdftex.def)             Requested size: 436.15294pt x 261.37804pt.
+ [4 <./images__method/interface_in_progress.jpg>] <images/residualProgress.jpg, id=327, 807.015pt x 807.015pt>
 File: images/residualProgress.jpg Graphic file (type jpg)
  <use images/residualProgress.jpg>
 Package pdftex.def Info: images/residualProgress.jpg used on input line 47.
-(pdftex.def)             Requested size: 227.62204pt x 227.62505pt.
+(pdftex.def)             Requested size: 436.15294pt x 436.15103pt.
  [5 <./images/residualProgress.jpg>]
-
-Package natbib Warning: Citation `2018AJ....156..123T' on page 6 undefined on input line 89.
-
 LaTeX Font Info:    Try loading font information for T1+aett on input line 92.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 Overfull \hbox (13.80768pt too wide) in paragraph at lines 100--100
 [][]| [] [][][]| 
  []
 
-
-LaTeX Warning: Reference `appendix:frame_stacking' on page 6 undefined on input line 102.
-
-[6] <images__method/drawn_shapes.pdf, id=373, 1142.36797pt x 1136.17026pt>
+[6] <images__method/drawn_shapes.pdf, id=388, 1142.36797pt x 1136.17026pt>
 File: images__method/drawn_shapes.pdf Graphic file (type pdf)
  <use images__method/drawn_shapes.pdf>
-Package pdftex.def Info: images__method/drawn_shapes.pdf used on input line 142.
-(pdftex.def)             Requested size: 492.23276pt x 489.56654pt.
- [7] [8 <./images__method/drawn_shapes.pdf>]
-
-LaTeX Warning: Reference `table:bad_values' on page 9 undefined on input line 159.
-
-<images__method/mean_shapes.pdf, id=438, 1281.2674pt x 430.28525pt>
+Package pdftex.def Info: images__method/drawn_shapes.pdf used on input line 139.
+(pdftex.def)             Requested size: 436.15294pt x 433.77756pt.
+ [7] [8 <./images__method/drawn_shapes.pdf>] <images__method/mean_shapes.pdf, id=453, 1281.14192pt x 1273.20602pt>
 File: images__method/mean_shapes.pdf Graphic file (type pdf)
  <use images__method/mean_shapes.pdf>
-Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 179.
-(pdftex.def)             Requested size: 492.23276pt x 165.3025pt.
-
-
-LaTeX Warning: Reference `appendix:clustering_maths' on page 9 undefined on input line 184.
-
-<images__method/LOF_cleaning.pdf, id=442, 564.349pt x 545.98352pt>
-File: images__method/LOF_cleaning.pdf Graphic file (type pdf)
- <use images__method/LOF_cleaning.pdf>
-Package pdftex.def Info: images__method/LOF_cleaning.pdf used on input line 191.
-(pdftex.def)             Requested size: 227.62204pt x 220.21404pt.
- [9 <./images__method/mean_shapes.pdf>] <images__method/aggregate_model.pdf, id=500, 564.349pt x 545.98352pt>
-File: images__method/aggregate_model.pdf Graphic file (type pdf)
- <use images__method/aggregate_model.pdf>
-Package pdftex.def Info: images__method/aggregate_model.pdf used on input line 201.
-(pdftex.def)             Requested size: 227.62204pt x 220.21404pt.
- [10 <./images__method/LOF_cleaning.pdf> <./images__method/aggregate_model.pdf
-
-pdfTeX warning: pdflatex (file ./images__method/aggregate_model.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Reference `sec:appendix_model_fitting' on page 11 undefined on input line 213.
-
-<images__method/model_tuning.pdf, id=580, 1341.20311pt x 820.82875pt>
+Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 167.
+(pdftex.def)             Requested size: 436.15294pt x 433.44772pt.
+ [9] <images__method/model_tuning.pdf, id=485, 1341.20311pt x 820.82875pt>
 File: images__method/model_tuning.pdf Graphic file (type pdf)
  <use images__method/model_tuning.pdf>
-Package pdftex.def Info: images__method/model_tuning.pdf used on input line 220.
-(pdftex.def)             Requested size: 503.61368pt x 308.21082pt.
-) (./sections/results.tex [11 <./images__method/model_tuning.pdf>] <images__results/component_frequency.pdf, id=656, 955.60945pt x 254.90804pt>
+Package pdftex.def Info: images__method/model_tuning.pdf used on input line 194.
+(pdftex.def)             Requested size: 436.15294pt x 266.929pt.
+) [10 <./images__method/mean_shapes.pdf>] (./sections/results.tex [11 <./images__method/model_tuning.pdf>] <images__results/component_frequency.pdf, id=614, 955.60945pt x 254.90804pt>
 File: images__results/component_frequency.pdf Graphic file (type pdf)
  <use images__results/component_frequency.pdf>
 Package pdftex.def Info: images__results/component_frequency.pdf used on input line 23.
-(pdftex.def)             Requested size: 492.23276pt x 131.30438pt.
- <images__results/component_sizing.pdf, id=658, 896.00781pt x 607.06487pt>
+(pdftex.def)             Requested size: 436.15294pt x 116.34117pt.
+ <images__results/component_sizing.pdf, id=616, 896.00781pt x 607.06487pt>
 File: images__results/component_sizing.pdf Graphic file (type pdf)
  <use images__results/component_sizing.pdf>
 Package pdftex.def Info: images__results/component_sizing.pdf used on input line 31.
-(pdftex.def)             Requested size: 492.23276pt x 333.49767pt.
- [12 <./images__results/component_frequency.pdf>] [13 <./images__results/component_sizing.pdf>] <images__results/spiral-number-vs-gz2.pdf, id=825, 427.0517pt x 427.74178pt>
+(pdftex.def)             Requested size: 436.15294pt x 295.50063pt.
+ [12 <./images__results/component_frequency.pdf>] <images__results/spiral-number-vs-gz2.pdf, id=702, 427.0517pt x 427.74178pt>
 File: images__results/spiral-number-vs-gz2.pdf Graphic file (type pdf)
  <use images__results/spiral-number-vs-gz2.pdf>
 Package pdftex.def Info: images__results/spiral-number-vs-gz2.pdf used on input line 64.
-(pdftex.def)             Requested size: 227.62204pt x 227.98784pt.
- <images__results/gzb-agg-nsa-comparison.pdf, id=832, 387.22481pt x 383.52722pt>
+(pdftex.def)             Requested size: 436.15294pt x 436.87172pt.
+ <images__results/gzb-agg-nsa-comparison.pdf, id=708, 387.22481pt x 383.52722pt>
 File: images__results/gzb-agg-nsa-comparison.pdf Graphic file (type pdf)
- <use images__results/gzb-agg-nsa-comparison.pdf>
-Package pdftex.def Info: images__results/gzb-agg-nsa-comparison.pdf used on input line 78.
-(pdftex.def)             Requested size: 227.62204pt x 225.44809pt.
- [14 <./images__results/spiral-number-vs-gz2.pdf>] <images__results/bulge_fraction_scatter_reduced.pdf, id=888, 961.62344pt x 282.19377pt>
+
+<use images__results/gzb-agg-nsa-comparison.pdf>
+Package pdftex.def Info: images__results/gzb-agg-nsa-comparison.pdf used on input line 76.
+(pdftex.def)             Requested size: 436.15294pt x 431.99374pt.
+ [13 <./images__results/component_sizing.pdf>] [14 <./images__results/spiral-number-vs-gz2.pdf>] <images__results/bulge_fraction_scatter_reduced.pdf, id=842, 961.62344pt x 282.19377pt>
 File: images__results/bulge_fraction_scatter_reduced.pdf Graphic file (type pdf)
  <use images__results/bulge_fraction_scatter_reduced.pdf>
-Package pdftex.def Info: images__results/bulge_fraction_scatter_reduced.pdf used on input line 95.
-(pdftex.def)             Requested size: 492.23276pt x 144.45084pt.
-
-<images__results/sd_comp_comparison_fitted.pdf, id=894, 789.37408pt x 389.68774pt>
+Package pdftex.def Info: images__results/bulge_fraction_scatter_reduced.pdf used on input line 92.
+(pdftex.def)             Requested size: 436.15294pt x 127.99359pt.
+ <images__results/sd_comp_comparison_fitted.pdf, id=848, 789.37408pt x 389.68774pt>
 File: images__results/sd_comp_comparison_fitted.pdf Graphic file (type pdf)
  <use images__results/sd_comp_comparison_fitted.pdf>
-Package pdftex.def Info: images__results/sd_comp_comparison_fitted.pdf used on input line 106.
-(pdftex.def)             Requested size: 227.62204pt x 112.3703pt.
- [15 <./images__results/gzb-agg-nsa-comparison.pdf>] <images__results/gzb-hart-comparison.pdf, id=972, 401.80896pt x 334.10448pt>
-File: images__results/gzb-hart-comparison.pdf Graphic file (type pdf)
- <use images__results/gzb-hart-comparison.pdf>
-Package pdftex.def Info: images__results/gzb-hart-comparison.pdf used on input line 120.
-(pdftex.def)             Requested size: 227.62204pt x 189.26898pt.
-) (./sections/conclusions.tex [16 <./images__results/bulge_fraction_scatter_reduced.pdf> <./images__results/sd_comp_comparison_fitted.pdf
+Package pdftex.def Info: images__results/sd_comp_comparison_fitted.pdf used on input line 103.
+(pdftex.def)             Requested size: 436.15294pt x 215.32191pt.
+ [15 <./images__results/gzb-agg-nsa-comparison.pdf>]) [16 <./images__results/bulge_fraction_scatter_reduced.pdf> <./images__results/sd_comp_comparison_fitted.pdf
 
 pdfTeX warning: pdflatex (file ./images__results/sd_comp_comparison_fitted.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./sections/acknowledgements.tex) (./aas_submission.bbl [17 <./images__results/gzb-hart-comparison.pdf>] [18]) [19]
+>] (./sections/conclusions.tex) (./sections/acknowledgements.tex) (./sections/appendix.tex (./sections/appendix_frame_stacking.tex
+Overfull \hbox (13.83969pt too wide) in paragraph at lines 7--7
+[][]| [] [][][]| 
+ []
 
-Package natbib Warning: There were undefined citations.
+[17]
 
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
-(./aas_submission.aux)
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
+LaTeX Warning: Command \textpm invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \textpm invalid in math mode on input line 13.
+
+Missing character: There is no ± in font ntx-Regular-tlf-ot1!
+) (./sections/appendix_model_fitting.tex [18]) (./sections/appendix_ancillary_tables.tex)) (./aas_submission.bbl [19] [20]) [21]
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 369.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 369.
+ (./aas_submission.aux)
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 369.
 Package rerunfilecheck Info: File `aas_submission.out' has not changed.
-(rerunfilecheck)             Checksum: 5EF14FFFE60CD90415EC0AD26C6D20B8;2007.
+(rerunfilecheck)             Checksum: BCCFE5798FE50BA117178574467E38DC;2179.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1413,25 +1387,22 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 13175 strings out of 493014
- 183622 string characters out of 6133352
- 327291 words of memory out of 5000000
- 16188 multiletter control sequences out of 15000+600000
- 95594 words of font info for 212 fonts, out of 8000000 for 9000
+ 13196 strings out of 493014
+ 183782 string characters out of 6133352
+ 362977 words of memory out of 5000000
+ 16182 multiletter control sequences out of 15000+600000
+ 95106 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,11n,52p,1133b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,52p,1751b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/ntxsups-Regular.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aas_submission.pdf (19 pages, 2245578 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/ntxsups-Regular.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on aas_submission.pdf (21 pages, 2089677 bytes).
 PDF statistics:
- 1323 PDF objects out of 1440 (max. 8388607)
- 750 compressed objects within 8 object streams
- 130 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1257 PDF objects out of 1440 (max. 8388607)
+ 767 compressed objects within 8 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
