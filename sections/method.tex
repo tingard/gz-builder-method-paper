@@ -192,10 +192,11 @@ Before fitting for all free parameters, we fit only for the brightnesses of comp
 
 \begin{figure*}
   \plotone{images__method/model_tuning.pdf}
-  \caption{Effect of fitting on the fit results. The top left panel shows an Arcsinh-scaled image of the galaxy being fit (UGC 4721), the top middle shows the final model obtained (with the same limits and scaling as the galaxy image) and the top right shows the difference between the two images, in units of pixel uncertainty. The bottom panels show a simple representation of the model before and after tuning, overlaid on the galaxy image from the top-left panel.}
+  \caption{Effect of fitting on the aggregated models. The top left panel shows an Arcsinh-scaled image of the galaxy being fit (UGC 4721), the top middle shows the final model obtained (with the same limits and scaling as the galaxy image) and the top right shows the difference between the two images, in units of pixel uncertainty. The bottom panels show a simple representation of the model before and after tuning, overlaid on the galaxy image from the top-left panel.}
   \label{fig:model_tuning}
 \end{figure*}
 
 As we do not perform a full Bayesian minimzation, we make use of the errors described in Section \ref{sec:error_estimation} as our parameter uncertainties, as we feel a Hessian-based approach would likely fall foul of the issues described in the introduction and thus be a under-estimate, this does mean we do not have uncertainties for some parameters.
 
+Twelve models originally failed to successfuly fit, due to an error inside L-BFGS-B involving gradient computation. Ten of these models successfuly converged when the fit was re-started, we remove the two models for which a fit did not converge.
 \end{document}

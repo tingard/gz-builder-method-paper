@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  18 MAR 2020 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  25 MAR 2020 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1065,49 +1065,49 @@ Now handling font encoding LMX ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-Class revtex4-1 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 181.
-Class revtex4-1 Info: Patching unrecognized longtable package. (Proceeding with fingers crossed) on input line 181.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 181.
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 181.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 181.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 181.
+Class revtex4-1 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 157.
+Class revtex4-1 Info: Patching unrecognized longtable package. (Proceeding with fingers crossed) on input line 157.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 157.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 157.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 157.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 157.
  (./aas_submission.aux)
 \openout1 = `aas_submission.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 181.
-LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 181.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 157.
+LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 181.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 157.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 181.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 157.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 181.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
@@ -1133,7 +1133,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring ON on input line 181.
+Package hyperref Info: Link coloring ON on input line 157.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1141,9 +1141,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 181.
-LaTeX Info: Redefining \pageref on input line 181.
-LaTeX Info: Redefining \nameref on input line 181.
+LaTeX Info: Redefining \ref on input line 157.
+LaTeX Info: Redefining \pageref on input line 157.
+LaTeX Info: Redefining \nameref on input line 157.
  (./aas_submission.out) (./aas_submission.out)
 \@outlinefile=\write4
 \openout4 = `aas_submission.out'.
@@ -1152,92 +1152,92 @@ LaTeX Info: Redefining \nameref on input line 181.
 \c@mv@boldtabular=\count182
 \symgns@font=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/aer/m/n --> TS1/aer/bx/n on input line 181.
-Package gensymb Info: Math companion symbols declared on input line 181.
-LaTeX Info: Redefining \degree on input line 181.
-LaTeX Info: Redefining \celsius on input line 181.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 181.
-LaTeX Info: Redefining \ohm on input line 181.
-Package gensymb Info: Using \textohm for \ohm on input line 181.
-Package gensymb Info: Using \textmu for \micro on input line 181.
-LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 234.
+(Font)                  TS1/aer/m/n --> TS1/aer/bx/n on input line 157.
+Package gensymb Info: Math companion symbols declared on input line 157.
+LaTeX Info: Redefining \degree on input line 157.
+LaTeX Info: Redefining \celsius on input line 157.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 157.
+LaTeX Info: Redefining \ohm on input line 157.
+Package gensymb Info: Using \textohm for \ohm on input line 157.
+Package gensymb Info: Using \textmu for \micro on input line 157.
+LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 234.
+(Font)              scaled to size 10.0pt on input line 210.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 234.
+(Font)              scaled to size 7.3pt on input line 210.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 234.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 234.
+(Font)              scaled to size 5.5pt on input line 210.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 234.
+(Font)              size <5> substituted on input line 210.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 234.
+LaTeX Font Info:    Try loading font information for U+msa on input line 210.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 234.
+LaTeX Font Info:    Try loading font information for U+msb on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 234.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 234.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 234.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 210.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 234.
-LaTeX Font Info:    No file TS1aer.fd. on input line 234.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 210.
+LaTeX Font Info:    No file TS1aer.fd. on input line 210.
 
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead on input line 234.
+(Font)              using `TS1/cmr/m/n' instead on input line 210.
 
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 234.
+(Font)              size <5> substituted on input line 210.
 
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 234.
+(Font)              scaled to size 8.0pt on input line 210.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 234.
+(Font)              scaled to size 6.2pt on input line 210.
 (./sections/abstract.tex) <Orcid-ID.png, id=120, 220.825pt x 220.825pt>
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 329.
+Package pdftex.def Info: Orcid-ID.png used on input line 305.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 329.
+(Font)              scaled to size 9.0pt on input line 305.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 329.
+Package pdftex.def Info: Orcid-ID.png used on input line 305.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 329.
+Package pdftex.def Info: Orcid-ID.png used on input line 305.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 329.
+Package pdftex.def Info: Orcid-ID.png used on input line 305.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 329.
+Package pdftex.def Info: Orcid-ID.png used on input line 305.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 329--329
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 305--305
 [][] 
  []
 
@@ -1320,38 +1320,38 @@ File: images__method/mean_shapes.pdf Graphic file (type pdf)
  <use images__method/mean_shapes.pdf>
 Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 167.
 (pdftex.def)             Requested size: 436.15294pt x 433.44772pt.
- [9] <images__method/model_tuning.pdf, id=485, 1341.20311pt x 820.82875pt>
+ [9] <images__method/model_tuning.pdf, id=485, 1330.9774pt x 820.82875pt>
 File: images__method/model_tuning.pdf Graphic file (type pdf)
  <use images__method/model_tuning.pdf>
 Package pdftex.def Info: images__method/model_tuning.pdf used on input line 194.
-(pdftex.def)             Requested size: 436.15294pt x 266.929pt.
-) [10 <./images__method/mean_shapes.pdf>] (./sections/results.tex [11 <./images__method/model_tuning.pdf>] <images__results/component_frequency.pdf, id=614, 955.60945pt x 254.90804pt>
+(pdftex.def)             Requested size: 436.15294pt x 268.97055pt.
+ [10 <./images__method/mean_shapes.pdf>]) (./sections/results.tex [11 <./images__method/model_tuning.pdf>] <images__results/component_frequency.pdf, id=616, 955.60945pt x 254.90804pt>
 File: images__results/component_frequency.pdf Graphic file (type pdf)
  <use images__results/component_frequency.pdf>
 Package pdftex.def Info: images__results/component_frequency.pdf used on input line 23.
 (pdftex.def)             Requested size: 436.15294pt x 116.34117pt.
- <images__results/component_sizing.pdf, id=616, 896.00781pt x 607.06487pt>
+ <images__results/component_sizing.pdf, id=618, 896.00781pt x 607.06487pt>
 File: images__results/component_sizing.pdf Graphic file (type pdf)
  <use images__results/component_sizing.pdf>
 Package pdftex.def Info: images__results/component_sizing.pdf used on input line 31.
 (pdftex.def)             Requested size: 436.15294pt x 295.50063pt.
- [12 <./images__results/component_frequency.pdf>] <images__results/spiral-number-vs-gz2.pdf, id=702, 427.0517pt x 427.74178pt>
+ [12 <./images__results/component_frequency.pdf>] <images__results/spiral-number-vs-gz2.pdf, id=704, 427.0517pt x 427.74178pt>
 File: images__results/spiral-number-vs-gz2.pdf Graphic file (type pdf)
  <use images__results/spiral-number-vs-gz2.pdf>
 Package pdftex.def Info: images__results/spiral-number-vs-gz2.pdf used on input line 64.
 (pdftex.def)             Requested size: 436.15294pt x 436.87172pt.
- <images__results/gzb-agg-nsa-comparison.pdf, id=708, 387.22481pt x 383.52722pt>
+ <images__results/gzb-agg-nsa-comparison.pdf, id=710, 387.22481pt x 383.52722pt>
 File: images__results/gzb-agg-nsa-comparison.pdf Graphic file (type pdf)
 
 <use images__results/gzb-agg-nsa-comparison.pdf>
 Package pdftex.def Info: images__results/gzb-agg-nsa-comparison.pdf used on input line 76.
 (pdftex.def)             Requested size: 436.15294pt x 431.99374pt.
- [13 <./images__results/component_sizing.pdf>] [14 <./images__results/spiral-number-vs-gz2.pdf>] <images__results/bulge_fraction_scatter_reduced.pdf, id=842, 961.62344pt x 282.19377pt>
+ [13 <./images__results/component_sizing.pdf>] [14 <./images__results/spiral-number-vs-gz2.pdf>] <images__results/bulge_fraction_scatter_reduced.pdf, id=844, 961.62344pt x 282.19377pt>
 File: images__results/bulge_fraction_scatter_reduced.pdf Graphic file (type pdf)
  <use images__results/bulge_fraction_scatter_reduced.pdf>
 Package pdftex.def Info: images__results/bulge_fraction_scatter_reduced.pdf used on input line 92.
 (pdftex.def)             Requested size: 436.15294pt x 127.99359pt.
- <images__results/sd_comp_comparison_fitted.pdf, id=848, 789.37408pt x 389.68774pt>
+ <images__results/sd_comp_comparison_fitted.pdf, id=850, 789.37408pt x 389.68774pt>
 File: images__results/sd_comp_comparison_fitted.pdf Graphic file (type pdf)
  <use images__results/sd_comp_comparison_fitted.pdf>
 Package pdftex.def Info: images__results/sd_comp_comparison_fitted.pdf used on input line 103.
@@ -1373,10 +1373,10 @@ LaTeX Warning: Command \textpm invalid in math mode on input line 13.
 
 Missing character: There is no ± in font ntx-Regular-tlf-ot1!
 ) (./sections/appendix_model_fitting.tex [18]) (./sections/appendix_ancillary_tables.tex)) (./aas_submission.bbl [19] [20]) [21]
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 369.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 369.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
  (./aas_submission.aux)
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 369.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
 Package rerunfilecheck Info: File `aas_submission.out' has not changed.
 (rerunfilecheck)             Checksum: BCCFE5798FE50BA117178574467E38DC;2179.
 
@@ -1391,7 +1391,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  13196 strings out of 493014
  183782 string characters out of 6133352
- 362977 words of memory out of 5000000
+ 363976 words of memory out of 5000000
  16182 multiletter control sequences out of 15000+600000
  95106 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1399,10 +1399,10 @@ Here is how much of TeX's memory you used:
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/ntxsups-Regular.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aas_submission.pdf (21 pages, 2089677 bytes).
+Output written on aas_submission.pdf (21 pages, 2150840 bytes).
 PDF statistics:
- 1257 PDF objects out of 1440 (max. 8388607)
- 767 compressed objects within 8 object streams
+ 1259 PDF objects out of 1440 (max. 8388607)
+ 768 compressed objects within 8 object streams
  151 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
