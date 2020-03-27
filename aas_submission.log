@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  25 MAR 2020 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  27 MAR 2020 13:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1216,35 +1216,35 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (./sections/abstract.tex) <Orcid-ID.png, id=120, 220.825pt x 220.825pt>
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 305.
+Package pdftex.def Info: Orcid-ID.png used on input line 282.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 305.
+(Font)              scaled to size 9.0pt on input line 282.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 305.
+Package pdftex.def Info: Orcid-ID.png used on input line 282.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 305.
+Package pdftex.def Info: Orcid-ID.png used on input line 282.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 305.
+Package pdftex.def Info: Orcid-ID.png used on input line 282.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 File: Orcid-ID.png Graphic file (type png)
  <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png used on input line 305.
+Package pdftex.def Info: Orcid-ID.png used on input line 282.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 305--305
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 282--282
 [][] 
  []
 
+(./sections/introduction.tex
+Overfull \vbox (13.81047pt too high) has occurred while \output is active []
 
-Overfull \vbox (3.69821pt too high) has occurred while \output is active []
-
- [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Orcid-ID.png>] (./sections/introduction.tex [2]
+ [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Orcid-ID.png>]
 LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 22.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
 File: t1ntxsups.fd 2015/01/17 v1.0
@@ -1263,7 +1263,10 @@ Overfull \hbox (13.86368pt too wide) in paragraph at lines 22--22
 [][]| [] [][][]| 
  []
 
-) (./sections/method.tex
+
+Overfull \vbox (3.6811pt too high) has occurred while \output is active []
+
+ [2]) (./sections/method.tex
 Overfull \hbox (13.79169pt too wide) in paragraph at lines 8--8
 [][]| [] [][][]| 
  []
@@ -1288,20 +1291,20 @@ Overfull \hbox (13.67169pt too wide) in paragraph at lines 19--19
 [][]| [] [][][]| 
  []
 
-
-Overfull \vbox (21.53291pt too high) has occurred while \output is active []
-
- [3] <images__method/interface_in_progress.jpg, id=306, 1991.44pt x 1193.45876pt>
+<images__method/interface_in_progress.jpg, id=304, 1991.44pt x 1193.45876pt>
 File: images__method/interface_in_progress.jpg Graphic file (type jpg)
  <use images__method/interface_in_progress.jpg>
 Package pdftex.def Info: images__method/interface_in_progress.jpg used on input line 27.
 (pdftex.def)             Requested size: 436.15294pt x 261.37804pt.
- [4 <./images__method/interface_in_progress.jpg>] <images/residualProgress.jpg, id=327, 807.015pt x 807.015pt>
+
+Overfull \vbox (29.33284pt too high) has occurred while \output is active []
+
+ [3] <images/residualProgress.jpg, id=331, 807.015pt x 807.015pt>
 File: images/residualProgress.jpg Graphic file (type jpg)
  <use images/residualProgress.jpg>
 Package pdftex.def Info: images/residualProgress.jpg used on input line 47.
 (pdftex.def)             Requested size: 436.15294pt x 436.15103pt.
- [5 <./images/residualProgress.jpg>]
+ [4 <./images__method/interface_in_progress.jpg>] [5 <./images/residualProgress.jpg>]
 LaTeX Font Info:    Try loading font information for T1+aett on input line 92.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -1310,61 +1313,62 @@ Overfull \hbox (13.80768pt too wide) in paragraph at lines 100--100
 [][]| [] [][][]| 
  []
 
-[6] <images__method/drawn_shapes.pdf, id=388, 1142.36797pt x 1136.17026pt>
+[6] <images__method/drawn_shapes.pdf, id=406, 1142.36797pt x 1136.17026pt>
 File: images__method/drawn_shapes.pdf Graphic file (type pdf)
  <use images__method/drawn_shapes.pdf>
 Package pdftex.def Info: images__method/drawn_shapes.pdf used on input line 139.
 (pdftex.def)             Requested size: 436.15294pt x 433.77756pt.
- [7] [8 <./images__method/drawn_shapes.pdf>] <images__method/mean_shapes.pdf, id=453, 1281.14192pt x 1273.20602pt>
+ [7] [8 <./images__method/drawn_shapes.pdf>] <images__method/mean_shapes.pdf, id=477, 1281.14192pt x 1273.20602pt>
 File: images__method/mean_shapes.pdf Graphic file (type pdf)
  <use images__method/mean_shapes.pdf>
 Package pdftex.def Info: images__method/mean_shapes.pdf used on input line 167.
 (pdftex.def)             Requested size: 436.15294pt x 433.44772pt.
- [9] <images__method/model_tuning.pdf, id=485, 1330.9774pt x 820.82875pt>
+ [9 <./images__method/mean_shapes.pdf>] <images__method/model_tuning.pdf, id=548, 1330.9774pt x 820.82875pt>
 File: images__method/model_tuning.pdf Graphic file (type pdf)
  <use images__method/model_tuning.pdf>
 Package pdftex.def Info: images__method/model_tuning.pdf used on input line 194.
 (pdftex.def)             Requested size: 436.15294pt x 268.97055pt.
- [10 <./images__method/mean_shapes.pdf>]) (./sections/results.tex [11 <./images__method/model_tuning.pdf>] <images__results/component_frequency.pdf, id=616, 955.60945pt x 254.90804pt>
+) (./sections/results.tex [10] <images__results/component_frequency.pdf, id=565, 955.60945pt x 254.90804pt>
 File: images__results/component_frequency.pdf Graphic file (type pdf)
  <use images__results/component_frequency.pdf>
 Package pdftex.def Info: images__results/component_frequency.pdf used on input line 23.
 (pdftex.def)             Requested size: 436.15294pt x 116.34117pt.
- <images__results/component_sizing.pdf, id=618, 896.00781pt x 607.06487pt>
+ <images__results/component_sizing.pdf, id=567, 896.00781pt x 607.06487pt>
 File: images__results/component_sizing.pdf Graphic file (type pdf)
  <use images__results/component_sizing.pdf>
 Package pdftex.def Info: images__results/component_sizing.pdf used on input line 31.
 (pdftex.def)             Requested size: 436.15294pt x 295.50063pt.
- [12 <./images__results/component_frequency.pdf>] <images__results/spiral-number-vs-gz2.pdf, id=704, 427.0517pt x 427.74178pt>
+ [11 <./images__method/model_tuning.pdf>] [12 <./images__results/component_frequency.pdf> <./images__results/component_sizing.pdf
+
+pdfTeX warning: pdflatex (file ./images__results/component_sizing.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] <images__results/spiral-number-vs-gz2.pdf, id=790, 427.0517pt x 427.74178pt>
 File: images__results/spiral-number-vs-gz2.pdf Graphic file (type pdf)
  <use images__results/spiral-number-vs-gz2.pdf>
 Package pdftex.def Info: images__results/spiral-number-vs-gz2.pdf used on input line 64.
 (pdftex.def)             Requested size: 436.15294pt x 436.87172pt.
- <images__results/gzb-agg-nsa-comparison.pdf, id=710, 387.22481pt x 383.52722pt>
+ <images__results/gzb-agg-nsa-comparison.pdf, id=796, 387.22481pt x 383.52722pt>
 File: images__results/gzb-agg-nsa-comparison.pdf Graphic file (type pdf)
-
-<use images__results/gzb-agg-nsa-comparison.pdf>
+ <use images__results/gzb-agg-nsa-comparison.pdf>
 Package pdftex.def Info: images__results/gzb-agg-nsa-comparison.pdf used on input line 76.
 (pdftex.def)             Requested size: 436.15294pt x 431.99374pt.
- [13 <./images__results/component_sizing.pdf>] [14 <./images__results/spiral-number-vs-gz2.pdf>] <images__results/bulge_fraction_scatter_reduced.pdf, id=844, 961.62344pt x 282.19377pt>
+ <images__results/bulge_fraction_scatter_reduced.pdf, id=810, 961.62344pt x 282.19377pt>
 File: images__results/bulge_fraction_scatter_reduced.pdf Graphic file (type pdf)
  <use images__results/bulge_fraction_scatter_reduced.pdf>
 Package pdftex.def Info: images__results/bulge_fraction_scatter_reduced.pdf used on input line 92.
 (pdftex.def)             Requested size: 436.15294pt x 127.99359pt.
- <images__results/sd_comp_comparison_fitted.pdf, id=850, 789.37408pt x 389.68774pt>
+ [13] <images__results/sd_comp_comparison_fitted.pdf, id=825, 789.37408pt x 389.68774pt>
 File: images__results/sd_comp_comparison_fitted.pdf Graphic file (type pdf)
  <use images__results/sd_comp_comparison_fitted.pdf>
 Package pdftex.def Info: images__results/sd_comp_comparison_fitted.pdf used on input line 103.
 (pdftex.def)             Requested size: 436.15294pt x 215.32191pt.
- [15 <./images__results/gzb-agg-nsa-comparison.pdf>]) [16 <./images__results/bulge_fraction_scatter_reduced.pdf> <./images__results/sd_comp_comparison_fitted.pdf
+ [14 <./images__results/spiral-number-vs-gz2.pdf>] [15 <./images__results/gzb-agg-nsa-comparison.pdf> <./images__results/bulge_fraction_scatter_reduced.pdf
 
-pdfTeX warning: pdflatex (file ./images__results/sd_comp_comparison_fitted.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./sections/conclusions.tex) (./sections/acknowledgements.tex) (./sections/appendix.tex (./sections/appendix_frame_stacking.tex
+pdfTeX warning: pdflatex (file ./images__results/bulge_fraction_scatter_reduced.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./sections/conclusions.tex [16 <./images__results/sd_comp_comparison_fitted.pdf>]) (./sections/acknowledgements.tex) (./sections/appendix.tex (./sections/appendix_frame_stacking.tex
 Overfull \hbox (13.83969pt too wide) in paragraph at lines 7--7
 [][]| [] [][][]| 
  []
 
-[17]
 
 LaTeX Warning: Command \textpm invalid in math mode on input line 13.
 
@@ -1372,11 +1376,11 @@ LaTeX Warning: Command \textpm invalid in math mode on input line 13.
 LaTeX Warning: Command \textpm invalid in math mode on input line 13.
 
 Missing character: There is no ± in font ntx-Regular-tlf-ot1!
-) (./sections/appendix_model_fitting.tex [18]) (./sections/appendix_ancillary_tables.tex)) (./aas_submission.bbl [19] [20]) [21]
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
+[17]) (./sections/appendix_model_fitting.tex [18]) (./sections/appendix_ancillary_tables.tex)) (./aas_submission.bbl [19] [20]) [21]
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
  (./aas_submission.aux)
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `aas_submission.out' has not changed.
 (rerunfilecheck)             Checksum: BCCFE5798FE50BA117178574467E38DC;2179.
 
@@ -1389,20 +1393,20 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 13196 strings out of 493014
- 183782 string characters out of 6133352
- 363976 words of memory out of 5000000
- 16182 multiletter control sequences out of 15000+600000
+ 13210 strings out of 493014
+ 184165 string characters out of 6133352
+ 346491 words of memory out of 5000000
+ 16193 multiletter control sequences out of 15000+600000
  95106 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,11n,52p,1751b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,52p,1751b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/ntxsups-Regular.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/newtx/txex-bar.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aas_submission.pdf (21 pages, 2150840 bytes).
+Output written on aas_submission.pdf (21 pages, 2152643 bytes).
 PDF statistics:
- 1259 PDF objects out of 1440 (max. 8388607)
- 768 compressed objects within 8 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 1277 PDF objects out of 1440 (max. 8388607)
+ 786 compressed objects within 8 object streams
+ 154 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

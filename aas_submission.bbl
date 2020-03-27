@@ -213,6 +213,11 @@ Mendez-Abreu, J., Ruiz-Lara, T., Sanchez-Menguiano, L., {et~al.} 2016
   SDSS~collaboration}]{Park2006:astro-ph/0611610v2}
 Park, C., Choi, Y.-Y., Vogeley, M.~S., {et~al.} 2007, ApJ, 658, 898
 
+\bibitem[{{Parry} {et~al.}(2009){Parry}, {Eke}, \&
+  {Frenk}}]{2009MNRAS.396.1972P}
+{Parry}, O.~H., {Eke}, V.~R., \& {Frenk}, C.~S. 2009, \mnras, 396, 1972,
+  \dodoi{10.1111/j.1365-2966.2009.14921.x}
+
 \bibitem[{Pedregosa {et~al.}(2011)Pedregosa, Varoquaux, Gramfort, Michel,
   Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
   Cournapeau, Brucher, Perrot, \& Duchesnay}]{scikit-learn}
@@ -248,6 +253,11 @@ Pozzetti, L., Bolzonella, M., Zucca, E., {et~al.} 2009, Astronomy \&
   Driver}]{profit-paper}
 Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
   2016
+
+\bibitem[{{Rodrigues} {et~al.}(2018){Rodrigues}, {Puech}, {Flores}, {Hammer},
+  \& {Pirzkal}}]{2018MNRAS.475.5133R}
+{Rodrigues}, M., {Puech}, M., {Flores}, H., {Hammer}, F., \& {Pirzkal}, N.
+  2018, \mnras, 475, 5133, \dodoi{10.1093/mnras/sty098}
 
 \bibitem[{{Salo} {et~al.}(2015){Salo}, {Laurikainen}, {Laine}, {Comer{\'o}n},
   {Gadotti}, {Buta}, {Sheth}, {Zaritsky}, {Ho}, {Knapen}, {Athanassoula},
@@ -304,6 +314,9 @@ Simard, L., Willmer, C. N.~A., Vogt, N.~P., {et~al.} 2002{\natexlab{a}},
 Simpson, R., Page, K.~R., \& De~Roure, D. 2014, in Proceedings of the 23rd
   International Conference on World Wide Web, WWW '14 Companion (New York, NY,
   USA: ACM), 1049--1054, \dodoi{10.1145/2567948.2579215}
+
+\bibitem[{{Springel} \& {Hernquist}(2005)}]{2005ApJ...622L...9S}
+{Springel}, V., \& {Hernquist}, L. 2005, \apjl, 622, L9, \dodoi{10.1086/429486}
 
 \bibitem[{{Stoughton} {et~al.}(2002){Stoughton}, {Lupton}, {Bernardi},
   {Blanton}, {Burles}, {Castand er}, {Connolly}, {Eisenstein}, {Frieman}, \&
