@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex aas_submission"] 1585317573 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1585317575
+["bibtex aas_submission"] 1585582058 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1585582332
   "./aasjournal.bst" 1584461286 36116 01b9608da4a9bc38a80d63e9a4bc6ec7 ""
-  "aas_submission.aux" 1585317575 20945 96b9ff794c28fb2bcfe3eb5398b709e3 ""
+  "aas_submission.aux" 1585582195 21183 b55a07541ec5fcbe6d609f5963874be8 ""
   "aas_submission.bcf" 0 -1 0 ""
-  "bibliography.bib" 1585312769 67837 01640978d51420383d376d920c9b0cd1 ""
+  "bibliography.bib" 1585580440 75127 117337420816aae412b4e09671ea2a5b ""
   (generated)
-  "aas_submission.bbl"
   "aas_submission.blg"
-["pdflatex"] 1585317573 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1585317575
+  "aas_submission.bbl"
+["pdflatex"] 1585582194 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1585582332
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc" 1266978417 12642 9742585e52c5b37e57ae9249e0b2585b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -250,9 +250,9 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "Orcid-ID.png" 1584461374 27604 8527c7c3c14d5c207af947385c09fd77 ""
-  "aas_submission.aux" 1585317575 20945 96b9ff794c28fb2bcfe3eb5398b709e3 ""
-  "aas_submission.bbl" 1585317573 17866 47c2212700414d30b7a0918d53bb318e "bibtex aas_submission"
-  "aas_submission.out" 1585317575 2179 bccfe5798fe50ba117178574467e38dc ""
+  "aas_submission.aux" 1585582195 21183 b55a07541ec5fcbe6d609f5963874be8 ""
+  "aas_submission.bbl" 1585582059 18483 e8f2d942987bf704bd893914a5ed4888 "bibtex aas_submission"
+  "aas_submission.out" 1585582195 2179 bccfe5798fe50ba117178574467e38dc ""
   "aas_submission.tex" 1585304562 14107 6e4ffdb4b3239ecfc845969d7152e9de ""
   "aastex63.cls" 1584461251 223148 8fa171df877c422ff65173b8b1a5921a ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
@@ -273,12 +273,12 @@
   "sections/appendix_frame_stacking.tex" 1584527501 2245 c4ae5aa06c4577d0a3e67edd5f9741d5 ""
   "sections/appendix_model_fitting.tex" 1585068984 4269 134face550625170b106b6247993f10a ""
   "sections/conclusions.tex" 1585146073 3434 fc4aa162cc143beeb808b0ef10194a97 ""
-  "sections/introduction.tex" 1585317570 7700 2ad4e77fcfc0ee8c55a263404ed3672f ""
+  "sections/introduction.tex" 1585582192 7757 ea4b363df40e726c37bc94cb8298bc1f ""
   "sections/method.tex" 1585317428 26333 c8a5fbee54f77293e13052ebaed1133c ""
   "sections/results.tex" 1585146066 15184 444915aa6b35e3b629be5ce9e30c4b52 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
+  "aas_submission.out"
   "aas_submission.log"
   "aas_submission.pdf"
   "aas_submission.aux"
-  "aas_submission.out"

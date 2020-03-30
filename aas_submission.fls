@@ -349,6 +349,11 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aeti10.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aecsc10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsups-Regular-t1.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsups-Regular-t1.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmia.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txmia.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsyralt.tfm
@@ -359,11 +364,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmio.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/boondox/zxxrl7z.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aecsc10.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/newtx/t1ntxsups.fd
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsups-Regular-t1.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsups-Regular-t1.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aecsc10.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer5.tfm

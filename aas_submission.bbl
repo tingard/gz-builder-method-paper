@@ -51,6 +51,13 @@
   Data Analysis Software and Systems XX, ed. I.~N. {Evans}, A.~{Accomazzi},
   D.~J. {Mink}, \& A.~H. {Rots}, 479
 
+\bibitem[{{Barden} {et~al.}(2005){Barden}, {Rix}, {Somerville}, {Bell},
+  {H{\"a}u{\ss}ler}, {Peng}, {Borch}, {Beckwith}, {Caldwell}, {Heymans},
+  {Jahnke}, {Jogee}, {McIntosh}, {Meisenheimer}, {S{\'a}nchez}, {Wisotzki}, \&
+  {Wolf}}]{2005ApJ...635..959B}
+{Barden}, M., {Rix}, H.-W., {Somerville}, R.~S., {et~al.} 2005, \apj, 635, 959,
+  \dodoi{10.1086/497679}
+
 \bibitem[{{Bertin} \& {Arnouts}(1996)}]{source-extractor}
 {Bertin}, E., \& {Arnouts}, S. 1996, \aaps, 117, 393,
   \dodoi{10.1051/aas:1996164}
@@ -83,6 +90,10 @@ Byrd, R., Lu, P., Nocedal, J., \& Zhu, C. 1995, SIAM Journal on Scientific
 \bibitem[{Davis \& Hayes(2014)}]{Davis2014:1402.1910v1}
 Davis, D.~R., \& Hayes, W.~B. 2014, ApJ, 790, 87
 
+\bibitem[{{de Jong}(1996)}]{1996A&AS..118..557D}
+{de Jong}, R.~S. 1996, \aaps, 118, 557.
+\newblock \doarXiv{astro-ph/9601002}
+
 \bibitem[{{de Vaucouleurs} {et~al.}(1991){de Vaucouleurs}, {de Vaucouleurs},
   {Corwin}, {Buta}, {Paturel}, \& {Fouqu{\'e}}}]{deVaucouleurs1991}
 {de Vaucouleurs}, G., {de Vaucouleurs}, A., {Corwin}, Jr., H.~G., {et~al.}
@@ -98,6 +109,10 @@ Davis, D.~R., \& Hayes, W.~B. 2014, ApJ, 790, 87
 
 \bibitem[{Dobbs \& Baba(2014)}]{Dobbs2014:1407.5062v1}
 Dobbs, C., \& Baba, J. 2014, Publ. Astron. Soc. Aust., 31
+
+\bibitem[{{Elmegreen} \& {Elmegreen}(1985)}]{1985ApJ...288..438E}
+{Elmegreen}, B.~G., \& {Elmegreen}, D.~M. 1985, \apj, 288, 438,
+  \dodoi{10.1086/162810}
 
 \bibitem[{{Gadotti}(2011)}]{2011MNRAS.415.3308G}
 {Gadotti}, D.~A. 2011, \mnras, 415, 3308,
@@ -150,6 +165,13 @@ Jones, E., Oliphant, T., Peterson, P., {et~al.} 2001, SciPy: Open source
   scientific tools for Python.
 \newblock \url{http://www.scipy.org/}
 
+\bibitem[{{Kelvin} {et~al.}(2012){Kelvin}, {Driver}, {Robotham}, {Hill},
+  {Alpaslan}, {Baldry}, {Bamford}, {Bland-Hawthorn}, {Brough}, {Graham},
+  {H{\"a}ussler}, {Hopkins}, {Liske}, {Loveday}, {Norberg}, {Phillipps},
+  {Popescu}, {Prescott}, {Taylor}, \& {Tuffs}}]{2012MNRAS.421.1007K}
+{Kelvin}, L.~S., {Driver}, S.~P., {Robotham}, A. S.~G., {et~al.} 2012, \mnras,
+  421, 1007, \dodoi{10.1111/j.1365-2966.2012.20355.x}
+
 \bibitem[{Kormendy {et~al.}(2010)Kormendy, Drory, Bender, \&
   Cornell}]{Kormendy2010:1009.3015v1}
 Kormendy, J., Drory, N., Bender, R., \& Cornell, M.~E. 2010, The Astrophysical
@@ -180,6 +202,12 @@ Kormendy, J., Drory, N., Bender, R., \& Cornell, M.~E. 2010, The Astrophysical
 {Lange}, R., {Moffett}, A.~J., {Driver}, S.~P., {et~al.} 2016, \mnras, 462,
   1470, \dodoi{10.1093/mnras/stw1495}
 
+\bibitem[{{Lilly} {et~al.}(1998){Lilly}, {Schade}, {Ellis}, {Le F{\`e}vre},
+  {Brinchmann}, {Tresse}, {Abraham}, {Hammer}, {Crampton}, {Colless},
+  {Glazebrook}, {Mallen-Ornelas}, \& {Broadhurst}}]{1998ApJ...500...75L}
+{Lilly}, S., {Schade}, D., {Ellis}, R., {et~al.} 1998, \apj, 500, 75,
+  \dodoi{10.1086/305713}
+
 \bibitem[{Lintott {et~al.}(2008)Lintott, Schawinski, Slosar, Land, Bamford,
   Thomas, Raddick, Nichol, Szalay, Andreescu, Murray, \& van~den
   Berg}]{Lintott2008:0804.4483v1}
@@ -208,10 +236,6 @@ Masters, K.~L., Nichol, R.~C., Hoyle, B., {et~al.} 2010, Monthly Notices of the
   Marino, Marquez, Ortega-Minakata, Papaderos, Sanchez, Sanchez-Blazquez,
   Spekkens, van~de Ven, Wild, \& Ziegler}]{Mendez-Abreu2016:1610.05324v1}
 Mendez-Abreu, J., Ruiz-Lara, T., Sanchez-Menguiano, L., {et~al.} 2016
-
-\bibitem[{Park {et~al.}(2007)Park, Choi, Vogeley, III, Blanton, \& the
-  SDSS~collaboration}]{Park2006:astro-ph/0611610v2}
-Park, C., Choi, Y.-Y., Vogeley, M.~S., {et~al.} 2007, ApJ, 658, 898
 
 \bibitem[{{Parry} {et~al.}(2009){Parry}, {Eke}, \&
   {Frenk}}]{2009MNRAS.396.1972P}
@@ -249,6 +273,14 @@ Pour-Imani, H., Kennefick, D., Kennefick, J., {et~al.} 2016, The Astrophysical
 Pozzetti, L., Bolzonella, M., Zucca, E., {et~al.} 2009, Astronomy \&
   Astrophysics, 523, A13
 
+\bibitem[{{Rampazzo} {et~al.}(2019){Rampazzo}, {Uslenghi}, {Giorgiev},
+  {Cattapan}, {Verdes-Montenegro}, {Bonaglia}, {Borelli}, {Busoni}, {Gaessler},
+  {. Magrin}, {Marino}, {Mazzei}, {Mazzoni}, {Peter}, {Rabien}, {Ragazzoni}, \&
+  {Rosensteiner}}]{2019arXiv191002664R}
+{Rampazzo}, R., {Uslenghi}, M., {Giorgiev}, I.~Y., {et~al.} 2019, arXiv
+  e-prints, arXiv:1910.02664.
+\newblock \doarXiv{1910.02664}
+
 \bibitem[{Robotham {et~al.}(2016)Robotham, Taranu, Tobar, Moffett, \&
   Driver}]{profit-paper}
 Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
@@ -258,29 +290,6 @@ Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
   \& {Pirzkal}}]{2018MNRAS.475.5133R}
 {Rodrigues}, M., {Puech}, M., {Flores}, H., {Hammer}, F., \& {Pirzkal}, N.
   2018, \mnras, 475, 5133, \dodoi{10.1093/mnras/sty098}
-
-\bibitem[{{Salo} {et~al.}(2015){Salo}, {Laurikainen}, {Laine}, {Comer{\'o}n},
-  {Gadotti}, {Buta}, {Sheth}, {Zaritsky}, {Ho}, {Knapen}, {Athanassoula},
-  {Bosma}, {Laine}, {Cisternas}, {Kim}, {Mu{\~n}oz-Mateos}, {Regan}, {Hinz},
-  {Gil de Paz}, {Menendez-Delmestre}, {Mizusawa}, {Erroz-Ferrer}, {Meidt}, \&
-  {Querejeta}}]{2015ApJS..219....4S}
-{Salo}, H., {Laurikainen}, E., {Laine}, J., {et~al.} 2015, \apjs, 219, 4,
-  \dodoi{10.1088/0067-0049/219/1/4}
-
-\bibitem[{Sanchez {et~al.}(2011)Sanchez, Kennicutt, de~Paz, van~de Ven,
-  Vilchez, Wisotzki, Walcher, Mast, Aguerri, Albiol-Perez, Alonso-Herrero,
-  Alves, Bakos, Bartakova, Bland-Hawthorn, Boselli, Bomans, Castillo-Morales,
-  Cortijo-Ferrero, de~Lorenzo-Caceres, del Olmo, Dettmar, D\`iaz, Ellis,
-  Falcon-Barroso, Flores, Gallazzi, Garc\`ia-Lorenzo, Delgado, Gruel, Haines,
-  Hao, Husemann, Iglesias-Páramo, Jahnke, Johnson, Jungwiert, Kalinova,
-  Kehrig, Kupko, Lopez-Sanchez, Lyubenova, Marino, Marmol-Queralto, Marquez,
-  Masegosa, Meidt, Mendez-Abreu, Monreal-Ibero, Montijo, Mourao,
-  Palacios-Navarro, Papaderos, Pasquali, Peletier, Perez, Perez, Quirrenbach,
-  Relaño, Rosales-Ortega, Roth, Ruiz-Lara, Sanchez-Blazquez, Sengupta, Singh,
-  Stanishev, Trager, Vazdekis, Viironen, Wild, Zibetti, \&
-  Ziegler}]{Sanchez2011:1111.0962v2}
-Sanchez, S.~F., Kennicutt, R.~C., de~Paz, A.~G., {et~al.} 2011, Astronomy and
-  Astrophysics, 538, A8
 
 \bibitem[{{Simard} {et~al.}(2011){Simard}, {Mendel}, {Patton}, {Ellison}, \&
   {McConnachie}}]{2011ApJS..196...11S}
@@ -323,6 +332,13 @@ Simpson, R., Page, K.~R., \& De~Roure, D. 2014, in Proceedings of the 23rd
   {Hennessy}}]{2002AJ....123..485S}
 {Stoughton}, C., {Lupton}, R.~H., {Bernardi}, M., {et~al.} 2002, \aj, 123, 485,
   \dodoi{10.1086/324741}
+
+\bibitem[{{van der Wel} {et~al.}(2012){van der Wel}, {Bell}, {H{\"a}ussler},
+  {McGrath}, {Chang}, {Guo}, {McIntosh}, {Rix}, {Barden}, {Cheung}, {Faber},
+  {Ferguson}, {Galametz}, {Grogin}, {Hartley}, {Kartaltepe}, {Kocevski},
+  {Koekemoer}, {Lotz}, {Mozena}, {Peth}, \& {Peng}}]{2012ApJS..203...24V}
+{van der Wel}, A., {Bell}, E.~F., {H{\"a}ussler}, B., {et~al.} 2012, \apjs,
+  203, 24, \dodoi{10.1088/0067-0049/203/2/24}
 
 \bibitem[{Vika {et~al.}(2014)Vika, Bamford, Häußler, \&
   Rojas}]{Vika2014:1408.4070v1}
