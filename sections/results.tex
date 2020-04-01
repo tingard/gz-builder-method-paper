@@ -3,21 +3,29 @@
 \begin{document}
 \label{sec:results}
 
-In this Section we explore the consistency with which volunteers modelled galaxies, the accuracy of the aggregate models, and compare the aggregate and fitted models to comparable results in the literature.
+In this Section we present Galaxy Builder models for 198 galaxies, both from simple aggregation of user classifications (aggregate models), and with parameters fine tuned by a numerical fit (fitted models). We explore the consistency with which volunteers modelled galaxies, the accuracy of the aggregate models, and compare the aggregate and fitted models to comparable results in the literature.
 
 \subsection{The Calibration Set}
 
-The recovered models for the nine synthetic galaxy images created for the \textit{calibration subset} show that volunteers make systematic use of bulges, even when only a bar component is needed, resulting in two false positives for bulge presence in the aggregate model. It also highlighted the limitation of the Jaccard metric for highly elliptical components (i.e. bars), as even a small change in rotation results in a large change in the metric. The result of this is one false negative of bar presence in the aggregate. We successfully recover all spiral arms present, and do not receive any false positives. The pitch angles obtained through aggregation vary by up to $9^\degree$ from the true values, with fitting improving this error slightly.
+The calibration subset was a set of nine synthetic galaxy images created from Galaxy Builder models, which were then re-run through the \textit{Galaxy Builder} process. These galaxies were used to fine-tune clustering and fitting hyperparameters (See Section \ref{sec:aggregation_of_volunteer_models}). Our ability to recover morphology accurately is essential validation for our ability to recover good photometic models of galaxies.
 
-Fitting also highlighted the difficulty in recovering structural parameters for which we did not obtain a starting point through clustering (S\'ersic index and bar boxyness). These parameters are crucial for measurements of bulge fraction, but difficult to identidy using gradient descent \citep{2012MNRAS.421.2277L}. Reduced Chi-squard values for the fits range from 1.000 to 1.331.
+Overall, these results highlight the importance of good priors to obtain accurate fits of complex photometric models. In more detail, the models recovered for the nine synthetic galaxy images demonstrate that:
 
-As these galaxies were used to fine-tune clustering and fitting hyperparameters, our ability to recover morphology accurately is essential validation for our ability to recover good photometic models of galaxies. These results highlight the importance of good priors to obtain accurate fits of complex photometric models.
+\begin{enumerate}
+  \item We successfully recover all spiral arms present, and do not receive any false positives
+The spiral pitch angles obtained through aggregation vary by $< 9\degree$ from the true values, with fitting improving this error slightly.
+  \item Volunteers systematically use elongated bulges to fit for bar components. This resulted in two false positives for bulge presence in the aggregate models. This feature (switching light between model components) is a common issue in all photometric fitting methods.
+  \item The Jaccard metric is unstable to small changes in rotation for highly elliptical components (i.e. bars). This resulted in one false negative of bar presence in the aggregate model.
+\end{enumerate}
 
+The fitting step for this subset of images highlighted the benefit of obtaining a rough starting point through clustering of user classifications; the method struggled to recover structural parameters for which we did not obtain such a starting point (S\'ersic index and bar boxyness). These parameters are difficult to identify using gradient descent \citep{2012MNRAS.421.2277L}, suggesting future work should attempt to obtain priors on these parameters from volunteers and make use of a more robust fitting algorithm.
 
 \subsection{Examination of Volunteer consistency}
 We aggregate two independent models for a set of 98 galaxies based on ``original'' or repeat (``validation'') classifications, obtained with the same retirement limit (see Section \ref{sec:retirement-limit} for more on this selection).
 
-One of the simplest choices the volunteers have is whether to include a model component or not. Figure \ref{fig:volunteer_component_consistency} illustrates the consistency with which volunteers made use of a component in their model for a galaxy. We see that volunteer classification is very consistent, with scatter as predicted by the Binomial uncertainty on the mean. Volunteers almost always make us of a disc and bulge (as seen in the \textit{calibration subset}), and even proportions agree on the presence of a bar and the number of spiral arms. Many volunteers used a very elliptical bulge and the ends of spiral arms to model light that could be seen classified as a bar. The validation model is identical to the original model for less 40\% of galaxies (often due to a missing bar component or single spiral arm), suggesting further work is needed to ensure consistency in aggregation.
+One of the simplest choices the volunteers have is whether to include a model component or not. Figure \ref{fig:volunteer_component_consistency} illustrates the consistency with which volunteers made use of a component in their model for a galaxy. We see that volunteer classification is very consistent, with scatter as predicted by the Binomial uncertainty on the mean. Volunteers almost always make us of a disc and bulge (as seen in the \textit{calibration subset}), and even proportions agree on the presence of a bar and the number of spiral arms. One common challenge is that some volunteers used a very ellipsoidal bulge and the ends of spiral arms to model light that other users modelled with a bar. This caused some scatter in aggregate models.
+
+In the end, the aggregated validation model is identical to the original aggregated model in around 40\% of galaxies. The most common changes are a missing bar component or a missing single spiral arm. This may suggest that more than 30 classifications should be collected per galaxy, or may just point to the reality that there is some unavoidable degeneracy in the photometric model which can be used to fit the light from any single galaxy.
 
 \begin{figure*}
   \plotone{images__results/component_frequency.pdf}
@@ -25,7 +33,7 @@ One of the simplest choices the volunteers have is whether to include a model co
   \label{fig:volunteer_component_consistency}
 \end{figure*}
 
-After selecting a component, the volunteer sets its shape and size. Fewer bars being drawn by volunteers makes clustering more difficult and more uncertain; for a strongly barred galaxy with 30 classifications we recieve only 15 or so drawn bars. The variation in axial ratios and effective radii for the aggregate discs, bulges and bars are shown in Figure \ref{fig:aggregate_model_consistency}. The aggregate disks and bulges are consistent within errors, while bars show more scatter, potentially due to reasons discussed above.
+After selecting a component, the volunteer sets its shape and size. The variation in axial ratios and effective radii for the aggregate discs, bulges and bars are shown in Figure \ref{fig:aggregate_model_consistency}. The aggregate discs and bulges are consistent within errors, however bars show more scatter. Bars are one of the most challenging components to aggregate consistently. This is partly because even a strongly barred galaxy with 30 classifications overall might receive only 15 or so drawn bars, and lower numbers of classifications result in more scatter. In addition the aggregation method is more sensitive to rotation of highly elongated shapes. Both factors probably contribute to lower consistency in bar components.
 
 \begin{figure*}
   \plotone{images__results/component_sizing.pdf}
@@ -35,7 +43,7 @@ After selecting a component, the volunteer sets its shape and size. Fewer bars b
 
 \subsection{Comparison to results in the literature}
 
-After having obtained aggregated models for our galaxies, we examine how our models compare to other results in the literature. There exists no published comparison sample with four-component fits, instead we make comparisons for individual or subsets of model components.
+After having aggregated and fitted models for our galaxies, we examine how our models compare to other results in the literature. Part of the motivation for exploring the \textit{Galaxy Builder} method was that there exists no published large sample of galaxies with four-component photometric fits. This means we can only make comparisons for individual or subsets of model components (e.g. just disc and bulge) and by design \textit{Galaxy Builder} models will differ as we have attempted to fit bulge-disc-bar-spiral models to all our galaxies. The reader is therefore cautioned against treating literature models as any kind of ``ground truth'' since deviation from these simple models is part of the goal of this project. We provide these comparisons not to check how well our models work, but to provide data on how they compare with other well known, but much simpler photometric models.
 
 \subsubsection{Comparison to Galaxy Zoo morpohology}
 
@@ -68,9 +76,10 @@ It is not uncommon in \textit{Galaxy Builder} for one spiral arm to have been br
 
 
 \subsubsection{Comparison to One-component fit - axis ratio}
-We compare the axis ratios of the discs of \textit{Galaxy Builder} aggregate models (without fitting) to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NSA catalog, \citealt{2011AJ....142...31B}). For the untuned models there is an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}). There is a clustering of outlying values around $b/a=0.5$ which is almost certainly due to the drawing tool ellipse having a default axis ratio of 0.5. Where this default is a ``good enough'' fit we hypothesise that volunteers are less likely to modify it, while if it needs to move a long way they find a more refined value.
 
-Volunteers not adjusting components from their default values was a consistent issue with volunteer models (36\% of all disc components drawn by volunteers were left at the default axis ratio, and over half of all bars were left with their default rotation, though many of these would have been excluded during clustering). Future projects should carefully consider their interface design to minimize this bias. Fitting aggregate models successfully removes this bias though the overall scatter does not change significantly.
+We compare the axis ratios of the discs of \textit{Galaxy Builder} aggregate models (without fitting) to the axis ratio of a 2D S\'ersic fit to the r-band SDSS image of each galaxy (as provided in the NSA catalog, \citealt{2011AJ....142...31B}). For these untuned models there is an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}).
+
+We observe a clustering of outlying values around $b/a=0.5$. This is almost certainly due to the drawing tool ellipse having a default axis ratio of 0.5. Where this default is a ``good enough'' fit we hypothesise that volunteers are less likely to modify it, while if it needs to move a long way they find a more refined value. Overall we see that 36\% of all disc components drawn by volunteers were left at the default axis ratio. We recommend that future projects should carefully consider their interface design to minimize this bias (e.g. forcing volunteers to draw both the major and minor axis), however the fitting process we implement on the aggregate models successfully removes the bias, and the overall scatter does not change significantly.
 
 \begin{figure}
   \plotone{images__results/gzb-agg-nsa-comparison.pdf}
@@ -85,26 +94,26 @@ A strong motivation for performing multi-component modelling is the desire to me
 
 One of the largest catalogs of 2D multi-component fits is \citet{2011ApJS..196...11S}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an Exponential disc and de-Vaucouleurs bulge model (hereafter exp+deV), and an Exponential disc and a S\'ersic bulge model (exp+S). Ftting was performed using the Metropolis algorithm, which is resilient to local minima and therefore suitable for the complex likelihood space of galaxy photometric modelling. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disc and exponential bulge (exp+exp), and an exponential disc and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
 
-We compare our central component fraction to bulge fraction from \citet{2011ApJS..196...11S} where their analysis indicated genuine bulge+disc systems ($P_{pS} \le 0.32$). We compare to \citet{2012MNRAS.421.2277L} bulge fractions only when their model selection criteria determined that model was the best-fit model. We see a significant scatter, but a strong correlation (Figure \ref{fig:bulge_fractions}). The relationship to exp+deV models appears to be less than 1:1, while the relationship to exp+exp models is greater than 1:1, highlighting the dependance of bulge fraction on S\'ersic index. The amount of scatter (and lack of consistent 1:1 relationships) between bulge fractions of the two-component models is comparable to the scatter we see to our more complex one.
+We compare our central component fraction (the flux of the bulge and bar relative to the total model flux) to bulge fraction from \citet{2011ApJS..196...11S} where their analysis indicated genuine bulge+disc systems ($P_{pS} \le 0.32$). We compare to \citet{2012MNRAS.421.2277L} bulge fractions only when their model selection criteria determined that model was the best-fit model. We see a strong correlation with significant scatter (Figure \ref{fig:bulge_fractions}). The relationship to exp+deV models appears to be less than 1:1, while the relationship to exp+exp models is greater than 1:1, highlighting the dependance of bulge fraction on S\'ersic index.
 
+The amount of scatter (and lack of consistent 1:1 relationships) between bulge fractions between any two of the published two-component models is comparable to the scatter we see between any one of them and our more complex model. Bulge fractions for complex multi-component galaxies fit with any method should be used with caution.
 
 \begin{figure*}
   \plotone{images__results/bulge_fraction_scatter_reduced.pdf}
-  \caption{Scatter plots comparing the ratio of flux from central components (bulge and bar) to the total flux between fit models from \textit{Galaxy Builder} and two-component models in the literature.}
+  \caption{Scatter plots comparing the ratio of flux from central components (bulge and bar) to the total flux between fitted models from \textit{Galaxy Builder} and two-component models in the literature.}
   \label{fig:bulge_fractions}
 \end{figure*}
 
 
 \subsubsection{Comparison to Disc-Bulge-Bar models}
 
-\citet{2018MNRAS.473.4731K} performed multi-component, multi-band decompositions of a selection of SDSS galaxies, 12 of which were also classified in \textit{Galaxy Builder}. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the aggregate models. We see strong consistency in all effective radii, with one major outlier, caused by the bulge growing to model the disk. There is more scatter in component axis ratio, with many bulges reaching the imposed lower boundary. Comparing values for central component fraction as above, we see a near-identical 1:1 relationship.
+\citet{2018MNRAS.473.4731K} performed multi-component (up to three), multi-band decompositions of a selection of SDSS galaxies, 12 of which were also classified in \textit{Galaxy Builder}. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the fitted models. We see good consistency in effective radii of all components in the majority of galaxies. There is more scatter in the fit values of axis ratio for components. In particular we observe many of the Galaxy Builder bulges reaching the imposed lower boundary. Comparing the central component fraction between \textit{Galaxy Builder} models and those in \citet{2018MNRAS.473.4731K}, we see next to no scatter.
 
 \begin{figure}
   \plotone{images__results/sd_comp_comparison_fitted.pdf}
-  \caption{Comparison between \textit{Galaxy Builder} fit models and the result of 3-component, multi\-wavelength fits performed by \citet{2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio.}
+  \caption{Comparison between \textit{Galaxy Builder} fitted models and the result of 3-component, multi\-wavelength fits performed by \citet{2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio.}
   \label{fig:sd_comp_comparison}
 \end{figure}
-
 
 \subsubsection{Comparison to Disc-Bulge-Bar-Spiral models}
 To the best of our knowledge, no photometic models exist for the Galaxy Builder sample which contain spiral arm structure. The closest comparable result is that produced by \citet{Gao2017:1709.00746v1}, however the galaxies they used are not in the Sloan footprint.

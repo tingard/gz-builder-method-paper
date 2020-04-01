@@ -7,22 +7,23 @@
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Image and modelling metadata extraction}{subsection.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.3}{Choice of Retirement limit}{section.2}% 8
 \BOOKMARK [2][-]{subsection.2.4}{The Galaxy Model}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.5}{Reprojection of Classifications into original SDSS Frame Coordinates}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.6}{Classification Aggregation Methodology}{section.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.6.1}{Aggregation of Volunteer Models}{subsection.2.6}% 12
-\BOOKMARK [2][-]{subsection.2.7}{Error Estimation of Aggregate models}{section.2}% 13
-\BOOKMARK [2][-]{subsection.2.8}{Model Fitting}{section.2}% 14
-\BOOKMARK [1][-]{section.3}{Results}{}% 15
-\BOOKMARK [2][-]{subsection.3.1}{The Calibration Set}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.2}{Examination of Volunteer consistency}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.3}{Comparison to results in the literature}{section.3}% 18
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Comparison to Galaxy Zoo morpohology}{subsection.3.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Comparison to One-component fit - axis ratio}{subsection.3.3}% 20
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Comparison to Disc-Bulge models}{subsection.3.3}% 21
-\BOOKMARK [3][-]{subsubsection.3.3.4}{Comparison to Disc-Bulge-Bar models}{subsection.3.3}% 22
-\BOOKMARK [3][-]{subsubsection.3.3.5}{Comparison to Disc-Bulge-Bar-Spiral models}{subsection.3.3}% 23
-\BOOKMARK [1][-]{section.4}{Summary and Conclusions}{}% 24
-\BOOKMARK [1][-]{section.5}{Acknowledgements}{}% 25
-\BOOKMARK [1][-]{appendix.A}{Stacking of multiple SDSS Frames}{}% 26
-\BOOKMARK [1][-]{appendix.B}{Model Fitting}{}% 27
-\BOOKMARK [1][-]{appendix.C}{Ancillary Tables}{}% 28
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Spiral Arm Model}{subsection.2.4}% 10
+\BOOKMARK [2][-]{subsection.2.5}{Classification Aggregation Methodology}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Aggregation of Volunteer Models}{subsection.2.5}% 12
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Disc, Bulge and Bar Clustering}{subsection.2.5}% 13
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Spiral Arm Clustering}{subsection.2.5}% 14
+\BOOKMARK [2][-]{subsection.2.6}{Error Estimation of Aggregate models}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.7}{Model Fitting}{section.2}% 16
+\BOOKMARK [1][-]{section.3}{Results}{}% 17
+\BOOKMARK [2][-]{subsection.3.1}{The Calibration Set}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.2}{Examination of Volunteer consistency}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.3}{Comparison to results in the literature}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Comparison to Galaxy Zoo morpohology}{subsection.3.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Comparison to One-component fit - axis ratio}{subsection.3.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Comparison to Disc-Bulge models}{subsection.3.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Comparison to Disc-Bulge-Bar models}{subsection.3.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Comparison to Disc-Bulge-Bar-Spiral models}{subsection.3.3}% 25
+\BOOKMARK [1][-]{section.4}{Summary and Conclusions}{}% 26
+\BOOKMARK [1][-]{section.5}{Acknowledgements}{}% 27
+\BOOKMARK [1][-]{appendix.A}{Model Fitting}{}% 28
+\BOOKMARK [1][-]{appendix.B}{Ancillary Tables}{}% 29
