@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex aas_submission"] 1585739305 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1585739637
+["bibtex aas_submission"] 1585739305 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1585739766
   "./aasjournal.bst" 1584461286 36116 01b9608da4a9bc38a80d63e9a4bc6ec7 ""
-  "aas_submission.aux" 1585739637 21362 93b06580a8578906e2c2026233fe52fe ""
+  "aas_submission.aux" 1585739766 21362 93b06580a8578906e2c2026233fe52fe ""
   "aas_submission.bcf" 0 -1 0 ""
   "bibliography.bib" 1585739286 75814 7747fe751ae166d4547f38502aa2afc8 ""
   (generated)
   "aas_submission.bbl"
   "aas_submission.blg"
-["pdflatex"] 1585739636 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1585739637
+["pdflatex"] 1585739765 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1585739766
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc" 1266978417 12642 9742585e52c5b37e57ae9249e0b2585b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -249,9 +249,9 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "Orcid-ID.png" 1584461374 27604 8527c7c3c14d5c207af947385c09fd77 ""
-  "aas_submission.aux" 1585739637 21362 93b06580a8578906e2c2026233fe52fe ""
+  "aas_submission.aux" 1585739766 21362 93b06580a8578906e2c2026233fe52fe ""
   "aas_submission.bbl" 1585739305 18633 cdae922c63bd24b7365664240c95e940 "bibtex aas_submission"
-  "aas_submission.out" 1585739637 2239 c08661432e1a98ff028bcc61b36129cf ""
+  "aas_submission.out" 1585739766 2239 c08661432e1a98ff028bcc61b36129cf ""
   "aas_submission.tex" 1585304562 14107 6e4ffdb4b3239ecfc845969d7152e9de ""
   "aastex63.cls" 1584461251 223148 8fa171df877c422ff65173b8b1a5921a ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
@@ -273,10 +273,10 @@
   "sections/conclusions.tex" 1585739425 3783 79bd448caff02d7ff302c60b4fca3bfd ""
   "sections/introduction.tex" 1585736340 7754 db9660d1e41401a689156dc6b665439a ""
   "sections/method.tex" 1585739635 25958 112a97292d5e1bfcd0030a8701ab1e0c ""
-  "sections/results.tex" 1585673227 17169 2102674d5ac11a0969ff419da75e6313 ""
+  "sections/results.tex" 1585739758 17159 869d15f7497f9c04de5346de602a3c18 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
   "aas_submission.out"
-  "aas_submission.aux"
   "aas_submission.log"
+  "aas_submission.aux"
   "aas_submission.pdf"
