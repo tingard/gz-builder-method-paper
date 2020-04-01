@@ -4,7 +4,7 @@
 \section{Ancillary Tables}
 \begin{deluxetable*}{rlcc}
   \tablenum{2}
-  \tablecaption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.}
+  \tablecaption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.\label{table:bad_values}}
   \tablewidth{0pt}
   \tablehead{
     \colhead{Component} & \colhead{Parameter} & \colhead{Tuning Minimum Bound} & \colhead{Tuning Maximum Bound}
@@ -35,6 +35,5 @@
               & spread     & 0              & inf            \\
               & $\phi$     & -85            & 85             \\
   \enddata
-  \label{table:bad_values}
 \end{deluxetable*}
 \end{document}

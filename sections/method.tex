@@ -60,7 +60,7 @@ The morphological information required to select spiral galaxies came from the p
 
 \begin{deluxetable*}{cc}
   \tablenum{1}
-  \tablecaption{The selection criteria used in \citet{2017MNRAS.472.2263H} to create the \textit{stellar mass-complete sample} of 6222 spiral galaxies}
+  \tablecaption{The selection criteria used in \citet{2017MNRAS.472.2263H} to create the \textit{stellar mass-complete sample} of 6222 spiral galaxies.\label{table:sample_selection}}
   \tablewidth{0pt}
   \tablehead{
     \colhead{Description} & \colhead{Value}
@@ -72,7 +72,6 @@ The morphological information required to select spiral galaxies came from the p
     Mass limits for rough volume limited sample. & $9.45 < \log(M_* / M_\odot) \le 11.05$ \\
     Mass limits for complete sample\tablenotemark{a} & $2.07\log(z) + 12.64 < \log({M_* / M_\odot}) < 2.45\log(z) + 14.05$ \\
   \enddata
-  \label{table:sample_selection}
   \tablenotetext{a}{Using the method of \citet{Pozzetti2009:0907.5416v2} and limits calculated by \citet{2017MNRAS.472.2263H}}
 \end{deluxetable*}
 
@@ -140,7 +139,7 @@ In this Section, we will use the galaxy UGC 4721, a two-armed barred spiral gala
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
 
-Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. We did not take into account any slider values, only the shape drawn by the volunteers. Disk classifications were doubled in effective radius to account for an observed tendency of volunteers to draw a smaller disk than needed. Models were altered such that component parameters were within the limits shown in Table \ref{table:bad_values} (deemed to be the physically acceptable bounds). All components were transformed from the coordinate space of the \textsc{Montage}-created images to the more accurate stacked images created for fitting. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two sets:
+Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. We did not take into account any slider values, only the shape drawn by the volunteers. Disk classifications were doubled in effective radius to account for an systematic error in disk size observed in the classifications received for the \textit{calibration subset}. Models were altered such that component parameters were within the limits shown in Table \ref{table:bad_values} (deemed to be the physically acceptable bounds). All components were transformed from the coordinate space of the \textsc{Montage}-created images to the more accurate stacked images created for fitting. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two sets:
 
 \begin{equation}
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
