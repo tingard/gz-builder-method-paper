@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex aas_submission"] 1585739305 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1585739766
+["bibtex aas_submission"] 1585739305 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1586944817
   "./aasjournal.bst" 1584461286 36116 01b9608da4a9bc38a80d63e9a4bc6ec7 ""
-  "aas_submission.aux" 1585739766 21362 93b06580a8578906e2c2026233fe52fe ""
+  "aas_submission.aux" 1586944816 21362 93b06580a8578906e2c2026233fe52fe ""
   "aas_submission.bcf" 0 -1 0 ""
   "bibliography.bib" 1585739286 75814 7747fe751ae166d4547f38502aa2afc8 ""
   (generated)
   "aas_submission.bbl"
   "aas_submission.blg"
-["pdflatex"] 1585739765 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1585739766
+["pdflatex"] 1586944814 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1586944817
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc" 1266978417 12642 9742585e52c5b37e57ae9249e0b2585b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -249,10 +249,10 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "Orcid-ID.png" 1584461374 27604 8527c7c3c14d5c207af947385c09fd77 ""
-  "aas_submission.aux" 1585739766 21362 93b06580a8578906e2c2026233fe52fe ""
+  "aas_submission.aux" 1586944816 21362 93b06580a8578906e2c2026233fe52fe ""
   "aas_submission.bbl" 1585739305 18633 cdae922c63bd24b7365664240c95e940 "bibtex aas_submission"
-  "aas_submission.out" 1585739766 2239 c08661432e1a98ff028bcc61b36129cf ""
-  "aas_submission.tex" 1585304562 14107 6e4ffdb4b3239ecfc845969d7152e9de ""
+  "aas_submission.out" 1586944816 2239 c08661432e1a98ff028bcc61b36129cf ""
+  "aas_submission.tex" 1586944813 14181 131b47e7479b92db4fa6a9edd25ce19e ""
   "aastex63.cls" 1584461251 223148 8fa171df877c422ff65173b8b1a5921a ""
   "images/residualProgress.jpg" 1549896571 177731 02e46f22604537d539de1f2e0fa338dc ""
   "images__method/drawn_shapes.pdf" 1585145542 414175 264fbe48e7b76e1fb3e7573351b99dc8 ""
@@ -266,7 +266,7 @@
   "images__results/sd_comp_comparison_fitted.pdf" 1585145542 32025 2600ab05de52617f74cd4e7c3cb2d4de ""
   "images__results/spiral-number-vs-gz2.pdf" 1585145542 17843 5348d9e95b7ff2ed2f1b2057fda72ca3 ""
   "sections/abstract.tex" 1585317415 1576 324d17e7467e0c1bc0d85ad230802053 ""
-  "sections/acknowledgements.tex" 1585068917 1667 95924d1fd7e3edc8b5691efea47abfca ""
+  "sections/acknowledgements.tex" 1585815630 1667 95924d1fd7e3edc8b5691efea47abfca ""
   "sections/appendix.tex" 1585653878 239 fbd2cddb2b961b29ec106286a37f6e93 ""
   "sections/appendix_ancillary_tables.tex" 1585738387 2370 187dcc0a11d1dae3e53e0c8fded05c35 ""
   "sections/appendix_model_fitting.tex" 1585068984 4269 134face550625170b106b6247993f10a ""
@@ -276,7 +276,7 @@
   "sections/results.tex" 1585739758 17159 869d15f7497f9c04de5346de602a3c18 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
-  "aas_submission.out"
-  "aas_submission.log"
-  "aas_submission.aux"
   "aas_submission.pdf"
+  "aas_submission.out"
+  "aas_submission.aux"
+  "aas_submission.log"
