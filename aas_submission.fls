@@ -263,7 +263,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer6.tfm
 INPUT sections/abstract.tex
 INPUT sections/abstract.tex
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aecsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aebx10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer9.tfm
@@ -301,6 +300,7 @@ INPUT Orcid-ID.png
 INPUT Orcid-ID.png
 INPUT ./Orcid-ID.png
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti8.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti10.tfm
 INPUT sections/introduction.tex
 INPUT sections/introduction.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aecsc10.vf
