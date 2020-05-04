@@ -7,16 +7,23 @@ In this Section we present Galaxy Builder models for 198 galaxies, both from sim
 
 \subsection{The Calibration Set}
 
-The calibration subset was a set of nine synthetic galaxy images created from Galaxy Builder models, which were then re-run through the \textit{Galaxy Builder} process. These galaxies were used to fine-tune clustering and fitting hyperparameters (See Section \ref{sec:aggregation_of_volunteer_models}). Our ability to recover morphology accurately is essential validation for our ability to recover good photometic models of galaxies.
+The calibration subset was a set of nine synthetic galaxy images created from Galaxy Builder models, which were then re-run through the \textit{Galaxy Builder} process. These galaxies were used to fine-tune clustering and fitting hyperparameters (See Section \ref{sec:aggregation_of_volunteer_models}), as the ground truth was known. Our ability to recover morphology accurately is essential validation for our ability to recover good photometic models of galaxies.
 
 Overall, these results highlight the importance of good priors to obtain accurate fits of complex photometric models. In more detail, the models recovered for the nine synthetic galaxy images demonstrate that:
 
 \begin{enumerate}
+  \item Model parameters were generally recovered to a high degree of accuracy
   \item We successfully recover all spiral arms present, and do not receive any false positives
 The spiral pitch angles obtained through aggregation vary by $< 9\degree$ from the true values, with fitting improving this error slightly.
   \item Volunteers systematically use elongated bulges to fit for bar components. This resulted in two false positives for bulge presence in the aggregate models. This feature (switching light between model components) is a common issue in all photometric fitting methods.
   \item The Jaccard metric is unstable to small changes in rotation for highly elliptical components (i.e. bars). This resulted in one false negative of bar presence in the aggregate model.
 \end{enumerate}
+
+\begin{figure*}
+  \plotone{images__results/calibration_parameter_recovery.pdf}
+  \caption{Plots examining the accuracy of fit parameters for the calibration subset of galaxies.}
+  \label{fig:calibration_parameter_recovery}
+\end{figure*}
 
 The fitting step for this subset of images highlighted the benefit of obtaining a rough starting point through clustering of user classifications; the method struggled to recover structural parameters for which we did not obtain such a starting point (S\'ersic index and bar boxyness). These parameters are difficult to identify using gradient descent \citep{2012MNRAS.421.2277L}, suggesting future work should attempt to obtain priors on these parameters from volunteers and make use of a more robust fitting algorithm.
 
@@ -107,7 +114,7 @@ The amount of scatter (and lack of consistent 1:1 relationships) between bulge f
 
 \subsubsection{Comparison to Disc-Bulge-Bar models}
 
-\citet{2018MNRAS.473.4731K} performed multi-component (up to three), multi-band decompositions of a selection of SDSS galaxies, 12 of which were also classified in \textit{Galaxy Builder}. Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the fitted models. We see good consistency in effective radii of all components in the majority of galaxies. There is more scatter in the fit values of axis ratio for components. In particular we observe many of the Galaxy Builder bulges reaching the imposed lower boundary. Comparing the central component fraction between \textit{Galaxy Builder} models and those in \citet{2018MNRAS.473.4731K}, we see next to no scatter.
+\citet{2018MNRAS.473.4731K} performed multi-component (up to three), multi-band decompositions of a selection of SDSS galaxies, 23 of which were also classified in \textit{Galaxy Builder} (with 16 in the repeated validation subset). Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the fitted models. We see good consistency in effective radii of all components in the majority of galaxies. There is more scatter in the fit values of axis ratio for components. In particular we observe many of the Galaxy Builder bulges reaching the imposed lower boundary. Comparing the central component fraction between \textit{Galaxy Builder} models and those in \citet{2018MNRAS.473.4731K}, we see next to no scatter.
 
 \begin{figure}
   \plotone{images__results/sd_comp_comparison_fitted.pdf}

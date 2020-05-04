@@ -297,6 +297,9 @@ INPUT ./Orcid-ID.png
 INPUT Orcid-ID.png
 INPUT Orcid-ID.png
 INPUT ./Orcid-ID.png
+INPUT Orcid-ID.png
+INPUT Orcid-ID.png
+INPUT ./Orcid-ID.png
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti8.tfm
 INPUT sections/introduction.tex
 INPUT sections/introduction.tex
@@ -364,6 +367,12 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmio.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/boondox/zxxrl7z.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txmi.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aecsc10.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer5.tfm
@@ -374,12 +383,6 @@ INPUT images__method/interface_in_progress.jpg
 INPUT ./images__method/interface_in_progress.jpg
 INPUT ./images__method/interface_in_progress.jpg
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aebx9.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txmi.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
@@ -420,6 +423,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/boondox/zxxrl7z.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
+INPUT images__method/stellar_mass_selection_plot.pdf
+INPUT ./images__method/stellar_mass_selection_plot.pdf
+INPUT ./images__method/stellar_mass_selection_plot.pdf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aer7.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
@@ -462,6 +468,9 @@ INPUT ./images__method/model_tuning.pdf
 INPUT ./images__method/model_tuning.pdf
 INPUT sections/results.tex
 INPUT sections/results.tex
+INPUT images__results/calibration_parameter_recovery.pdf
+INPUT ./images__results/calibration_parameter_recovery.pdf
+INPUT ./images__results/calibration_parameter_recovery.pdf
 INPUT images__results/component_frequency.pdf
 INPUT ./images__results/component_frequency.pdf
 INPUT ./images__results/component_frequency.pdf
