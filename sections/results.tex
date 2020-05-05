@@ -15,7 +15,7 @@ Overall, these results highlight the importance of good priors to obtain accurat
   \item Model parameters were generally recovered to a high degree of accuracy
   \item We successfully recover all spiral arms present, and do not receive any false positives
 The spiral pitch angles obtained through aggregation vary by $< 9\degree$ from the true values, with fitting improving this error slightly.
-  \item Volunteers systematically use elongated bulges to model bar components. This resulted in two false positives for bulge presence in the aggregate models. This feature (switching light between model components) is a common issue in all photometric fitting methods.
+  \item Volunteers systematically use elongated bulges to model bar components. This resulted in two false positives for bulge presence in the aggregate models. This feature (switching light between model components) is a common issue in all photometric fitting methods \citep{2018MNRAS.473.4731K}.
   \item The Jaccard metric is unstable to small changes in rotation for highly elliptical components (i.e. bars). This resulted in one false negative of bar presence in the aggregate model.
 \end{enumerate}
 
@@ -28,7 +28,7 @@ The spiral pitch angles obtained through aggregation vary by $< 9\degree$ from t
 The fitting step for this subset of images highlighted the benefit of obtaining a rough starting point through clustering of user classifications; the method struggled to recover structural parameters for which we did not obtain such a starting point (S\'ersic index and bar boxyness). These parameters are difficult to identify using gradient descent \citep{2012MNRAS.421.2277L}, suggesting future work should attempt to obtain priors on these parameters from volunteers and make use of a more robust fitting algorithm.
 
 \subsection{Examination of Volunteer consistency}
-We aggregate two independent models for a set of 98 galaxies based on ``original'' or repeat (``validation'') classifications, obtained with the same retirement limit (see Section \ref{sec:retirement-limit} for more on this selection).
+We aggregate two independent models for a set of 98 galaxies based on ``original'' or repeat (``validation'') classifications, obtained with the same retirement limit (see Section \ref{sec:data} for more on this selection).
 
 One of the simplest choices the volunteers have is whether to include a model component or not. Figure \ref{fig:volunteer_component_consistency} illustrates the consistency with which volunteers made use of a component in their model for a galaxy. We see that volunteer classification is very consistent, with scatter as predicted by the Binomial uncertainty on the mean. Volunteers almost always make us of a disc and bulge (as seen in the \textit{calibration subset}), and bulge, bar and spiral arm usage is consistent within Binomial error. One common challenge is that some volunteers used a very ellipsoidal bulge and the ends of spiral arms to model light that other users modelled with a bar. This caused some scatter in aggregate models.
 
@@ -125,7 +125,7 @@ The amount of scatter (and lack of consistent 1:1 relationships) between bulge f
 \subsubsection{Comparison to Disc-Bulge-Bar-Spiral models}
 To the best of our knowledge, no photometric models exist for the \textit{Galaxy Builder} sample which contain spiral arm structure. The closest comparable result is that produced by \citet{Gao2017:1709.00746v1}, however the galaxies they used are not in the Sloan footprint.
 
-In order to provide a comparison for our novel method of spiral parameter (pitch angle and amplitude) extraction, we compare the result of our galaxy length-weighted pitch angles to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle. Their fit was obtained by using the Zooniverse to filter good vs bad spiral arm segments identified using an automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}, whereas \textit{Galaxy Builder} asks volunteers to provide their own opinion on spiral arm number, location and tightness. \textit{Galaxy Builder} pitch angles are within the (large) uncertainties on the \citet{Hart2016:1607.01019v1} fit.
+In order to provide a comparison for our novel method of spiral parameter (pitch angle and amplitude) extraction, we compare the result of our galaxy length-weighted pitch angles to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle. Their fit was obtained by using the Zooniverse project \textit{Spiral Spotter} to filter good vs bad spiral arm segments identified using an automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}, whereas \textit{Galaxy Builder} asks volunteers to provide their own opinion on spiral arm number, location and tightness. \textit{Galaxy Builder} pitch angles are within the (large) uncertainties on the \citet{Hart2016:1607.01019v1} fit.
 
 Many researches (\citealt{Davis2014:1402.1910v1}, \citealt{2019arXiv190804246D} to name a few) have noted that many galaxies show large inter-arm variations in pitch angle, suggesting that obtaining a single value of a galaxy's pitch angle is highly dependent on which arms have been identified. We plan to further explore this issue in future work.
 
