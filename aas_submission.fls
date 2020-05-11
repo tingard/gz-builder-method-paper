@@ -261,8 +261,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer6.tfm
-INPUT abstract.tex
-INPUT abstract.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aecsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aebx10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer9.tfm
@@ -310,8 +308,6 @@ INPUT Orcid-ID.png
 INPUT ./Orcid-ID.png
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti8.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti10.tfm
-INPUT introduction.tex
-INPUT introduction.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aecsc10.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -385,8 +381,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/ntxsups-Regular-
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aecsc10.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer5.tfm
-INPUT method.tex
-INPUT method.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT interface_in_progress.jpg
 INPUT ./interface_in_progress.jpg
@@ -478,8 +472,6 @@ INPUT ./mean_shapes.pdf
 INPUT model_tuning.pdf
 INPUT ./model_tuning.pdf
 INPUT ./model_tuning.pdf
-INPUT results.tex
-INPUT results.tex
 INPUT calibration_parameter_recovery.pdf
 INPUT ./calibration_parameter_recovery.pdf
 INPUT ./calibration_parameter_recovery.pdf
@@ -504,16 +496,6 @@ INPUT ./bulge_fraction_scatter_reduced.pdf
 INPUT sd_comp_comparison_fitted.pdf
 INPUT ./sd_comp_comparison_fitted.pdf
 INPUT ./sd_comp_comparison_fitted.pdf
-INPUT conclusions.tex
-INPUT conclusions.tex
-INPUT acknowledgements.tex
-INPUT acknowledgements.tex
-INPUT appendix.tex
-INPUT appendix.tex
-INPUT appendix_model_fitting.tex
-INPUT appendix_model_fitting.tex
-INPUT appendix_ancillary_tables.tex
-INPUT appendix_ancillary_tables.tex
 INPUT aas_submission.bbl
 INPUT aas_submission.bbl
 INPUT aas_submission.aux
