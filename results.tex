@@ -1,5 +1,5 @@
-% !TEX root = ../aas_submission.tex
-\documentclass[../main.tex]{subfiles}
+% !TEX root = aas_submission.tex
+\documentclass[main\.tex]{subfiles}
 \begin{document}
 \label{sec:results}
 
@@ -20,7 +20,7 @@ The spiral pitch angles obtained through aggregation vary by $< 9\degree$ from t
 \end{enumerate}
 
 \begin{figure*}
-  \plotone{images__results/calibration_parameter_recovery.pdf}
+  \plotone{calibration_parameter_recovery.pdf}
   \caption{Plots examining the accuracy of fit parameters for the calibration subset of galaxies. Most parameters are recovered to a high degree of accuracy, however S\'ersic index and boxyness are difficult to determine only using gradient descent, and the error in the fit values reflects this problem.}
   \label{fig:calibration_parameter_recovery}
 \end{figure*}
@@ -35,7 +35,7 @@ One of the simplest choices the volunteers have is whether to include a model co
 In the end, the aggregated validation model is identical to the original aggregated model in around 40\% of galaxies. The most common changes are a missing bar component or a missing single spiral arm. This may suggest that more than 30 classifications should be collected per galaxy, or may be an artefact of the lack of consensus among volunteers for galaxies with difficult-to-determine components.
 
 \begin{figure*}
-  \plotone{images__results/component_frequency.pdf}
+  \plotone{component_frequency.pdf}
   \caption{Comparison of frequency of use of component in volunteer models between the original and validation sets of classifications. Errors shown on the disc, bulge and bar arise from Binomial error estimation. We see that classifications are generally consistent within errors, validating our assumption of volunteer independence.}
   \label{fig:volunteer_component_consistency}
 \end{figure*}
@@ -43,7 +43,7 @@ In the end, the aggregated validation model is identical to the original aggrega
 After selecting a component, the volunteer sets its shape and size. The variation in axial ratios and effective radii for the aggregate discs, bulges and bars are shown in Figure \ref{fig:aggregate_model_consistency}. The aggregate discs and bulges are consistent within errors, however bars show more scatter. Bars are one of the most challenging components to aggregate consistently. This is partly because even a strongly barred galaxy with 30 classifications overall might receive only 15 or so drawn bars, and lower numbers of classifications result in more scatter. In addition the aggregation method is more sensitive to rotation of highly elongated shapes. Both factors probably contribute to lower consistency in bar components.
 
 \begin{figure*}
-  \plotone{images__results/component_sizing.pdf}
+  \plotone{component_sizing.pdf}
   \caption{Comparison of component shape in aggregate models between the original and validation sets. Errors are obtained through the sample variance of clustered components, as detailed in Section \ref{sec:error_estimation}. We see close agreement between aggregate components from the two sets, suggesting that the clustering method is robust to the scatter in classifications.}
   \label{fig:aggregate_model_consistency}
 \end{figure*}
@@ -76,7 +76,7 @@ The circle with the largest area for each possible GZ2 response is highlighted, 
 It is not uncommon in \textit{Galaxy Builder} for one spiral arm to have been broken into two smaller segments. We also occasionally identify two distinct clusters that represent the same physical arm. These two reasons account for a majority of cases where GZ2 classifications suggest a galaxy has two spiral arms and we have clustered a larger number. Improved project user experience would be crucial in correcting these errors.
 
 \begin{figure}
-  \plotone{images__results/spiral-number-vs-gz2.pdf}
+  \plotone{spiral-number-vs-gz2.pdf}
   \caption{Density plot of GZ2 vote counts for spiral arm number vs the number of spiral arms obtained through aggregation. The area of each circle can be seen as the level of agreement between \textit{Galaxy Builder} aggregate models and GZ2 classifiers, and is defined by Equation \ref{eq:spiral_circle_area_size}. The circle with the largest area for each possible GZ2 response is highlighted by shading. The 1:1 relationship suggests the clustering method is correctly recovering the behaviour of volunteers.}
   \label{fig:n_spirals_comparison}
 \end{figure}
@@ -91,7 +91,7 @@ We observe a clustering of outlying values around $b/a=0.5$. This is almost cert
 As we account for light in spiral arms and bars, we expect that disc axis ratios fit by \textit{Galaxy Builder} should be more physical than those from models that do not account for how these non axisymmetries can bias measurements of ellipticity.
 
 \begin{figure}
-  \plotone{images__results/gzb-agg-nsa-comparison.pdf}
+  \plotone{gzb-agg-nsa-comparison.pdf}
   \caption{Difference between the axis ratios of the aggregated disc component (before fitting) to the results of an $r$-band S\'ersic profile fit. Points  between one- and two-sigma are highlighted as orange squares, points outside $2\sigma$ are shown as red stars. While the overall relationship is good, the increase prevalence of points outside $2\sigma$ is a clear indication of bias caused by the \textit{Galaxy Builder} online user interface.}
   \label{fig:ax_ratio_comparison}
 \end{figure}
@@ -108,7 +108,7 @@ We compare our central component fraction (the flux of the bulge and bar relativ
 The amount of scatter (and lack of consistent 1:1 relationships) between bulge fractions between any two of the published two-component models is comparable to the scatter we see between any one of them and our more complex model. Bulge fractions for complex multi-component galaxies fit with any method should be used with caution.
 
 \begin{figure*}
-  \plotone{images__results/bulge_fraction_scatter_reduced.pdf}
+  \plotone{bulge_fraction_scatter_reduced.pdf}
   \caption{Scatter plots comparing the ratio of flux from central components (bulge and bar) to the total flux between fitted models from \textit{Galaxy Builder} and two-component models in the literature. Our models are broadly consistent with their results, but should be more accurate for complex galaxies, as we account for galaxy bars.}
   \label{fig:bulge_fractions}
 \end{figure*}
@@ -119,7 +119,7 @@ The amount of scatter (and lack of consistent 1:1 relationships) between bulge f
 \citet{2018MNRAS.473.4731K} performed multi-component (up to three), multi-band decompositions of a selection of SDSS galaxies, 23 of which were also classified in \textit{Galaxy Builder} (with 16 in the repeated validation subset). Figure \ref{fig:sd_comp_comparison} compares the axis ratios and effective radii of bulges, discs and bars in \citet{2018MNRAS.473.4731K} to those present in the fitted models. We see good consistency in effective radii of all components in the majority of galaxies. There is more scatter in the fit axis ratios of components. In particular we observe many of the \textit{Galaxy Builder} bulges reaching the imposed lower boundary. Comparing the central component fraction between \textit{Galaxy Builder} models and those in \citet{2018MNRAS.473.4731K}, we see next to no scatter.
 
 \begin{figure}
-  \plotone{images__results/sd_comp_comparison_fitted.pdf}
+  \plotone{sd_comp_comparison_fitted.pdf}
   \caption{Comparison between \textit{Galaxy Builder} fitted models and the result of 3-component, multi\-wavelength fits performed by \citet{2018MNRAS.473.4731K}. Discs, Bulges and Bars are shown as blue circles, orange stars and green squares respectively. The left panel compares component effective radius, the right panel compares the component axis ratio. The components match well, with bulges showing the most scatter. Bulges in \textit{Galaxy Builder} fit models often get stuck at the lower allowed value, despite the physically motivated initial conditions.}
   \label{fig:sd_comp_comparison}
 \end{figure}

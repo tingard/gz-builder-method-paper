@@ -1,5 +1,5 @@
-% !TEX root = ../aas_submission.tex
-\documentclass[../main.tex]{subfiles}
+% !TEX root = aas_submission.tex
+\documentclass[main\.tex]{subfiles}
 \begin{document}
 \label{sec:method}
 
@@ -21,7 +21,7 @@ A major challenge during development of the project was finding the right balanc
 The \textit{Galaxy Builder} project prompts volunteers to work through the step-by-step creation of a photometric model of a galaxy (described in detail in Section \ref{section:galaxy-model}). A screenshot of the interface can be seen in Figure \ref{fig:interfaceInProgress}, where a residual image is shown. The interface presents a volunteer with three views, which they can switch between at any time: a $r$-band cutout image of a spiral galaxy (see Section \ref{sec:data}), the galaxy model they have created so far, and the residual between their model and image (shown in blue and yellow).
 
 \begin{figure}
-  \plotone{images__method/interface_in_progress.jpg}
+  \plotone{interface_in_progress.jpg}
   \caption{The \textit{Galaxy Builder} interface. The residual image is being shown, and the volunteer is on the ``Disc'' task. The drawn disc component (yellow) is offset from the galaxy image (blue) to demonstrate the positive and negative residuals. Where the image equals the model the residual is black. The dots below the residual image allow the user to switch images. The icons to the right allow panning and zooming of the image (rotation was not functional for this project). The icons to the bottom right of the image allow colour inversion of the galaxy cutout, flagging of the image as inappropriate, inspection of galaxy metadata (i.e. sky position, link to SDSS SkyServer), ability to save the image as a favourite and to add to a Zooniverse ``collection''. The Score shown in the bottom left of the image is calculated using Equation \ref{eqn:gal_score} and is a rough goodness-of-fit measure.}
   \label{fig:interfaceInProgress}
 \end{figure}
@@ -41,7 +41,7 @@ where $N$ is the total number of pixels, $y$ is the cutout of the galaxy, normal
 This score has the advantage of being easy (and fast) to generate from the residual image shown to volunteers (which was Arcsinh-scaled in a manner described by \citealt{Lupton2003:astro-ph/0312483v1}), however it is overly sensitive to small deviations of the model from the galaxy.
 
 \begin{figure}
-  \plotone{images__method/residual_progress.jpg}
+  \plotone{residual_progress.jpg}
   \caption{Figure demonstrating the desired result of each step of the modelling process, as seen from the residual image provided to volunteers. The top left panel shows the galaxy after only a disc component has been added: the top right contains a disc and a bulge; the bottom left has a disc, bulge and bar; the bottom right is the finished model with a disc, bulge, bar and spiral arms. The image shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}
   \label{fig:residualsStepByStep}
 \end{figure}
@@ -76,7 +76,7 @@ The morphological information required to select spiral galaxies came from the p
 The \textit{stellar mass-complete sample} was split into smaller sub-samples, each containing 100 galaxies. In an iterative process, each sub-sample was chosen to contain the 60 lowest redshift unclassified galaxies, and 40 random unclassified galaxies. This was done to ensure we would have an early sample to work with given the {\it a priori} unknown rate at which volunteers would provide classifications. Due to time constraints, classifications were only collected for two unique sub-samples. The mass-redshift relation of galaxies in the \textit{stellar mass-complete sample} from \citet{2017MNRAS.472.2263H} can be seen in Figure \ref{fig:mass_redshift}, with galaxies present in this work highlighted in red. Stellar Masses were calculated by \citet{2014ApJS..210....3M}.
 
 \begin{figure*}
-  \plotone{images__method/stellar_mass_selection_plot.pdf}
+  \plotone{stellar_mass_selection_plot.pdf}
   \caption{Redshift against total galaxy stellar mass for all galaxies in the \textit{stellar mass-complete sample}, with the 198 galaxies considered in this paper highlighted in red. The distribution of stellar masses is shown in the right panel for the total sample and for the galaxies considered here. It is evident that the galaxies for which we collected classifications are not complete in stellar mass, but it is possible to select a further subset which would be.}
   \label{fig:mass_redshift}
 \end{figure*}
@@ -116,7 +116,7 @@ The entire {\it test sample} of 198 galaxies was then presented to users, with 3
 We also created 9 synthetic images of galaxies, containing various combinations of components available to volunteers and a spread of possible parameters. These synthetic galaxies were based off of a set of target galaxies from \textit{Galaxy Builder} and designed to be as realistic as possible, including the addition of realistic noise and pixel masks. This set of synthetic images is shown in Figure \ref{fig:calibration-subset} and was used to calibrate our aggregation and fitting methodology and thus is referred to as the \textit{calibration subset}.
 
 \begin{figure*}
-  \plotone{images__method/calibration_subset.pdf}
+  \plotone{calibration_subset.pdf}
   \caption{Arcsinh-stretched images of the synthetic galaxies present in the \textit{calibration subset}. These galaxies were designed to look as realistic as possible, while being described perfectly by the model available to volunteers.}
   \label{fig:calibration-subset}
 \end{figure*}
@@ -141,7 +141,7 @@ Each spiral arm is modelled using a poly-line drawn by the volunteer. The bright
 In this Section, we will use the galaxy UGC 4721, a two-armed barred spiral galaxy at $z=0.02086$ classified by \citet{deVaucouleurs1991} as SBcd, to illustrate the data reduction and aggregation methodology. For UGC 4721 we received 32 classifications, containing 28 discs, 24 bulges, 17 bars and 47 drawn spiral arm poly-lines (four classifications did not contain spirals, seven contained one spiral arm, fourteen contained two arms, six contained three arms and one contained four arms). These annotations can be seen in Figure \ref{fig:drawn_shapes}, overlaid on the greyscale $r$-band image of the galaxy.
 
 \begin{figure*}
-  \plotone{images__method/drawn_shapes.pdf}
+  \plotone{drawn_shapes.pdf}
   \caption{Components drawn by volunteers for UGC 4721. The top left panel shows drawn discs, top right shows drawn bulges, bottom left shows drawn bars and bottom right shows drawn spiral arms. Discs, bulges and bars are displayed at twice their effective radii. These raw marks are subsequently aggregated to produce a consensus value for each galaxy component.}
   \label{fig:drawn_shapes}
 \end{figure*}
@@ -173,7 +173,7 @@ Once spiral classifications on a galaxy have been clustered into the physical ar
 Deprojected points within each drawn poly-line are converted to polar coordinates and unwound to allow model fitting. These unwound points are then cleaned using the Local-outlier-factor algorithm (LOF, \citealt{local-outlier-factor}). For each drawn poly-line in the cluster, the LOF algorithm was trained on all points not in that arm, and then used to predict whether each point in the arm should be considered an outlier. In this way we clean our data while respecting its grouped nature. The points removed as outliers for the example galaxy are shown in the bottom right panel of Figure \ref{fig:mean_shapes}.
 
 \begin{figure*}
-  \plotone{images__method/mean_shapes.pdf}
+  \plotone{mean_shapes.pdf}
   \caption{Calculated aggregate components for UGC 4721. The aggregate disc is shown using a dot-dashed line and blue fill in the upper left panel, the aggregate bulge with a dotted line and orange fill in the upper right panel, the aggregate bar using a dashed line and green fill in the lower left panel and the aggregate spiral arms are plotted as red lines in the lower right panel. S\'ersic components are displayed at twice their effective radii. Black crosses in the lower right panel indicate spiral arm points that were identified as outliers and removed during cleaning (described in Section \ref{sec:spiral_clustering}). The aggregated components agree well with the underlying morphology, despite the noisiness of the classifications received.}
   \label{fig:mean_shapes}
 \end{figure*}
@@ -201,7 +201,7 @@ The model rendering and fitting code was written up using Google's JAX package \
 We initially fit only for the brightnesses of components, and then simultaneously for all free parameters of all components. The result of the fit, including the final photometric model for UGC 4721, can be seen in \ref{fig:model_tuning}. The secondary components have been accounted for well, and the model has a sensible reduced chi-squared value of 1.176, where we have approximated degrees of freedom as the number of unmasked pixels present in the galaxy image (similar to \textsc{Galfit}).
 
 \begin{figure*}
-  \plotone{images__method/model_tuning.pdf}
+  \plotone{model_tuning.pdf}
   \caption{Effect of fitting on the aggregated models. The top left panel shows an Arcsinh-scaled image of the galaxy being fit (UGC 4721), the top middle shows the final model obtained (with the same limits and scaling as the galaxy image) and the top right shows the difference between the two images, in units of pixel uncertainty. The bottom panels show a simple representation of the model before and after tuning, overlaid on the galaxy image from the top-left panel. With minimal change to the aggregated components, we recover a detailed model that matches the galaxy exceptionally well, as evident in the residuals.}
   \label{fig:model_tuning}
 \end{figure*}
