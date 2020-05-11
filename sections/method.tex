@@ -5,14 +5,9 @@
 
 \subsection{The \textit{Galaxy Builder} Zooniverse project}
 
-\comment{CL: I think this could be shortened - it’s a bit chatty, and I’m not sure it adds much. I’d replace with just the first paragraph and then a line about Mergers and a note that we didn’t use Java.}
-
 \textit{Galaxy Builder} is a citizen-science project built on the Zooniverse web platform. It asks volunteers to perform detailed photometric modelling of spiral galaxies (potentially including bulge, disc, bar and spiral arm components). A project of this kind, allowing volunteers to interact with and model data, had never been attempted inside the current Zooniverse web platform before, so this project involved designing and implementing a model rendering\footnote{We use the term rendering in a similar manner to that used for computer graphics: to calculate an image from a model or set of rules.} suite inside the existing Zooniverse front-end code-base. As with all citizen science solutions, we had to not only consider the accuracy of the resulting model, but also user experience and engagement in our design decisions.
 
-The closest relative to this project within the Zooniverse ecosystem was the Galaxy Zoo: Mergers project \citep{Holincheck2016:1604.00435v1}. This project asked volunteers to help match the morphological properties of an image of merging galaxies to a plethora of restricted three-body simulations, in an attempt to identify the initial conditions that could result in the observed morphology. For part of the project, volunteers downloaded a Java applet, which would run restricted three-body simulations and generate output images. Volunteers could manipulate the model parameters used in the simulation, and vote on simulations which matched a given galaxy merger image or shared important tidal features. A new batch of simulations could then be run and an optimal solution converged on.
-
-In many ways, this iterative workflow was very similar to that used in \textit{Galaxy Builder}: volunteers were asked to manipulate the parameters of a complex astrophysical model in order to identify the most likely solution, in a problem space that traditional computational modelling struggles to solve. However, \textit{Galaxy Builder} operates purely inside a web page and does not make use of secondary citizen science projects for model selection (such as the Galaxy Zoo: Mergers' \textit{merger wars} sub-project), instead using unsupervised clustering and computational optimization to identify final models.
-
+The closest relative to this project within the Zooniverse ecosystem was the Galaxy Zoo: Mergers project \citep{Holincheck2016:1604.00435v1}. This project asked volunteers to help match the morphological properties of an image of merging galaxies to a plethora of restricted three-body simulations. Galaxy Zoo: Mergers required volunteers to download a Java applet to take part in model selection, while \textit{Galaxy Builder} operates purely inside a web page.
 
 \subsubsection{Project Timeline and Development}
 
@@ -46,7 +41,7 @@ where $N$ is the total number of pixels, $y$ is the cutout of the galaxy, normal
 This score has the advantage of being easy (and fast) to generate from the residual image shown to volunteers (which was Arcsinh-scaled in a manner described by \citealt{Lupton2003:astro-ph/0312483v1}), however it is overly sensitive to small deviations of the model from the galaxy.
 
 \begin{figure}
-  \plotone{images/residualProgress.jpg}
+  \plotone{images__method/residual_progress.jpg}
   \caption{Figure demonstrating the desired result of each step of the modelling process, as seen from the residual image provided to volunteers. The top left panel shows the galaxy after only a disc component has been added: the top right contains a disc and a bulge; the bottom left has a disc, bulge and bar; the bottom right is the finished model with a disc, bulge, bar and spiral arms. The image shown is SDSS J104238.12+235706.8. This brightness and contrast of this image have been edited to improve visibility in print.}
   \label{fig:residualsStepByStep}
 \end{figure}
@@ -118,7 +113,13 @@ The number of independent answers needed to create reliable and reproducible agg
 
 The entire {\it test sample} of 198 galaxies was then presented to users, with 30 classifications collected per galaxy. In addition, one of the subsets was presented a second time, thus providing a validation subset to measure consistency between sets of 30 classifications on the same galaxies.
 
-We also created 9 synthetic images of galaxies, containing various combinations of components available to volunteers and a spread of possible parameters. These synthetic galaxies were based off of a set of target galaxies from \textit{Galaxy Builder} and designed to be as realistic as possible, including the addition of realistic noise and pixel masks. This set of synthetic images was used to calibrate our aggregation and fitting methodology and thus is referred to as the \textit{calibration subset}.
+We also created 9 synthetic images of galaxies, containing various combinations of components available to volunteers and a spread of possible parameters. These synthetic galaxies were based off of a set of target galaxies from \textit{Galaxy Builder} and designed to be as realistic as possible, including the addition of realistic noise and pixel masks. This set of synthetic images is shown in Figure \ref{fig:calibration-subset} and was used to calibrate our aggregation and fitting methodology and thus is referred to as the \textit{calibration subset}.
+
+\begin{figure*}
+  \plotone{images__method/calibration_subset.pdf}
+  \caption{Arcsinh-stretched images of the synthetic galaxies present in the \textit{calibration subset}. These galaxies were designed to look as realistic as possible, while being described perfectly by the model available to volunteers.}
+  \label{fig:calibration-subset}
+\end{figure*}
 
 \subsection{The Galaxy Model}
 \label{section:galaxy-model}
@@ -178,7 +179,7 @@ Deprojected points within each drawn poly-line are converted to polar coordinate
 \end{figure*}
 
 
-For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \citep{2014arXiv1401.0287Z} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). Any logarithmic spirals within a distance of 0.0005 (given by the clustering metric) were deemed to be from the same arm and thus their classifications were merged and a log-spiral recalculated.
+For each arm cluster in each galaxy, a logarithmic spiral model was fitted using Bayesian Ridge Regression, performed using the Scikit-learn python package. A logarithmic spiral was chosen due to its simple form with constant pitch angle. Hyperpriors on the noise parameter were chosen by fitting a truncated gamma distribution \citep{2014arXiv1401.0287Z} to the spiral width slider values returned by volunteers (ignoring sliders left at the default or moved to the extremes of allowed values). Any logarithmic spirals within a distance of 0.0005 (given by the clustering metric) were deemed to be from the same arm and thus their classifications were merged and a log-spiral recalculated.
 
 We do not assume that every arm in a galaxy has the same pitch angle. To obtain a single value for the pitch angle of a galaxy, we take the length-weighted average pitch angle of all arms detected in the galaxy (as used by \citealt{Davis2014:1402.1910v1}).
 
