@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex aas_submission"] 1589206365 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1589206367
+["bibtex aas_submission"] 1589206780 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1589206783
   "./aasjournal.bst" 1584461286 36116 01b9608da4a9bc38a80d63e9a4bc6ec7 ""
-  "aas_submission.aux" 1589206366 21889 9daa38c06d97c4b622e9e3b70fae56f3 ""
+  "aas_submission.aux" 1589206782 21889 9daa38c06d97c4b622e9e3b70fae56f3 ""
   "aas_submission.bcf" 0 -1 0 ""
   "bibliography.bib" 1588343691 76652 402887606a42d72cd994733991d9a32e ""
   (generated)
   "aas_submission.bbl"
-["pdflatex"] 1589206365 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1589206367
+["pdflatex"] 1589206781 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1589206783
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc" 1266978417 12642 9742585e52c5b37e57ae9249e0b2585b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -248,10 +248,10 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "Orcid-ID.png" 1584461374 27604 8527c7c3c14d5c207af947385c09fd77 ""
-  "aas_submission.aux" 1589206366 21889 9daa38c06d97c4b622e9e3b70fae56f3 ""
-  "aas_submission.bbl" 1589206365 18884 f0f7afa5308f82dc47982ce4dfcabaab "bibtex aas_submission"
-  "aas_submission.out" 1589206366 2238 2f32d8fddd77606619950e8f3a91dcff ""
-  "aas_submission.tex" 1589206205 14182 9cdf5f716bede3915ac6f70577da5e3c ""
+  "aas_submission.aux" 1589206782 21889 9daa38c06d97c4b622e9e3b70fae56f3 ""
+  "aas_submission.bbl" 1589206780 18884 f0f7afa5308f82dc47982ce4dfcabaab "bibtex aas_submission"
+  "aas_submission.out" 1589206782 2238 2f32d8fddd77606619950e8f3a91dcff ""
+  "aas_submission.tex" 1589206463 14203 5d955144d0af88671e80f6d26b1bf6be ""
   "aastex63.cls" 1584461251 223148 8fa171df877c422ff65173b8b1a5921a ""
   "abstract.tex" 1589206015 1169 1009ecb510ddcecdde86e6ee53511024 ""
   "acknowledgements.tex" 1589206015 1662 5e39e897660ae39568335e294b0bd9e1 ""
@@ -278,7 +278,7 @@
   "stellar_mass_selection_plot.pdf" 1589205842 119985 11c66fe4c1ee464c3ece7e38318b6993 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
+  "aas_submission.pdf"
   "aas_submission.out"
   "aas_submission.log"
   "aas_submission.aux"
-  "aas_submission.pdf"

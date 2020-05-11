@@ -305,6 +305,9 @@ INPUT ./Orcid-ID.png
 INPUT Orcid-ID.png
 INPUT Orcid-ID.png
 INPUT ./Orcid-ID.png
+INPUT Orcid-ID.png
+INPUT Orcid-ID.png
+INPUT ./Orcid-ID.png
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti8.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aeti10.tfm
 INPUT introduction.tex
