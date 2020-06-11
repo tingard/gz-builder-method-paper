@@ -1,5 +1,5 @@
 
-\documentclass{aastex63}
+\documentclass[trackchanges]{aastex63}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are 5 other style options available via an optional argument. They
@@ -258,7 +258,7 @@ Dennis Sciama Building, Burnaby Road, Portsmouth, PO1 3FX, UK}
 
 %% Mark off the abstract in the ``abstract'' environment.
 \begin{abstract}
-  Multi-component modelling of galaxies is a valuable tool in the effort to quantitatively understand galaxy evolution, yet the use of the technique is plagued by issues of convergence, model selection and parameter degeneracies. These issues limit its application over large samples to the simplest models, with complex models being applied only to very small samples. We attempt to resolve this dilemma of ``quantity or quality'' by developing a novel framework, built inside the Zooniverse citizen science platform, to enable the crowdsourcing of model creation for SDSS galaxies. We have applied the method, including a final algorithmic optimisation step, on a test sample of 198 galaxies, and examine the robustness of this new method. We also compare it to automated fitting pipelines, demonstrating that it is possible to consistently recover accurate models which either show good agreement with, or improve on, prior work. We conclude that citizen science is a promising technique for modelling images of complex galaxies, and release our catalogue of models.
+  Multi-component modelling of galaxies is a valuable tool in the effort to quantitatively understand galaxy evolution, yet the use of the technique is plagued by issues of convergence, model selection and parameter degeneracies. These issues limit its application over large samples to the simplest models, with complex models being applied only to very small samples. We attempt to resolve this dilemma of ``quantity or quality'' by developing a novel framework, built inside the Zooniverse citizen science platform, to enable the crowdsourcing of model creation for \replaced{SDSS}{Sloan Digitial Sky Survey} galaxies. We have applied the method, including a final algorithmic optimisation step, on a test sample of 198 galaxies, and examine the robustness of this new method. We also compare it to automated fitting pipelines, demonstrating that it is possible to consistently recover accurate models that either show good agreement with, or improve on, prior work. We conclude that citizen science is a promising technique for modelling images of complex galaxies, and release our catalogue of models.
 \end{abstract}
 %% Keywords should appear after the \end{abstract} command.
 %% See the online documentation for the full list of available subject
@@ -289,7 +289,7 @@ Disc galaxies are complex objects, containing many different components, includi
 
 These fully quantitative methods allow researchers to obtain structural parameters of galaxy sub-components, which has been used in a variety of astrophysical and cosmological research. For example, the stellar mass found in discs and bulges places strong constraints on the galaxy merger tree from $\Lambda$CDM $N$-body simulations (\citealt{2009MNRAS.396.1972P}, \citealt{Hopkins2010:1004.2708v3}, \citealt{2018MNRAS.475.5133R}); the strength of a galaxy's classical bulge is thought to be tied to the strength of merger events in its past (\citealt{2005ApJ...622L...9S}, \citealt{Kormendy2010:1009.3015v1}); different spiral arm formation theories vary in their predictions of spiral morphology (\citealt{Dobbs2014:1407.5062v1}, \citealt{Pour-Imani2016:1608.00969v1}, \citealt{2017MNRAS.472.2263H}).
 
-The usefulness of obtaining parametric models of a galaxy has motivated the creation of many image modelling and fitting suites, including \textsc{Gim2d} \citep{gim2d-paper}, \textsc{Galfit} \citep{galfit-paper}, \textsc{MegaMorph} \citep{megamorph-paper} and \textsc{Profit} \citep{profit-paper} to name a few. Using these tools, researchers have built large catalogues of model fits to galaxies. One of the largest photometric model catalogs is that of \citet{2011ApJS..196...11S}, who performed automated 2D, two-component (bulge + disc) decomposition of 1,123,718 galaxies from the Legacy imaging of the Sloan Digital Sky Survey (hereafter SDSS) Data Release 7 \citep{SDSSDR7}.
+The usefulness of obtaining parametric models of a galaxy has motivated the creation of many image modelling and fitting suites, including \textsc{Gim2d} \citep{gim2d-paper}, \textsc{Galfit} \citep{galfit-paper}, \textsc{MegaMorph} \citep{megamorph-paper} and \textsc{Profit} \citep{profit-paper} to name a few. Using these tools, researchers have built large catalogues of model fits to galaxies. One of the largest photometric model catalogues is that of \citet{2011ApJS..196...11S}, who performed automated 2D, two-component (bulge + disc) decomposition of 1,123,718 galaxies from the Legacy imaging of the Sloan Digital Sky Survey (hereafter SDSS) Data Release 7 \citep{SDSSDR7}.
 
 Many other large catalogues of photometric fits exist (i.e. \citealt{2012MNRAS.421.2277L}, \citealt{2012MNRAS.421.1007K}, \citealt{2012ApJS..203...24V}), but despite the usefulness of photometric fitting, and the presence of analytic profiles and methods for modelling more complex galaxy sub-components, relatively few studies have attempted to perform large-scale (1000s of galaxies) parametric decomposition of galaxies using more complicated models than that of \citet{2011ApJS..196...11S} (two axisymmetric S\'ersic components representing a bulge and disc). Not properly taking into account these ``secondary'' morphological features (such as a bar, ring and spiral arms) can impact detailed measurements of a galaxy's bulge \citep{Gao2017:1709.00746v1}. Proper decomposition of secondary morphological features allows investigation into mechanisms behind the secular evolution of galaxies (\citealt{2015MNRAS.453.3729H}, \citealt{2018MNRAS.473.4731K}, \citealt{2018ApJ...862..100G}) and exploration of environmental effects on morphology, such as offset bars \citep{2017MNRAS.469.3363K}.
 
@@ -297,9 +297,9 @@ A prominent issue when performing these detailed decompositions is the tendency 
 
 Compounding this, uncertainties reported by many software fitting packages (i.e. \textsc{Galfit} and \textsc{MegaMorph} from the above list) are often lower estimates on the real uncertainty, due to secondary sources not being modelled, flat-fielding errors and incorrect models (including the possibly incorrect assumption of Poisson noise) \citep{2010AJ....139.2097P}. Other packages such as \textsc{Gim2d} and \textsc{Profit} attempt to fully model posterior distributions and so produce more representative uncertainties, however this comes with a larger computational cost and configuration complexity. Formal uncertainties are measures of the likelihood space and therefore underestimates of the true error as an analytic model will rarely capture the nuanced light profile of a galaxy.
 
-Another problem which needs to be addressed is whether a component should be present in the model at all. An automated fit will generally attempt to add as many components as possible to produce the closest-matching model. Many studies therefore need to select the most appropriate model by visual inspection of the resulting residuals or recovered parameters. For example, both \citet{Vika2014:1408.4070v1} and \citet{2018MNRAS.473.4731K} inspected the resulting model and residual images for all of their parametric fits (163 and 5,282 respectively) to ensure physical results with the correct components present. The end result of most of these problems is that researchers will have to invest time to individually check many of their fits to ensure they have converged on a physical model. In the era of large sky surveys such as the SDSS, the time required to do this becomes unsustainable and introduces concerns over human error if done by only a single, or small number of individuals.
+Another problem that needs to be addressed is whether a component should be present in the model at all. An automated fit will generally attempt to add as many components as possible to produce the closest-matching model. Many studies therefore need to select the most appropriate model by visual inspection of the resulting residuals or recovered parameters. For example, both \citet{Vika2014:1408.4070v1} and \citet{2018MNRAS.473.4731K} inspected the resulting model and residual images for all of their parametric fits (163 and 5,282 respectively) to ensure physical results with the correct components present. The end result of most of these problems is that researchers will have to invest time to individually check many of their fits to ensure they have converged on a physical model. In the era of large sky surveys such as the SDSS, the time required to do this becomes unsustainable and introduces concerns over human error if done by only a single, or small number of individuals.
 
-A demonstrably successful solution to the similar problem of galaxy classification in the era of large surveys, was to find a new source of person-power: \cite{Lintott2008:0804.4483v1} invited large numbers of people to classify SDSS-images of galaxies over the internet in the Galaxy Zoo project. The resulting classifications (a mean of 38 per galaxy) were then weighted and averaged to create a morphological catalogue of 893,212 galaxies. This hugely successful project, including its subsequent iterations and expansions (i.e. \citealt{Willett2013:1308.3496v2}, \citealt{Hart2016:1607.01019v1}, \citealt{2017MNRAS.464.4176W}, \citealt{2017MNRAS.464.4420S}), has produced a large catalogue of detailed morphological classifications which are in good agreement with other studies, and have been used in a wide variety of studies of the local galaxy population (see \citealt{2019arXiv191008177M} for a recent review).
+A demonstrably successful solution to the similar problem of galaxy classification in the era of large surveys, was to find a new source of person-power: \cite{Lintott2008:0804.4483v1} invited large numbers of people to classify SDSS-images of galaxies over the internet in the Galaxy Zoo project. The resulting classifications (a mean of 38 per galaxy) were then weighted and averaged to create a morphological catalogue of 893,212 galaxies. This hugely successful project, including its subsequent iterations and expansions (i.e. \citealt{Willett2013:1308.3496v2}, \citealt{Hart2016:1607.01019v1}, \citealt{2017MNRAS.464.4176W}, \citealt{2017MNRAS.464.4420S}), has produced a large catalogue of detailed morphological classifications that are in good agreement with other studies, and have been used in a wide variety of studies of the local galaxy population (see \citealt{2019arXiv191008177M} for a recent review).
 
 In this paper we explore an analogous solution to that \citet{Lintott2008:0804.4483v1} brought to galaxy classification for the issues faced by galaxy parametric modelling, inside the ecosystem that Galaxy Zoo set in motion (namely {\it The Zooniverse}\footnote{\url{https://www.zooniverse.org}}). We leverage citizen scientists to pick model components and perform model optimization in an online, web-browser environment\footnote{\url{https://www.zooniverse.org/projects/tingard/galaxy-builder}}. We describe our method in Section \ref{sec:method}, including details of the images and ancillary data from SDSS as well as the strategy used to obtain scientifically useful models from volunteer classifications. We provide consistency checks within our infrastructure and to other methods in Section \ref{sec:results} and discuss the efficacy and potential impact of our new method relative to existing methodologies in Section \ref{sec:conclusions}.
 
@@ -308,6 +308,13 @@ Where necessary, we make use of $H_0 = 70\ \text{km}\ \text{s}^{-1}\ \text{Mpc}^
 
 \section{Method}
 \label{sec:method}
+\added{This Section describes the \textit{Galaxy Builder} project, and the sample of galaxies and syntetic images used in this paper to examine the project's output. The entire process is summarised in flowchart form in Figure \ref{fig:gzb-flowchart}, with appropriate sections referenced therein.}
+
+\begin{figure*}
+  \plotone{galaxy-builder-workflow.pdf}
+  \caption{\added{Flowchart detailing the entire \textit{Galaxy Builder} process, from image creation, through classification collection using the Zooniverse, to model aggregation and fitting. Processes, manual input, data inputs and exports, and document exports are displayed distinctly. Colours distinguish between component-specific processes (disc in blue, bulge in orange, bar in green and spiral in red). Black nodes relate to the galaxy as a whole.}}
+  \label{fig:gzb-flowchart}
+\end{figure*}
 
 \subsection{The \textit{Galaxy Builder} Zooniverse project}
 
@@ -333,7 +340,7 @@ The \textit{Galaxy Builder} project prompts volunteers to work through the step-
 \end{figure}
 
 
-The workflow is designed so that volunteers slowly subtract increasing amounts of light from the galaxy, as is illustrated in Figure \ref{fig:residualsStepByStep}. A tutorial is available which contains a step-by-step guide to completing a classification. At each step volunteers are asked to first draw a simple isophote, and then make use of a series of sliders to adjust the parameters of the model component (see Section \ref{section:galaxy-model} for more information).
+The workflow is designed so that volunteers slowly subtract increasing amounts of light from the galaxy, as is illustrated in Figure \ref{fig:residualsStepByStep}. A tutorial is available that contains a step-by-step guide to completing a classification. At each step volunteers are asked to first draw a simple isophote, and then make use of a series of sliders to adjust the parameters of the model component (see Section \ref{section:galaxy-model} for more information).
 
 Volunteers are also guided by a ``score'', which is tied to the residuals and chosen to increase from zero to some arbitrary value depending on the galaxy; a less noisy and more easily modelled galaxy will have a higher maximum score. To map a residual image to a final score shown to volunteers we used
 
@@ -356,7 +363,7 @@ This score has the advantage of being easy (and fast) to generate from the resid
 \subsection{Sample Selection: Images and Ancillary Data}
 \label{sec:data}
 
-As a proposed solution to the problem of fitting multi-component and complex galaxies, \textit{Galaxy Builder} finds a niche with a sample of disc galaxies with spiral features. One such sample is the \textit{stellar mass-complete sample} in \citet{2017MNRAS.472.2263H}, which is a sample of face-on spiral galaxies with and without bars and selected to be complete across stellar masses $9.45 < \log(M_\star / M_\odot) < 11.05$. The test sample we use for the Galaxy Builder project was therefore selected from the \citet{2017MNRAS.472.2263H} sample of face-on spiral galaxies.
+As a proposed solution to the problem of fitting multi-component and complex galaxies, \textit{Galaxy Builder} finds a niche with a sample of disc galaxies with spiral features. One such sample is the \textit{stellar mass-complete sample} in \citet{2017MNRAS.472.2263H}, which is a sample of \added{relatively} face-on spiral galaxies ($b/a > 0.4$) with and without bars and selected to be complete across stellar masses $9.45 < \log(M_\star / M_\odot) < 11.05$. The test sample we use for the Galaxy Builder project was therefore selected from the \citet{2017MNRAS.472.2263H} sample of \added{relatively} face-on spiral galaxies.
 
 The morphological information required to select spiral galaxies came from the public data release of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2). Each response to a GZ2 morphology question is allocated a $p$ value ranging from 0 to 1, where 0 indicates no volunteers responded positively to that question and 1 indicates all volunteers who classified that galaxy responded positively (i.e. $p_\text{bar} = 0.5$ would indicate $50\%$ of volunteers said a bar was present in a galaxy). Photometric measurements used for selection came from the NASA-Sloan Atlas (\citealt{2011AJ....142...31B}, hereafter NSA). The \textit{stellar mass complete sample} is constructed using the set of criteria detailed in Table \ref{table:sample_selection}.
 
@@ -371,7 +378,7 @@ The morphological information required to select spiral galaxies came from the p
   \startdata
     Face-on spiral morphological selection. & GZ2 $p_\text{features} \times p_\text{not edge on} \times p_\text{spiral} \ge 0.5$ \\
     Redshift limits. & $0.02 < z < 0.055$ \\
-    Face-on galaxy selection using $g$-band axial ratio. & $(b/a)_g > 0.4$ \\
+    \replaced{Face-on}{Relatively face-on} galaxy selection using $g$-band axial ratio. & $(b/a)_g > 0.4$ \\
     Mass limits for rough volume limited sample. & $9.45 < \log(M_* / M_\odot) \le 11.05$ \\
     Mass limits for complete sample\tablenotemark{a} & $2.07\log(z) + 12.64 < \log({M_* / M_\odot}) < 2.45\log(z) + 14.05$ \\
   \enddata
@@ -383,7 +390,7 @@ The \textit{stellar mass-complete sample} was split into smaller sub-samples, ea
 
 \begin{figure*}
   \plotone{stellar_mass_selection_plot.pdf}
-  \caption{Redshift against total galaxy stellar mass for all galaxies in the \textit{stellar mass-complete sample}, with the 198 galaxies considered in this paper highlighted in red. The distribution of stellar masses is shown in the right panel for the total sample and for the galaxies considered here. It is evident that the galaxies for which we collected classifications are not complete in stellar mass, but it is possible to select a further subset which would be.}
+  \caption{Redshift against total galaxy stellar mass for all galaxies in the \textit{stellar mass-complete sample}, with the 198 galaxies considered in this paper highlighted in red. The distribution of stellar masses is shown in the right panel for the total sample and for the galaxies considered here. It is evident that the galaxies for which we collected classifications are not complete in stellar mass, but it is possible to select a further subset that would be.}
   \label{fig:mass_redshift}
 \end{figure*}
 
@@ -456,23 +463,58 @@ In this Section, we will use the galaxy UGC 4721, a two-armed barred spiral gala
 \subsubsection{Aggregation of Volunteer Models}
 \label{sec:aggregation_of_volunteer_models}
 
-Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. We did not take into account any slider values, only the shape drawn by the volunteers. Disk classifications were doubled in effective radius to correct for a systematic error in disk size observed in the classifications received for the \textit{calibration subset}. Models parameters were clipped to be within the limits shown in Table \ref{table:bad_values} (deemed to be the physically acceptable bounds). All components were transformed from the coordinate space of the \textsc{Montage}-created images to the more accurate stacked images created for fitting. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two sets:
+Aggregate model calculation was done on a component-by-component basis, rather than per classification, i.e. clustering of discs was performed independently to that of bulges, bars and spirals. We did not take into account any slider values, only the shape drawn by the volunteers. Disk classifications were doubled in effective radius to correct for a systematic error in disk size observed in the classifications received for the \textit{calibration subset}. Model parameters were restricted to be within the limits shown in Table \ref{table:bad_values} (deemed to be the physically acceptable bounds). All components were transformed from the coordinate space of the \textsc{Montage}-created images to the more accurate stacked images created for fitting. Clustering was performed using the Jaccard distance measure (also known as the intersect-over-union distance, or IOU distance), which is a simple metric determining the relative shared area of two sets:
 
 \begin{equation}
 d_J(A, B) = 1 - \frac{|A \cap B|}{|A \cup B|}.
 \end{equation}
 
-The algorithm chosen to perform clustering was the density-based spatial clustering of applications with noise (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. In DBSCAN the core of a cluster is defined as a group of at least \texttt{min\_points} that are all within a distance \texttt{eps} of each other. Additionally, any points within a distance \texttt{eps} of a cluster's core are also associated with the cluster.
+The algorithm chosen to perform clustering was the \replaced{density-based spatial clustering of applications with noise}{Density-Based Spatial Clustering of Applications with Noise} (DBSCAN, \citealt{dbscan}) algorithm, due to its robustness and speed. We made use of Scikit-learn \citep{scikit-learn} to implement the algorithm. In DBSCAN the core of a cluster is defined as a group of at least \replaced{\texttt{min\_points}}{$N_\mathrm{min}$} items that are all within a distance \replaced{\texttt{eps}}{$\epsilon$} of each other. Additionally, any points within a distance \replaced{\texttt{eps}}{$\epsilon$} of a cluster's core are also associated with the cluster.
+
+\begin{deluxetable*}{rlcc}
+  \tablenum{2}
+  \tablecaption{\added{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.\label{table:bad_values}}}
+  \tablewidth{0pt}
+  \tablehead{
+    \colhead{Component} & \colhead{Parameter} & \colhead{Tuning Minimum Bound} & \colhead{Tuning Maximum Bound}
+  }
+  \startdata
+    disc      & $\mu_x$    & -inf           & inf            \\
+              & $\mu_y$    & -inf           & inf            \\
+              & roll       & -inf           & inf            \\
+              & $q$        & 0.25           & 1.2            \\
+              & $R_e$      & 0              & inf            \\
+              & $\Sigma_e$ & 0              & inf            \\
+    bulge     & $\mu_x$    & -inf           & inf            \\
+              & $\mu_y$    & -inf           & inf            \\
+              & roll       & -inf           & inf            \\
+              & $q$        & 0.6            & 1.2            \\
+              & $R_e / R_\mathrm{disc}$ & 0.01 & 1           \\
+              & $(B/T)_r)$ & 0              & 0.99           \\
+              & $n$        & 0.5            & 5              \\
+    bar       & $\mu_x$    & -inf           & inf            \\
+              & $\mu_y$    & -inf           & inf            \\
+              & roll       & -inf           & inf            \\
+              & $q$        & 0.05           & 0.5            \\
+              & $R_e / R_\mathrm{disc}$ & 0.05 & 1           \\
+              & $(B/T)_r)$ & 0              & 0.99           \\
+              & $n$        & 0.3            & 5              \\
+              & $c$        & 1              & 6              \\
+    spiral    & $\Sigma_e$ & 0              & inf            \\
+              & spread     & 0              & inf            \\
+              & $\phi$     & -85            & 85             \\
+  \enddata
+\end{deluxetable*}
 
 \subsubsection{Disc, Bulge and Bar Clustering}
 
-We select the disc clustering hyperparameters such that a disc is clustered for all galaxies, and the bulge hyperparameters to most successfully recover the morphology of galaxies in the \textit{calibration subset}. The value of \texttt{eps} used to cluster bars was tuned such that the aggregate model best agreed with GZ2 $p_\mathrm{bar}$ ($p_\mathrm{bar} < 0.2$ implying no bar and $p_\mathrm{bar} > 0.5$ implying a definite bar). The values chosen for \texttt{eps} were 0.3, 0.4, 0.478 for the disc, bulge and bar; \texttt{min\_points} was set to 4 for all three of these components.
+We select the disc clustering hyperparameters such that a disc is clustered for all galaxies, and the bulge hyperparameters to most successfully recover the morphology of galaxies in the \textit{calibration subset}. The value of \texttt{eps} used to cluster bars was tuned such that the aggregate model best agreed with GZ2 $p_\mathrm{bar}$ ($p_\mathrm{bar} < 0.2$ implying no bar and $p_\mathrm{bar} > 0.5$ implying a definite bar). The values chosen for \replaced{\texttt{eps}}{$\epsilon$} were 0.3, 0.4, 0.478 for the disc, bulge and bar; \replaced{\texttt{min\_points}}{$N_\mathrm{min}$} was set to 4 for all three of these components.
 
-We define the aggregate component to be the shape which minimises the sum of Jaccard distances to each of the members of the cluster. For our example galaxy, UGC 4721, clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes}.
+We define the aggregate component to be the shape that minimises the sum of Jaccard distances to each of the members of the cluster. For our example galaxy, UGC 4721, clustered and aggregate components can be seen in Figure \ref{fig:mean_shapes}.
 
 \subsubsection{Spiral Arm Clustering}
 \label{sec:spiral_clustering}
-To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. We make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications). Values of 0.001 and 4 were used for the \texttt{eps} and \texttt{min\_samples} hyper-parameters respectively.
+To cluster drawn spiral arms, we define a custom separation measure to represent how far away one poly-line is from another. This measure was chosen to be the mean of the squared distances from each vertex in a poly-line to the nearest point (vertex or edge) of another poly-line, added to the mean of the squared distances from the second poly-line to the first. We make use of this separation measure inside the DBSCAN algorithm to cluster these drawn lines, after removing any self-intersecting drawn arms (as this was deemed an easy method to filter out ``bad'' classifications). Values of 0.001 and 4 were used for the \replaced{\texttt{eps}}{$\epsilon$} and \texttt{min\_samples} hyper-parameters respectively.
 
 Once spiral classifications on a galaxy have been clustered into the physical arms they represent, the points are deprojected using the axis ratio and position angle of the aggregated disc. The deprojection method assumes a thin disc and stretches the ellipsoidal minor axis to match the major axis.
 
@@ -499,7 +541,6 @@ As all components in a cluster can be viewed as volunteers' attempts at modellin
 
 \subsection{Model Fitting}
 
-
 The final step in creating \textit{Galaxy Builder} models is a numerical fit to fine-tune parameters. This fitting was performed using the L-BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. We minimize a custom likelihood function that assumes gaussian error on pixel values and incorporates the priors on parameters we obtain from clustering. The full fitting model and likelihood is detailed in Appendix \ref{sec:appendix_model_fitting}. We use the same model as used by volunteers in the online interface (with altered limits), with spiral arms restricted to being logarithmic spirals relative to the disc, and without the ability to change the relative falloff of spiral arms.
 
 The model rendering and fitting code was written up using Google's JAX package \citep{jax2018github}, which allows GPU-optimization and automatic gradient calculation, enabling quick and accurate calculation of the jacobian matrix needed for the L-BFGS-b minimization algorithm.
@@ -516,16 +557,18 @@ We use the errors described in Section \ref{sec:error_estimation} as parameter u
 
 We remove two models for which a fit did not converge.
 
+
 \section{Results}
 \label{sec:results}
 
 In this Section we present \textit{Galaxy Builder} models for 198 galaxies, both from simple aggregation of user classifications (aggregate models), and with parameters fine tuned by a numerical fit (fitted models). We explore the consistency with which volunteers modelled galaxies, the accuracy of the aggregate models, and compare the aggregate and fitted models to comparable results in the literature.
 
 \subsection{The Calibration Set}
+\label{sec:calibration-set-results}
 
 The calibration subset was a set of nine synthetic galaxy images created from \textit{Galaxy Builder} models, which were then re-run through the \textit{Galaxy Builder} process. These galaxies were used to fine-tune clustering and fitting hyperparameters (See Section \ref{sec:aggregation_of_volunteer_models}), as the ground truth was known. Our ability to recover morphology accurately is essential validation for our ability to recover good photometric models of galaxies.
 
-Overall, these results highlight the importance of good priors to obtain accurate fits of complex photometric models. In more detail, the models recovered for the nine synthetic galaxy images demonstrate that:
+\added{The scatter between true and measured parameters is shown in Figure \ref{fig:calibration_parameter_recovery};} these results highlight the importance of good priors to obtain accurate fits of complex photometric models. In more detail, the models recovered for the nine synthetic galaxy images demonstrate that:
 
 \begin{enumerate}
   \item Model parameters were generally recovered to a high degree of accuracy
@@ -600,7 +643,7 @@ It is not uncommon in \textit{Galaxy Builder} for one spiral arm to have been br
 
 \subsubsection{Comparison to One-component fit - axis ratio}
 
-We compare the axis ratios of the discs of \textit{Galaxy Builder} aggregate models (without fitting) to the axis ratio of a 2D S\'ersic fit to the $r$-band SDSS image of each galaxy (as provided in the NSA catalog, \citealt{2011AJ....142...31B}). For these untuned models there is an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}).
+We compare the axis ratios of the discs of \textit{Galaxy Builder} aggregate models (without fitting) to the axis ratio of a 2D S\'ersic fit to the $r$-band SDSS image of each galaxy (as provided in the NSA catalog, \citealt{2011AJ....142...31B}). \added{The resulting scatter is shown in Figure \ref{fig:ax_ratio_comparison};} for these untuned models there is an error of $\sim0.1$, consistent with our expected errors (derived in Section \ref{sec:error_estimation}).
 
 We observe a clustering of outlying values around $b/a=0.5$. This is almost certainly due to the drawing tool ellipse having a default axis ratio of 0.5. Where this default is a ``good enough'' fit we hypothesise that volunteers are less likely to modify it, while if it needs to move a long way they find a more refined value. Overall we see that 36\% of all disc components drawn by volunteers were left at the default axis ratio. We recommend that future projects should carefully consider their interface design to minimize this bias (e.g. forcing volunteers to draw both the major and minor axis), however the fitting process we implement on the aggregate models successfully removes the bias, and the overall scatter does not change significantly.
 
@@ -617,7 +660,7 @@ As we account for light in spiral arms and bars, we expect that disc axis ratios
 
 A strong motivation for performing multi-component modelling is the desire to measure the fraction of a galaxy's light being emitted by its central components (such as bulge fraction, defined as the ratio of bulge luminosity to total luminosity). \citet{Gao2017:1709.00746v1} demonstrate that modelling secondary central components is essential for recovering an accurate measure of bulge fraction. The difficulty of measuring bulge fraction is further compounded by the complex degeneracies present in even two-component fits, meaning that many gradient-descent based solvers often fail to find the globally optimum solution \citep{profit-paper}, especially when bulge S\'ersic index is a free parameter.
 
-One of the largest catalogs of 2D multi-component fits is \citet{2011ApJS..196...11S}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an Exponential disc and de-Vaucouleurs bulge model (hereafter exp+deV), and an Exponential disc and a S\'ersic bulge model (exp+S). Fitting was performed using the Metropolis algorithm, which is resilient to local minima and therefore suitable for the complex likelihood space of galaxy photometric modelling. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disc and exponential bulge (exp+exp), and an exponential disc and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
+One of the largest catalogues of 2D multi-component fits is \citet{2011ApJS..196...11S}, which performed simultaneous, two-bandpass decompositions of 1,123,718 galaxies in the Legacy area of the SDSS DR7 using \textsc{Gim2D}. Three variations of models were fitted: a pure S\'ersic model, an Exponential disc and de-Vaucouleurs bulge model (hereafter exp+deV), and an Exponential disc and a S\'ersic bulge model (exp+S). Fitting was performed using the Metropolis algorithm, which is resilient to local minima and therefore suitable for the complex likelihood space of galaxy photometric modelling. \citet{2012MNRAS.421.2277L} similarly fitted two models to SDSS main-sample galaxies: an exponential disc and exponential bulge (exp+exp), and an exponential disc and de Vaucouleurs bulge. They used a Levenberg-Marquadt gradient descent algorithm, with initial parameters taken from previous SDSS analysis.
 
 We compare our central component fraction (the flux of the bulge and bar relative to the total model flux) to bulge fraction from \citet{2011ApJS..196...11S} where their analysis indicated genuine bulge+disc systems ($P_{pS} \le 0.32$). We compare to \citet{2012MNRAS.421.2277L} bulge fractions only when their model selection criteria determined that model was the best-fit model. We see a strong correlation with significant scatter (Figure \ref{fig:bulge_fractions}). The relationship to exp+deV models appears to be less than 1:1, while the relationship to exp+exp models is greater than 1:1, highlighting the dependence of bulge fraction on S\'ersic index. Taking \textit{Galaxy Builder} results as ground truth implies that exp+deV puts too much light into the bulge, while exp+exp puts too little.
 
@@ -627,6 +670,14 @@ The amount of scatter (and lack of consistent 1:1 relationships) between bulge f
   \plotone{bulge_fraction_scatter_reduced.pdf}
   \caption{Scatter plots comparing the ratio of flux from central components (bulge and bar) to the total flux between fitted models from \textit{Galaxy Builder} and two-component models in the literature. Our models are broadly consistent with their results, but should be more accurate for complex galaxies, as we account for galaxy bars.}
   \label{fig:bulge_fractions}
+\end{figure*}
+
+\added{Another comprehensive catalogue of 2D two-component fits is that of \citet{2015MNRAS.446.3943M}, who fit identical models to \citet{2011ApJS..196...11S} on $\sim 7 \times 10^5$ galaxies imaged by SDSS, using \textsc{Galfit} and \textsc{PyMorph} \citep{2010MNRAS.409.1379V}. They made use of a set of logical filters to distinguish between model fits, allowing them to identify cases where the model did not converge to a physically meaningful result. There is an overlap of 86 galaxy builder galaxy models with their ``intermediate catalogue'', and we see some scatter between measured paramers (see Figure \ref{fig:meert-comparison}). The modelling of spiral arms does not appear to impact measured disk parameters, with disk size and ellipticity showing strong agreement between the catalogues. We see significant scatter in bulge S\'ersic index, especially when a bar is present. Total luminosity is not strongly affected by the addition of detail to the model.}
+
+\begin{figure*}
+  \plotone{meert-2015-comparison.pdf}
+  \caption{\added{Scatter plots comparing measured model parameters between \citeauthor{2015MNRAS.446.3943M} (\citeyear{2015MNRAS.446.3943M}, x-axis) and \textit{Galaxy Builder} (y-axis). We note that adding spirals to a model does not strongly impact disc parameters, but the presence of a bar has a significant impact on bulge S\'ersic index measurement.}}
+  \label{fig:meert-comparison}
 \end{figure*}
 
 
@@ -641,7 +692,7 @@ The amount of scatter (and lack of consistent 1:1 relationships) between bulge f
 \end{figure}
 
 \subsubsection{Comparison to Disc-Bulge-Bar-Spiral models}
-To the best of our knowledge, no photometric models exist for the \textit{Galaxy Builder} sample which contain spiral arm structure. The closest comparable result is that produced by \citet{Gao2017:1709.00746v1}, however the galaxies they used are not in the Sloan footprint.
+To the best of our knowledge, no photometric models exist for the \textit{Galaxy Builder} sample that contain spiral arm structure. The closest comparable result is that produced by \citet{Gao2017:1709.00746v1}, however the galaxies they used are not in the Sloan footprint.
 
 In order to provide a comparison for our novel method of spiral parameter (pitch angle and amplitude) extraction, we compare the result of our galaxy length-weighted pitch angles to the relationship obtained by \citet{Hart2016:1607.01019v1} between GZ2 classification and galaxy pitch angle. Their fit was obtained by using the Zooniverse project \textit{Spiral Spotter} to filter good vs bad spiral arm segments identified using an automated spiral arm detection and fitting tool, \textsc{SpArcFiRe} \citep{Davis2014:1402.1910v1}, whereas \textit{Galaxy Builder} asks volunteers to provide their own opinion on spiral arm number, location and tightness. \textit{Galaxy Builder} pitch angles are within the (large) uncertainties on the \citet{Hart2016:1607.01019v1} fit.
 
@@ -661,12 +712,20 @@ We have demonstrated our ability to obtain physically motivated models with comp
 
 We compare these new models to existing results in the literature. We find good agreement where the models or parameters are comparable, and suggest that where differences are found, \textit{Galaxy Builder} should generally provide superior models because of the more realistic modelling of the galaxy morphologies.
 
-We were able to obtain aggregate models for 296 images with an average rate of one galaxy per day, and fit photometric models for 294 images. User experience and task simplification will need to be considered if significantly larger numbers of these models are to be obtained. At the time of writing and to the best of our knowledge, the number of photometric models obtained here is still significantly larger than the largest sample obtained through purely computational photometric fitting of disc, bulge, bar and spiral arms in galaxies (10 galaxies, \citealt{Gao2017:1709.00746v1}, who also included rings, disc-breaks and further components).
+\deleted{We were able to obtain aggregate models for 296 images with an average rate of one galaxy per day, and fit photometric models for 294 images. User experience and task simplification will need to be considered if significantly larger numbers of these models are to be obtained.}
+
+\added{Upcoming survey missions such as LSST \citep{2019ApJ...873..111I} and Euclid (\citealt{2011arXiv1110.3193L}, \citealt{2012SPIE.8442E..0ZA}) present a rich source of astrophysical data. However, the approach detailed in this paper will not be sufficient to deal with the volume of galaxies these surveys will image (twenty billion and two billion respectively, though a large proportion of these will not benefit from detailed photometric modelling). Tools such as \textit{Galaxy Builder} may serve an important role in the generation of training catalogues for scalable machine learning techniques, in an analogous manner to that currently employed for visual morphological classification in Galaxy Zoo: Enhanced \citep{2020MNRAS.491.1554W}.}
+
+\added{We were able to obtain aggregate models for 296 images with an average rate of one galaxy per day, and fit photometric models for 294 images.} At the time of writing and to the best of our knowledge, the number of photometric models obtained here is still significantly larger than the largest sample obtained through purely computational photometric fitting of disc, bulge, bar and spiral arms in galaxies (10 galaxies, \citealt{Gao2017:1709.00746v1}, who also included rings, disc-breaks and further components).
+
+\added{The software used to generate image cutouts; perform clustering and aggregation of volunteer models, and fit photometric models is available under a GNU general public licence on GitHub\footnote{\url{http://github.com/tingard/gzbuilder_analysis}}. We hope that publishing this code with the paper promotes transparency and accountability in astrophysical software development. All models created as part of the \textit{Galaxy Builder} project will be available on the Galaxy Zoo website\footnote{\url{https://data.galaxyzoo.org}}.}
 
 Any citizen science project is only as good as the volunteers who generously donate their time to it. We were incredibly fortunate to be able to make use of the wonderful pool of volunteers built by the Zooniverse, who in some cases contributed hundreds of detailed galaxy classifications to this project. We are optimistic about the potential of projects like \textit{Galaxy Builder} to dramatically increase the ability of researchers to perform complex, labour-intensive modelling of galaxy photometry, leveraging the power of the crowd to perform the complex tasks best suited to humans, and computer algorithms for the final optimization.
 
 \section{Acknowledgements}
 \label{sec:acknowledgements}
+\added{We would like to thank our referee for their input; suggesting numerous ways to improve the clarity and content of this paper, and providing avenues of discussion that we had not previously covered. We would also like to thank Ross Hart for providing the target catalogue for the \textit{stellar mass-complete sample}.}
+
 This publication made use of SDSS-I/II data. Funding for the SDSS and SDSS-II was provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}.
 
 This publication uses data generated via the Zooniverse.org platform, development of which is funded by generous support, including a Global Impact Award from Google, and by a grant from the Alfred P. Sloan Foundation. We would also like to thank the 2,340 volunteers who have submitted classifications to the \textit{Galaxy Builder} project, especially user EliabethB, whose presence on the \textit{Galaxy Builder} forum on top of a large number of galaxies modelled has been a huge help.
@@ -701,7 +760,7 @@ r\,(\vec{P}) = \left|\begin{pmatrix}
 
 The disc is resticted to $n=1; c=2$, bulge to $n\in(0.5, 6); c=2$ and bar to $n\in(0.5, 6); c\in(0.5, 6)$.
 
-The S\'ersic components are actually rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel. I.e. for a pixel of size $(\delta_x, \delta_y)$
+The S\'ersic components are actually rendered at 5x the image resolution, and downsampled using the mean pixel brightness. This is a widely used method of approximating the true pixel value, which is an integration over the area of sky inside the pixel: for a pixel of size $(\delta_x, \delta_y)$,
 
 \begin{equation}
 I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_y/2}\int_{-\delta_x/2}^{\delta_x/2}\mathrm{d}x\mathrm{d}y\ I_\mathrm{sersic}\left(\vec{P} + \begin{pmatrix}
@@ -759,45 +818,6 @@ and is limited to be between 0 and 1. Disc luminosity is allowed to take any val
 
 Similarly, bulge and bar effective radius are reparametrized as their scale relative to the disc ($R_e = R_e / R_{e,\,\mathrm{disc}}$). Bulge and bar are also restricted to have the same position.
 
-
-\section{Ancillary Tables}
-\begin{deluxetable*}{rlcc}
-  \tablenum{2}
-  \tablecaption{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.\label{table:bad_values}}
-  \tablewidth{0pt}
-  \tablehead{
-    \colhead{Component} & \colhead{Parameter} & \colhead{Tuning Minimum Bound} & \colhead{Tuning Maximum Bound}
-  }
-  \startdata
-    disc      & $\mu_x$    & -inf           & inf            \\
-              & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
-              & $q$        & 0.25           & 1.2            \\
-              & $R_e$      & 0              & inf            \\
-              & $\Sigma_e$ & 0              & inf            \\
-    bulge     & $\mu_x$    & -inf           & inf            \\
-              & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
-              & $q$        & 0.6            & 1.2            \\
-              & $R_e / R_\mathrm{disc}$ & 0.01 & 1           \\
-              & $(B/T)_r)$ & 0              & 0.99           \\
-              & $n$        & 0.5            & 5              \\
-    bar       & $\mu_x$    & -inf           & inf            \\
-              & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
-              & $q$        & 0.05           & 0.5            \\
-              & $R_e / R_\mathrm{disc}$ & 0.05 & 1           \\
-              & $(B/T)_r)$ & 0              & 0.99           \\
-              & $n$        & 0.3            & 5              \\
-              & $c$        & 1              & 6              \\
-    spiral    & $\Sigma_e$ & 0              & inf            \\
-              & spread     & 0              & inf            \\
-              & $\phi$     & -85            & 85             \\
-  \enddata
-\end{deluxetable*}
-
-
-
 %% For this sample we use BibTeX plus aasjournals.bst to generate the
 %% the bibliography. The sample63.bib file was populated from ADS. To
 %% get the citations to show in the compiled file do the following:
@@ -817,7 +837,7 @@ Similarly, bulge and bar effective radius are reparametrized as their scale rela
 
 %% Include this line if you are using the \added, \replaced, \deleted
 %% commands to see a summary list of all changes at the end of the article.
-%\listofchanges
+\listofchanges
 
 \end{document}
 

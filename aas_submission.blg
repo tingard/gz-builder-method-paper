@@ -4,7 +4,7 @@ The top-level auxiliary file: aas_submission.aux
 The style file: aasjournal.bst
 Database file #1: bibliography.bib
 Warning--entry type for "jax2018github" isn't style-file defined
---line 589 of file bibliography.bib
+--line 607 of file bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in deVaucouleurs1991
 Warning--empty journal in Hart2016:1607.01019v1
@@ -12,45 +12,45 @@ Warning--empty journal in Holincheck2016:1604.00435v1
 Warning--empty journal in Mendez-Abreu2016:1610.05324v1
 Warning--empty journal in profit-paper
 Warning--empty journal in Willett2013:1308.3496v2
-You've used 62 entries,
+You've used 68 entries,
             3168 wiz_defined-function locations,
-            1142 strings with 30122 characters,
-and the built_in function-call counts, 34685 in all, are:
-= -- 2443
-> -- 3423
-< -- 13
-+ -- 1132
-- -- 1229
-* -- 3476
-:= -- 6560
-add.period$ -- 72
-call.type$ -- 62
-change.case$ -- 336
-chr.to.int$ -- 61
-cite$ -- 68
-duplicate$ -- 1067
-empty$ -- 1805
-format.name$ -- 1295
-if$ -- 6802
+            1191 strings with 43604 characters,
+and the built_in function-call counts, 45044 in all, are:
+= -- 2698
+> -- 5326
+< -- 14
++ -- 1764
+- -- 1872
+* -- 4881
+:= -- 8779
+add.period$ -- 79
+call.type$ -- 68
+change.case$ -- 365
+chr.to.int$ -- 67
+cite$ -- 74
+duplicate$ -- 1184
+empty$ -- 1994
+format.name$ -- 1943
+if$ -- 8565
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 57
-newline$ -- 204
-num.names$ -- 249
-pop$ -- 423
+missing$ -- 62
+newline$ -- 223
+num.names$ -- 273
+pop$ -- 461
 preamble$ -- 1
-purify$ -- 336
+purify$ -- 365
 quote$ -- 0
-skip$ -- 904
+skip$ -- 1015
 stack$ -- 0
-substring$ -- 1198
-swap$ -- 26
-text.length$ -- 1
+substring$ -- 1347
+swap$ -- 40
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 555
+type$ -- 609
 warning$ -- 6
-while$ -- 216
+while$ -- 236
 width$ -- 0
-write$ -- 663
+write$ -- 729
 (There were 7 warnings)
