@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex aas_submission"] 1591869229 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1591869231
+["bibtex aas_submission"] 1591959327 "aas_submission.aux" "aas_submission.bbl" "aas_submission" 1591959329
   "./aasjournal.bst" 1584461286 36116 01b9608da4a9bc38a80d63e9a4bc6ec7 ""
-  "aas_submission.aux" 1591869231 31198 3bcce85cb12287be9895be0e478afbba ""
+  "aas_submission.aux" 1591959329 31198 9b6743f3d01a22c08338664e0376ac32 ""
   "aas_submission.bcf" 0 -1 0 ""
   "bibliography.bib" 1591712546 95272 ceef7d23317bc7dae40af9c888f19aac ""
   (generated)
   "aas_submission.blg"
   "aas_submission.bbl"
-["pdflatex"] 1591869229 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1591869231
+["pdflatex"] 1591959327 "aas_submission.tex" "aas_submission.pdf" "aas_submission" 1591959329
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/ec.enc" 1266978417 12642 9742585e52c5b37e57ae9249e0b2585b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -260,10 +260,10 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1486052463 3873396 e46673161f712a56df5b0cf95926fdd1 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "Orcid-ID.png" 1584461374 27604 8527c7c3c14d5c207af947385c09fd77 ""
-  "aas_submission.aux" 1591869231 31198 3bcce85cb12287be9895be0e478afbba ""
-  "aas_submission.bbl" 1591869229 26783 899c61015375fe97161b5be548f29311 "bibtex aas_submission"
-  "aas_submission.out" 1591869231 2185 de45c1bba98c42db6c3ed5db8bd07e5e ""
-  "aas_submission.tex" 1591869216 85316 60dc09ef50b4ae0632dbfe77051cda4e ""
+  "aas_submission.aux" 1591959329 31198 9b6743f3d01a22c08338664e0376ac32 ""
+  "aas_submission.bbl" 1591959327 26783 899c61015375fe97161b5be548f29311 "bibtex aas_submission"
+  "aas_submission.out" 1591959329 2185 de45c1bba98c42db6c3ed5db8bd07e5e ""
+  "aas_submission.tex" 1591959324 85602 876cfb7702eeb59e7a5f3e2d203d7e5c ""
   "aastex63.cls" 1584461251 223148 8fa171df877c422ff65173b8b1a5921a ""
   "bulge_fraction_scatter_reduced.pdf" 1589205842 30111 3932cc74ace832b06318352fb9d2d6c2 ""
   "calibration_parameter_recovery.pdf" 1591712650 29363 e68fdecda7b46a9d49d465fb4567d876 ""
@@ -271,7 +271,7 @@
   "component_frequency.pdf" 1591711858 45288 262aa1da59aab8c7f4efeff2d64ba9ff ""
   "component_sizing.pdf" 1591711849 63734 06482161ee29c87c4f53e9599f4b8a7f ""
   "drawn_shapes.pdf" 1589205842 414175 264fbe48e7b76e1fb3e7573351b99dc8 ""
-  "galaxy-builder-workflow.pdf" 1591865435 43649 821796172b37003087220ee99218bd9c ""
+  "galaxy-builder-workflow.pdf" 1591876074 43746 a0b4e6b29112eb40831a82bb906ae85a ""
   "gzb-agg-nsa-comparison.pdf" 1589205842 36802 bf788c73b9102f2adf5157524916bb71 ""
   "interface_in_progress.jpg" 1589205842 247936 ccc50f0863c8475d653f99518b033b9f ""
   "mean_shapes.pdf" 1589205842 238129 ea3f05220305f8adafe60ee219be0954 ""
@@ -283,7 +283,7 @@
   "stellar_mass_selection_plot.pdf" 1589205842 119985 11c66fe4c1ee464c3ece7e38318b6993 ""
   "subfiles.sty" 1549018972 651 24cb2017a923f4735b1190eecb80faeb ""
   (generated)
-  "aas_submission.out"
-  "aas_submission.aux"
   "aas_submission.pdf"
+  "aas_submission.aux"
+  "aas_submission.out"
   "aas_submission.log"

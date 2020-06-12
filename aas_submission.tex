@@ -473,7 +473,7 @@ The algorithm chosen to perform clustering was the \replaced{density-based spati
 
 \begin{deluxetable*}{rlcc}
   \tablenum{2}
-  \tablecaption{\added{The maximum, minimum and default values for model parameters. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component roll and spiral pitch angle was similarly unconstrained.\label{table:bad_values}}}
+  \tablecaption{\added{The maximum, minimum and default values for model parameters. Model parameters are defined in Appendix \ref{sec:appendix_model_fitting}. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component position angle ($\psi$) and spiral pitch angle ($\phi$) were similarly unconstrained.\label{table:bad_values}}}
   \tablewidth{0pt}
   \tablehead{
     \colhead{Component} & \colhead{Parameter} & \colhead{Tuning Minimum Bound} & \colhead{Tuning Maximum Bound}
@@ -481,26 +481,26 @@ The algorithm chosen to perform clustering was the \replaced{density-based spati
   \startdata
     disc      & $\mu_x$    & -inf           & inf            \\
               & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
+              & $\psi$     & -inf           & inf            \\
               & $q$        & 0.25           & 1.2            \\
               & $R_e$      & 0              & inf            \\
-              & $\Sigma_e$ & 0              & inf            \\
+              & $I_e$      & 0              & inf            \\
     bulge     & $\mu_x$    & -inf           & inf            \\
               & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
+              & $\psi$     & -inf           & inf            \\
               & $q$        & 0.6            & 1.2            \\
-              & $R_e / R_\mathrm{disc}$ & 0.01 & 1           \\
+              & $R_e\ /\ R_{e,\,\mathrm{disc}}$ & 0.01 & 1   \\
               & $(B/T)_r)$ & 0              & 0.99           \\
               & $n$        & 0.5            & 5              \\
     bar       & $\mu_x$    & -inf           & inf            \\
               & $\mu_y$    & -inf           & inf            \\
-              & roll       & -inf           & inf            \\
+              & $\psi$     & -inf           & inf            \\
               & $q$        & 0.05           & 0.5            \\
-              & $R_e / R_\mathrm{disc}$ & 0.05 & 1           \\
+              & $R_e\ /\ R_{e,\,\mathrm{disc}}$ & 0.05 & 1   \\
               & $(B/T)_r)$ & 0              & 0.99           \\
               & $n$        & 0.3            & 5              \\
               & $c$        & 1              & 6              \\
-    spiral    & $\Sigma_e$ & 0              & inf            \\
+    spiral    & $I_s$ & 0              & inf            \\
               & spread     & 0              & inf            \\
               & $\phi$     & -85            & 85             \\
   \enddata
@@ -613,7 +613,7 @@ After having aggregated and fitted models for our galaxies, we examine how our m
 
 \subsubsection{Comparison to Galaxy Zoo morphology}
 
-The simplest comparison we can make to external results is to examine whether our models respect the existing morphological classifications present in the literature. We make use of Galaxy Zoo 2 (GZ2, \citealt{Willett2013:1308.3496v2}) results, including the redshift debiasing described in \citet{Hart2016:1607.01019v1} and spiral properties calculated in \citet{Hart2016:1607.01019v1}.
+The simplest comparison we can make to external results is to examine whether our models respect the existing morphological classifications present in the literature. We make use of Galaxy Zoo 2 (\citealt{Willett2013:1308.3496v2}, hereafter GZ2) results, including the redshift debiasing described in \citet{Hart2016:1607.01019v1} and spiral properties calculated in \citet{Hart2016:1607.01019v1}.
 
 When comparing the probability of a volunteer's classification containing a bar component against a galaxy being classed as strongly-barred or as having no bar (as defined in \citealt{Masters2010:1003.0449v2}), we see reasonable agreement. Classifications of GZ2 strongly-barred galaxies ($p_\text{bar} > 0.5$) are more likely to contain a bar than GZ2 unbarred galaxies ($0.47 \pm 0.15$ vs. $0.29 \pm 0.11$). While there is some overlap in these probabilities, the Pearson correlation between GZ2's $p_\text{bar}$ and the bar likelihood in \textit{Galaxy Builder} is $0.56$, implying a significant correlation. We also note that GZ2 bar classifications exclude most weak bars \citep{2017MNRAS.469.3363K}.
 
@@ -771,11 +771,11 @@ I_\mathrm{pix}(\vec{P}) = \frac{1}{\delta_x \delta_y}\int_{-\delta_y/2}^{\delta_
 
 Spiral arms were restricted to be logarithmic with respect to the inclined, rotated disc. They were rendered in a similar manner to the online interface; using the nearest distance from a pixel to a calculated logarithmic spiral.
 
-An inclined, rotated log spiral requires parameters brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($a$ and $b$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component.
+An inclined, rotated log spiral requires parameters brightness $I_s$, spread $s$, minimum and maximum $\theta$ ($\theta_\mathrm{min}$ and $\theta_\mathrm{max}$), an amplitude $A$, pitch angle $\phi$, position $\vec\mu$, position angle $\psi$ and axis ratio $q$, where $\vec\mu$, $\psi$ and $q$ are inherited from the disc component.
 
 The distance from a pixel to a logarithmic spiral is given by
 \begin{equation}
-  D_\mathrm{s}(\vec{P}) = \min_{\theta\in[a, b]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
+  D_\mathrm{s}(\vec{P}) = \min_{\theta\in[\theta_\mathrm{min}, \theta_\mathrm{max}]}\left|\left|\vec{P} - \vec\mu - Ae^{\theta\tan\phi}\begin{pmatrix}
        \cos\psi & \sin\psi\\
        -\sin\psi & \cos\psi
        \end{pmatrix}
@@ -786,26 +786,26 @@ The distance from a pixel to a logarithmic spiral is given by
        \right|\right|^{\ 2}.
 \end{equation}
 
-In practise the spiral distance was approximated using the distance to a poly-line with 200 vertices, as solving the above minimization for each pixel at each fitting step is computationally intractable. We also adjust $A$, $a$ and $b$ to account for the rotation of the disc component from its starting value, in order to prevent spirals inadvertendly moving far from starting locations for face-on discs (which have poorly constrained position angles). These adjustments are
+In practise the spiral distance was approximated using the distance to a poly-line with 200 vertices, as solving the above minimization for each pixel at each fitting step is computationally intractable. We also adjust $A$, $\theta_\mathrm{min}$ and $\theta_\mathrm{max}$ to account for the rotation of the disc component from its starting value, in order to prevent spirals inadvertendly moving far from starting locations for face-on discs (which have poorly constrained position angles). These adjustments are
 
 \begin{equation}
 \begin{aligned}
   A' &= Ae^{\Delta\psi\tan\phi},\\
-  a' &= a - \Delta\psi,\\
-  b' &= b - \Delta\psi.
+  \theta_\mathrm{min}' &= \theta_\mathrm{min} - \Delta\psi,\\
+  \theta_\mathrm{max}' &= \theta_\mathrm{max} - \Delta\psi.
 \end{aligned}
 \end{equation}
 
 The pixel brightness is then calculated as
 
 \begin{equation}
-I_\mathrm{spiral}(\vec{P}) = I_\mathrm{disc}(\vec{P}) \times I_s\exp\left(\frac{-D_\mathrm{s}(\vec{P})}{2s^2}\right).
+I_\mathrm{spiral}(\vec{P}) = I_{e,\,\mathrm{disc}}(\vec{P}) \times I_s\exp\left(\frac{-D_\mathrm{s}(\vec{P})}{2s^2}\right).
 \end{equation}
 
 For the fit, we parametrize disc $I_e$ as the S\'ersic total luminosity, given by
 
 \begin{equation}
-L_\mathrm{tot} = I_eR_e^2\ 2\pi n\frac{e^{b_n}}{(b_n)^{2n}}\Gamma(2n).
+L_\mathrm{tot} = I_e R_e^2\ 2\pi n\frac{e^{b_n}}{(b_n)^{2n}}\Gamma(2n).
 \end{equation}
 
 Bulge (bar) $I_e$ is reparametrized as ``bulge (bar) fraction'', which we define as
