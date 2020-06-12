@@ -494,12 +494,12 @@ INPUT ./component_sizing.pdf
 INPUT spiral-number-vs-gz2.pdf
 INPUT ./spiral-number-vs-gz2.pdf
 INPUT ./spiral-number-vs-gz2.pdf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi5.tfm
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi5.tfm
 INPUT gzb-agg-nsa-comparison.pdf
 INPUT ./gzb-agg-nsa-comparison.pdf
 INPUT ./gzb-agg-nsa-comparison.pdf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rtxmi5.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/newtx/rntxmi5.tfm
 INPUT bulge_fraction_scatter_reduced.pdf
 INPUT ./bulge_fraction_scatter_reduced.pdf
 INPUT ./bulge_fraction_scatter_reduced.pdf
