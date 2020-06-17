@@ -408,15 +408,10 @@ Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
 {Simard}, L., {Mendel}, J.~T., {Patton}, D.~R., {Ellison}, S.~L., \&
   {McConnachie}, A.~W. 2011, \apjs, 196, 11, \dodoi{10.1088/0067-0049/196/1/11}
 
-\bibitem[{Simard {et~al.}(2002{\natexlab{a}})Simard, Willmer, Vogt, Sarajedini,
-  Phillips, Weiner, Koo, Im, Illingworth, \&
-  Faber}]{Simard2002:astro-ph/0205025v2}
-Simard, L., Willmer, C. N.~A., Vogt, N.~P., {et~al.} 2002{\natexlab{a}},
-  ASTROPHYS J SUPPL S, 142, 1
-
-\bibitem[{Simard {et~al.}(2002{\natexlab{b}})Simard, Willmer, Vogt, Sarajedini,
-  Phillips, Weiner, Koo, Im, Illingworth, \& Faber}]{gim2d-paper}
----. 2002{\natexlab{b}}, The Astrophysical Journal Supplement Series, 142, 1
+\bibitem[{Simard {et~al.}(2002)Simard, Willmer, Vogt, Sarajedini, Phillips,
+  Weiner, Koo, Im, Illingworth, \& Faber}]{Simard2002:astro-ph/0205025v2}
+Simard, L., Willmer, C. N.~A., Vogt, N.~P., {et~al.} 2002, ASTROPHYS J SUPPL S,
+  142, 1
 
 \bibitem[{{Simmons} {et~al.}(2017){Simmons}, {Lintott}, {Willett}, {Masters},
   {Kartaltepe}, {H{\"a}u{\ss}ler}, {Kaviraj}, {Krawczyk}, {Kruk}, {McIntosh},
