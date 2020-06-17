@@ -1,5 +1,5 @@
 
-\documentclass[trackchanges]{aastex63}
+\documentclass{aastex63}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are 5 other style options available via an optional argument. They
@@ -473,7 +473,7 @@ The algorithm chosen to perform clustering was the \replaced{density-based spati
 
 \begin{deluxetable*}{rlcc}
   \tablenum{2}
-  \tablecaption{\added{The maximum, minimum and default values for model parameters. Model parameters are defined in Appendix \ref{sec:appendix_model_fitting}. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater than 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component position angle ($\psi$) and spiral pitch angle ($\phi$) were similarly unconstrained.\label{table:bad_values}}}
+  \tablecaption{\added{The maximum, minimum and default values for model parameters. Model parameters are defined in Appendix \ref{sec:appendix-model-fitting}. Note that some parameters were allowed to overflow when fitting, for instance an axis ratio greater than 1 (signifying a swap of major and minor axis) was allowed, and corrected for once fitting reached completion. This helped avoid the optimizer encountering parameter bounds and failing to converge. Component position angle ($\psi$) and spiral pitch angle ($\phi$) were similarly unconstrained.\label{table:bad_values}}}
   \tablewidth{0pt}
   \tablehead{
     \colhead{Component} & \colhead{Parameter} & \colhead{Tuning Minimum Bound} & \colhead{Tuning Maximum Bound}
@@ -544,7 +544,7 @@ As all components in a cluster can be viewed as volunteers' attempts at modellin
 
 \subsection{Model Fitting}
 
-The final step in creating \textit{Galaxy Builder} models is a numerical fit to fine-tune parameters. This fitting was performed using the L-BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. We minimize a custom likelihood function that assumes Gaussian error on pixel values and incorporates the priors on parameters we obtain from clustering. The full fitting model and likelihood is detailed in Appendix \ref{sec:appendix_model_fitting}. We use the same model as used by volunteers in the online interface (with altered limits), with spiral arms restricted to being logarithmic spirals relative to the disc, and without the ability to change the relative falloff of spiral arms.
+The final step in creating \textit{Galaxy Builder} models is a numerical fit to fine-tune parameters. This fitting was performed using the L-BFGS-b algorithm \citep{doi:10.1137/0916069}, implemented in \textsc{Scipy} \citep{scipy-paper}. We minimize a custom likelihood function that assumes Gaussian error on pixel values and incorporates the priors on parameters we obtain from clustering. The full fitting model and likelihood is detailed in Appendix \ref{sec:appendix-model-fitting}. We use the same model as used by volunteers in the online interface (with altered limits), with spiral arms restricted to being logarithmic spirals relative to the disc, and without the ability to change the relative falloff of spiral arms.
 
 The model rendering and fitting code was written up using Google's JAX package \citep{jax2018github}, which allows GPU-optimization and automatic gradient calculation, enabling quick and accurate calculation of the jacobian matrix needed for the L-BFGS-b minimization algorithm.
 
@@ -740,7 +740,9 @@ This project was partially funded by a Google Faculty Research Award to Karen Ma
 \appendix
 
 \section{Model Fitting}
-\label{sec:appendix_model_fitting}
+
+\label{sec:appendix-model-fitting}
+
 Assume Normal priors on component parameters determined from clustering ($\mu_x$, $\mu_y$, $q$, $Re$), with the spread given by the spread in the clustered values. We, therefore, have that our final log-likelihood (to be maximised) is the sum of the Gaussian log-likelihood of the residuals given the pixel uncertainty and the Gaussian log-likelihood of the variation in parameters, given their uncertainty.
 
 The model being rendered is the PSF-convolved sum of the separate components and outputs an ($N_x$, $N_y$) image. The disc, bulge and bar are variations on the boxy S\'ersic profile:
