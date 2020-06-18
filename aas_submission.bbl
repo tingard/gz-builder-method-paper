@@ -18,6 +18,16 @@
 {Albareti}, F.~D., {Allende Prieto}, C., {Almeida}, A., {et~al.} 2017, \apjs,
   233, 25, \dodoi{10.3847/1538-4365/aa8992}
 
+\bibitem[{{Amiaux} {et~al.}(2012){Amiaux}, {Scaramella}, {Mellier}, {Altieri},
+  {Burigana}, {Da Silva}, {Gomez}, {Hoar}, {Laureijs}, {Maiorano},
+  {Magalh{\~a}es Oliveira}, {Renk}, {Saavedra Criado}, {Tereno},
+  {Augu{\`e}res}, {Brinchmann}, {Cropper}, {Duvet}, {Ealet}, {Franzetti},
+  {Garilli}, {Gondoin}, {Guzzo}, {Hoekstra}, {Holmes}, {Jahnke}, {Kitching},
+  {Meneghetti}, {Percival}, \& {Warren}}]{2012SPIE.8442E..0ZA}
+{Amiaux}, J., {Scaramella}, R., {Mellier}, Y., {et~al.} 2012, in Society of
+  Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 8442,
+  \procspie, 84420Z, \dodoi{10.1117/12.926513}
+
 \bibitem[{{Astropy Collaboration} {et~al.}(2018){Astropy Collaboration},
   {Price-Whelan}, {Sip{\H{o}}cz}, {G{\"u}nther}, {Lim}, {Crawford}, {Conseil},
   {Shupe}, {Craig}, {Dencheva}, {Ginsburg}, {Vand erPlas}, {Bradley},
@@ -153,6 +163,59 @@ Holincheck, A.~J., Wallin, J.~F., Borne, K., {et~al.} 2016
 Hopkins, P.~F., Croton, D., Bundy, K., {et~al.} 2010, The Astrophysical
   Journal, 724, 915
 
+\bibitem[{{Ivezi{\'c}} {et~al.}(2019){Ivezi{\'c}}, {Kahn}, {Tyson}, {Abel},
+  {Acosta}, {Allsman}, {Alonso}, {AlSayyad}, {Anderson}, {Andrew}, {Angel},
+  {Angeli}, {Ansari}, {Antilogus}, {Araujo}, {Armstrong}, {Arndt}, {Astier},
+  {Aubourg}, {Auza}, {Axelrod}, {Bard}, {Barr}, {Barrau}, {Bartlett}, {Bauer},
+  {Bauman}, {Baumont}, {Bechtol}, {Bechtol}, {Becker}, {Becla}, {Beldica},
+  {Bellavia}, {Bianco}, {Biswas}, {Blanc}, {Blazek}, {Bland ford}, {Bloom},
+  {Bogart}, {Bond}, {Booth}, {Borgland}, {Borne}, {Bosch}, {Boutigny},
+  {Brackett}, {Bradshaw}, {Brand t}, {Brown}, {Bullock}, {Burchat}, {Burke},
+  {Cagnoli}, {Calabrese}, {Callahan}, {Callen}, {Carlin}, {Carlson}, {Chand
+  rasekharan}, {Charles-Emerson}, {Chesley}, {Cheu}, {Chiang}, {Chiang},
+  {Chirino}, {Chow}, {Ciardi}, {Claver}, {Cohen-Tanugi}, {Cockrum}, {Coles},
+  {Connolly}, {Cook}, {Cooray}, {Covey}, {Cribbs}, {Cui}, {Cutri}, {Daly},
+  {Daniel}, {Daruich}, {Daubard}, {Daues}, {Dawson}, {Delgado}, {Dellapenna},
+  {de Peyster}, {de Val-Borro}, {Digel}, {Doherty}, {Dubois},
+  {Dubois-Felsmann}, {Durech}, {Economou}, {Eifler}, {Eracleous}, {Emmons},
+  {Fausti Neto}, {Ferguson}, {Figueroa}, {Fisher-Levine}, {Focke}, {Foss},
+  {Frank}, {Freemon}, {Gangler}, {Gawiser}, {Geary}, {Gee}, {Geha}, {Gessner},
+  {Gibson}, {Gilmore}, {Glanzman}, {Glick}, {Goldina}, {Goldstein}, {Goodenow},
+  {Graham}, {Gressler}, {Gris}, {Guy}, {Guyonnet}, {Haller}, {Harris},
+  {Hascall}, {Haupt}, {Hernand ez}, {Herrmann}, {Hileman}, {Hoblitt},
+  {Hodgson}, {Hogan}, {Howard}, {Huang}, {Huffer}, {Ingraham}, {Innes},
+  {Jacoby}, {Jain}, {Jammes}, {Jee}, {Jenness}, {Jernigan}, {Jevremovi{\'c}},
+  {Johns}, {Johnson}, {Johnson}, {Jones}, {Juramy-Gilles}, {Juri{\'c}},
+  {Kalirai}, {Kallivayalil}, {Kalmbach}, {Kantor}, {Karst}, {Kasliwal},
+  {Kelly}, {Kessler}, {Kinnison}, {Kirkby}, {Knox}, {Kotov}, {Krabbendam},
+  {Krughoff}, {Kub{\'a}nek}, {Kuczewski}, {Kulkarni}, {Ku}, {Kurita}, {Lage},
+  {Lambert}, {Lange}, {Langton}, {Le Guillou}, {Levine}, {Liang}, {Lim},
+  {Lintott}, {Long}, {Lopez}, {Lotz}, {Lupton}, {Lust}, {MacArthur}, {Mahabal},
+  {Mand elbaum}, {Markiewicz}, {Marsh}, {Marshall}, {Marshall}, {May},
+  {McKercher}, {McQueen}, {Meyers}, {Migliore}, {Miller}, {Mills}, {Miraval},
+  {Moeyens}, {Moolekamp}, {Monet}, {Moniez}, {Monkewitz}, {Montgomery},
+  {Morrison}, {Mueller}, {Muller}, {Mu{\~n}oz Arancibia}, {Neill}, {Newbry},
+  {Nief}, {Nomerotski}, {Nordby}, {O'Connor}, {Oliver}, {Olivier}, {Olsen},
+  {O'Mullane}, {Ortiz}, {Osier}, {Owen}, {Pain}, {Palecek}, {Parejko},
+  {Parsons}, {Pease}, {Peterson}, {Peterson}, {Petravick}, {Libby Petrick},
+  {Petry}, {Pierfederici}, {Pietrowicz}, {Pike}, {Pinto}, {Plante}, {Plate},
+  {Plutchak}, {Price}, {Prouza}, {Radeka}, {Rajagopal}, {Rasmussen},
+  {Regnault}, {Reil}, {Reiss}, {Reuter}, {Ridgway}, {Riot}, {Ritz}, {Robinson},
+  {Roby}, {Roodman}, {Rosing}, {Roucelle}, {Rumore}, {Russo}, {Saha},
+  {Sassolas}, {Schalk}, {Schellart}, {Schindler}, {Schmidt}, {Schneider},
+  {Schneider}, {Schoening}, {Schumacher}, {Schwamb}, {Sebag}, {Selvy},
+  {Sembroski}, {Seppala}, {Serio}, {Serrano}, {Shaw}, {Shipsey}, {Sick},
+  {Silvestri}, {Slater}, {Smith}, {Smith}, {Sobhani}, {Soldahl},
+  {Storrie-Lombardi}, {Stover}, {Strauss}, {Street}, {Stubbs}, {Sullivan},
+  {Sweeney}, {Swinbank}, {Szalay}, {Takacs}, {Tether}, {Thaler}, {Thayer},
+  {Thomas}, {Thornton}, {Thukral}, {Tice}, {Trilling}, {Turri}, {Van Berg},
+  {Vanden Berk}, {Vetter}, {Virieux}, {Vucina}, {Wahl}, {Walkowicz}, {Walsh},
+  {Walter}, {Wang}, {Wang}, {Warner}, {Wiecha}, {Willman}, {Winters},
+  {Wittman}, {Wolff}, {Wood-Vasey}, {Wu}, {Xin}, {Yoachim}, \&
+  {Zhan}}]{2019ApJ...873..111I}
+{Ivezi{\'c}}, {\v{Z}}., {Kahn}, S.~M., {Tyson}, J.~A., {et~al.} 2019, \apj,
+  873, 111, \dodoi{10.3847/1538-4357/ab042c}
+
 \bibitem[{{Jacob} {et~al.}(2010){Jacob}, {Katz}, {Berriman}, {Good}, {Laity},
   {Deelman}, {Kesselman}, {Singh}, {Su}, \& {Prince}}]{2010arXiv1005.4454J}
 {Jacob}, J.~C., {Katz}, D.~S., {Berriman}, G.~B., {et~al.} 2010, arXiv
@@ -202,6 +265,45 @@ Kormendy, J., Drory, N., Bender, R., \& Cornell, M.~E. 2010, The Astrophysical
 {Lange}, R., {Moffett}, A.~J., {Driver}, S.~P., {et~al.} 2016, \mnras, 462,
   1470, \dodoi{10.1093/mnras/stw1495}
 
+\bibitem[{{Laureijs} {et~al.}(2011){Laureijs}, {Amiaux}, {Arduini},
+  {Augu{\`e}res}, {Brinchmann}, {Cole}, {Cropper}, {Dabin}, {Duvet}, {Ealet},
+  {Garilli}, {Gondoin}, {Guzzo}, {Hoar}, {Hoekstra}, {Holmes}, {Kitching},
+  {Maciaszek}, {Mellier}, {Pasian}, {Percival}, {Rhodes}, {Saavedra Criado},
+  {Sauvage}, {Scaramella}, {Valenziano}, {Warren}, {Bender}, {Castander},
+  {Cimatti}, {Le F{\`e}vre}, {Kurki-Suonio}, {Levi}, {Lilje}, {Meylan},
+  {Nichol}, {Pedersen}, {Popa}, {Rebolo Lopez}, {Rix}, {Rottgering},
+  {Zeilinger}, {Grupp}, {Hudelot}, {Massey}, {Meneghetti}, {Miller}, {Paltani},
+  {Paulin-Henriksson}, {Pires}, {Saxton}, {Schrabback}, {Seidel}, {Walsh},
+  {Aghanim}, {Amendola}, {Bartlett}, {Baccigalupi}, {Beaulieu}, {Benabed},
+  {Cuby}, {Elbaz}, {Fosalba}, {Gavazzi}, {Helmi}, {Hook}, {Irwin}, {Kneib},
+  {Kunz}, {Mannucci}, {Moscardini}, {Tao}, {Teyssier}, {Weller}, {Zamorani},
+  {Zapatero Osorio}, {Boulade}, {Foumond}, {Di Giorgio}, {Guttridge}, {James},
+  {Kemp}, {Martignac}, {Spencer}, {Walton}, {Bl{\"u}mchen}, {Bonoli},
+  {Bortoletto}, {Cerna}, {Corcione}, {Fabron}, {Jahnke}, {Ligori}, {Madrid},
+  {Martin}, {Morgante}, {Pamplona}, {Prieto}, {Riva}, {Toledo}, {Trifoglio},
+  {Zerbi}, {Abdalla}, {Douspis}, {Grenet}, {Borgani}, {Bouwens}, {Courbin},
+  {Delouis}, {Dubath}, {Fontana}, {Frailis}, {Grazian}, {Koppenh{\"o}fer},
+  {Mansutti}, {Melchior}, {Mignoli}, {Mohr}, {Neissner}, {Noddle}, {Poncet},
+  {Scodeggio}, {Serrano}, {Shane}, {Starck}, {Surace}, {Taylor},
+  {Verdoes-Kleijn}, {Vuerli}, {Williams}, {Zacchei}, {Altieri}, {Escudero
+  Sanz}, {Kohley}, {Oosterbroek}, {Astier}, {Bacon}, {Bardelli}, {Baugh},
+  {Bellagamba}, {Benoist}, {Bianchi}, {Biviano}, {Branchini}, {Carbone},
+  {Cardone}, {Clements}, {Colombi}, {Conselice}, {Cresci}, {Deacon}, {Dunlop},
+  {Fedeli}, {Fontanot}, {Franzetti}, {Giocoli}, {Garcia-Bellido}, {Gow},
+  {Heavens}, {Hewett}, {Heymans}, {Holland}, {Huang}, {Ilbert}, {Joachimi},
+  {Jennins}, {Kerins}, {Kiessling}, {Kirk}, {Kotak}, {Krause}, {Lahav}, {van
+  Leeuwen}, {Lesgourgues}, {Lombardi}, {Magliocchetti}, {Maguire}, {Majerotto},
+  {Maoli}, {Marulli}, {Maurogordato}, {McCracken}, {McLure}, {Melchiorri},
+  {Merson}, {Moresco}, {Nonino}, {Norberg}, {Peacock}, {Pello}, {Penny},
+  {Pettorino}, {Di Porto}, {Pozzetti}, {Quercellini}, {Radovich}, {Rassat},
+  {Roche}, {Ronayette}, {Rossetti}, {Sartoris}, {Schneider}, {Semboloni},
+  {Serjeant}, {Simpson}, {Skordis}, {Smadja}, {Smartt}, {Spano}, {Spiro},
+  {Sullivan}, {Tilquin}, {Trotta}, {Verde}, {Wang}, {Williger}, {Zhao},
+  {Zoubian}, \& {Zucca}}]{2011arXiv1110.3193L}
+{Laureijs}, R., {Amiaux}, J., {Arduini}, S., {et~al.} 2011, arXiv e-prints,
+  arXiv:1110.3193.
+\newblock \doarXiv{1110.3193}
+
 \bibitem[{{Lilly} {et~al.}(1998){Lilly}, {Schade}, {Ellis}, {Le F{\`e}vre},
   {Brinchmann}, {Tresse}, {Abraham}, {Hammer}, {Crampton}, {Colless},
   {Glazebrook}, {Mallen-Ornelas}, \& {Broadhurst}}]{1998ApJ...500...75L}
@@ -229,6 +331,11 @@ Lupton, R., Blanton, M.~R., Fekete, G., {et~al.} 2004, PUBL ASTRON SOC PAC,
   Thomas}]{Masters2010:1003.0449v2}
 Masters, K.~L., Nichol, R.~C., Hoyle, B., {et~al.} 2010, Monthly Notices of the
   Royal Astronomical Society, 411, 2026
+
+\bibitem[{{Meert} {et~al.}(2015){Meert}, {Vikram}, \&
+  {Bernardi}}]{2015MNRAS.446.3943M}
+{Meert}, A., {Vikram}, V., \& {Bernardi}, M. 2015, \mnras, 446, 3943,
+  \dodoi{10.1093/mnras/stu2333}
 
 \bibitem[{{Mendel} {et~al.}(2014){Mendel}, {Simard}, {Palmer}, {Ellison}, \&
   {Patton}}]{2014ApJS..210....3M}
@@ -301,15 +408,10 @@ Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
 {Simard}, L., {Mendel}, J.~T., {Patton}, D.~R., {Ellison}, S.~L., \&
   {McConnachie}, A.~W. 2011, \apjs, 196, 11, \dodoi{10.1088/0067-0049/196/1/11}
 
-\bibitem[{Simard {et~al.}(2002{\natexlab{a}})Simard, Willmer, Vogt, Sarajedini,
-  Phillips, Weiner, Koo, Im, Illingworth, \&
-  Faber}]{Simard2002:astro-ph/0205025v2}
-Simard, L., Willmer, C. N.~A., Vogt, N.~P., {et~al.} 2002{\natexlab{a}},
-  ASTROPHYS J SUPPL S, 142, 1
-
-\bibitem[{Simard {et~al.}(2002{\natexlab{b}})Simard, Willmer, Vogt, Sarajedini,
-  Phillips, Weiner, Koo, Im, Illingworth, \& Faber}]{gim2d-paper}
----. 2002{\natexlab{b}}, The Astrophysical Journal Supplement Series, 142, 1
+\bibitem[{Simard {et~al.}(2002)Simard, Willmer, Vogt, Sarajedini, Phillips,
+  Weiner, Koo, Im, Illingworth, \& Faber}]{Simard2002:astro-ph/0205025v2}
+Simard, L., Willmer, C. N.~A., Vogt, N.~P., {et~al.} 2002, ASTROPHYS J SUPPL S,
+  142, 1
 
 \bibitem[{{Simmons} {et~al.}(2017){Simmons}, {Lintott}, {Willett}, {Masters},
   {Kartaltepe}, {H{\"a}u{\ss}ler}, {Kaviraj}, {Krawczyk}, {Kruk}, {McIntosh},
@@ -350,9 +452,20 @@ Simpson, R., Page, K.~R., \& De~Roure, D. 2014, in Proceedings of the 23rd
 Vika, M., Bamford, S.~P., Häußler, B., \& Rojas, A.~L. 2014, Monthly Notices
   of the Royal Astronomical Society, 444, 3603
 
+\bibitem[{{Vikram} {et~al.}(2010){Vikram}, {Wadadekar}, {Kembhavi}, \&
+  {Vijayagovindan}}]{2010MNRAS.409.1379V}
+{Vikram}, V., {Wadadekar}, Y., {Kembhavi}, A.~K., \& {Vijayagovindan}, G.~V.
+  2010, \mnras, 409, 1379, \dodoi{10.1111/j.1365-2966.2010.17426.x}
+
 \bibitem[{{Wales} \& {Doye}(1998)}]{1998cond.mat..3344W}
 {Wales}, D., \& {Doye}, J. 1998, arXiv e-prints, cond.
 \newblock \doarXiv{cond-mat/9803344}
+
+\bibitem[{{Walmsley} {et~al.}(2020){Walmsley}, {Smith}, {Lintott}, {Gal},
+  {Bamford}, {Dickinson}, {Fortson}, {Kruk}, {Masters}, {Scarlata}, {Simmons},
+  {Smethurst}, \& {Wright}}]{2020MNRAS.491.1554W}
+{Walmsley}, M., {Smith}, L., {Lintott}, C., {et~al.} 2020, \mnras, 491, 1554,
+  \dodoi{10.1093/mnras/stz2816}
 
 \bibitem[{Willett {et~al.}(2013)Willett, Lintott, Bamford, Masters, Simmons,
   Casteels, Edmondson, Fortson, Kaviraj, Keel, Melvin, Nichol, Raddick,
