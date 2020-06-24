@@ -12,45 +12,45 @@ Warning--empty journal in Holincheck2016:1604.00435v1
 Warning--empty journal in Mendez-Abreu2016:1610.05324v1
 Warning--empty journal in profit-paper
 Warning--empty journal in Willett2013:1308.3496v2
-You've used 67 entries,
+You've used 75 entries,
             3168 wiz_defined-function locations,
-            1187 strings with 43489 characters,
-and the built_in function-call counts, 44562 in all, are:
-= -- 2665
-> -- 5279
-< -- 14
-+ -- 1748
-- -- 1855
-* -- 4830
-:= -- 8686
-add.period$ -- 78
-call.type$ -- 67
-change.case$ -- 361
-chr.to.int$ -- 67
-cite$ -- 73
-duplicate$ -- 1167
-empty$ -- 1967
-format.name$ -- 1925
-if$ -- 8471
+            1250 strings with 45407 characters,
+and the built_in function-call counts, 47854 in all, are:
+= -- 2954
+> -- 5491
+< -- 18
++ -- 1820
+- -- 1931
+* -- 5106
+:= -- 9293
+add.period$ -- 86
+call.type$ -- 75
+change.case$ -- 407
+chr.to.int$ -- 75
+cite$ -- 81
+duplicate$ -- 1297
+empty$ -- 2181
+format.name$ -- 2009
+if$ -- 9139
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 61
-newline$ -- 220
-num.names$ -- 269
-pop$ -- 455
+missing$ -- 69
+newline$ -- 244
+num.names$ -- 301
+pop$ -- 501
 preamble$ -- 1
-purify$ -- 361
+purify$ -- 407
 quote$ -- 0
-skip$ -- 1007
+skip$ -- 1115
 stack$ -- 0
-substring$ -- 1336
+substring$ -- 1463
 swap$ -- 38
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 600
+type$ -- 672
 warning$ -- 6
-while$ -- 233
+while$ -- 265
 width$ -- 0
-write$ -- 719
+write$ -- 806
 (There were 7 warnings)

@@ -18,6 +18,11 @@
 {Albareti}, F.~D., {Allende Prieto}, C., {Almeida}, A., {et~al.} 2017, \apjs,
   233, 25, \dodoi{10.3847/1538-4365/aa8992}
 
+\bibitem[{{Allen} {et~al.}(2006){Allen}, {Driver}, {Graham}, {Cameron},
+  {Liske}, \& {de Propris}}]{2006MNRAS.371....2A}
+{Allen}, P.~D., {Driver}, S.~P., {Graham}, A.~W., {et~al.} 2006, \mnras, 371,
+  2, \dodoi{10.1111/j.1365-2966.2006.10586.x}
+
 \bibitem[{{Amiaux} {et~al.}(2012){Amiaux}, {Scaramella}, {Mellier}, {Altieri},
   {Burigana}, {Da Silva}, {Gomez}, {Hoar}, {Laureijs}, {Maiorano},
   {Magalh{\~a}es Oliveira}, {Renk}, {Saavedra Criado}, {Tereno},
@@ -97,6 +102,19 @@ Breunig, M.~M., Kriegel, H.-P., Ng, R.~T., \& Sander, J. 2000, in Proceedings
 Byrd, R., Lu, P., Nocedal, J., \& Zhu, C. 1995, SIAM Journal on Scientific
   Computing, 16, 1190, \dodoi{10.1137/0916069}
 
+\bibitem[{{Carollo} {et~al.}(2002){Carollo}, {Stiavelli}, {Seigar}, {de Zeeuw},
+  \& {Dejonghe}}]{2002AJ....123..159C}
+{Carollo}, C.~M., {Stiavelli}, M., {Seigar}, M., {de Zeeuw}, P.~T., \&
+  {Dejonghe}, H. 2002, \aj, 123, 159, \dodoi{10.1086/324725}
+
+\bibitem[{{Ciambur}(2016)}]{2016PASA...33...62C}
+{Ciambur}, B.~C. 2016, \pasa, 33, e062, \dodoi{10.1017/pasa.2016.60}
+
+\bibitem[{{Davis} {et~al.}(2019){Davis}, {Graham}, \&
+  {Cameron}}]{2019ApJ...873...85D}
+{Davis}, B.~L., {Graham}, A.~W., \& {Cameron}, E. 2019, \apj, 873, 85,
+  \dodoi{10.3847/1538-4357/aaf3b8}
+
 \bibitem[{Davis \& Hayes(2014)}]{Davis2014:1402.1910v1}
 Davis, D.~R., \& Hayes, W.~B. 2014, ApJ, 790, 87
 
@@ -136,6 +154,13 @@ Dobbs, C., \& Baba, J. 2014, Publ. Astron. Soc. Aust., 31
   {Li}}]{2018ApJ...862..100G}
 {Gao}, H., {Ho}, L.~C., {Barth}, A.~J., \& {Li}, Z.-Y. 2018, \apj, 862, 100,
   \dodoi{10.3847/1538-4357/aacdac}
+
+\bibitem[{{Graham}(2001)}]{2001AJ....121..820G}
+{Graham}, A.~W. 2001, \aj, 121, 820, \dodoi{10.1086/318767}
+
+\bibitem[{{Graham} \& {Driver}(2005)}]{2005PASA...22..118G}
+{Graham}, A.~W., \& {Driver}, S.~P. 2005, \pasa, 22, 118,
+  \dodoi{10.1071/AS05001}
 
 \bibitem[{Hart {et~al.}(2016)Hart, Bamford, Willett, Masters, Cardamone,
   Lintott, Mackay, Nichol, Rosslowe, Simmons, \&
@@ -402,6 +427,15 @@ Robotham, A. S.~G., Taranu, D.~S., Tobar, R., Moffett, A., \& Driver, S.~P.
   \& {Pirzkal}}]{2018MNRAS.475.5133R}
 {Rodrigues}, M., {Puech}, M., {Flores}, H., {Hammer}, F., \& {Pirzkal}, N.
   2018, \mnras, 475, 5133, \dodoi{10.1093/mnras/sty098}
+
+\bibitem[{{Sahu} {et~al.}(2019){Sahu}, {Graham}, \&
+  {Davis}}]{2019ApJ...876..155S}
+{Sahu}, N., {Graham}, A.~W., \& {Davis}, B.~L. 2019, \apj, 876, 155,
+  \dodoi{10.3847/1538-4357/ab0f32}
+
+\bibitem[{{S{\'e}rsic}(1963)}]{1963BAAA....6...41S}
+{S{\'e}rsic}, J.~L. 1963, Boletin de la Asociacion Argentina de Astronomia La
+  Plata Argentina, 6, 41
 
 \bibitem[{{Simard} {et~al.}(2011){Simard}, {Mendel}, {Patton}, {Ellison}, \&
   {McConnachie}}]{2011ApJS..196...11S}
